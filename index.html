@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Un Webdesigner — Sites internet par abonnement</title>
-  <meta name="description" content="Votre site internet professionnel à 149€/mois. Zéro frais de création, modifications par SMS sous 48h. — Test déploiement auto ✅">
+  <meta name="description" content="Votre site internet professionnel à partir de 150€/mois. Zéro frais de création, site livré en 48h, modifications par SMS.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -99,6 +99,15 @@
     }
     .nav-logo-icon svg { width: 12px; height: 12px; }
     .nav-right { display: flex; align-items: center; gap: 8px; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav-hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile-menu { display: none; position: fixed; top: 56px; left: 0; right: 0; background: rgba(8,8,16,0.97); border-bottom: 1px solid var(--border); backdrop-filter: blur(20px); padding: 16px 20px 24px; flex-direction: column; gap: 8px; z-index: 99; }
+    .nav-mobile-menu a { font-size: 15px; color: var(--text-2); text-decoration: none; padding: 10px 12px; border-radius: 8px; display: block; }
+    .nav-mobile-menu a:last-child { background: var(--grad); color: white; text-align: center; font-weight: 600; margin-top: 8px; }
+    .nav-mobile-menu.open { display: flex; }
     .nav-link {
       font-size: 13px; color: var(--text-2); text-decoration: none;
       padding: 6px 12px; border-radius: 6px;
@@ -824,6 +833,8 @@
     /* ─────────────────── RESPONSIVE ─────────────────── */
     @media (max-width: 860px) {
       nav { padding: 0 20px; }
+      .nav-right .nav-link, .nav-right .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
       .section, .why-inner, .targets-inner, .pricing-inner, .process-inner { padding: 72px 24px; }
       .stats-grid { grid-template-columns: repeat(2,1fr); }
       .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
@@ -850,6 +861,13 @@
       </div>
       un-webdesigner
     </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="#offres" onclick="closeMenu()">Formules</a>
+      <a href="#contact" onclick="closeMenu()">Maquette gratuite</a>
+    </div>
     <div class="nav-right">
       <a href="#offres" class="nav-link">Formules</a>
       <a href="https://wa.me/33631876401?text=Bonjour%20Bristan%2C%20je%20souhaite%20recevoir%20une%20maquette%20gratuite%20pour%20mon%20site." target="_blank" class="nav-link" style="display:flex;align-items:center;gap:6px;">
@@ -871,8 +889,8 @@
     </div>
 
     <h1>
-      <span style="white-space:nowrap">Votre site internet pro.</span><br>
-      <span class="grad-text">149&nbsp;€ par mois.</span>
+      <span>Votre site internet pro.</span><br>
+      <span class="grad-text">À partir de 150&nbsp;€/mois.</span>
     </h1>
 
     <p class="hero-sub">
@@ -1213,53 +1231,55 @@
       <p class="section-body reveal d2">Le SEO / référencement Google n'est pas inclus dans ces formules — il peut être ajouté sur devis séparé.</p>
       <div class="pricing-grid">
 
-        <!-- ESSENTIELLE -->
+        <!-- STARTER LOCAL -->
         <div class="plan reveal d1">
-          <div class="plan-tag">Essentielle</div>
-          <div class="plan-price">99 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">La base solide. Un site vitrine pro, livré en moins d'une semaine, sans rien débourser au départ.</p>
+          <div class="plan-tag">🥇 Starter Local</div>
+          <div class="plan-price">150 <sub>€/mois HT</sub></div>
+          <p class="plan-desc">Votre vitrine pro en ligne en 48h. Zéro acompte. Zéro prise de tête. Juste des clients qui appellent.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site 3 pages (Accueil, Services, Contact)</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement & nom de domaine inclus</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Certificat SSL · Responsive mobile</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1h de modifications / mois (sous 5 jours)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site 3 à 5 pages (Accueil, Services, Contact…)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + nom de domaine + SSL inclus</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mobile-first · 100/100 Google PageSpeed</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bouton appel d'urgence "Pulse" sur mobile</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Audit & conseils Google My Business offerts</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi ROI trimestriel (clics tel + devis reçus)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Modifications textes/photos groupés 1×/semaine</li>
           </ul>
-          <a href="#contact" class="plan-btn">Choisir Essentielle</a>
+          <a href="#contact" class="plan-btn">Démarrer — 150 €/mois</a>
         </div>
 
-        <!-- SÉRÉNITÉ PLUS -->
+        <!-- BOOST NETLINKING -->
         <div class="plan featured reveal d2">
           <div class="plan-featured-glow"></div>
-          <div class="plan-tag">Sérénité Plus · Recommandé</div>
-          <div class="plan-price">149 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">Tout Essentielle, plus ce qu'il faut pour convaincre et rassurer vos prospects dès le premier regard.</p>
+          <div class="plan-tag">🥈 Boost Netlinking · Le plus choisi</div>
+          <div class="plan-price">300 <sub>€/mois HT</sub></div>
+          <p class="plan-desc">Le Starter Local + une vraie campagne de liens pour vous installer durablement en première page Google avant la fin de vos 12 mois.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout ce qu'inclut Essentielle</strong></li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site étendu jusqu'à 5 pages</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Intégration automatique des avis Google</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Galerie photos & réalisations illimitée</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Modifications prioritaires sous 24/48h</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Support WhatsApp direct</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout le Starter Local inclus</strong></li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>150 €/mois alloués en backlinks de qualité</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Soumission annuaires locaux & régionaux</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Analyse impact backlinks chaque trimestre</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi positions Google mensuel</li>
           </ul>
-          <a href="#contact" class="plan-btn">Choisir Sérénité Plus</a>
+          <a href="#contact" class="plan-btn">Démarrer — 300 €/mois</a>
         </div>
 
-        <!-- VISIBILITÉ PRO -->
+        <!-- LEADER RÉGIONAL -->
         <div class="plan reveal d3">
-          <div class="plan-tag">Visibilité Pro</div>
-          <div class="plan-price">249 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">Tout Sérénité Plus, avec en plus le travail SEO pour que vos clients vous trouvent sur Google.</p>
+          <div class="plan-tag">🥉 Leader Régional</div>
+          <div class="plan-price">600 <sub>€/mois HT</sub></div>
+          <p class="plan-desc">La totale. Contenu + Netlinking pour écraser la concurrence en ville et rayonner sur toutes les communes voisines.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout ce qu'inclut Sérénité Plus</strong></li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Optimisation SEO local (votre ville)</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Création & optimisation fiche Google Business</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport mensuel de positions Google</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 article de blog SEO par mois</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout le Boost Netlinking inclus</strong></li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>4 articles/pages SEO rédigés par mois</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Structure en clusters (silos) pour booster les pages</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pages piliers multi-villes (ex: "Plombier à Dijon")</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport trimestriel avancé + bilan ROI complet</li>
           </ul>
-          <a href="#contact" class="plan-btn">Choisir Visibilité Pro</a>
+          <a href="#contact" class="plan-btn">Démarrer — 600 €/mois</a>
         </div>
 
       </div>
@@ -1527,6 +1547,16 @@
       e.preventDefault();
       document.getElementById('success-msg').style.display = 'block';
       e.target.reset();
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('hamburger').classList.remove('open');
+      document.getElementById('mobileMenu').classList.remove('open');
     }
   </script>
 </body>
