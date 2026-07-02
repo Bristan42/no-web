@@ -312,7 +312,7 @@
       width: 16px; height: 1px;
       background: var(--grad);
     }
-    .section-h2 {
+    .section-h2 { margin-top: 14px;
       font-size: clamp(24px, 3.5vw, 46px);
       font-weight: 700; letter-spacing: -1px; line-height: 1.15;
       max-width: 540px;
@@ -473,7 +473,7 @@
     }
     .contact-wa:hover { border-color: rgba(37,211,102,0.4); background: rgba(37,211,102,0.05); }
     .wa-orb { width: 30px; height: 30px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .contact-note { margin-top: 16px; font-size: 13px; color: var(--text-3); line-height: 1.6; }
+    .contact-note { margin-top: 24px; margin-bottom: 8px; font-size: 13px; color: var(--text-3); line-height: 1.6; }
 
     /* Form */
     form { display: flex; flex-direction: column; gap: 12px; }
@@ -848,15 +848,14 @@
       nav { padding: 0 20px; }
       .hero-sub { font-size: 14px; line-height: 1.55; }
       .section-body { font-size: 14px; }
-      .faq-inner { padding: 60px 20px; }
-      .why-inner, .targets-inner, .pricing-inner, .process-inner { padding: 60px 20px; }
-      .section, .why-inner, .targets-inner, .pricing-inner, .process-inner { padding: 72px 24px; }
+      .faq-inner, .why-inner, .targets-inner, .pricing-inner, .process-inner,
+      .testi-inner, .about-inner, .perf-inner, .device-inner { padding: 72px 24px; }
       .stats-grid { grid-template-columns: repeat(2,1fr); }
       .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
       .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
       .why-card p { max-width: 100%; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
-      .contact-inner { grid-template-columns: 1fr; gap: 24px; padding: 48px 20px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 24px; padding: 72px 24px; }
       .contact-inner > div:first-child { text-align: center; padding-bottom: 8px; }
       .contact-inner > .reveal:last-child { border-top: 1px solid var(--border); padding-top: 24px; }
       .contact-inner .section-label { justify-content: center; }
@@ -901,7 +900,7 @@
 
     <h1>
       <span>Votre site internet pro.</span>
-      <span class="grad-text" style="display:block;margin-top:0.15em;">À partir de 150&nbsp;€/mois.</span>
+      <span class="grad-text" style="display:block;margin-top:0.35em;">À partir de 150&nbsp;€/mois.</span>
     </h1>
 
     <p class="hero-sub">
@@ -1259,7 +1258,6 @@
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + nom de domaine + sécurité inclus</li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fonctionne parfaitement sur mobile et ordinateur</li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site protégé contre les attaques et le piratage</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport trimestriel du nombre de visiteurs sur votre site</li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 demande de modifications par semaine (textes, photos, infos…)</li>
           </ul>
           <a href="#contact" class="plan-btn">Démarrer — 150 €/mois</a>
@@ -1335,7 +1333,6 @@
   <div class="contact-wrapper" id="contact">
     <div class="contact-inner">
       <div>
-        <div class="section-label reveal">Contact</div>
         <h2 class="section-h2 reveal d1">Commençons<br>par votre maquette.</h2>
         <p class="section-body reveal d2">Remplissez le formulaire ou contactez-moi directement sur WhatsApp. Je vous réponds sous 48h avec un aperçu visuel de votre futur site.</p>
         <a href="https://wa.me/33631876401" class="contact-wa reveal d3">
@@ -1366,7 +1363,6 @@
               <option>Essentiel — 150 €/mois</option>
               <option>Sérénité — 300 €/mois</option>
               <option>Indétrônable — 600 €/mois</option>
-              <option>Je ne sais pas encore</option>
             </select>
           </div>
           <button type="submit" class="form-submit">Recevoir ma maquette gratuite →</button>
