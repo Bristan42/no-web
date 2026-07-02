@@ -336,21 +336,22 @@
       display: grid; grid-template-columns: 52px 1fr;
       gap: 28px; align-items: start;
       padding: 32px 0; border-bottom: 1px solid var(--border);
-      transition: none; position: relative; background: none;
+      position: relative; background: none;
     }
     .why-card:first-child { padding-top: 0; }
     .why-card:last-child { border-bottom: none; padding-bottom: 0; }
     .why-card-glow { display: none; }
+    .why-left { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+    .why-right { display: flex; flex-direction: column; }
     .why-icon {
       width: 36px; height: 36px; border-radius: 8px;
       border: 1px solid var(--border-h); background: var(--bg-card);
       display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: 4px;
+      flex-shrink: 0;
       transition: border-color 0.3s, background 0.3s;
     }
     .why-card:hover .why-icon { border-color: rgba(124,58,237,0.5); background: rgba(124,58,237,0.08); }
-    .why-card:hover .why-icon svg { stroke: #A78BFA; }
-    .why-icon svg { width: 16px; height: 16px; transition: stroke 0.3s; }
+    .why-icon svg { width: 16px; height: 16px; stroke: #A78BFA; }
     .why-num { font-size: 10px; color: var(--text-3); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 8px; }
     .why-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; letter-spacing: -0.4px; }
     .why-card p { font-size: 14px; color: var(--text-2); line-height: 1.7; max-width: 460px; }
@@ -1184,31 +1185,40 @@
       <h2 class="section-h2 reveal d1">Pourquoi des professionnels<br>nous choisissent</h2>
       <div class="why-grid">
         <div class="why-card reveal">
-          <div class="why-card-glow"></div>
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 010 4H8"/><path d="M12 18V6"/></svg>
+          <div class="why-left">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 010 4H8"/><path d="M12 18V6"/></svg>
+            </div>
           </div>
-          <div class="why-num">01</div>
-          <h3>Zéro acompte</h3>
-          <p>Pas de chèque à sortir pour démarrer. Vous payez uniquement l'abonnement mensuel. Votre trésorerie reste intacte.</p>
+          <div class="why-right">
+            <div class="why-num">01</div>
+            <h3>Zéro acompte</h3>
+            <p>Pas de chèque à sortir pour démarrer. Vous payez uniquement l'abonnement mensuel. Votre trésorerie reste intacte.</p>
+          </div>
         </div>
         <div class="why-card reveal d1">
-          <div class="why-card-glow"></div>
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <div class="why-left">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
           </div>
-          <div class="why-num">02</div>
-          <h3>Modifications par SMS</h3>
-          <p>Un tarif change, une photo de chantier ? Envoyez un message WhatsApp — c'est en ligne dans les 48h.</p>
+          <div class="why-right">
+            <div class="why-num">02</div>
+            <h3>Modifications par SMS</h3>
+            <p>Un tarif change, une photo de chantier ? Envoyez un message WhatsApp — c'est en ligne dans les 48h.</p>
+          </div>
         </div>
         <div class="why-card reveal d2">
-          <div class="why-card-glow"></div>
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="why-left">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
           </div>
-          <div class="why-num">03</div>
-          <h3>Sérénité totale</h3>
-          <p>Hébergement, SSL, sauvegardes, mises à jour. Tout est géré de A à Z. Vous ne touchez plus jamais à la technique.</p>
+          <div class="why-right">
+            <div class="why-num">03</div>
+            <h3>Sérénité totale</h3>
+            <p>Hébergement, SSL, sauvegardes, mises à jour. Tout est géré de A à Z. Vous ne touchez plus jamais à la technique.</p>
+          </div>
         </div>
       </div>
     </div>
