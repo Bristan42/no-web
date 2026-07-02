@@ -138,7 +138,8 @@
     .hero-lines::before, .hero-lines::after {
       content: '';
       position: absolute; left: 0; right: 0;
-      height: 1px; background: var(--border);
+      height: 1px;
+      background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.05) 80%, transparent 100%);
     }
     .hero-lines::before { top: 33%; }
     .hero-lines::after  { top: 66%; }
@@ -225,7 +226,7 @@
 
     /* Floating cards preview under hero */
     .hero-preview {
-      position: relative; margin-top: 72px; width: 100%; max-width: 760px;
+      position: relative; margin-top: 40px; width: 100%; max-width: 760px;
       opacity: 0; transform: translateY(24px);
       animation: fadeUp 1s ease forwards 0.8s;
     }
@@ -917,7 +918,7 @@
         Écrire sur WhatsApp
       </a>
     </div>
-    <p style="margin-top:40px;margin-bottom:20px;font-size:12px;color:var(--text-3);opacity:0;animation:fadeUp 0.8s ease forwards 0.75s;text-align:center;">
+    <p style="margin-top:40px;margin-bottom:0;font-size:12px;color:var(--text-3);opacity:0;animation:fadeUp 0.8s ease forwards 0.75s;text-align:center;">
       Maquette gratuite · Réponse sous 48h · Sans engagement
     </p>
 
@@ -1333,7 +1334,7 @@
   <div class="contact-wrapper" id="contact">
     <div class="contact-inner">
       <div>
-        <h2 class="section-h2 reveal d1">Commençons<br>par votre maquette.</h2>
+        <h2 class="section-h2 reveal d1">Créons votre<br>site ensemble.</h2>
         <p class="section-body reveal d2">Remplissez le formulaire ou contactez-moi directement sur WhatsApp. Je vous réponds sous 48h avec un aperçu visuel de votre futur site.</p>
         <a href="https://wa.me/33631876401" class="contact-wa reveal d3">
           <div class="wa-orb">
