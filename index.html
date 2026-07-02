@@ -313,8 +313,8 @@
       background: var(--grad);
     }
     .section-h2 {
-      font-size: clamp(30px, 3.5vw, 46px);
-      font-weight: 700; letter-spacing: -1.5px; line-height: 1.1;
+      font-size: clamp(24px, 3.5vw, 46px);
+      font-weight: 700; letter-spacing: -1px; line-height: 1.15;
       max-width: 540px;
     }
     .section-body {
@@ -560,13 +560,27 @@
       display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
     }
     .about-pill {
-      border: 1px solid var(--border); background: var(--bg-card);
-      padding: 6px 14px; border-radius: 6px;
+      border: 1px solid var(--border-h); background: var(--bg-card);
+      padding: 7px 14px; border-radius: 20px;
       font-size: 12px; font-weight: 500; color: var(--text-2);
+      transition: border-color 0.2s, color 0.2s;
     }
+    .about-pill:hover { border-color: rgba(124,58,237,0.4); color: var(--text); }
     @media (max-width: 860px) {
-      .about-inner { grid-template-columns: 1fr; gap: 40px; padding: 72px 24px; }
-      .about-photo-wrap { aspect-ratio: 3/2; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 36px; padding: 64px 24px;
+      }
+      .about-photo-wrap {
+        order: 2;
+        aspect-ratio: 4/3;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+      .about-right { order: 1; text-align: center; }
+      .about-tag { margin: 0 auto 20px; }
+      .about-pills { justify-content: center; }
     }
 
     /* ─────────────────── MARQUEE ─────────────────── */
@@ -834,12 +848,17 @@
     @media (max-width: 860px) {
       nav { padding: 0 20px; }
       .hero-sub { font-size: 14px; line-height: 1.55; }
+      .section-body { font-size: 14px; }
+      .faq-inner { padding: 60px 20px; }
+      .why-inner, .targets-inner, .pricing-inner, .process-inner { padding: 60px 20px; }
       .section, .why-inner, .targets-inner, .pricing-inner, .process-inner { padding: 72px 24px; }
       .stats-grid { grid-template-columns: repeat(2,1fr); }
       .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
       .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
-      .why-grid { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 360px; }
+      .why-grid { grid-template-columns: 1fr; gap: 0; }
+      .why-card { padding: 28px 20px; }
+      .why-icon { margin-bottom: 16px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
       .contact-inner { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
       .hero h1 { letter-spacing: -1px; font-size: clamp(26px, 7.5vw, 36px); }
@@ -1399,7 +1418,7 @@
     <div class="faq-inner">
       <div>
         <div class="section-label reveal">FAQ</div>
-        <h2 class="section-h2 reveal d1">Les questions<br>qu'on nous pose<br>le plus souvent.</h2>
+        <h2 class="section-h2 reveal d1">Vos questions,<br>nos réponses.</h2>
         <p class="section-body reveal d2" style="margin-top:16px;">Une question qui ne figure pas ici ? Appelez-moi directement au <a href="tel:0631876401" style="color:#A78BFA;text-decoration:none;">06 31 87 64 01</a>.</p>
       </div>
       <div class="faq-list reveal d1">
@@ -1461,7 +1480,7 @@
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           À propos
         </div>
-        <h2 class="reveal d1">Bristan Farre.<br><span class="grad-text">Webdesigner</span><br>& Consultant SEO.</h2>
+        <h2 class="reveal d1">Bristan Farre.<br><span class="grad-text">Webdesigner & Consultant SEO.</span></h2>
         <p class="reveal d2">
           Depuis plusieurs années, j'accompagne des entreprises dans leur visibilité digitale en tant que consultant SEO. J'ai appris une chose simple : un bon référencement ne sert à rien si le site qui l'accueille ne donne pas confiance.
         </p>
@@ -1469,10 +1488,12 @@
           C'est pourquoi j'ai créé cette offre d'abonnement. Pas de devis à 3 000 €, pas de contrat incompréhensible — juste un site pro, livré rapidement, maintenu par quelqu'un que vous pouvez appeler directement.
         </p>
         <div class="about-pills reveal d4">
-          <span class="about-pill">Consultant SEO</span>
-          <span class="about-pill">Webdesign</span>
-          <span class="about-pill">Génération de leads</span>
-          <span class="about-pill">Basé en France</span>
+          <span class="about-pill">🎨 Webdesign</span>
+          <span class="about-pill">🔍 Consultant SEO</span>
+          <span class="about-pill">📈 Génération de leads</span>
+          <span class="about-pill">⚡ Sites ultra-rapides</span>
+          <span class="about-pill">📍 Basé en France</span>
+          <span class="about-pill">💬 Suivi WhatsApp</span>
         </div>
       </div>
     </div>
