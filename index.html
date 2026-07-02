@@ -859,7 +859,7 @@
       .contact-inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 20px; }
       .contact-inner > div:first-child { text-align: center; }
       .contact-inner .section-label { justify-content: center; }
-      .contact-wa { margin: 0 auto; }
+      .contact-wa { display: flex; width: fit-content; margin: 0 auto; }
       .contact-note { text-align: center; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
       .hero h1 { letter-spacing: -1px; font-size: clamp(26px, 7.5vw, 36px); }
@@ -1214,7 +1214,7 @@
           </div>
           <div class="why-right">
             <h3>Sérénité totale</h3>
-            <p>Hébergement, SSL, sauvegardes, mises à jour. Tout est géré de A à Z. Vous ne touchez plus jamais à la technique.</p>
+            <p>Hébergement, sécurité, sauvegardes, mises à jour. Tout est géré de A à Z. Vous ne touchez plus jamais à la technique.</p>
           </div>
         </div>
       </div>
@@ -1244,56 +1244,53 @@
     <div class="pricing-inner">
       <div class="section-label reveal">Tarifs</div>
       <h2 class="section-h2 reveal d1">Trois formules.<br>Pas de surprise.</h2>
-      <p class="section-body reveal d2">Le SEO / référencement Google n'est pas inclus dans ces formules — il peut être ajouté sur devis séparé.</p>
+      <p class="section-body reveal d2">Choisissez selon vos besoins. Vous pouvez changer de formule à tout moment.</p>
       <div class="pricing-grid">
 
-        <!-- STARTER LOCAL -->
+        <!-- ESSENTIEL -->
         <div class="plan reveal d1">
-          <div class="plan-tag">🥇 Starter Local</div>
+          <div class="plan-tag">Essentiel</div>
           <div class="plan-price">150 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">Votre vitrine pro en ligne en 48h. Zéro acompte. Zéro prise de tête. Juste des clients qui appellent.</p>
+          <p class="plan-desc">Votre vitrine pro en ligne en 48h. Zéro acompte. Zéro prise de tête. Juste des clients qui vous trouvent.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site 3 à 5 pages (Accueil, Services, Contact…)</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + nom de domaine + SSL inclus</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mobile-first · 100/100 Google PageSpeed</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bouton appel d'urgence "Pulse" sur mobile</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Audit & conseils Google My Business offerts</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi ROI trimestriel (clics tel + devis reçus)</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Modifications textes/photos groupés 1×/semaine</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site jusqu'à 5 pages (Accueil, Services, Contact…)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + nom de domaine + sécurité inclus</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fonctionne parfaitement sur mobile et ordinateur</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site protégé contre les attaques et le piratage</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport mensuel : combien de visiteurs sur votre site</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 demande de modifications par semaine (textes, photos, infos…)</li>
           </ul>
           <a href="#contact" class="plan-btn">Démarrer — 150 €/mois</a>
         </div>
 
-        <!-- BOOST NETLINKING -->
+        <!-- SÉRÉNITÉ -->
         <div class="plan featured reveal d2">
           <div class="plan-featured-glow"></div>
-          <div class="plan-tag">🥈 Boost Netlinking · Le plus choisi</div>
+          <div class="plan-tag">Sérénité · Le plus choisi</div>
           <div class="plan-price">300 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">Le Starter Local + une vraie campagne de liens pour vous installer durablement en première page Google avant la fin de vos 12 mois.</p>
+          <p class="plan-desc">Tout l'Essentiel, plus un travail concret pour que Google vous mette en avant face à vos concurrents locaux.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout le Starter Local inclus</strong></li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>150 €/mois alloués en backlinks de qualité</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Soumission annuaires locaux & régionaux</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Analyse impact backlinks chaque trimestre</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi positions Google mensuel</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout l'Essentiel inclus</strong></li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Votre site référencé sur des sites partenaires sérieux</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Inscrit sur les annuaires locaux de votre région</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport mensuel de votre position sur Google</li>
           </ul>
           <a href="#contact" class="plan-btn">Démarrer — 300 €/mois</a>
         </div>
 
-        <!-- LEADER RÉGIONAL -->
+        <!-- PRESTIGE -->
         <div class="plan reveal d3">
-          <div class="plan-tag">🥉 Leader Régional</div>
+          <div class="plan-tag">Prestige</div>
           <div class="plan-price">600 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">La totale. Contenu + Netlinking pour écraser la concurrence en ville et rayonner sur toutes les communes voisines.</p>
+          <p class="plan-desc">La formule complète pour devenir la référence de votre métier dans votre ville et les communes voisines.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout le Boost Netlinking inclus</strong></li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>4 articles/pages SEO rédigés par mois</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Structure en clusters (silos) pour booster les pages</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pages piliers multi-villes (ex: "Plombier à Dijon")</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport trimestriel avancé + bilan ROI complet</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout le Sérénité inclus</strong></li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>4 nouvelles pages rédigées par mois pour attirer plus de clients</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pages dédiées par ville (ex : "Plombier à Dijon", "Plombier à Beaune"…)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bilan complet chaque mois : visites, appels, formulaires reçus</li>
           </ul>
           <a href="#contact" class="plan-btn">Démarrer — 600 €/mois</a>
         </div>
@@ -1365,8 +1362,9 @@
           <div style="margin-bottom:12px;">
             <label>Formule souhaitée</label>
             <select>
-              <option>Sérénité Plus — 149 €/mois (Recommandé)</option>
-              <option>Essentielle — 99 €/mois</option>
+              <option>Essentiel — 150 €/mois</option>
+              <option>Sérénité — 300 €/mois (Recommandé)</option>
+              <option>Prestige — 600 €/mois</option>
               <option>Je ne sais pas encore</option>
             </select>
           </div>
