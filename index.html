@@ -77,7 +77,7 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 0 32px;
       height: 56px;
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex; justify-content: center; align-items: center; gap: 32px;
       border-bottom: 1px solid transparent;
       transition: background 0.5s ease, border-color 0.5s ease;
     }
@@ -129,29 +129,15 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 120px 24px 80px;
+      padding: 140px 24px 100px;
+      gap: 0;
     }
 
     /* Horizontal hairline grid */
-    .hero-lines {
-      position: absolute; inset: 0; pointer-events: none; overflow: hidden;
-    }
-    .hero-lines::before, .hero-lines::after {
-      content: '';
-      position: absolute; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.05) 80%, transparent 100%);
-    }
-    .hero-lines::before { top: 33%; }
-    .hero-lines::after  { top: 66%; }
+
 
     /* Vertical center line */
-    .hero-vline {
-      position: absolute; top: 0; bottom: 0;
-      left: 50%; width: 1px;
-      background: linear-gradient(to bottom, transparent, var(--border) 20%, var(--border) 80%, transparent);
-      pointer-events: none;
-    }
+
 
     .hero-badge {
       display: inline-flex; align-items: center; gap: 6px;
@@ -173,10 +159,21 @@
 
     .hero h1 {
       font-size: clamp(36px, 4.2vw, 58px);
-      font-weight: 700; letter-spacing: -2.5px; line-height: 1.03;
+      font-weight: 700; letter-spacing: -2.5px; line-height: 1.15;
       max-width: 820px;
       opacity: 0; transform: translateY(20px);
       animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) forwards 0.25s;
+    }
+    .h1-eyebrow {
+      display: block;
+      font-size: clamp(13px, 1.1vw, 16px);
+      font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-2); margin-bottom: 24px;
+    }
+    .gold-text {
+      display: block; margin-top: 0.25em;
+      background: linear-gradient(135deg,#F5D060,#C9952A);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
 
     .grad-text {
@@ -186,7 +183,7 @@
     }
 
     .hero-sub {
-      margin-top: 24px;
+      margin-top: 32px;
       font-size: 15px; color: var(--text-2); line-height: 1.65; font-weight: 400;
       max-width: 480px;
       opacity: 0; transform: translateY(16px);
@@ -194,7 +191,7 @@
     }
 
     .hero-actions {
-      margin-top: 36px;
+      margin-top: 48px;
       display: flex; flex-direction: column; gap: 10px; align-items: stretch;
       width: 100%; max-width: 340px;
       opacity: 0; transform: translateY(14px);
@@ -227,7 +224,7 @@
 
     /* Floating cards preview under hero */
     .hero-preview {
-      position: relative; margin-top: 40px; width: 100%; max-width: 760px;
+      position: relative; margin-top: 64px; width: 100%; max-width: 760px;
       opacity: 0; transform: translateY(24px);
       animation: fadeUp 1s ease forwards 0.8s;
     }
@@ -296,6 +293,7 @@
       line-height: 1;
     }
     .stat-num.grad { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-num.gold { background: linear-gradient(135deg,#F5D060,#C9952A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .stat-label { margin-top: 6px; font-size: 13px; color: var(--text-2); }
 
     /* ─────────────────── SECTION BASE ─────────────────── */
@@ -361,28 +359,29 @@
     /* ─────────────────── POUR QUI ─────────────────── */
     .targets-wrapper { border-bottom: 1px solid var(--border); }
     .targets-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
-    .targets-grid { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
-    .target-chip {
-      display: inline-flex; align-items: center; gap: 8px;
+    .targets-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .target-card {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 22px 18px; border-radius: 14px;
       border: 1px solid var(--border); background: var(--bg-card);
-      padding: 9px 16px; border-radius: 8px;
-      font-size: 13px; font-weight: 500; color: var(--text-2);
+      transition: border-color 0.25s, background 0.25s, transform 0.2s;
       cursor: default;
-      transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.2s;
     }
-    .target-chip:hover {
-      border-color: rgba(124,58,237,0.5);
-      background: rgba(124,58,237,0.08);
-      color: var(--text); transform: translateY(-2px);
+    .target-card:hover { border-color: var(--border-h); background: var(--bg-card-h); transform: translateY(-2px); }
+    .target-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .target-chip svg { width: 14px; height: 14px; color: var(--text-3); transition: color 0.25s; }
-    .target-chip:hover svg { color: #A78BFA; }
+    .target-icon svg { width: 20px; height: 20px; }
+    .target-name { font-size: 14px; font-weight: 600; color: var(--text); }
+    .target-desc { font-size: 12px; color: var(--text-2); line-height: 1.55; }
 
     /* ─────────────────── PRICING ─────────────────── */
     .pricing-wrapper { border-bottom: 1px solid var(--border); }
     .pricing-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
     .pricing-grid { margin-top: 60px; display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
     @media (max-width: 860px) { .pricing-grid { grid-template-columns: 1fr; max-width: 400px; } }
+    @media (max-width: 860px) { .targets-grid { grid-template-columns: repeat(2,1fr); gap: 10px; } }
 
     .plan {
       border: 1px solid var(--border);
@@ -435,6 +434,13 @@
       box-shadow: 0 0 20px rgba(124,58,237,0.4);
     }
     .plan.featured .plan-btn:hover { opacity: 0.9; }
+    /* ── Pack Gold ── */
+    .plan.gold { border-color: rgba(212,175,55,0.45); background: rgba(212,175,55,0.04); }
+    .plan.gold .plan-tag { color: #D4AF37; }
+    .plan.gold .plan-price { background: linear-gradient(135deg,#F5D060,#C9952A); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .plan.gold .check-icon { color: #D4AF37; }
+    .plan.gold .plan-btn { background: linear-gradient(135deg,#F5D060,#C9952A); border-color: transparent; color: #1a1200; box-shadow: 0 0 20px rgba(212,175,55,0.35); font-weight: 700; }
+    .plan.gold .plan-btn:hover { opacity: 0.9; }
 
     /* ─────────────────── PROCESS ─────────────────── */
     .process-wrapper { border-bottom: 1px solid var(--border); }
@@ -454,13 +460,14 @@
       font-size: 12px; font-weight: 600; color: var(--text-3);
       margin-top: 4px; flex-shrink: 0;
     }
-    .process-step:hover .step-idx {
-      border-color: rgba(124,58,237,0.5);
-      color: #A78BFA;
-      background: rgba(124,58,237,0.08);
-    }
+    .process-step { position: relative; transition: border-color 0.25s; }
+    .process-step::before { content: ''; position: absolute; left: -60px; top: 0; bottom: 0; width: 3px; border-radius: 2px; opacity: 0; transition: opacity 0.25s; }
+    .process-step:hover::before { opacity: 1; }
+    .process-step:first-child::before { background: rgba(255,255,255,0.35); }
+    .process-step:nth-child(2)::before { background: linear-gradient(180deg,#9B6EF3,#5E6AD2); }
+    .process-step:last-child::before { background: linear-gradient(180deg,#F5D060,#C9952A); }
     .step-idx { transition: all 0.3s; }
-    .process-step h4 { font-size: 18px; font-weight: 600; letter-spacing: -0.4px; margin-bottom: 6px; }
+    .process-step h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.4px; margin-bottom: 6px; }
     .process-step p { font-size: 14px; color: var(--text-2); line-height: 1.7; max-width: 460px; }
 
     /* ─────────────────── CONTACT ─────────────────── */
@@ -606,22 +613,47 @@
 
     /* ─────────────────── DEVICE SHOWCASE ─────────────────── */
     .device-wrapper { border-bottom: 1px solid var(--border); overflow: hidden; }
-    .device-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
+    .device-inner {
+      max-width: 1100px; margin: 0 auto; padding: 100px 60px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .device-text { display: flex; flex-direction: column; }
     .device-scene {
-      margin-top: 64px; position: relative;
+      position: relative;
       display: flex; align-items: flex-end; justify-content: center;
-      gap: 0; height: 380px;
+      gap: 0; height: 300px;
     }
     .device-glow {
       position: absolute; inset: 0; pointer-events: none;
       background: radial-gradient(ellipse 60% 50% at 50% 80%, rgba(94,106,210,0.15) 0%, transparent 70%);
     }
 
+    /* Tablet */
+    .tablet {
+      width: 110px; flex-shrink: 0; z-index: 1;
+      transform: translateX(16px);
+    }
+    .tablet-frame {
+      background: #111128; border-radius: 16px;
+      border: 1px solid rgba(124,58,237,0.55);
+      padding: 10px 8px;
+      box-shadow: 8px 16px 40px rgba(0,0,0,0.45);
+    }
+    .tablet-cam { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.08); margin: 0 auto 8px; }
+    .tablet-screen { background: #0d0d1f; border-radius: 10px; overflow: hidden; aspect-ratio: 3/4; }
+    .tp { padding: 10px 10px 0; display: flex; flex-direction: column; gap: 7px; }
+    .tp-nav { height: 18px; background: rgba(255,255,255,0.03); border-radius: 3px; }
+    .tp-badge { width: 60px; height: 5px; border-radius: 2px; background: rgba(124,58,237,0.4); }
+    .tp-h1a { width: 90%; height: 9px; border-radius: 2px; background: rgba(255,255,255,0.2); }
+    .tp-h1b { width: 70%; height: 9px; border-radius: 2px; background: rgba(255,255,255,0.12); }
+    .tp-p { width: 100%; height: 5px; border-radius: 1px; background: rgba(255,255,255,0.07); }
+    .tp-btn { width: 90px; height: 16px; border-radius: 8px; background: var(--grad); margin-top: 2px; }
+
     /* Laptop */
-    .laptop { position: relative; width: 580px; flex-shrink: 0; z-index: 2; }
+    .laptop { position: relative; width: 340px; flex-shrink: 0; z-index: 2; }
     .laptop-screen {
       background: #0d0d1f; border-radius: 10px 10px 0 0;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
       border-bottom: none; overflow: hidden;
       aspect-ratio: 16/10; position: relative;
     }
@@ -648,13 +680,13 @@
 
     /* Phone */
     .phone {
-      width: 130px; flex-shrink: 0;
-      position: absolute; right: 60px; bottom: 8px;
+      width: 85px; flex-shrink: 0;
       z-index: 3;
+      transform: translateX(-16px);
     }
     .phone-frame {
       background: #111128; border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.14);
+      border: 1px solid rgba(212,175,55,0.55);
       padding: 12px 6px; position: relative;
       box-shadow: -8px 16px 40px rgba(0,0,0,0.5);
     }
@@ -698,23 +730,27 @@
     .perf-wrapper { border-bottom: 1px solid var(--border); }
     .perf-inner {
       max-width: 1100px; margin: 0 auto; padding: 100px 60px;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+      display: flex; flex-direction: column; gap: 48px;
     }
-    .perf-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; }
+    .perf-head { display: flex; flex-direction: column; }
+    .perf-body {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+    }
+    .perf-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .perf-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 18px 0; border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
+      display: flex; flex-direction: column; gap: 10px;
+      padding: 18px 16px; border-radius: 12px;
+      border: 1px solid var(--border); background: var(--bg-card);
+      transition: border-color 0.25s, background 0.25s, transform 0.2s;
     }
-    .perf-item:last-child { border-bottom: none; }
+    .perf-item:hover { border-color: var(--border-h); background: var(--bg-card-h); transform: translateY(-2px); }
     .perf-check {
-      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
-      background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.35);
+      width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
     }
-    .perf-check svg { width: 10px; height: 10px; color: #A78BFA; }
-    .perf-item-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
-    .perf-item-desc { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+    .perf-check svg { width: 17px; height: 17px; }
+    .perf-item-title { font-size: 13px; font-weight: 600; line-height: 1.3; }
+    .perf-item-desc { font-size: 12px; color: var(--text-2); line-height: 1.55; }
 
     /* PageSpeed card */
     .pagespeed-card {
@@ -752,11 +788,26 @@
     .ps-metric-val { font-size: 10px; font-weight: 600; color: #202124; margin-left: auto; }
 
     @media (max-width: 860px) {
-      .device-scene { height: 240px; }
-      .laptop { width: 340px; }
-      .phone { width: 80px; right: 20px; }
-      .perf-inner { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px; }
-      .device-inner { padding: 72px 24px; }
+      /* Stats : 2x2 sur mobile */
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 24px; }
+      .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
+      .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+      .stat-num { font-size: 32px; }
+
+      /* Device section : 1 colonne, scène centrée */
+      .device-inner { padding: 72px 24px; grid-template-columns: 1fr; gap: 40px; }
+      .device-scene { height: 180px; width: 100%; overflow: visible; }
+      .device-scene > *:not(.device-glow) { transform-origin: bottom center; }
+      .laptop { width: 230px; }
+      .tablet { width: 74px; transform: translateX(10px); }
+      .phone { width: 58px; transform: translateX(-10px); }
+      .device-scene { transform: scale(0.82); transform-origin: center center; }
+
+      /* Perf */
+      .perf-inner { padding: 72px 24px; gap: 32px; }
+      .perf-body { grid-template-columns: 1fr; gap: 32px; }
+      .perf-list { grid-template-columns: 1fr 1fr; gap: 10px; }
     }
 
     /* ─────────────────── TESTIMONIALS ─────────────────── */
@@ -818,7 +869,7 @@
       position: relative; z-index: 1;
       max-width: 1100px; margin: 0 auto;
       padding: 28px 60px;
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex; justify-content: center; align-items: center; gap: 32px;
     }
     .footer-logo { font-size: 13px; font-weight: 600; color: var(--text-3); }
     .footer-logo span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -864,7 +915,14 @@
       .contact-wa { display: flex; width: 100%; justify-content: center; margin: 24px auto 0; }
       .contact-note { text-align: center; margin-top: 24px; margin-bottom: 24px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
-      .hero h1 { letter-spacing: -1px; font-size: clamp(26px, 7.5vw, 36px); }
+      .hero { padding: 80px 24px 80px; gap: 0; }
+      .hero h1 { letter-spacing: -0.5px; font-size: clamp(22px, 5.8vw, 32px); max-width: 100%; line-height: 1.3; }
+      .h1-eyebrow { margin-bottom: 28px; }
+      .gold-text { margin-top: 0.5em; }
+      .hero-badge { margin-bottom: 28px; }
+      .hero-sub { margin-top: 28px; }
+      .hero-actions { margin-top: 28px; }
+      .hero-preview { margin-top: 28px; }
     }
   </style>
 </head>
@@ -892,8 +950,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-lines"></div>
-    <div class="hero-vline"></div>
 
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
@@ -901,12 +957,13 @@
     </div>
 
     <h1>
-      <span>Votre site internet pro.</span>
-      <span class="grad-text" style="display:block;margin-top:0.35em;">À partir de 150&nbsp;€/mois.</span>
+      <span class="h1-eyebrow">Webdesigner freelance</span>
+      <span>Création de votre site internet.</span>
+      <span class="gold-text">100% gratuit sous 48 heures.</span>
     </h1>
 
     <p class="hero-sub">
-      Zéro frais de création. Je conçois, héberge et maintiens votre site vitrine. Un changement&nbsp;? Un SMS suffit, c'est en ligne sous 48h.
+      Votre site pro livré en 48h, sans payer un centime au départ. Je crée, j'héberge et je maintiens votre site. Une modification&nbsp;? Un message WhatsApp suffit — en ligne sous 48h.
     </p>
 
     <div class="hero-actions">
@@ -914,14 +971,7 @@
         Demander mon site internet gratuitement
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="https://wa.me/33631876401?text=Bonjour%20Bristan%2C%0A%0AJe%20souhaite%20recevoir%20une%20maquette%20de%20mon%20futur%20site%20internet.%0ACordialement%2C%0A%0APr%C3%A9nom%20%3A%0ANom%20%3A%0AEntreprise%20%3A" target="_blank" class="btn-secondary">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Écrire sur WhatsApp
-      </a>
     </div>
-    <p style="margin-top:40px;margin-bottom:0;font-size:12px;color:var(--text-3);opacity:0;animation:fadeUp 0.8s ease forwards 0.75s;text-align:center;">
-      Maquette gratuite · Réponse sous 48h · Sans engagement
-    </p>
 
     <!-- Faux aperçu d'interface -->
     <div class="hero-preview">
@@ -973,20 +1023,20 @@
   <div class="stats-section reveal">
     <div class="stats-grid">
       <div class="stat-item">
+        <div class="stat-num">Satisfait</div>
+        <div class="stat-label">ou remboursé</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" style="color:#25D366;">WhatsApp</div>
+        <div class="stat-label">support direct inclus</div>
+      </div>
+      <div class="stat-item">
         <div class="stat-num grad"><span class="count" data-t="0">0</span> €</div>
         <div class="stat-label">de frais de création</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num"><span class="count" data-t="48">0</span> h</div>
-        <div class="stat-label">pour recevoir votre maquette</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="count" data-t="5">0</span></div>
-        <div class="stat-label">pages maximum incluses</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="count" data-t="12">0</span></div>
-        <div class="stat-label">mois d'engagement</div>
+        <div class="stat-num gold">48 h</div>
+        <div class="stat-label">pour recevoir votre site</div>
       </div>
     </div>
   </div>
@@ -1014,14 +1064,150 @@
   </div>
 
   <!-- DEVICE SHOWCASE -->
-  <div class="device-wrapper">
+  <div class="process-wrapper">
+    <div class="process-inner">
+      <div class="section-label reveal">Comment ça marche</div>
+      <h2 class="section-h2 reveal d1">Votre site en ligne<br>en 3 étapes simples</h2>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-idx">01</div>
+          <div>
+            <h3>Vous me contactez</h3>
+            <p>Donnez-moi le nom de votre entreprise et votre métier. Je m'occupe du reste — vous n'avez rien à préparer.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-idx" style="border-color:rgba(124,58,237,0.6);color:#A78BFA;background:rgba(124,58,237,0.12);">02</div>
+          <div>
+            <h3>Je vous envoie votre site gratuit sous 48h</h3>
+            <p>Vous recevez un aperçu réel de votre futur site directement sur votre téléphone, par SMS ou WhatsApp. Sans engagement.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-idx" style="border-color:rgba(212,175,55,0.6);color:#F5D060;background:rgba(212,175,55,0.1);">03</div>
+          <div>
+            <h3>Si ça vous plaît, on lance</h3>
+            <p>Votre site est en ligne dès que vous aurez payé votre abonnement. Si vous souhaitez des modifications, un simple message WhatsApp suffit. Je m'en occupe dans les 48h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PERFORMANCE -->
+  <div class="perf-wrapper">
+    <div class="perf-inner">
+      <div class="perf-head">
+        <div class="section-label reveal">Nos engagements</div>
+        <h2 class="section-h2 reveal d1">Ce que vous obtenez,<br>sans compromis.</h2>
+        <p class="section-body reveal d2" style="margin-top:14px;max-width:440px;">Chaque site livré respecte ces 6 engagements. Sans exception, sans supplément.</p>
+      </div>
+      <div class="perf-body">
+        <div class="perf-list">
+          <div class="perf-item reveal d1">
+            <div class="perf-check" style="background:rgba(52,211,153,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="perf-item-title">100% Sécurisé</div>
+            <div class="perf-item-desc">Zéro base de données, zéro faille. Rien à pirater.</div>
+          </div>
+          <div class="perf-item reveal d2">
+            <div class="perf-check" style="background:rgba(167,139,250,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div class="perf-item-title">Design sur-mesure</div>
+            <div class="perf-item-desc">Conçu pour votre métier, pas un template générique.</div>
+          </div>
+          <div class="perf-item reveal d3">
+            <div class="perf-check" style="background:rgba(251,191,36,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="perf-item-title">Chargement instantané</div>
+            <div class="perf-item-desc">100/100 PageSpeed. Google vous récompense, vos clients aussi.</div>
+          </div>
+          <div class="perf-item reveal d1">
+            <div class="perf-check" style="background:rgba(251,113,133,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="perf-item-title">Satisfait ou remboursé</div>
+            <div class="perf-item-desc">Maquette offerte sous 48h. Si ça ne convient pas, rien à payer.</div>
+          </div>
+          <div class="perf-item reveal d2">
+            <div class="perf-check" style="background:rgba(37,211,102,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <div class="perf-item-title">Support WhatsApp direct</div>
+            <div class="perf-item-desc">C'est moi qui réponds. Pas un robot, pas 72h d'attente.</div>
+          </div>
+          <div class="perf-item reveal d3">
+            <div class="perf-check" style="background:rgba(96,165,250,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="perf-item-title">Expertise SEO intégrée</div>
+            <div class="perf-item-desc">Je sais ce qui fait remonter un site sur Google. Ce n'est pas du hasard.</div>
+          </div>
+        </div>
+        <div class="reveal d2" style="position:sticky;top:80px;">
+        <div class="pagespeed-card">
+          <div class="ps-header">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#4285F4"/><path d="M24 14l2.5 7h7.3l-5.9 4.3 2.3 7L24 28.3l-6.2 4 2.3-7L14.2 21h7.3z" fill="white"/></svg>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:#202124;">PageSpeed Insights</div>
+              <div style="font-size:11px;color:#5f6368;">dupont-electricite.fr — Mobile</div>
+            </div>
+          </div>
+          <div class="ps-circles">
+            <div class="ps-circle-wrap">
+              <div class="ps-circle">100</div>
+              <div class="ps-circle-label">Performance</div>
+            </div>
+            <div class="ps-circle-wrap">
+              <div class="ps-circle">100</div>
+              <div class="ps-circle-label">Accessibilité</div>
+            </div>
+            <div class="ps-circle-wrap">
+              <div class="ps-circle">100</div>
+              <div class="ps-circle-label">Bonnes pratiques</div>
+            </div>
+            <div class="ps-circle-wrap">
+              <div class="ps-circle">100</div>
+              <div class="ps-circle-label">SEO</div>
+            </div>
+          </div>
+          <div class="ps-metrics">
+            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">First Contentful Paint</div><div class="ps-metric-val">0,4 s</div></div>
+            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Largest Contentful Paint</div><div class="ps-metric-val">0,6 s</div></div>
+            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Total Blocking Time</div><div class="ps-metric-val">0 ms</div></div>
+            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Cumulative Layout Shift</div><div class="ps-metric-val">0</div></div>
+            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Speed Index</div><div class="ps-metric-val">0,4 s</div></div>
+            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Time to Interactive</div><div class="ps-metric-val">0,4 s</div></div>
+          </div>
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid #e8eaed;display:flex;align-items:center;gap:6px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#0cce6b;flex-shrink:0;"></div>
+            <div style="font-size:11px;color:#188038;font-weight:500;">Excellent — tous les indicateurs sont au vert</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="device-wrapper">
     <div class="device-inner">
-      <div class="section-label reveal">Votre site, partout</div>
-      <h2 class="section-h2 reveal d1">Optimisé mobile,<br>tablette &amp; ordinateur.</h2>
-      <p class="section-body reveal d2" style="max-width:520px;margin-top:16px;">Chaque site livré est testé sur tous les appareils. Vos clients vous trouvent et vous contactent, qu'ils soient sur téléphone ou bureau.</p>
+      <div class="device-text">
+        <div class="section-label reveal">Votre site, partout</div>
+        <h2 class="section-h2 reveal d1">Optimisé mobile,<br>tablette &amp; ordinateur.</h2>
+        <p class="section-body reveal d2" style="margin-top:16px;">Chaque site livré est testé sur tous les appareils. Vos clients vous trouvent et vous contactent, qu'ils soient sur téléphone ou bureau.</p>
+      </div>
 
       <div class="device-scene">
         <div class="device-glow"></div>
+
+        <!-- Tablet -->
+        <div class="tablet reveal d1">
+          <div class="tablet-frame">
+            <div class="tablet-cam"></div>
+            <div class="tablet-screen">
+              <div class="tp">
+                <div class="tp-nav"></div>
+                <div class="tp-badge"></div>
+                <div class="tp-h1a"></div>
+                <div class="tp-h1b"></div>
+                <div class="tp-p"></div>
+                <div class="tp-p"></div>
+                <div class="tp-btn"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Laptop -->
         <div class="laptop reveal d2">
@@ -1070,178 +1256,7 @@
     </div>
   </div>
 
-  <!-- PERFORMANCE -->
-  <div class="perf-wrapper">
-    <div class="perf-inner">
-      <!-- Checklist -->
-      <div>
-        <div class="section-label reveal">Nos engagements</div>
-        <h2 class="section-h2 reveal d1">Ce que vous obtenez,<br>sans compromis.</h2>
-        <div class="perf-list">
-          <div class="perf-item reveal d1">
-            <div class="perf-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <div class="perf-item-title">100% Sécurisé</div>
-              <div class="perf-item-desc">Site en HTML/CSS pur — zéro base de données, zéro faille, rien à pirater.</div>
-            </div>
-          </div>
-          <div class="perf-item reveal d2">
-            <div class="perf-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <div class="perf-item-title">Design sur-mesure</div>
-              <div class="perf-item-desc">Pas de template générique — conçu pour votre activité, votre identité, vos clients.</div>
-            </div>
-          </div>
-          <div class="perf-item reveal d3">
-            <div class="perf-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <div class="perf-item-title">Score PageSpeed 100 / 100</div>
-              <div class="perf-item-desc">Chargement instantané sur mobile — Google récompense ça, vos clients aussi.</div>
-            </div>
-          </div>
-          <div class="perf-item reveal d1">
-            <div class="perf-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <div class="perf-item-title">Satisfait ou remboursé</div>
-              <div class="perf-item-desc">Maquette gratuite sous 48 h. Si elle ne vous convient pas, rien à payer.</div>
-            </div>
-          </div>
-          <div class="perf-item reveal d2">
-            <div class="perf-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <div class="perf-item-title">Support direct WhatsApp</div>
-              <div class="perf-item-desc">Vous m'écrivez, c'est moi qui réponds — pas un robot, pas un délai de 72 h.</div>
-            </div>
-          </div>
-          <div class="perf-item reveal d3">
-            <div class="perf-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <div class="perf-item-title">Expertise SEO intégrée</div>
-              <div class="perf-item-desc">Je sais ce qui fait vraiment remonter un site sur Google. Ce n'est pas du hasard.</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- PageSpeed Visual -->
-      <div class="reveal d2">
-        <div class="pagespeed-card">
-          <div class="ps-header">
-            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#4285F4"/><path d="M24 14l2.5 7h7.3l-5.9 4.3 2.3 7L24 28.3l-6.2 4 2.3-7L14.2 21h7.3z" fill="white"/></svg>
-            <div>
-              <div style="font-size:13px;font-weight:600;color:#202124;">PageSpeed Insights</div>
-              <div style="font-size:11px;color:#5f6368;">dupont-electricite.fr — Mobile</div>
-            </div>
-          </div>
-          <div class="ps-circles">
-            <div class="ps-circle-wrap">
-              <div class="ps-circle">100</div>
-              <div class="ps-circle-label">Performance</div>
-            </div>
-            <div class="ps-circle-wrap">
-              <div class="ps-circle">100</div>
-              <div class="ps-circle-label">Accessibilité</div>
-            </div>
-            <div class="ps-circle-wrap">
-              <div class="ps-circle">100</div>
-              <div class="ps-circle-label">Bonnes pratiques</div>
-            </div>
-            <div class="ps-circle-wrap">
-              <div class="ps-circle">100</div>
-              <div class="ps-circle-label">SEO</div>
-            </div>
-          </div>
-          <div class="ps-metrics">
-            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">First Contentful Paint</div><div class="ps-metric-val">0,4 s</div></div>
-            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Largest Contentful Paint</div><div class="ps-metric-val">0,6 s</div></div>
-            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Total Blocking Time</div><div class="ps-metric-val">0 ms</div></div>
-            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Cumulative Layout Shift</div><div class="ps-metric-val">0</div></div>
-            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Speed Index</div><div class="ps-metric-val">0,4 s</div></div>
-            <div class="ps-metric"><div class="ps-dot"></div><div class="ps-metric-label">Time to Interactive</div><div class="ps-metric-val">0,4 s</div></div>
-          </div>
-          <div style="margin-top:14px;padding-top:12px;border-top:1px solid #e8eaed;display:flex;align-items:center;gap:6px;">
-            <div style="width:8px;height:8px;border-radius:50%;background:#0cce6b;flex-shrink:0;"></div>
-            <div style="font-size:11px;color:#188038;font-weight:500;">Excellent — tous les indicateurs sont au vert</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- POURQUOI -->
-  <div class="why-wrapper">
-    <div class="why-inner">
-      <div class="section-label reveal">Le concept</div>
-      <h2 class="section-h2 reveal d1">Pourquoi des professionnels<br>nous choisissent</h2>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-left">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 010 4H8"/><path d="M12 18V6"/></svg>
-            </div>
-          </div>
-          <div class="why-right">
-            <h3>Zéro acompte</h3>
-            <p>Pas de chèque à sortir pour démarrer. Vous payez uniquement l'abonnement mensuel. Votre trésorerie reste intacte.</p>
-          </div>
-        </div>
-        <div class="why-card reveal d1">
-          <div class="why-left">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-            </div>
-          </div>
-          <div class="why-right">
-            <h3>Modifications par SMS</h3>
-            <p>Un tarif change, une photo de chantier ? Envoyez un message WhatsApp — c'est en ligne dans les 48h.</p>
-          </div>
-        </div>
-        <div class="why-card reveal d2">
-          <div class="why-left">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-          </div>
-          <div class="why-right">
-            <h3>Sérénité totale</h3>
-            <p>Hébergement, sécurité, sauvegardes, mises à jour. Tout est géré de A à Z. Vous ne touchez plus jamais à la technique.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- POUR QUI -->
-  <div class="targets-wrapper">
-    <div class="targets-inner">
-      <div class="section-label reveal">Pour qui ?</div>
-      <h2 class="section-h2 reveal d1">Idéal pour les artisans<br>et indépendants locaux</h2>
-      <div class="targets-grid">
-        <div class="target-chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Électriciens</div>
-        <div class="target-chip reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Plombiers</div>
-        <div class="target-chip reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Maçons & BTP</div>
-        <div class="target-chip reveal d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg>Paysagistes</div>
-        <div class="target-chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Santé & Bien-être</div>
-        <div class="target-chip reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Avocats & Consultants</div>
-        <div class="target-chip reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Comptables</div>
-        <div class="target-chip reveal d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>Nettoyage & Services</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- OFFRES -->
   <div class="pricing-wrapper" id="offres">
     <div class="pricing-inner">
       <div class="section-label reveal">Tarifs</div>
@@ -1256,13 +1271,13 @@
           <p class="plan-desc">Votre vitrine pro en ligne en 48h. Zéro acompte. Zéro prise de tête. Juste des clients qui vous trouvent.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site jusqu'à 5 pages (Accueil, Services, Contact…)</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + nom de domaine + sécurité inclus</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fonctionne parfaitement sur mobile et ordinateur</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site protégé contre les attaques et le piratage</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 demande de modifications par semaine (textes, photos, infos…)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site jusqu'à 5 pages</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + sécurité inclus</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Optimisé pour mobile, tablette et ordinateur</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Protégé contre le piratage</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 demande de modifications par semaine</li>
           </ul>
-          <a href="#contact" class="plan-btn">Démarrer — 150 €/mois</a>
+          <a href="#contact" class="plan-btn">ESSAI GRATUIT</a>
         </div>
 
         <!-- SÉRÉNITÉ -->
@@ -1273,27 +1288,32 @@
           <p class="plan-desc">Tout l'Essentiel, plus un travail concret pour que Google vous mette en avant face à vos concurrents locaux.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout l'Essentiel inclus</strong></li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Votre site référencé sur des sites partenaires sérieux</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport trimestriel de vos positions sur Google</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi du nombre d'appels et de demandes reçues via le site</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Pack Essentiel inclus</strong></li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Jusqu'à 15 pages</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Visible avant vos concurrents sur Google</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Liens sur des sites partenaires sérieux</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Google My Business optimisé et maintenu</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport mensuel de visites (Google Analytics)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bilan trimestriel : visites, appels, formulaires</li>
           </ul>
-          <a href="#contact" class="plan-btn">Démarrer — 300 €/mois</a>
+          <a href="#contact" class="plan-btn">ESSAI GRATUIT</a>
         </div>
 
-        <!-- PRESTIGE -->
-        <div class="plan reveal d3">
+        <!-- INDÉTRÔNABLE -->
+        <div class="plan gold reveal d3">
           <div class="plan-tag">Indétrônable</div>
           <div class="plan-price">600 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">La formule complète pour devenir la référence de votre métier dans votre ville et les communes voisines.</p>
+          <p class="plan-desc">La formule complète pour devenir la référence de votre métier dans votre ville et les villes voisines.</p>
           <hr>
           <ul>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout le Sérénité inclus</strong></li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>4 nouvelles pages rédigées par mois pour attirer plus de clients</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pages dédiées par ville (ex : "Plombier à Dijon", "Plombier à Beaune"…)</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bilan complet chaque mois : visites, appels, formulaires reçus</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Pack Essentiel + Sérénité inclus</strong></li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Jusqu'à 30 pages</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Une page dédiée par ville pour apparaître partout autour de vous</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Stratégie de contenu pour viser la 1ère position sur Google</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Publication d'articles de blog mensuels pour le SEO</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi de positions de mots clés prioritaires positionnés</li>
           </ul>
-          <a href="#contact" class="plan-btn">Démarrer — 600 €/mois</a>
+          <a href="#contact" class="plan-btn">ESSAI GRATUIT</a>
         </div>
 
       </div>
@@ -1301,35 +1321,7 @@
   </div>
 
   <!-- PROCESS -->
-  <div class="process-wrapper">
-    <div class="process-inner">
-      <div class="section-label reveal">Comment ça marche</div>
-      <h2 class="section-h2 reveal d1">Votre site en ligne<br>en 3 étapes simples</h2>
-      <div class="process-steps">
-        <div class="process-step reveal">
-          <div class="step-idx">01</div>
-          <div>
-            <h4>Vous me contactez</h4>
-            <p>Donnez-moi le nom de votre entreprise et votre métier. Je m'occupe du reste — vous n'avez rien à préparer.</p>
-          </div>
-        </div>
-        <div class="process-step reveal">
-          <div class="step-idx">02</div>
-          <div>
-            <h4>Je vous envoie une maquette gratuite sous 48h</h4>
-            <p>Vous recevez un aperçu réel de votre futur site directement sur votre téléphone, par SMS ou WhatsApp. Sans engagement.</p>
-          </div>
-        </div>
-        <div class="process-step reveal">
-          <div class="step-idx">03</div>
-          <div>
-            <h4>Si ça vous plaît, on lance</h4>
-            <p>Votre site est mis en ligne. Dès que vous avez une modification, un simple message WhatsApp suffit. Je m'en occupe dans les 48h.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- CONTACT -->
   <div class="contact-wrapper" id="contact">
@@ -1417,6 +1409,90 @@
     </div>
   </div>
 
+
+  <!-- POUR QUI -->
+  <div class="targets-wrapper">
+    <div class="targets-inner">
+      <div class="section-label reveal">Pour qui ?</div>
+      <h2 class="section-h2 reveal d1">Idéal pour les artisans<br>et indépendants locaux</h2>
+      <div class="targets-grid">
+        <div class="target-card reveal">
+          <div class="target-icon" style="background:rgba(251,191,36,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#FCD34D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div class="target-name">Électriciens</div>
+          <div class="target-desc">Dépannage, installation, mise aux normes — des clients urgents qui cherchent sur Google.</div>
+        </div>
+        <div class="target-card reveal d1">
+          <div class="target-icon" style="background:rgba(96,165,250,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="target-name">Plombiers</div>
+          <div class="target-desc">Fuite, chauffe-eau, salle de bain — vos futurs clients veulent une réponse rapide.</div>
+        </div>
+        <div class="target-card reveal d2">
+          <div class="target-icon" style="background:rgba(251,146,60,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="target-name">Maçons & BTP</div>
+          <div class="target-desc">Rénovation, extension, gros oeuvre — montrez vos chantiers et décrochez des devis.</div>
+        </div>
+        <div class="target-card reveal d3">
+          <div class="target-icon" style="background:rgba(52,211,153,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg></div>
+          <div class="target-name">Paysagistes</div>
+          <div class="target-desc">Jardin, terrasse, entretien — vos photos de réalisations valent mille mots.</div>
+        </div>
+        <div class="target-card reveal">
+          <div class="target-icon" style="background:rgba(244,114,182,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          <div class="target-name">Santé & Bien-être</div>
+          <div class="target-desc">Kiné, ostéo, coach — rassurez et convertissez avant même le premier rendez-vous.</div>
+        </div>
+        <div class="target-card reveal d1">
+          <div class="target-icon" style="background:rgba(167,139,250,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="target-name">Avocats & Consultants</div>
+          <div class="target-desc">Crédibilité et expertise : votre site doit inspirer confiance dès la première seconde.</div>
+        </div>
+        <div class="target-card reveal d2">
+          <div class="target-icon" style="background:rgba(56,189,248,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div class="target-name">Comptables</div>
+          <div class="target-desc">Bilan, TVA, création de société — vos prospects cherchent un expert de confiance.</div>
+        </div>
+        <div class="target-card reveal d3">
+          <div class="target-icon" style="background:rgba(134,239,172,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M14 14h7v7h-7z"/><path d="M3 14h7v7H3z"/></svg></div>
+          <div class="target-name">Nettoyage & Services</div>
+          <div class="target-desc">Bureaux, maisons, vitres — des clients réguliers qui comparent avant de choisir.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFRES -->
+  <!-- ABOUT -->
+  <div class="about-wrapper">
+    <div class="about-inner">
+      <div class="about-photo-wrap reveal">
+        <img src="bristan.png" alt="Bristan Farre">
+        <div class="about-photo-border"></div>
+      </div>
+      <div class="about-right">
+        <div class="about-tag reveal">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          À propos
+        </div>
+        <h2 class="reveal d1">Bristan Farre.<br><span class="grad-text">Webdesigner</span> & <span style="background:linear-gradient(135deg,#F5D060,#C9952A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Consultant SEO</span>.</h2>
+        <p class="reveal d2">
+          Depuis plusieurs années, j'accompagne des entreprises dans leur visibilité digitale en tant que consultant SEO. J'ai appris une chose simple : un bon référencement ne sert à rien si le site qui l'accueille ne donne pas confiance.
+        </p>
+        <p class="reveal d3">
+          C'est pourquoi j'ai créé cette offre d'abonnement. Pas de devis à 3 000 €, pas de contrat incompréhensible — juste un site pro, livré rapidement, maintenu par quelqu'un que vous pouvez appeler directement.
+        </p>
+        <div class="about-pills reveal d4">
+          <span class="about-pill">🎨 Webdesign</span>
+          <span class="about-pill">🔍 Consultant SEO</span>
+          <span class="about-pill">📈 Génération de leads</span>
+          <span class="about-pill">⚡ Sites ultra-rapides</span>
+          <span class="about-pill">📍 Basé en France</span>
+          <span class="about-pill">💬 Suivi WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <!-- FAQ -->
   <div class="faq-wrapper">
     <div class="faq-inner">
@@ -1472,38 +1548,6 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <div class="about-wrapper">
-    <div class="about-inner">
-      <div class="about-photo-wrap reveal">
-        <img src="bristan.png" alt="Bristan Farre">
-        <div class="about-photo-border"></div>
-      </div>
-      <div class="about-right">
-        <div class="about-tag reveal">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          À propos
-        </div>
-        <h2 class="reveal d1">Bristan Farre.<br><span class="grad-text">Webdesigner & Consultant SEO.</span></h2>
-        <p class="reveal d2">
-          Depuis plusieurs années, j'accompagne des entreprises dans leur visibilité digitale en tant que consultant SEO. J'ai appris une chose simple : un bon référencement ne sert à rien si le site qui l'accueille ne donne pas confiance.
-        </p>
-        <p class="reveal d3">
-          C'est pourquoi j'ai créé cette offre d'abonnement. Pas de devis à 3 000 €, pas de contrat incompréhensible — juste un site pro, livré rapidement, maintenu par quelqu'un que vous pouvez appeler directement.
-        </p>
-        <div class="about-pills reveal d4">
-          <span class="about-pill">🎨 Webdesign</span>
-          <span class="about-pill">🔍 Consultant SEO</span>
-          <span class="about-pill">📈 Génération de leads</span>
-          <span class="about-pill">⚡ Sites ultra-rapides</span>
-          <span class="about-pill">📍 Basé en France</span>
-          <span class="about-pill">💬 Suivi WhatsApp</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   <footer>
     <span class="footer-logo">un<span>—webdesigner.fr</span></span>
     <div class="footer-links">
