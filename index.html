@@ -361,7 +361,7 @@
     /* ─────────────────── POUR QUI ─────────────────── */
     .targets-wrapper { border-bottom: 1px solid var(--border); }
     .targets-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
-    .targets-grid { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .targets-grid { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
     .target-chip {
       display: inline-flex; align-items: center; gap: 8px;
       border: 1px solid var(--border); background: var(--bg-card);
@@ -526,6 +526,7 @@
       width: 100%; height: 100%; object-fit: cover; object-position: top center;
       display: block;
       filter: contrast(1.03) brightness(1);
+      image-orientation: from-image;
     }
     .about-photo-wrap::after {
       content: '';
@@ -855,11 +856,19 @@
       .stats-grid { grid-template-columns: repeat(2,1fr); }
       .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
       .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
-      .why-grid { grid-template-columns: 1fr; gap: 0; }
-      .why-card { padding: 28px 20px; }
-      .why-icon { margin-bottom: 16px; }
+      .why-grid { grid-template-columns: 1fr; gap: 0; background: none; }
+      .why-card { padding: 24px 20px; border-bottom: 1px solid var(--border); }
+      .why-card:last-child { border-bottom: none; }
+      .why-icon { width: 30px; height: 30px; margin-bottom: 12px; }
+      .why-num { margin-bottom: 6px; }
+      .why-card h3 { font-size: 15px; margin-bottom: 6px; }
+      .why-card p { font-size: 13px; line-height: 1.6; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
-      .contact-inner { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 20px; }
+      .contact-inner > div:first-child { text-align: center; }
+      .contact-inner .section-label { justify-content: center; }
+      .contact-wa { margin: 0 auto; }
+      .contact-note { text-align: center; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
       .hero h1 { letter-spacing: -1px; font-size: clamp(26px, 7.5vw, 36px); }
     }
