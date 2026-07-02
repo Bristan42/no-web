@@ -856,11 +856,12 @@
       .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
       .why-card p { max-width: 100%; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
-      .contact-inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 20px; }
-      .contact-inner > div:first-child { text-align: center; }
+      .contact-inner { grid-template-columns: 1fr; gap: 24px; padding: 48px 20px; }
+      .contact-inner > div:first-child { text-align: center; padding-bottom: 8px; }
+      .contact-inner > .reveal:last-child { border-top: 1px solid var(--border); padding-top: 24px; }
       .contact-inner .section-label { justify-content: center; }
-      .contact-wa { display: flex; width: fit-content; margin: 0 auto; }
-      .contact-note { text-align: center; }
+      .contact-wa { display: flex; width: 100%; justify-content: center; margin: 24px auto 0; }
+      .contact-note { text-align: center; margin-top: 10px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
       .hero h1 { letter-spacing: -1px; font-size: clamp(26px, 7.5vw, 36px); }
     }
@@ -1258,7 +1259,7 @@
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hébergement + nom de domaine + sécurité inclus</li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fonctionne parfaitement sur mobile et ordinateur</li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Site protégé contre les attaques et le piratage</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport mensuel : combien de visiteurs sur votre site</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport trimestriel du nombre de visiteurs sur votre site</li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 demande de modifications par semaine (textes, photos, infos…)</li>
           </ul>
           <a href="#contact" class="plan-btn">Démarrer — 150 €/mois</a>
@@ -1274,15 +1275,15 @@
           <ul>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><strong>Tout l'Essentiel inclus</strong></li>
             <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Votre site référencé sur des sites partenaires sérieux</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Inscrit sur les annuaires locaux de votre région</li>
-            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport mensuel de votre position sur Google</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapport trimestriel de vos positions sur Google</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi du nombre d'appels et de demandes reçues via le site</li>
           </ul>
           <a href="#contact" class="plan-btn">Démarrer — 300 €/mois</a>
         </div>
 
         <!-- PRESTIGE -->
         <div class="plan reveal d3">
-          <div class="plan-tag">Prestige</div>
+          <div class="plan-tag">Indétrônable</div>
           <div class="plan-price">600 <sub>€/mois HT</sub></div>
           <p class="plan-desc">La formule complète pour devenir la référence de votre métier dans votre ville et les communes voisines.</p>
           <hr>
@@ -1363,8 +1364,8 @@
             <label>Formule souhaitée</label>
             <select>
               <option>Essentiel — 150 €/mois</option>
-              <option>Sérénité — 300 €/mois (Recommandé)</option>
-              <option>Prestige — 600 €/mois</option>
+              <option>Sérénité — 300 €/mois</option>
+              <option>Indétrônable — 600 €/mois</option>
               <option>Je ne sais pas encore</option>
             </select>
           </div>
