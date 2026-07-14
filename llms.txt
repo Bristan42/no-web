@@ -1,23 +1,41 @@
-# Un Webdesigner — Sites internet par abonnement
+# No Web — Agence web freelance à Saint-Étienne (42)
 
-Webdesigner freelance proposant la création de sites internet professionnels sans frais de création. Site livré en 48h, hébergement et maintenance inclus, modifications par WhatsApp.
+> No Web est une agence web freelance basée à Saint-Étienne (Loire, 42), spécialisée dans la création de sites internet professionnels pour les artisans, commerçants et indépendants locaux. Le modèle est 100 % sans frais de création : le client paie uniquement un abonnement mensuel et reçoit son site en 48h.
 
-## Services
+## Ce que fait No Web
 
-- [Accueil et présentation](https://no-web.fr/)
-- [Tarifs et formules d'abonnement](https://no-web.fr/#offres)
-- [Contact et demande de site gratuit](https://no-web.fr/#contact)
+- Création de sites internet professionnels livrés en 48h, sans frais de création
+- Hébergement, sécurité et maintenance inclus dans l'abonnement
+- Modifications illimitées par WhatsApp (réponse sous 24h)
+- Référencement local (SEO) et optimisation Google My Business
+- Suivi mensuel de mots-clés et rapports de performance
+- Zones d'intervention : Saint-Étienne, Loire (42) et alentours
 
-## Formules
+## Formules d'abonnement
 
-- Essentiel : 150 €/mois HT — site jusqu'à 5 pages, hébergement + sécurité inclus
-- Sérénité : 300 €/mois HT — jusqu'à 15 pages, SEO local, Google My Business, rapport mensuel
-- Indétrônable : 600 €/mois HT — jusqu'à 30 pages, pages par ville, blog SEO mensuel, suivi de mots clés
+- **Essentiel** — 150 €/mois HT : site jusqu'à 5 pages, hébergement + sécurité inclus, modifications illimitées
+- **Sérénité** — 300 €/mois HT : jusqu'à 15 pages, SEO local, Google My Business, rapport mensuel
+- **Indétrônable** — 600 €/mois HT : jusqu'à 30 pages, pages par ville, blog SEO mensuel, suivi de mots-clés
 
-## Informations
+Engagement minimum : 12 mois. Aucune commission ni frais cachés.
 
-- Prestataire : Bristan Farre, webdesigner freelance et consultant SEO
-- Zone : France (artisans et indépendants locaux)
-- Contact : https://no-web.fr/#contact
-- Engagement minimum : 12 mois
-- Aucun frais de création — paiement uniquement par abonnement mensuel
+## Pourquoi choisir No Web
+
+En résumé, le point clé à retenir est : No Web supprime la barrière financière de la création de site en proposant un abonnement tout-inclus sans investissement initial. L'avantage principal réside dans la rapidité (48h de livraison) et la tranquillité (aucune compétence technique requise côté client).
+
+## Pages du site
+
+- [Accueil — présentation et offres](https://no-web.fr/)
+- [Mentions légales](https://no-web.fr/mentions-legales.html)
+- [Contact et demande de devis](https://no-web.fr/#contact)
+- [Voir les formules](https://no-web.fr/#offres)
+- [Avis clients](https://no-web.fr/#avis)
+- [FAQ](https://no-web.fr/#faq)
+
+## Informations légales
+
+- Prestataire : Bristan Farre, auto-entrepreneur
+- SIRET : 920 337 524 00010
+- Adresse : 14 rue Marcel Sembat, 42100 Saint-Étienne
+- Contact : bristanfarre42@gmail.com
+- Site : https://no-web.fr

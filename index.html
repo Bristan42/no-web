@@ -940,6 +940,112 @@
       .hero-preview { margin-top: 28px; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://no-web.fr/#organization",
+        "name": "No Web",
+        "description": "Agence web freelance à Saint-Étienne spécialisée dans la création de sites internet professionnels pour artisans et indépendants, sans frais de création, livrés en 48h.",
+        "url": "https://no-web.fr",
+        "logo": "https://no-web.fr/bristan.webp",
+        "telephone": "+33000000000",
+        "email": "bristanfarre42@gmail.com",
+        "founder": {
+          "@type": "Person",
+          "name": "Bristan Farre",
+          "jobTitle": "Webdesigner & Consultant SEO freelance"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "14 rue Marcel Sembat",
+          "addressLocality": "Saint-Étienne",
+          "postalCode": "42100",
+          "addressCountry": "FR"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.4397,
+            "longitude": 4.3872
+          },
+          "geoRadius": "80000"
+        },
+        "priceRange": "€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Virement bancaire, prélèvement",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+          "https://github.com/Bristan42"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://no-web.fr/#website",
+        "url": "https://no-web.fr",
+        "name": "No Web",
+        "publisher": { "@id": "https://no-web.fr/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://no-web.fr/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Combien coûte la création d'un site internet avec No Web ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Avec No Web, la création du site est 100 % gratuite. Vous payez uniquement un abonnement mensuel à partir de 150 €/mois HT qui inclut l'hébergement, la sécurité et les modifications illimitées."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "En combien de temps mon site est-il livré ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Votre site internet professionnel est livré en 48 heures après validation du brief et des contenus."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la zone d'intervention de No Web ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No Web est basée à Saint-Étienne (Loire, 42) et intervient principalement pour les artisans et indépendants de la Loire et de la région Auvergne-Rhône-Alpes, ainsi que sur toute la France en télétravail."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je modifier mon site après livraison ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, les modifications sont illimitées et s'effectuent directement par WhatsApp. No Web s'engage à traiter chaque demande sous 24 heures."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Offer",
+        "@id": "https://no-web.fr/#offre-essentiel",
+        "name": "Formule Essentiel",
+        "description": "Site internet professionnel jusqu'à 5 pages, hébergement et sécurité inclus, modifications illimitées.",
+        "price": "150",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "150",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1M",
+          "unitText": "mois HT"
+        },
+        "seller": { "@id": "https://no-web.fr/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
