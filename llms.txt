@@ -4,9 +4,9 @@ Webdesigner freelance proposant la création de sites internet professionnels sa
 
 ## Services
 
-- [Accueil et présentation](https://un-webdesigner.fr/)
-- [Tarifs et formules d'abonnement](https://un-webdesigner.fr/#offres)
-- [Contact et demande de site gratuit](https://un-webdesigner.fr/#contact)
+- [Accueil et présentation](https://no-web.fr/)
+- [Tarifs et formules d'abonnement](https://no-web.fr/#offres)
+- [Contact et demande de site gratuit](https://no-web.fr/#contact)
 
 ## Formules
 
@@ -18,6 +18,6 @@ Webdesigner freelance proposant la création de sites internet professionnels sa
 
 - Prestataire : Bristan Farre, webdesigner freelance et consultant SEO
 - Zone : France (artisans et indépendants locaux)
-- Contact : https://un-webdesigner.fr/#contact
+- Contact : https://no-web.fr/#contact
 - Engagement minimum : 12 mois
 - Aucun frais de création — paiement uniquement par abonnement mensuel
