@@ -402,14 +402,15 @@
       position: relative; overflow: hidden;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
-    .plan:hover { transform: translateY(-4px); border-color: var(--border-h); }
+    .plan:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
     .plan.featured {
       border-color: rgba(139,92,246,0.55);
       background: rgba(139,92,246,0.06);
       transform: translateY(-10px);
       box-shadow: 0 24px 64px rgba(139,92,246,0.18);
     }
-    .plan.featured:hover { transform: translateY(-14px); box-shadow: 0 32px 80px rgba(139,92,246,0.25); }
+    .plan.featured:hover { transform: translateY(-16px); box-shadow: 0 32px 80px rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.8); }
+    .plan.gold:hover { border-color: rgba(212,175,55,0.6); box-shadow: 0 20px 50px rgba(212,175,55,0.15); }
     .plan-featured-glow {
       position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
       width: 260px; height: 130px;
@@ -1231,6 +1232,69 @@
   </div>
 
   <!-- DEVICE SHOWCASE -->
+  <div class="pricing-wrapper" id="offres">
+    <div class="pricing-inner">
+      <div class="section-label reveal">Tarifs</div>
+      <h2 class="section-h2 reveal d1">Trois formules.<br>Pas de surprise.</h2>
+      <p class="section-body reveal d2">Choisissez selon vos besoins. Vous pouvez changer de formule à tout moment.</p>
+      <div class="pricing-grid">
+
+        <!-- VISIBLE -->
+        <div class="plan reveal d1">
+          <div class="plan-badge-slot"></div>
+          <div class="plan-tag">Visible</div>
+          <div class="plan-headline">Site professionnel clé en main</div>
+          <div class="plan-price">200 <sub>€/mois HT</sub></div>
+          <hr class="plan-sep">
+          <div class="plan-items">
+            <span>Fiche Google optimisée</span>
+            <span>Cybersécurité et hébergement compris</span>
+            <span>Bilan trimestriel : visites, positions, appels et formulaires reçus</span>
+          </div>
+          <a href="#contact" class="plan-btn">DÉMARRER</a>
+        </div>
+
+        <!-- PREMIER -->
+        <div class="plan featured reveal d2">
+          <div class="plan-featured-glow"></div>
+          <div class="plan-badge-slot"><div class="plan-badge">⭐ Le plus choisi</div></div>
+          <div class="plan-tag">Premier</div>
+          <div class="plan-headline">Devenez le numéro&nbsp;1 de votre ville</div>
+          <div class="plan-price">500 <sub>€/mois HT</sub></div>
+          <div class="plan-inclut" style="color:#A78BFA;border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.06);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Inclut le Pack Visible
+          </div>
+          <hr class="plan-sep">
+          <div class="plan-items">
+            <span>Stratégie d'articles ciblés</span>
+            <span>Recommandations de sites partenaires</span>
+          </div>
+          <a href="#contact" class="plan-btn">DÉMARRER</a>
+        </div>
+
+        <!-- DOMINANT -->
+        <div class="plan gold reveal d3">
+          <div class="plan-badge-slot"></div>
+          <div class="plan-tag">Dominant</div>
+          <div class="plan-headline">Dominez la 1ère place en France</div>
+          <div class="plan-price">Sur <sub>devis</sub></div>
+          <div class="plan-inclut" style="color:#D4AF37;border-color:rgba(212,175,55,.2);background:rgba(212,175,55,.06);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Inclut les Packs Visible &amp; Premier
+          </div>
+          <hr class="plan-sep">
+          <div class="plan-items">
+            <span>Médias nationaux</span>
+            <span>Réseau de sites exclusifs</span>
+          </div>
+          <a href="#contact" class="plan-btn">OBTENIR UN DEVIS</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <div class="process-wrapper">
     <div class="process-inner">
       <div class="section-label reveal">Comment ça marche</div>
@@ -1424,70 +1488,6 @@
   </div>
 
 
-  <div class="pricing-wrapper" id="offres">
-    <div class="pricing-inner">
-      <div class="section-label reveal">Tarifs</div>
-      <h2 class="section-h2 reveal d1">Trois formules.<br>Pas de surprise.</h2>
-      <p class="section-body reveal d2">Choisissez selon vos besoins. Vous pouvez changer de formule à tout moment.</p>
-      <div class="pricing-grid">
-
-        <!-- VISIBLE -->
-        <div class="plan reveal d1">
-          <div class="plan-badge-slot"></div>
-          <div class="plan-tag">Visible</div>
-          <div class="plan-headline">Site professionnel clé en main</div>
-          <div class="plan-price">200 <sub>€/mois HT</sub></div>
-          <hr class="plan-sep">
-          <div class="plan-items">
-            <span>Fiche Google optimisée</span>
-            <span>Cybersécurité et hébergement compris</span>
-            <span>Bilan trimestriel : visites, positions, appels et formulaires reçus</span>
-          </div>
-          <a href="#contact" class="plan-btn">DÉMARRER</a>
-        </div>
-
-        <!-- PREMIER -->
-        <div class="plan featured reveal d2">
-          <div class="plan-featured-glow"></div>
-          <div class="plan-badge-slot"><div class="plan-badge">⭐ Le plus choisi</div></div>
-          <div class="plan-tag">Premier</div>
-          <div class="plan-headline">Devenez le numéro&nbsp;1 de votre ville</div>
-          <div class="plan-price">500 <sub>€/mois HT</sub></div>
-          <div class="plan-inclut" style="color:#A78BFA;border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.06);">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Inclut le Pack Visible
-          </div>
-          <hr class="plan-sep">
-          <div class="plan-items">
-            <span>Stratégie d'articles ciblés</span>
-            <span>Recommandations de sites partenaires</span>
-          </div>
-          <a href="#contact" class="plan-btn">DÉMARRER</a>
-        </div>
-
-        <!-- DOMINANT -->
-        <div class="plan gold reveal d3">
-          <div class="plan-badge-slot"></div>
-          <div class="plan-tag">Dominant</div>
-          <div class="plan-headline">Dominez la 1ère place en France</div>
-          <div class="plan-price">Sur <sub>devis</sub></div>
-          <div class="plan-inclut" style="color:#D4AF37;border-color:rgba(212,175,55,.2);background:rgba(212,175,55,.06);">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Inclut les Packs Visible &amp; Premier
-          </div>
-          <hr class="plan-sep">
-          <div class="plan-items">
-            <span>Médias nationaux</span>
-            <span>Réseau de sites exclusifs</span>
-          </div>
-          <a href="#contact" class="plan-btn">OBTENIR UN DEVIS</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- PROCESS -->
 
 
   <!-- CONTACT -->
