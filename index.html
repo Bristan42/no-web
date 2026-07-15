@@ -1405,7 +1405,12 @@
         <div class="plan reveal d1">
           <div class="plan-tag">Visible</div>
           <div class="plan-price">150 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">Site professionnel clé en main et fiche Google optimisée. Vos clients vous trouvent dès qu'ils vous cherchent, et on fait le point chaque trimestre sur vos visites, appels et formulaires reçus. Cybersécurité et hébergement compris.</p>
+          <p class="plan-desc">
+            <strong>Site professionnel clé en main</strong> et <strong>fiche Google optimisée.</strong><br><br>
+            Vos clients vous trouvent dès qu'ils vous cherchent.<br><br>
+            On fait le point <strong>chaque trimestre</strong> sur vos visites, appels et formulaires reçus.<br><br>
+            <strong>Cybersécurité et hébergement compris.</strong>
+          </p>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
@@ -1414,8 +1419,16 @@
           <div class="plan-featured-glow"></div>
           <div class="plan-tag">Premier · Le plus choisi</div>
           <div class="plan-price">400 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">Devenez le numéro 1 de votre ville. On propulse votre visibilité locale pour que chaque recherche Google dans votre secteur finisse chez vous.</p>
-          <p style="font-size:12px;color:var(--text-3);margin-top:-4px;margin-bottom:16px;">Inclut le Pack Visible</p>
+          <ul style="list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:6px;">
+            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-2);font-weight:600;">
+              <svg style="width:15px;height:15px;flex-shrink:0;color:#A78BFA;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Inclut le Pack Visible
+            </li>
+          </ul>
+          <p class="plan-desc">
+            Devenez le <strong>numéro 1 de votre ville.</strong><br><br>
+            On propulse votre visibilité locale pour que <strong>chaque recherche Google dans votre secteur finisse chez vous.</strong>
+          </p>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
@@ -1423,8 +1436,15 @@
         <div class="plan gold reveal d3">
           <div class="plan-tag">Dominant</div>
           <div class="plan-price">Sur <sub>devis</sub></div>
-          <p class="plan-desc">Visibilité nationale pour que votre entreprise devienne la référence incontournable de votre secteur dans toute la France.</p>
-          <p style="font-size:12px;color:var(--text-3);margin-top:-4px;margin-bottom:16px;">Inclut les Packs Visible &amp; Premier</p>
+          <ul style="list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:6px;">
+            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-2);font-weight:600;">
+              <svg style="width:15px;height:15px;flex-shrink:0;color:#D4AF37;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Inclut les Packs Visible &amp; Premier
+            </li>
+          </ul>
+          <p class="plan-desc">
+            <strong>Visibilité nationale</strong> pour que votre entreprise devienne <strong>la référence incontournable de votre secteur</strong> dans toute la France.
+          </p>
           <a href="#contact" class="plan-btn">NOUS CONTACTER</a>
         </div>
 
@@ -1460,8 +1480,12 @@
             <input type="text" name="nom" required placeholder="Jean Dupont">
           </div>
           <div style="margin-bottom:12px;">
-            <label>Entreprise & métier</label>
-            <input type="text" name="entreprise" required placeholder="Dupont Électricité — Électricien">
+            <label>Votre métier</label>
+            <input type="text" name="metier" required placeholder="Électricien, Plombier, Menuisier…">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="jean@dupont-electricite.fr">
           </div>
           <div style="margin-bottom:12px;">
             <label>Téléphone</label>
@@ -1471,7 +1495,7 @@
             <label for="formule">Formule souhaitée</label>
             <select id="formule" name="formule" aria-label="Formule souhaitée">
               <option>Visible — 150 €/mois</option>
-              <option>Premier — 400 €/mois</option>
+              <option selected>Premier — 400 €/mois</option>
               <option>Dominant — Sur devis</option>
             </select>
           </div>
