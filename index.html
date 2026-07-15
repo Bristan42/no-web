@@ -416,14 +416,17 @@
       background: radial-gradient(ellipse, rgba(139,92,246,0.35) 0%, transparent 70%);
       pointer-events: none;
     }
-    /* Badge "Le plus choisi" */
+    /* Zone badge — hauteur réservée sur toutes les cartes pour aligner */
+    .plan-badge-slot {
+      height: 32px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
     .plan-badge {
       display: inline-flex; align-items: center; gap: 5px;
       background: linear-gradient(135deg, #7c3aed, #6366f1);
       color: #fff; font-size: 10px; font-weight: 700;
       letter-spacing: .1em; text-transform: uppercase;
       padding: 5px 12px; border-radius: 20px;
-      margin-bottom: 20px; width: fit-content;
       box-shadow: 0 4px 16px rgba(124,58,237,0.4);
     }
     /* Nom du pack */
@@ -432,9 +435,11 @@
       color: var(--text-3); margin-bottom: 14px;
     }
     .plan.gold .plan-tag { color: #D4AF37; }
-    /* Headline — promesse principale */
+    /* Headline — promesse principale, hauteur fixe pour aligner les 3 cartes */
     .plan-headline {
-      font-size: 20px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 18px;
+      font-size: 19px; font-weight: 800; color: #fff; line-height: 1.25;
+      margin-bottom: 18px; min-height: 3em;
+      display: flex; align-items: center; justify-content: center;
     }
     .plan.featured .plan-headline { background: linear-gradient(90deg, #c4b5fd, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .plan.gold .plan-headline { background: linear-gradient(90deg, #F5D060, #C9952A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -1428,6 +1433,7 @@
 
         <!-- VISIBLE -->
         <div class="plan reveal d1">
+          <div class="plan-badge-slot"></div>
           <div class="plan-tag">Visible</div>
           <div class="plan-headline">Site professionnel clé en main</div>
           <div class="plan-price">200 <sub>€/mois HT</sub></div>
@@ -1443,7 +1449,7 @@
         <!-- PREMIER -->
         <div class="plan featured reveal d2">
           <div class="plan-featured-glow"></div>
-          <div class="plan-badge">⭐ Le plus choisi</div>
+          <div class="plan-badge-slot"><div class="plan-badge">⭐ Le plus choisi</div></div>
           <div class="plan-tag">Premier</div>
           <div class="plan-headline">Devenez le numéro&nbsp;1 de votre ville</div>
           <div class="plan-price">500 <sub>€/mois HT</sub></div>
@@ -1461,6 +1467,7 @@
 
         <!-- DOMINANT -->
         <div class="plan gold reveal d3">
+          <div class="plan-badge-slot"></div>
           <div class="plan-tag">Dominant</div>
           <div class="plan-headline">Dominez la 1ère place en France</div>
           <div class="plan-price">Sur <sub>devis</sub></div>
