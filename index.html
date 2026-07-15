@@ -427,6 +427,11 @@
     .plan-desc p:last-child { margin-bottom: 0; }
     .plan-inclut { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--text-3); margin: 0 0 20px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
     .plan-inclut svg { flex-shrink: 0; }
+    .plan-list { flex: 1; margin: 0 0 20px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--text-2); line-height: 1.5; }
+    .plan-list li { display: flex; align-items: flex-start; gap: 8px; }
+    .plan-list li::before { content: ""; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 5px; }
+    .plan.featured .plan-list li::before { background: #A78BFA; }
+    .plan.gold .plan-list li::before { background: #D4AF37; }
     .plan hr { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
     .plan ul { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
     .plan li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
@@ -1408,12 +1413,13 @@
         <!-- VISIBLE -->
         <div class="plan reveal d1">
           <div class="plan-tag">Visible</div>
-          <div class="plan-price">150 <sub>€/mois HT</sub></div>
-          <div class="plan-desc" style="margin-top:20px;">
-            <p><strong>Votre présence en ligne, clé en main.</strong></p>
-            <p>Site pro livré en 48h, fiche Google optimisée, hébergement et cybersécurité inclus.</p>
-            <p>Tous les 3 mois, un bilan chiffré : <strong>visites, appels et contacts reçus.</strong></p>
-          </div>
+          <div class="plan-price">200 <sub>€/mois HT</sub></div>
+          <ul class="plan-list" style="margin-top:20px;">
+            <li>Site professionnel clé en main</li>
+            <li>Fiche Google optimisée</li>
+            <li>Cybersécurité et hébergement compris</li>
+            <li>Bilan trimestriel : visites, positions, appels et formulaires reçus</li>
+          </ul>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
@@ -1421,15 +1427,16 @@
         <div class="plan featured reveal d2">
           <div class="plan-featured-glow"></div>
           <div class="plan-tag">Premier · Le plus choisi</div>
-          <div class="plan-price">400 <sub>€/mois HT</sub></div>
+          <div class="plan-price">500 <sub>€/mois HT</sub></div>
           <div class="plan-inclut" style="margin-top:20px;color:#A78BFA;border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.06);">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Inclut le Pack Visible
           </div>
-          <div class="plan-desc">
-            <p><strong>La 1ère place Google. Dans votre ville. Pour votre métier.</strong></p>
-            <p>Stratégie de liens et contenu ciblé — pour que vos concurrents regardent passer vos clients.</p>
-          </div>
+          <ul class="plan-list">
+            <li>Devenez le numéro 1 de votre ville</li>
+            <li>Stratégie d'articles ciblés</li>
+            <li>Recommandations de sites partenaires</li>
+          </ul>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
@@ -1441,10 +1448,11 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Inclut les Packs Visible &amp; Premier
           </div>
-          <div class="plan-desc">
-            <p><strong>Devenez le numéro 1 de France.</strong></p>
-            <p>Stratégie nationale multi-mots-clés, sur mesure selon les opportunités de votre marché.</p>
-          </div>
+          <ul class="plan-list">
+            <li>Dominez la 1ère place en France</li>
+            <li>Médias nationaux</li>
+            <li>Réseau de sites exclusifs</li>
+          </ul>
           <a href="#contact" class="plan-btn">NOUS CONTACTER</a>
         </div>
 
@@ -1489,7 +1497,7 @@
           </div>
           <div style="margin-bottom:12px;">
             <label style="display:flex;align-items:center;gap:6px;">Message <span style="font-size:10px;font-weight:500;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;">Facultatif</span></label>
-            <textarea name="message" rows="3" placeholder="Ex : Je suis électricien à Lyon, mon site est vieux. J'aimerais savoir comment ça fonctionne." style="resize:vertical;"></textarea>
+            <textarea name="message" rows="3" placeholder="Ex : Je suis électricien à Lyon. J'aimerais refaire mon site : electricien-lyon.fr. Comment ça fonctionne ?" style="resize:vertical;"></textarea>
           </div>
           <div style="margin-bottom:12px;">
             <label for="formule">Formule souhaitée</label>
