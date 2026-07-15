@@ -395,54 +395,65 @@
 
     .plan {
       border: 1px solid var(--border);
-      border-radius: 16px; padding: 32px;
+      border-radius: 20px; padding: 32px;
       background: var(--bg-card);
       display: flex; flex-direction: column;
       position: relative; overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
-    .plan:hover { transform: translateY(-3px); border-color: var(--border-h); }
+    .plan:hover { transform: translateY(-4px); border-color: var(--border-h); }
     .plan.featured {
-      border-color: rgba(124,58,237,0.4);
-      background: rgba(124,58,237,0.05);
+      border-color: rgba(139,92,246,0.55);
+      background: rgba(139,92,246,0.06);
+      transform: translateY(-10px);
+      box-shadow: 0 24px 64px rgba(139,92,246,0.18);
     }
-    .plan.featured:hover { border-color: rgba(124,58,237,0.7); }
+    .plan.featured:hover { transform: translateY(-14px); box-shadow: 0 32px 80px rgba(139,92,246,0.25); }
     .plan-featured-glow {
-      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 100px;
-      background: radial-gradient(ellipse, rgba(124,58,237,0.3) 0%, transparent 70%);
+      position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 260px; height: 130px;
+      background: radial-gradient(ellipse, rgba(139,92,246,0.35) 0%, transparent 70%);
       pointer-events: none;
     }
+    /* Badge "Le plus choisi" */
+    .plan-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: linear-gradient(135deg, #7c3aed, #6366f1);
+      color: #fff; font-size: 10px; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 20px;
+      margin-bottom: 20px; width: fit-content;
+      box-shadow: 0 4px 16px rgba(124,58,237,0.4);
+    }
+    /* Nom du pack */
     .plan-tag {
       font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--text-3); margin-bottom: 20px;
+      color: var(--text-3); margin-bottom: 14px;
     }
-    .plan.featured .plan-tag { color: #A78BFA; }
+    .plan.gold .plan-tag { color: #D4AF37; }
+    /* Headline — promesse principale */
+    .plan-headline {
+      font-size: 20px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 18px;
+    }
+    .plan.featured .plan-headline { background: linear-gradient(90deg, #c4b5fd, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .plan.gold .plan-headline { background: linear-gradient(90deg, #F5D060, #C9952A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    /* Prix — sous la promesse */
     .plan-price {
-      font-size: 40px; font-weight: 700; letter-spacing: -1.5px; line-height: 1;
+      font-size: 38px; font-weight: 700; letter-spacing: -1.5px; line-height: 1; margin-bottom: 24px;
     }
-    .plan-price sub { font-size: 15px; font-weight: 400; color: var(--text-2); vertical-align: middle; letter-spacing: 0; }
-    .plan-desc { margin: 0; flex: 1; font-size: 14px; color: var(--text-2); line-height: 1.7; }
-    .plan-desc p { margin: 0 0 12px; }
-    .plan-desc p:last-child { margin-bottom: 0; }
+    .plan-price sub { font-size: 14px; font-weight: 400; color: var(--text-2); vertical-align: middle; letter-spacing: 0; }
+    /* Badge inclut */
     .plan-inclut { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--text-3); margin: 0 0 20px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
     .plan-inclut svg { flex-shrink: 0; }
-    .plan-list { flex: 1; margin: 0 0 20px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .plan-list li { font-size: 13px; color: var(--text-2); line-height: 1.5; padding-left: 2px; }
-    .plan-list li.plan-headline { font-size: 17px; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 6px; padding-left: 0; }
-    .plan.featured .plan-list li.plan-headline { background: linear-gradient(90deg, #a78bfa, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .plan.gold .plan-list li.plan-headline { background: linear-gradient(90deg, #F5D060, #C9952A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .plan-list li.plan-sub::before { content: "✓  "; font-size: 11px; font-weight: 700; opacity: .5; }
-    .plan hr { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
-    .plan ul { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-    .plan li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
-    .check-icon {
-      width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px;
-      color: #A78BFA;
-    }
+    /* Séparateur */
+    .plan-sep { border: none; border-top: 1px solid var(--border); margin: 0 0 16px; }
+    /* Items */
+    .plan-items { flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .plan-items span { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+    /* Bouton */
     .plan-btn {
-      margin-top: 28px; display: block; text-align: center;
-      padding: 12px; border-radius: 10px;
+      display: block; text-align: center;
+      padding: 13px; border-radius: 10px;
       font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
       border: 1px solid var(--border-h); background: transparent; color: var(--text);
       cursor: pointer; text-decoration: none;
@@ -450,10 +461,13 @@
     }
     .plan-btn:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.2); }
     .plan.featured .plan-btn {
-      background: var(--grad); border-color: transparent; color: #fff;
-      box-shadow: 0 0 20px rgba(124,58,237,0.4);
+      background: linear-gradient(135deg, #7c3aed, #6366f1); border-color: transparent; color: #fff;
+      box-shadow: 0 0 24px rgba(124,58,237,0.45); font-size: 14px; padding: 15px;
     }
     .plan.featured .plan-btn:hover { opacity: 0.9; }
+    .plan-desc { margin: 0; flex: 1; font-size: 14px; color: var(--text-2); line-height: 1.7; }
+    .plan hr { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
+    .check-icon { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; color: #A78BFA; }
     /* ── Pack Gold ── */
     .plan.gold { border-color: rgba(212,175,55,0.45); background: rgba(212,175,55,0.04); }
     .plan.gold .plan-tag { color: #D4AF37; }
@@ -1410,51 +1424,54 @@
       <p class="section-body reveal d2">Choisissez selon vos besoins. Vous pouvez changer de formule à tout moment.</p>
       <div class="pricing-grid">
 
-        <!-- ESSENTIEL -->
         <!-- VISIBLE -->
         <div class="plan reveal d1">
           <div class="plan-tag">Visible</div>
+          <div class="plan-headline">Site professionnel clé en main</div>
           <div class="plan-price">200 <sub>€/mois HT</sub></div>
-          <ul class="plan-list" style="margin-top:20px;">
-            <li class="plan-headline">Site professionnel clé en main</li>
-            <li class="plan-sub">Fiche Google optimisée</li>
-            <li class="plan-sub">Cybersécurité et hébergement compris</li>
-            <li class="plan-sub">Bilan trimestriel : visites, positions, appels et formulaires reçus</li>
-          </ul>
+          <hr class="plan-sep">
+          <div class="plan-items">
+            <span>Fiche Google optimisée</span>
+            <span>Cybersécurité et hébergement compris</span>
+            <span>Bilan trimestriel : visites, positions, appels et formulaires reçus</span>
+          </div>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
         <!-- PREMIER -->
         <div class="plan featured reveal d2">
           <div class="plan-featured-glow"></div>
-          <div class="plan-tag">Premier · Le plus choisi</div>
+          <div class="plan-badge">⭐ Le plus choisi</div>
+          <div class="plan-tag">Premier</div>
+          <div class="plan-headline">Devenez le numéro&nbsp;1 de votre ville</div>
           <div class="plan-price">500 <sub>€/mois HT</sub></div>
-          <div class="plan-inclut" style="margin-top:20px;color:#A78BFA;border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.06);">
+          <div class="plan-inclut" style="color:#A78BFA;border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.06);">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Inclut le Pack Visible
           </div>
-          <ul class="plan-list">
-            <li class="plan-headline">Devenez le numéro 1 de votre ville</li>
-            <li class="plan-sub">Stratégie d'articles ciblés</li>
-            <li class="plan-sub">Recommandations de sites partenaires</li>
-          </ul>
+          <hr class="plan-sep">
+          <div class="plan-items">
+            <span>Stratégie d'articles ciblés</span>
+            <span>Recommandations de sites partenaires</span>
+          </div>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
         <!-- DOMINANT -->
         <div class="plan gold reveal d3">
           <div class="plan-tag">Dominant</div>
+          <div class="plan-headline">Dominez la 1ère place en France</div>
           <div class="plan-price">Sur <sub>devis</sub></div>
-          <div class="plan-inclut" style="margin-top:20px;color:#D4AF37;border-color:rgba(212,175,55,.2);background:rgba(212,175,55,.06);">
+          <div class="plan-inclut" style="color:#D4AF37;border-color:rgba(212,175,55,.2);background:rgba(212,175,55,.06);">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Inclut les Packs Visible &amp; Premier
           </div>
-          <ul class="plan-list">
-            <li class="plan-headline">Dominez la 1ère place en France</li>
-            <li class="plan-sub">Médias nationaux</li>
-            <li class="plan-sub">Réseau de sites exclusifs</li>
-          </ul>
-          <a href="#contact" class="plan-btn">NOUS CONTACTER</a>
+          <hr class="plan-sep">
+          <div class="plan-items">
+            <span>Médias nationaux</span>
+            <span>Réseau de sites exclusifs</span>
+          </div>
+          <a href="#contact" class="plan-btn">OBTENIR UN DEVIS</a>
         </div>
 
       </div>
