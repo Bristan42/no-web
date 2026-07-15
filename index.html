@@ -427,11 +427,12 @@
     .plan-desc p:last-child { margin-bottom: 0; }
     .plan-inclut { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--text-3); margin: 0 0 20px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
     .plan-inclut svg { flex-shrink: 0; }
-    .plan-list { flex: 1; margin: 0 0 20px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--text-2); line-height: 1.5; }
-    .plan-list li { display: flex; align-items: baseline; gap: 8px; }
-    .plan-list li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #ffffff; flex-shrink: 0; position: relative; top: -1px; }
-    .plan.featured .plan-list li::before { background: #ffffff; }
-    .plan.gold .plan-list li::before { background: #ffffff; }
+    .plan-list { flex: 1; margin: 0 0 20px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .plan-list li { font-size: 13px; color: var(--text-2); line-height: 1.5; padding-left: 2px; }
+    .plan-list li.plan-headline { font-size: 17px; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 6px; padding-left: 0; }
+    .plan.featured .plan-list li.plan-headline { background: linear-gradient(90deg, #a78bfa, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .plan.gold .plan-list li.plan-headline { background: linear-gradient(90deg, #F5D060, #C9952A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .plan-list li.plan-sub::before { content: "✓  "; font-size: 11px; font-weight: 700; opacity: .5; }
     .plan hr { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
     .plan ul { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
     .plan li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
@@ -1415,10 +1416,10 @@
           <div class="plan-tag">Visible</div>
           <div class="plan-price">200 <sub>€/mois HT</sub></div>
           <ul class="plan-list" style="margin-top:20px;">
-            <li>Site professionnel clé en main</li>
-            <li>Fiche Google optimisée</li>
-            <li>Cybersécurité et hébergement compris</li>
-            <li>Bilan trimestriel : visites, positions, appels et formulaires reçus</li>
+            <li class="plan-sub">Site professionnel clé en main</li>
+            <li class="plan-sub">Fiche Google optimisée</li>
+            <li class="plan-sub">Cybersécurité et hébergement compris</li>
+            <li class="plan-sub">Bilan trimestriel : visites, positions, appels et formulaires reçus</li>
           </ul>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
@@ -1433,9 +1434,9 @@
             Inclut le Pack Visible
           </div>
           <ul class="plan-list">
-            <li>Devenez le numéro 1 de votre ville</li>
-            <li>Stratégie d'articles ciblés</li>
-            <li>Recommandations de sites partenaires</li>
+            <li class="plan-headline">Devenez le numéro 1 de votre ville</li>
+            <li class="plan-sub">Stratégie d'articles ciblés</li>
+            <li class="plan-sub">Recommandations de sites partenaires</li>
           </ul>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
@@ -1449,9 +1450,9 @@
             Inclut les Packs Visible &amp; Premier
           </div>
           <ul class="plan-list">
-            <li>Dominez la 1ère place en France</li>
-            <li>Médias nationaux</li>
-            <li>Réseau de sites exclusifs</li>
+            <li class="plan-headline">Dominez la 1ère place en France</li>
+            <li class="plan-sub">Médias nationaux</li>
+            <li class="plan-sub">Réseau de sites exclusifs</li>
           </ul>
           <a href="#contact" class="plan-btn">NOUS CONTACTER</a>
         </div>
