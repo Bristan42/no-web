@@ -422,7 +422,11 @@
       font-size: 40px; font-weight: 700; letter-spacing: -1.5px; line-height: 1;
     }
     .plan-price sub { font-size: 15px; font-weight: 400; color: var(--text-2); vertical-align: middle; letter-spacing: 0; }
-    .plan-desc { margin: 12px 0 24px; font-size: 13px; color: var(--text-2); line-height: 1.6; }
+    .plan-desc { margin: 0; flex: 1; font-size: 14px; color: var(--text-2); line-height: 1.7; }
+    .plan-desc p { margin: 0 0 12px; }
+    .plan-desc p:last-child { margin-bottom: 0; }
+    .plan-inclut { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--text-3); margin: 0 0 20px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
+    .plan-inclut svg { flex-shrink: 0; }
     .plan hr { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
     .plan ul { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
     .plan li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
@@ -1405,12 +1409,12 @@
         <div class="plan reveal d1">
           <div class="plan-tag">Visible</div>
           <div class="plan-price">150 <sub>€/mois HT</sub></div>
-          <p class="plan-desc">
-            <strong>Site professionnel clé en main</strong> et <strong>fiche Google optimisée.</strong><br><br>
-            Vos clients vous trouvent dès qu'ils vous cherchent.<br><br>
-            On fait le point <strong>chaque trimestre</strong> sur vos visites, appels et formulaires reçus.<br><br>
-            <strong>Cybersécurité et hébergement compris.</strong>
-          </p>
+          <div class="plan-desc" style="margin-top:20px;">
+            <p><strong>Site professionnel clé en main</strong> et <strong>fiche Google optimisée.</strong></p>
+            <p>Vos clients vous trouvent dès qu'ils vous cherchent.</p>
+            <p>Bilan trimestriel sur vos <strong>visites, appels et formulaires</strong> reçus.</p>
+            <p>Cybersécurité et hébergement compris.</p>
+          </div>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
@@ -1419,16 +1423,14 @@
           <div class="plan-featured-glow"></div>
           <div class="plan-tag">Premier · Le plus choisi</div>
           <div class="plan-price">400 <sub>€/mois HT</sub></div>
-          <ul style="list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:6px;">
-            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-2);font-weight:600;">
-              <svg style="width:15px;height:15px;flex-shrink:0;color:#A78BFA;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Inclut le Pack Visible
-            </li>
-          </ul>
-          <p class="plan-desc">
-            Devenez le <strong>numéro 1 de votre ville.</strong><br><br>
-            On propulse votre visibilité locale pour que <strong>chaque recherche Google dans votre secteur finisse chez vous.</strong>
-          </p>
+          <div class="plan-inclut" style="margin-top:20px;color:#A78BFA;border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.06);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Inclut le Pack Visible
+          </div>
+          <div class="plan-desc">
+            <p>Devenez le <strong>numéro 1 de votre ville.</strong></p>
+            <p>On propulse votre visibilité locale pour que <strong>chaque recherche Google dans votre secteur finisse chez vous.</strong></p>
+          </div>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
 
@@ -1436,15 +1438,14 @@
         <div class="plan gold reveal d3">
           <div class="plan-tag">Dominant</div>
           <div class="plan-price">Sur <sub>devis</sub></div>
-          <ul style="list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:6px;">
-            <li style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-2);font-weight:600;">
-              <svg style="width:15px;height:15px;flex-shrink:0;color:#D4AF37;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Inclut les Packs Visible &amp; Premier
-            </li>
-          </ul>
-          <p class="plan-desc">
-            <strong>Visibilité nationale</strong> pour que votre entreprise devienne <strong>la référence incontournable de votre secteur</strong> dans toute la France.
-          </p>
+          <div class="plan-inclut" style="margin-top:20px;color:#D4AF37;border-color:rgba(212,175,55,.2);background:rgba(212,175,55,.06);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Inclut les Packs Visible &amp; Premier
+          </div>
+          <div class="plan-desc">
+            <p><strong>Visibilité nationale</strong> pour que votre entreprise devienne <strong>la référence incontournable de votre secteur</strong> dans toute la France.</p>
+            <p>Stratégie sur mesure selon les opportunités de votre marché.</p>
+          </div>
           <a href="#contact" class="plan-btn">NOUS CONTACTER</a>
         </div>
 
@@ -1480,14 +1481,6 @@
             <input type="text" name="nom" required placeholder="Jean Dupont">
           </div>
           <div style="margin-bottom:12px;">
-            <label>Votre métier</label>
-            <input type="text" name="metier" required placeholder="Électricien, Plombier, Menuisier…">
-          </div>
-          <div style="margin-bottom:12px;">
-            <label>Email</label>
-            <input type="email" name="email" required placeholder="jean@dupont-electricite.fr">
-          </div>
-          <div style="margin-bottom:12px;">
             <label>Téléphone</label>
             <input type="tel" name="telephone" required placeholder="06 00 00 00 00">
           </div>
@@ -1498,6 +1491,22 @@
               <option selected>Premier — 400 €/mois</option>
               <option>Dominant — Sur devis</option>
             </select>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:flex;align-items:center;gap:6px;">Votre métier <span style="font-size:10px;font-weight:500;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;">Facultatif</span></label>
+            <input type="text" name="metier" placeholder="Électricien, Plombier, Menuisier…">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:flex;align-items:center;gap:6px;">Email <span style="font-size:10px;font-weight:500;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;">Facultatif</span></label>
+            <input type="email" name="email" placeholder="jean@dupont-electricite.fr">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:flex;align-items:center;gap:6px;">Votre site actuel <span style="font-size:10px;font-weight:500;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;">Facultatif</span></label>
+            <input type="url" name="site_actuel" placeholder="https://monsite.fr">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:flex;align-items:center;gap:6px;">Message <span style="font-size:10px;font-weight:500;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;">Facultatif</span></label>
+            <textarea name="message" rows="3" placeholder="Une question, une précision…" style="resize:vertical;"></textarea>
           </div>
           <button type="submit" class="form-submit" id="form-btn">Recevoir mon site gratuitement →</button>
           <div id="success-msg" class="success-msg">✓ Merci ! Je vous recontacte dans les 48h.</div>
