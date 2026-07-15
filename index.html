@@ -402,15 +402,15 @@
       position: relative; overflow: hidden;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
-    .plan:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+    .plan:hover { transform: translateY(-10px); border-color: rgba(255,255,255,0.2); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
     .plan.featured {
       border-color: rgba(139,92,246,0.55);
       background: rgba(139,92,246,0.06);
       transform: translateY(-10px);
       box-shadow: 0 24px 64px rgba(139,92,246,0.18);
     }
-    .plan.featured:hover { transform: translateY(-16px); box-shadow: 0 32px 80px rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.8); }
-    .plan.gold:hover { border-color: rgba(212,175,55,0.6); box-shadow: 0 20px 50px rgba(212,175,55,0.15); }
+    .plan.featured:hover { transform: translateY(-20px); box-shadow: 0 36px 80px rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.8); }
+    .plan.gold:hover { transform: translateY(-10px); border-color: rgba(212,175,55,0.6); box-shadow: 0 24px 60px rgba(212,175,55,0.18); }
     .plan-featured-glow {
       position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
       width: 260px; height: 130px;
@@ -456,7 +456,8 @@
     .plan-sep { border: none; border-top: 1px solid var(--border); margin: 0 0 16px; width: 100%; }
     /* Items */
     .plan-items { flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; width: 100%; }
-    .plan-items span { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+    .plan-items span { font-size: 13px; color: var(--text-2); line-height: 1.4; display: flex; align-items: center; gap: 9px; text-align: left; }
+    .plan-items span svg { flex-shrink: 0; }
     .plan-btn { width: 100%; }
     /* Bouton */
     .plan-btn {
@@ -1247,9 +1248,9 @@
           <div class="plan-price">200 <sub>€/mois HT</sub></div>
           <hr class="plan-sep">
           <div class="plan-items">
-            <span>Fiche Google optimisée</span>
-            <span>Cybersécurité et hébergement compris</span>
-            <span>Bilan trimestriel : visites, positions, appels et formulaires reçus</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fiche Google optimisée</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cybersécurité et hébergement compris</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Bilan trimestriel : visites, positions, appels et formulaires reçus</span>
           </div>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
@@ -1267,8 +1268,8 @@
           </div>
           <hr class="plan-sep">
           <div class="plan-items">
-            <span>Stratégie d'articles ciblés</span>
-            <span>Recommandations de sites partenaires</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(167,139,250,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Stratégie d'articles ciblés</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(167,139,250,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Boost via nos partenaires web</span>
           </div>
           <a href="#contact" class="plan-btn">DÉMARRER</a>
         </div>
@@ -1285,8 +1286,8 @@
           </div>
           <hr class="plan-sep">
           <div class="plan-items">
-            <span>Médias nationaux</span>
-            <span>Réseau de sites exclusifs</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(212,175,55,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Médias nationaux</span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(212,175,55,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Réseau de sites exclusifs</span>
           </div>
           <a href="#contact" class="plan-btn">OBTENIR UN DEVIS</a>
         </div>
