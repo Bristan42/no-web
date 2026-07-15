@@ -395,9 +395,10 @@
 
     .plan {
       border: 1px solid var(--border);
-      border-radius: 20px; padding: 32px;
+      border-radius: 20px; padding: 36px 32px;
       background: var(--bg-card);
       display: flex; flex-direction: column;
+      align-items: center; text-align: center;
       position: relative; overflow: hidden;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
@@ -443,13 +444,14 @@
     }
     .plan-price sub { font-size: 14px; font-weight: 400; color: var(--text-2); vertical-align: middle; letter-spacing: 0; }
     /* Badge inclut */
-    .plan-inclut { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--text-3); margin: 0 0 20px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
+    .plan-inclut { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 12px; font-weight: 700; color: var(--text-3); margin: 0 0 20px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); width: 100%; }
     .plan-inclut svg { flex-shrink: 0; }
     /* Séparateur */
-    .plan-sep { border: none; border-top: 1px solid var(--border); margin: 0 0 16px; }
+    .plan-sep { border: none; border-top: 1px solid var(--border); margin: 0 0 16px; width: 100%; }
     /* Items */
-    .plan-items { flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .plan-items { flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; width: 100%; }
     .plan-items span { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+    .plan-btn { width: 100%; }
     /* Bouton */
     .plan-btn {
       display: block; text-align: center;
