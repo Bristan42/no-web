@@ -52,7 +52,7 @@
           {
             "@type": "Question",
             "name": "Combien de temps dure la refonte ?",
-            "acceptedAnswer": { "@type": "Answer", "text": "La maquette de votre nouveau site est livrée sous 48h. Une fois validée, la mise en ligne prend 3 à 5 jours, redirections SEO incluses." }
+            "acceptedAnswer": { "@type": "Answer", "text": "La maquette est livrée sous 48h. Une fois validée, la mise en ligne du site prend 3 à 5 jours. La migration complète — hébergement, DNS, redirections 301 — peut prendre quelques jours supplémentaires selon votre prestataire actuel. Aucune coupure pendant la transition." }
           },
           {
             "@type": "Question",
@@ -182,14 +182,14 @@
     /* ── LAYOUT ── */
     main { position: relative; z-index: 1; padding-top: 60px; }
     .section { border-bottom: 1px solid var(--border); }
-    .inner { max-width: 860px; margin: 0 auto; padding: 100px 40px; }
-    .inner-wide { max-width: 1100px; margin: 0 auto; padding: 100px 40px; }
+    .inner { max-width: 860px; margin: 0 auto; padding: 80px 40px; }
+    .inner-wide { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
     .section-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 18px; }
     .section-h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
     .section-body { font-size: 16px; color: var(--text-2); line-height: 1.7; max-width: 600px; }
 
     /* ── HERO ── */
-    .hero { padding: 120px 40px 100px; text-align: center; position: relative; }
+    .hero { min-height: calc(100vh - 60px); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 40px; text-align: center; position: relative; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 6px 14px; margin-bottom: 28px; }
     .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
     .hero h1 { font-size: clamp(34px, 5vw, 58px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; }
@@ -311,8 +311,8 @@
     @media (max-width: 960px) { .nav-menu { display: none; } .nav-burger { display: block; } .nav-wa-btn { display: none; } }
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
-      .hero { padding: 100px 24px 72px; }
-      .inner, .inner-wide { padding: 72px 24px; }
+      .hero { padding: 60px 24px; min-height: auto; }
+      .inner, .inner-wide { padding: 56px 24px; }
       .problems-grid, .solution-grid, .migration-steps, .pricing-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .why-card { grid-template-columns: 1fr; }
@@ -419,7 +419,7 @@
   <section class="hero">
     <div class="hero-eyebrow"><span></span> Saint-Étienne · Loire (42)</div>
     <h1>Refonte de site internet<br>à <em>Saint-Étienne</em></h1>
-    <p class="hero-sub">Votre nouveau site pro livré en 48h — sans avance de frais.<br>Migration SEO sécurisée, 100/100 PageSpeed, modifications sur WhatsApp.</p>
+    <p class="hero-sub">Maquette livrée sous 48h — zéro frais au départ.<br>Migration SEO sécurisée, 100/100 PageSpeed, suivi WhatsApp inclus.</p>
     <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
     <p class="hero-note">Maquette offerte · Sans engagement · Réponse sous 48h</p>
   </section>
@@ -428,29 +428,29 @@
   <section class="section">
     <div class="inner-wide">
       <div class="section-label reveal">Le constat</div>
-      <h2 class="section-h2 reveal d1">Votre site actuel<br>vous coûte des clients</h2>
-      <p class="section-body reveal d2">Un site lent, invisible sur Google ou difficile à modifier, c'est un frein direct à votre chiffre d'affaires à Saint-Étienne et dans la Loire.</p>
+      <h2 class="section-h2 reveal d1">Votre site actuel vous coûte<br>des clients à Saint-Étienne</h2>
+      <p class="section-body reveal d2">Dans la Loire (42) comme partout en Rhône-Alpes, un site lent ou invisible sur Google, c'est un frein direct à votre chiffre d'affaires.</p>
       <div class="problems-grid">
         <div class="problem-card reveal d1">
           <div class="problem-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           </div>
-          <h3>Invisible sur Google</h3>
-          <p>Vos concurrents stéphanois apparaissent en premier. Vous perdez des clients qui ne savent même pas que vous existez.</p>
+          <h3>Invisible sur Google à Saint-Étienne</h3>
+          <p>Vos concurrents stéphanois apparaissent en premier sur les requêtes locales. Vous perdez des clients qui ne savent même pas que vous existez.</p>
         </div>
         <div class="problem-card reveal d2">
           <div class="problem-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3>Site trop lent</h3>
-          <p>Un site qui charge en plus de 3 secondes perd 50 % de ses visiteurs. Google vous pénalise, vos clients partent chez la concurrence.</p>
+          <h3>Site trop lent sur mobile</h3>
+          <p>Un site qui charge en plus de 3 secondes perd 50 % de ses visiteurs. Google vous pénalise dans le 42 comme ailleurs — vos clients partent chez la concurrence.</p>
         </div>
         <div class="problem-card reveal d3">
           <div class="problem-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3>Dépendance technique</h3>
-          <p>La moindre modification demande de contacter un prestataire, d'attendre des jours et de payer à chaque fois. Vous êtes bloqué.</p>
+          <h3>Prisonnier de votre prestataire</h3>
+          <p>La moindre modification demande de contacter une agence web, d'attendre des semaines et de payer à chaque fois. Vous êtes bloqué.</p>
         </div>
       </div>
     </div>
@@ -460,29 +460,29 @@
   <section class="section">
     <div class="inner-wide">
       <div class="section-label reveal">Notre réponse</div>
-      <h2 class="section-h2 reveal d1">Un site HTML pur, rapide<br>et 100 % géré pour vous</h2>
-      <p class="section-body reveal d2">Aucun WordPress, aucun plugin, aucune faille. Juste du code propre qui se charge en une fraction de seconde — et un humain qui répond sur WhatsApp.</p>
+      <h2 class="section-h2 reveal d1">Un site HTML pur, ultra-rapide<br>et 100 % géré pour vous</h2>
+      <p class="section-body reveal d2">Aucun WordPress, aucun plugin, aucune faille de sécurité. Du code propre qui se charge en une fraction de seconde — et un interlocuteur unique basé à Saint-Étienne.</p>
       <div class="solution-grid">
         <div class="solution-card reveal d1">
           <div class="solution-icon" style="background:rgba(56,189,248,0.12);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <h3>100/100 PageSpeed garanti</h3>
-          <p>Score parfait sur Google PageSpeed Insights. Votre site se charge en moins d'une seconde, sur mobile comme sur desktop.</p>
+          <p>Score parfait sur Google PageSpeed Insights. Votre site se charge en moins d'une seconde, sur mobile comme sur desktop — partout dans la Loire.</p>
         </div>
         <div class="solution-card reveal d2">
           <div class="solution-icon" style="background:rgba(167,139,250,0.12);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>Zéro frais au départ</h3>
-          <p>Pas de chèque de 3 000 € à signer. La refonte complète est incluse dans l'abonnement mensuel. Vous payez uniquement quand votre site est en ligne.</p>
+          <p>Pas de chèque de 3 000 € à signer à une agence web stéphanoise. La refonte complète est incluse dans l'abonnement — vous payez quand votre site est en ligne.</p>
         </div>
         <div class="solution-card reveal d3">
           <div class="solution-icon" style="background:rgba(37,211,102,0.12);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           </div>
-          <h3>Modifications sous 48h</h3>
-          <p>Un message WhatsApp suffit. Texte, photo, nouveau service — je m'en occupe dans les 48h. Sans ticket, sans attente, sans surcoût.</p>
+          <h3>1 modification par semaine incluse</h3>
+          <p>Un message WhatsApp suffit. Texte, photo, nouveau service — une demande par semaine, traitée sous 48h. Sans ticket, sans surcoût.</p>
         </div>
       </div>
     </div>
@@ -550,7 +550,7 @@
   <section class="section">
     <div class="inner-wide">
       <div class="section-label reveal">Modèle économique</div>
-      <h2 class="section-h2 reveal d1">Abonnement vs achat classique :<br>pourquoi c'est différent</h2>
+      <h2 class="section-h2 reveal d1">Abonnement No Web vs agence web<br>stéphanoise classique</h2>
       <div class="why-grid">
         <div class="why-card reveal d1">
           <div>
@@ -576,7 +576,7 @@
             </div>
             <div class="why-item">
               <svg class="why-item-icon" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <p>Modifications <strong>illimitées</strong> par WhatsApp, traitées sous 48h</p>
+              <p><strong>1 modification par semaine</strong> par WhatsApp, traitée sous 48h</p>
             </div>
             <div class="why-item">
               <svg class="why-item-icon" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -596,23 +596,23 @@
   <section class="section">
     <div class="inner-wide">
       <div class="section-label reveal">Migration SEO</div>
-      <h2 class="section-h2 reveal d1">Comment on protège<br>vos positions Google</h2>
-      <p class="section-body reveal d2">La peur n°1 d'une refonte : perdre le référencement que vous avez mis des années à construire. Voici notre protocole.</p>
+      <h2 class="section-h2 reveal d1">Migration SEO à Saint-Étienne :<br>comment on protège vos positions</h2>
+      <p class="section-body reveal d2">La peur n°1 lors d'une refonte : perdre le référencement local dans le 42 que vous avez mis des années à construire. Voici notre protocole, étape par étape.</p>
       <div class="migration-steps">
         <div class="migration-step reveal d1">
-          <div class="migration-step-num">Étape 01</div>
-          <h3>Audit de vos positions</h3>
-          <p>Avant toute intervention, j'identifie vos mots-clés actifs, vos pages stratégiques et vos backlinks à préserver. Rien n'est touché sans avoir été cartographié.</p>
+          <div class="migration-step-num">Étape 01 — Avant la refonte</div>
+          <h3>Audit complet de vos positions</h3>
+          <p>J'identifie vos mots-clés actifs sur Saint-Étienne et la Loire, vos pages stratégiques et vos backlinks à préserver. Rien n'est touché sans avoir été cartographié.</p>
         </div>
         <div class="migration-step reveal d2">
-          <div class="migration-step-num">Étape 02</div>
-          <h3>Plan de redirections 301</h3>
-          <p>Chaque ancienne URL est redirigée vers son équivalent sur le nouveau site. Google conserve l'historique complet. Vos positions ne disparaissent pas du jour au lendemain.</p>
+          <div class="migration-step-num">Étape 02 — À la mise en ligne</div>
+          <h3>Redirections 301 et transfert d'hébergement</h3>
+          <p>Chaque ancienne URL est redirigée vers son équivalent sur le nouveau site. Le transfert d'hébergement et la configuration DNS peuvent prendre quelques jours supplémentaires selon votre prestataire actuel — je vous accompagne à chaque étape.</p>
         </div>
         <div class="migration-step reveal d3">
-          <div class="migration-step-num">Étape 03</div>
-          <h3>Suivi post-migration</h3>
-          <p>Après la mise en ligne, je surveille vos positions pendant 30 jours et j'interviens immédiatement si une anomalie est détectée dans Google Search Console.</p>
+          <div class="migration-step-num">Étape 03 — Après la mise en ligne</div>
+          <h3>Suivi post-migration 30 jours</h3>
+          <p>Je surveille vos positions dans Google Search Console pendant 30 jours et j'interviens immédiatement si une anomalie est détectée. Votre référencement local à Saint-Étienne est protégé.</p>
         </div>
       </div>
     </div>
@@ -622,7 +622,7 @@
   <section class="section">
     <div class="inner">
       <div class="section-label reveal">Cible</div>
-      <h2 class="section-h2 reveal d1">Cette offre est faite pour vous<br>si vous êtes…</h2>
+      <h2 class="section-h2 reveal d1">Pour qui est cette offre de refonte<br>à Saint-Étienne et dans la Loire ?</h2>
       <div class="for-who-grid">
         <div class="for-who-item reveal d1">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -656,7 +656,7 @@
   <section class="section">
     <div class="inner">
       <div class="section-label reveal">Questions fréquentes</div>
-      <h2 class="section-h2 reveal d1">Tout savoir sur la refonte<br>de votre site internet</h2>
+      <h2 class="section-h2 reveal d1">FAQ — Refonte de site internet<br>à Saint-Étienne</h2>
       <div class="faq-list reveal d2">
         <div class="faq-item">
           <button class="faq-q">Vais-je perdre mes positions Google pendant la refonte ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
@@ -664,7 +664,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Combien de temps dure la refonte ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="faq-a">La maquette de votre nouveau site est livrée sous 48h. Une fois que vous l'avez validée, la mise en ligne prend 3 à 5 jours, redirections SEO incluses. Vous restez en ligne pendant toute la transition — aucune coupure.</div>
+          <div class="faq-a">La maquette de votre nouveau site est livrée sous 48h. Une fois validée, la mise en ligne du site prend 3 à 5 jours. La migration complète — transfert d'hébergement, configuration DNS, redirections 301 — peut prendre quelques jours supplémentaires selon votre prestataire actuel. Votre ancien site reste en ligne pendant toute la transition, sans aucune coupure.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Que se passe-t-il pour mes e-mails professionnels ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
