@@ -288,8 +288,10 @@
     .migration-step p { font-size: 13px; color: var(--text-2); line-height: 1.6; }
 
     /* ── MOCKUP ── */
-    .demo-wrap { position: relative; margin: 56px auto 32px; max-width: 680px; }
-    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+    .demo-wrap { margin: 56px auto 48px; max-width: 900px; }
+    .devices-scene { display: flex; align-items: flex-end; justify-content: center; gap: 16px; }
+    /* -- Desktop browser -- */
+    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); flex: 1; min-width: 0; }
     .browser-bar { background: rgba(255,255,255,0.03); padding: 10px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
     .browser-dots { display: flex; gap: 6px; }
     .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -311,7 +313,46 @@
     .mockup-card-icon { width: 22px; height: 22px; border-radius: 5px; margin-bottom: 8px; }
     .mockup-card-t { width: 75%; height: 7px; background: rgba(255,255,255,0.13); border-radius: 3px; margin-bottom: 6px; }
     .mockup-card-l { height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; margin-bottom: 3px; }
-    .speed-badge { position: absolute; bottom: -20px; right: 20px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(34,197,94,0.05); }
+    /* -- Tablet -- */
+    .device-tablet { width: 220px; flex-shrink: 0; }
+    .tablet-frame { background: #13131f; border: 5px solid #1d1d2e; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 48px rgba(0,0,0,0.55); }
+    .tablet-camera { width: 6px; height: 6px; background: rgba(255,255,255,0.08); border-radius: 50%; margin: 7px auto; }
+    .tablet-site { background: #0c0c14; }
+    .tablet-nav { padding: 8px 12px; background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: space-between; }
+    .tablet-logo { display: flex; align-items: center; gap: 5px; }
+    .tablet-logo-dot { width: 15px; height: 15px; background: linear-gradient(135deg,#38bdf8,#818cf8); border-radius: 4px; flex-shrink:0; }
+    .tablet-logo-text { width: 32px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; }
+    .tablet-nav-links { display: flex; gap: 8px; }
+    .tablet-nav-link { width: 24px; height: 6px; background: rgba(255,255,255,0.06); border-radius: 2px; }
+    .tablet-hero { padding: 18px 12px 12px; text-align: center; }
+    .tablet-h1a { width: 75%; height: 12px; background: rgba(255,255,255,0.16); border-radius: 3px; margin: 0 auto 6px; }
+    .tablet-h1b { width: 55%; height: 12px; background: rgba(56,189,248,0.3); border-radius: 3px; margin: 0 auto 12px; }
+    .tablet-sub { width: 80%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 2px; margin: 0 auto 12px; }
+    .tablet-cta { width: 80px; height: 22px; background: linear-gradient(135deg,#7c3aed,#6366f1); border-radius: 6px; margin: 0 auto; }
+    .tablet-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px 12px 12px; }
+    .tablet-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 8px; }
+    .tablet-card-icon { width: 14px; height: 14px; border-radius: 3px; margin-bottom: 5px; }
+    .tablet-card-t { width: 70%; height: 5px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-bottom: 4px; }
+    .tablet-card-l { height: 4px; background: rgba(255,255,255,0.04); border-radius: 2px; margin-bottom: 3px; }
+    /* -- Phone -- */
+    .device-phone { width: 100px; flex-shrink: 0; }
+    .phone-frame { background: #13131f; border: 5px solid #1d1d2e; border-radius: 26px; overflow: hidden; box-shadow: 0 20px 48px rgba(0,0,0,0.55); }
+    .phone-notch { width: 32px; height: 8px; background: #1d1d2e; border-radius: 0 0 5px 5px; margin: 0 auto; }
+    .phone-site { background: #0c0c14; }
+    .phone-nav { padding: 7px 8px; background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: space-between; }
+    .phone-logo-dot { width: 14px; height: 14px; background: linear-gradient(135deg,#38bdf8,#818cf8); border-radius: 4px; }
+    .phone-burger { display: flex; flex-direction: column; gap: 3px; padding: 2px 0; }
+    .phone-burger span { display: block; width: 13px; height: 2px; background: rgba(255,255,255,0.15); border-radius: 1px; }
+    .phone-hero { padding: 14px 8px 10px; text-align: center; }
+    .phone-h1a { width: 80%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 3px; margin: 0 auto 5px; }
+    .phone-h1b { width: 60%; height: 10px; background: rgba(56,189,248,0.28); border-radius: 3px; margin: 0 auto 10px; }
+    .phone-sub { width: 75%; height: 5px; background: rgba(255,255,255,0.04); border-radius: 2px; margin: 0 auto 10px; }
+    .phone-cta { width: 65%; height: 18px; background: linear-gradient(135deg,#7c3aed,#6366f1); border-radius: 5px; margin: 0 auto; }
+    .phone-block { height: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 5px; margin: 8px 8px 0; }
+    .phone-block2 { height: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 5px; margin: 6px 8px 10px; }
+    .phone-home { width: 28px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; margin: 6px auto 8px; }
+    /* -- Speed badge -- */
+    .speed-badge { margin-top: 20px; display: inline-flex; align-items: center; gap: 16px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 14px; padding: 14px 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
     .speed-ring { width: 52px; height: 52px; border-radius: 50%; background: conic-gradient(#22c55e 100%, rgba(255,255,255,0.04) 0); display: flex; align-items: center; justify-content: center; position: relative; flex-shrink:0; }
     .speed-ring::before { content:''; position:absolute; width:40px; height:40px; border-radius:50%; background:#0f101c; }
     .speed-ring-num { position:relative; font-size:13px; font-weight:800; color:#22c55e; font-family:'Inter',sans-serif; }
@@ -321,7 +362,7 @@
     .speed-dot { width:7px; height:7px; border-radius:50%; background:#22c55e; flex-shrink:0; }
     .speed-row-label { font-size:10px; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; }
     .speed-row-val { font-size:10px; font-weight:700; color:#22c55e; margin-left:8px; font-family:'Inter',sans-serif; }
-    @media(max-width:768px){ .demo-wrap{margin:40px 0 24px;} .speed-badge{position:static;margin-top:16px;width:100%;box-sizing:border-box;border-radius:10px;} .mockup-cards{grid-template-columns:1fr;} }
+    @media(max-width:768px){ .demo-wrap{margin:40px 0 32px;} .device-phone,.device-tablet{display:none;} .devices-scene{display:block;} .speed-badge{display:flex;width:100%;box-sizing:border-box;border-radius:10px;margin-top:16px;} }
 
     /* ── POUR QUI ── */
     .for-who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; }
@@ -655,54 +696,121 @@
       <h2 class="section-h2 reveal d1">À quoi ressemble un site No Web</h2>
       <p class="section-body reveal d2">HTML pur, zéro plugin, zéro WordPress. Ce que Google PageSpeed Insights voit quand il audite l'un de nos sites.</p>
       <div class="demo-wrap reveal d3">
-        <div class="browser-frame">
-          <div class="browser-bar">
-            <div class="browser-dots">
-              <div class="browser-dot" style="background:#ff5f57"></div>
-              <div class="browser-dot" style="background:#ffbd2e"></div>
-              <div class="browser-dot" style="background:#28c840"></div>
-            </div>
-            <div class="browser-url">🔒 votre-metier-saint-etienne.fr</div>
-          </div>
-          <div class="mockup-site">
-            <div class="mockup-nav">
-              <div class="mockup-logo">
-                <div class="mockup-logo-dot"></div>
-                <div class="mockup-logo-text"></div>
+        <div class="devices-scene">
+
+          <!-- PHONE -->
+          <div class="device-phone">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-site">
+                <div class="phone-nav">
+                  <div class="phone-logo-dot"></div>
+                  <div class="phone-burger"><span></span><span></span><span></span></div>
+                </div>
+                <div class="phone-hero">
+                  <div class="phone-h1a"></div>
+                  <div class="phone-h1b"></div>
+                  <div class="phone-sub"></div>
+                  <div class="phone-cta"></div>
+                </div>
+                <div class="phone-block"></div>
+                <div class="phone-block2"></div>
               </div>
-              <div class="mockup-nav-links">
-                <div class="mockup-nav-link"></div>
-                <div class="mockup-nav-link"></div>
-                <div class="mockup-nav-link"></div>
-              </div>
-            </div>
-            <div class="mockup-hero-area">
-              <div class="mockup-h1a"></div>
-              <div class="mockup-h1b"></div>
-              <div class="mockup-sub-line"></div>
-              <div class="mockup-cta-btn"></div>
-            </div>
-            <div class="mockup-cards">
-              <div class="mockup-card">
-                <div class="mockup-card-icon" style="background:rgba(56,189,248,0.15)"></div>
-                <div class="mockup-card-t"></div>
-                <div class="mockup-card-l"></div>
-                <div class="mockup-card-l" style="width:70%"></div>
-              </div>
-              <div class="mockup-card">
-                <div class="mockup-card-icon" style="background:rgba(167,139,250,0.15)"></div>
-                <div class="mockup-card-t"></div>
-                <div class="mockup-card-l"></div>
-                <div class="mockup-card-l" style="width:80%"></div>
-              </div>
-              <div class="mockup-card">
-                <div class="mockup-card-icon" style="background:rgba(52,211,153,0.15)"></div>
-                <div class="mockup-card-t"></div>
-                <div class="mockup-card-l"></div>
-                <div class="mockup-card-l" style="width:60%"></div>
-              </div>
+              <div class="phone-home"></div>
             </div>
           </div>
+
+          <!-- DESKTOP BROWSER -->
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot" style="background:#ff5f57"></div>
+                <div class="browser-dot" style="background:#ffbd2e"></div>
+                <div class="browser-dot" style="background:#28c840"></div>
+              </div>
+              <div class="browser-url">🔒 votre-metier-saint-etienne.fr</div>
+            </div>
+            <div class="mockup-site">
+              <div class="mockup-nav">
+                <div class="mockup-logo">
+                  <div class="mockup-logo-dot"></div>
+                  <div class="mockup-logo-text"></div>
+                </div>
+                <div class="mockup-nav-links">
+                  <div class="mockup-nav-link"></div>
+                  <div class="mockup-nav-link"></div>
+                  <div class="mockup-nav-link"></div>
+                </div>
+              </div>
+              <div class="mockup-hero-area">
+                <div class="mockup-h1a"></div>
+                <div class="mockup-h1b"></div>
+                <div class="mockup-sub-line"></div>
+                <div class="mockup-cta-btn"></div>
+              </div>
+              <div class="mockup-cards">
+                <div class="mockup-card">
+                  <div class="mockup-card-icon" style="background:rgba(56,189,248,0.15)"></div>
+                  <div class="mockup-card-t"></div>
+                  <div class="mockup-card-l"></div>
+                  <div class="mockup-card-l" style="width:70%"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-icon" style="background:rgba(167,139,250,0.15)"></div>
+                  <div class="mockup-card-t"></div>
+                  <div class="mockup-card-l"></div>
+                  <div class="mockup-card-l" style="width:80%"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-icon" style="background:rgba(52,211,153,0.15)"></div>
+                  <div class="mockup-card-t"></div>
+                  <div class="mockup-card-l"></div>
+                  <div class="mockup-card-l" style="width:60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TABLET -->
+          <div class="device-tablet">
+            <div class="tablet-frame">
+              <div class="tablet-camera"></div>
+              <div class="tablet-site">
+                <div class="tablet-nav">
+                  <div class="tablet-logo">
+                    <div class="tablet-logo-dot"></div>
+                    <div class="tablet-logo-text"></div>
+                  </div>
+                  <div class="tablet-nav-links">
+                    <div class="tablet-nav-link"></div>
+                    <div class="tablet-nav-link"></div>
+                    <div class="tablet-nav-link"></div>
+                  </div>
+                </div>
+                <div class="tablet-hero">
+                  <div class="tablet-h1a"></div>
+                  <div class="tablet-h1b"></div>
+                  <div class="tablet-sub"></div>
+                  <div class="tablet-cta"></div>
+                </div>
+                <div class="tablet-cards">
+                  <div class="tablet-card">
+                    <div class="tablet-card-icon" style="background:rgba(56,189,248,0.15)"></div>
+                    <div class="tablet-card-t"></div>
+                    <div class="tablet-card-l"></div>
+                    <div class="tablet-card-l" style="width:60%"></div>
+                  </div>
+                  <div class="tablet-card">
+                    <div class="tablet-card-icon" style="background:rgba(167,139,250,0.15)"></div>
+                    <div class="tablet-card-t"></div>
+                    <div class="tablet-card-l"></div>
+                    <div class="tablet-card-l" style="width:75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="speed-badge">
           <div>
