@@ -370,14 +370,14 @@
     .badge-wip  { background: rgba(94,106,210,0.15); color: #818CF8; }
     .badge-new  { background: rgba(251,191,36,0.1);  color: #FCD34D; }
 
-    /* ─────────────────── CLIENTS ─────────────────── */
-    .clients-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 40px; }
-    .clients-inner { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 18px; }
-    .clients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); }
-    .clients-logos { display: flex; align-items: center; gap: 52px; flex-wrap: wrap; justify-content: center; }
-    .client-logo-link { display: flex; align-items: center; opacity: 0.35; filter: brightness(0) invert(1); transition: opacity 0.3s, filter 0.3s; }
-    .client-logo-link:hover { opacity: 0.9; filter: none; }
-    .client-logo { height: 26px; width: auto; max-width: 130px; object-fit: contain; }
+    /* ─────────────────── CLIENTS MARQUEE ─────────────────── */
+    .clients-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; padding: 20px 0; position: relative; z-index: 1; }
+    .clients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); text-align: center; margin-bottom: 16px; }
+    .clients-track { display: flex; align-items: center; gap: 0; animation: marquee 32s linear infinite; width: max-content; }
+    .clients-section:hover .clients-track { animation-play-state: paused; }
+    .client-logo-link { display: flex; align-items: center; padding: 0 48px; opacity: 0.35; filter: brightness(0) invert(1); transition: opacity 0.25s; }
+    .client-logo-link:hover { opacity: 1; }
+    .client-logo { height: 28px; width: auto; max-width: 140px; object-fit: contain; }
 
     /* ─────────────────── STATS ─────────────────── */
     .stats-section {
@@ -1424,27 +1424,21 @@
     </div>
   </section>
 
-  <!-- CLIENTS -->
+  <!-- CLIENTS MARQUEE -->
   <div class="clients-section">
-    <div class="clients-inner">
-      <p class="clients-label">Ils me font confiance</p>
-      <div class="clients-logos">
-        <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
-          <img src="/logos/slidor.svg" alt="Slidor" class="client-logo">
-        </a>
-        <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
-          <img src="/logos/veracash.svg" alt="Veracash" class="client-logo">
-        </a>
-        <a href="https://global-expertises.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
-          <img src="/logos/global-expertises.png" alt="Global Expertises" class="client-logo">
-        </a>
-        <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
-          <img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo">
-        </a>
-        <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
-          <img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo">
-        </a>
-      </div>
+    <p class="clients-label">Ils me font confiance</p>
+    <div class="clients-track">
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://global-expertises.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/global-expertises.png" alt="Global Expertises" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <!-- Duplicate pour boucle infinie -->
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://global-expertises.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/global-expertises.png" alt="Global Expertises" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
     </div>
   </div>
 
@@ -1467,28 +1461,6 @@
         <div class="stat-num gold">48 h</div>
         <div class="stat-label">pour recevoir votre site</div>
       </div>
-    </div>
-  </div>
-
-  <!-- MARQUEE -->
-  <div class="marquee-wrapper">
-    <div class="marquee-track" id="marquee">
-      <div class="marquee-item"><span class="marquee-dot"></span>100 / 100 PageSpeed</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Zéro frais de création</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Design sur-mesure</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Satisfait ou remboursé</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Support direct WhatsApp</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Expertise SEO</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Livré en 48 h</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>HTML / CSS pur — rien à hacker</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>100 / 100 PageSpeed</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Zéro frais de création</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Design sur-mesure</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Satisfait ou remboursé</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Support direct WhatsApp</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Expertise SEO</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Livré en 48 h</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>HTML / CSS pur — rien à hacker</div>
     </div>
   </div>
 
