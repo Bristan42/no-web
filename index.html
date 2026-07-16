@@ -115,7 +115,7 @@
       position: absolute; left: 50%; transform: translateX(-50%);
       display: flex; align-items: center; gap: 4px;
     }
-    .nav-item { position: static; } /* static pour que le dropdown se positionne par rapport à nav */
+    .nav-item { position: relative; } /* static pour que le dropdown se positionne par rapport à nav */
     .nav-item-btn {
       display: flex; align-items: center; gap: 5px;
       font-size: 13px; font-weight: 500; color: rgba(255,255,255,.7);
@@ -132,14 +132,15 @@
     /* Dropdown — positionné par rapport à nav (position: fixed) */
     /* Le pont invisible couvre l'espace entre le bouton et le panel */
     .mega-drop {
-      position: fixed; top: 60px; left: 50%; transform: translateX(-50%) translateY(-6px);
+      position: absolute; top: calc(100% + 10px); left: 50%;
+      transform: translateX(-50%) translateY(-6px);
       opacity: 0; pointer-events: none;
       background: rgba(10,16,36,0.97);
       border: 1px solid rgba(255,255,255,.1);
-      border-radius: 16px;
+      border-radius: 16px; padding: 24px 28px;
       box-shadow: 0 24px 60px rgba(0,0,0,0.6);
       backdrop-filter: blur(24px);
-      transition: opacity 0.18s ease, transform 0.18s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease;
       min-width: 260px;
     }
     /* Pont invisible : couvre le gap entre nav et dropdown pour ne pas perdre le hover */
