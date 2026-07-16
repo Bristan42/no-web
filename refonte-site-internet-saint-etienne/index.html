@@ -364,12 +364,18 @@
     .speed-row-val { font-size:10px; font-weight:700; color:#22c55e; margin-left:8px; font-family:'Inter',sans-serif; }
     @media(max-width:768px){
       .demo-wrap { margin: 32px -24px 24px; padding: 0; }
-      .scene-clip { overflow: hidden; height: 140px; }
-      .devices-scene { flex-wrap: nowrap; gap: 24px; width: fit-content; margin-left: calc(50vw - 434px); transform: scale(0.43); transform-origin: top center; }
       .browser-frame { width: 500px; order: 0; flex-shrink: 0; }
       .device-phone { display: block; width: 100px; }
       .device-tablet { display: block; width: 220px; }
       .speed-badge { display: flex; width: 100%; box-sizing: border-box; border-radius: 10px; margin-top: 16px; }
+      /* tablette : scale 0.75 → scène 651px large, 288px haute */
+      .scene-clip { overflow: hidden; height: 290px; }
+      .devices-scene { flex-wrap: nowrap; gap: 24px; width: fit-content; margin-left: calc(50vw - 434px); transform: scale(0.75); transform-origin: top center; }
+    }
+    @media(max-width:480px){
+      /* mobile : scale 0.43 → scène 373px large, 165px haute */
+      .scene-clip { height: 168px; }
+      .devices-scene { transform: scale(0.43); }
     }
 
     /* ── POUR QUI ── */
