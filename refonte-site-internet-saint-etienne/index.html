@@ -352,7 +352,7 @@
     .phone-block2 { height: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 5px; margin: 6px 8px 10px; }
     .phone-home { width: 28px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; margin: 6px auto 8px; }
     /* -- Speed badge -- */
-    .speed-badge { margin: 20px auto 0; display: flex; width: fit-content; align-items: center; gap: 20px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 40px; padding: 10px 22px 10px 14px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .speed-badge { margin: 36px auto 0; display: flex; width: fit-content; align-items: center; gap: 20px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 40px; padding: 10px 22px 10px 14px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
     .speed-score { display:flex; align-items: center; gap: 10px; }
     .speed-ring { width: 40px; height: 40px; border-radius: 50%; background: conic-gradient(#22c55e 100%, rgba(255,255,255,0.04) 0); display: flex; align-items: center; justify-content: center; position: relative; flex-shrink:0; }
     .speed-ring::before { content:''; position:absolute; width:30px; height:30px; border-radius:50%; background:#0f101c; }
@@ -364,14 +364,14 @@
     .speed-metric-val { font-size:13px; font-weight:700; color:#22c55e; font-family:'Inter',sans-serif; line-height:1; }
     .speed-metric-key { font-size:9px; color:rgba(255,255,255,0.35); font-family:'Inter',sans-serif; white-space:nowrap; }
     @media(max-width:768px){
-      .demo-wrap { margin: 32px -24px 24px; padding: 0; }
+      .demo-wrap { margin: 32px -20px 24px; padding: 0; width: calc(100% + 40px); }
       .browser-frame { width: 500px; order: 0; flex-shrink: 0; }
       .device-phone { display: block; width: 100px; }
       .device-tablet { display: block; width: 220px; }
       .speed-badge { margin-top: 16px; }
       /* tablette : scale 0.75 → scène 651px large, 288px haute */
       .scene-clip { overflow: hidden; height: 290px; }
-      .devices-scene { flex-wrap: nowrap; gap: 24px; width: fit-content; margin-left: calc(50vw - 360px); transform: scale(0.75); transform-origin: top center; }
+      .devices-scene { flex-wrap: nowrap; gap: 0; width: fit-content; margin-left: calc(50vw - 360px); transform: scale(0.75); transform-origin: top center; }
     }
     @media(max-width:480px){
       /* mobile : scale 0.43 → scène 373px large, 165px haute */
@@ -627,8 +627,8 @@
     <h1>Refonte de site internet<br>à <em>Saint-Étienne</em></h1>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-num blue">100/100</span>
-        <span class="hero-stat-label">PageSpeed garanti</span>
+        <span class="hero-stat-num blue">HTML</span>
+        <span class="hero-stat-label">zéro WordPress</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-num green">0 €</span>
@@ -639,81 +639,7 @@
         <span class="hero-stat-label">maquette offerte</span>
       </div>
     </div>
-    <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
-    <p class="hero-note">Sans engagement · SEO préservé · Hébergement inclus</p>
-  </section>
-
-  <!-- PROBLÈMES -->
-  <section class="section">
-    <div class="inner-wide">
-      <div class="section-label reveal">Le constat</div>
-      <h2 class="section-h2 reveal d1">Votre site actuel vous coûte<br>des clients à Saint-Étienne</h2>
-      <p class="section-body reveal d2">Dans la Loire (42) comme partout en Rhône-Alpes, un site lent ou invisible sur Google, c'est un frein direct à votre chiffre d'affaires.</p>
-      <div class="problems-grid">
-        <div class="problem-card reveal d1">
-          <div class="problem-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <h3>Invisible sur Google à Saint-Étienne</h3>
-          <p>Vos concurrents stéphanois apparaissent en premier sur les requêtes locales. Vous perdez des clients qui ne savent même pas que vous existez.</p>
-        </div>
-        <div class="problem-card reveal d2">
-          <div class="problem-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Site trop lent sur mobile</h3>
-          <p>Un site qui charge en plus de 3 secondes perd 50 % de ses visiteurs. À Saint-Étienne comme partout dans la Loire, Google abaisse votre positionnement et renvoie vos clients chez le concurrent d'à côté.</p>
-        </div>
-        <div class="problem-card reveal d3">
-          <div class="problem-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <h3>Prisonnier de votre prestataire</h3>
-          <p>Beaucoup d'agences web stéphanoises facturent chaque modification et restent injoignables entre deux projets. Un message WhatsApp ne devrait pas coûter 150 €.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUTION -->
-  <section class="section section-alt">
-    <div class="inner-wide">
-      <div class="section-label reveal">Notre réponse</div>
-      <h2 class="section-h2 reveal d1">Un site HTML pur, ultra-rapide<br>et 100 % géré pour vous</h2>
-      <p class="section-body reveal d2">Aucun WordPress, aucun plugin, aucune faille de sécurité. Du code propre qui se charge en une fraction de seconde — et un interlocuteur unique basé à Saint-Étienne.</p>
-      <div class="solution-grid">
-        <div class="solution-card reveal d1">
-          <div class="solution-icon" style="background:rgba(56,189,248,0.12);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>100/100 PageSpeed garanti</h3>
-          <p>Score parfait sur Google PageSpeed Insights. Votre site se charge en moins d'une seconde, sur mobile comme sur desktop — partout dans la Loire.</p>
-        </div>
-        <div class="solution-card reveal d2">
-          <div class="solution-icon" style="background:rgba(167,139,250,0.12);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Zéro frais au départ</h3>
-          <p>Pas de chèque de 3 000 € à signer avant de voir une seule maquette. La refonte complète est incluse dans l'abonnement — vous payez uniquement quand votre site est en ligne et validé.</p>
-        </div>
-        <div class="solution-card reveal d3">
-          <div class="solution-icon" style="background:rgba(37,211,102,0.12);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <h3>1 modification par semaine incluse</h3>
-          <p>Un message WhatsApp suffit. Texte, photo, nouveau service — une demande par semaine, traitée sous 48h. Sans ticket, sans surcoût.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MOCKUP VISUEL -->
-  <section class="section">
-    <div class="inner-wide">
-      <div class="section-label reveal">Exemple concret</div>
-      <h2 class="section-h2 reveal d1">À quoi ressemble un site No Web</h2>
-      <p class="section-body reveal d2">HTML pur, zéro plugin, zéro WordPress. Ce que Google PageSpeed Insights voit quand il audite l'un de nos sites.</p>
-      <div class="demo-wrap reveal d3">
+    <div class="demo-wrap">
         <div class="scene-clip">
         <div class="devices-scene">
 
@@ -845,8 +771,209 @@
           </div>
         </div>
       </div>
+    <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
+    <p class="hero-note">Sans engagement · SEO préservé · Hébergement inclus</p>
+  </section>
+
+  <!-- PROBLÈMES -->
+  <section class="section">
+    <div class="inner-wide">
+      <div class="section-label reveal">Le constat</div>
+      <h2 class="section-h2 reveal d1">Votre site actuel vous coûte<br>des clients à Saint-Étienne</h2>
+      <p class="section-body reveal d2">Dans la Loire (42) comme partout en Rhône-Alpes, un site lent ou invisible sur Google, c'est un frein direct à votre chiffre d'affaires.</p>
+      <div class="problems-grid">
+        <div class="problem-card reveal d1">
+          <div class="problem-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Invisible sur Google à Saint-Étienne</h3>
+          <p>Vos concurrents stéphanois apparaissent en premier sur les requêtes locales. Vous perdez des clients qui ne savent même pas que vous existez.</p>
+        </div>
+        <div class="problem-card reveal d2">
+          <div class="problem-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Site trop lent sur mobile</h3>
+          <p>Un site qui charge en plus de 3 secondes perd 50 % de ses visiteurs. À Saint-Étienne comme partout dans la Loire, Google abaisse votre positionnement et renvoie vos clients chez le concurrent d'à côté.</p>
+        </div>
+        <div class="problem-card reveal d3">
+          <div class="problem-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Prisonnier de votre prestataire</h3>
+          <p>Beaucoup d'agences web stéphanoises facturent chaque modification et restent injoignables entre deux projets. Un message WhatsApp ne devrait pas coûter 150 €.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- SOLUTION -->
+  <section class="section section-alt">
+    <div class="inner-wide">
+      <div class="section-label reveal">Notre réponse</div>
+      <h2 class="section-h2 reveal d1">Un site HTML pur, ultra-rapide<br>et 100 % géré pour vous</h2>
+      <p class="section-body reveal d2">Aucun WordPress, aucun plugin, aucune faille de sécurité. Du code propre qui se charge en une fraction de seconde — et un interlocuteur unique basé à Saint-Étienne.</p>
+      <div class="solution-grid">
+        <div class="solution-card reveal d1">
+          <div class="solution-icon" style="background:rgba(56,189,248,0.12);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>100/100 PageSpeed garanti</h3>
+          <p>Score parfait sur Google PageSpeed Insights. Votre site se charge en moins d'une seconde, sur mobile comme sur desktop — partout dans la Loire.</p>
+        </div>
+        <div class="solution-card reveal d2">
+          <div class="solution-icon" style="background:rgba(167,139,250,0.12);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Zéro frais au départ</h3>
+          <p>Pas de chèque de 3 000 € à signer avant de voir une seule maquette. La refonte complète est incluse dans l'abonnement — vous payez uniquement quand votre site est en ligne et validé.</p>
+        </div>
+        <div class="solution-card reveal d3">
+          <div class="solution-icon" style="background:rgba(37,211,102,0.12);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h3>1 modification par semaine incluse</h3>
+          <p>Un message WhatsApp suffit. Texte, photo, nouveau service — une demande par semaine, traitée sous 48h. Sans ticket, sans surcoût.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUP VISUEL (déplacé dans le hero) -->
+  <!-- supprimé -->
+  <div style="display:none"><div class="demo-wrap reveal d3">
+        <div class="scene-clip">
+        <div class="devices-scene">
+
+          <!-- PHONE -->
+          <div class="device-phone">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-site">
+                <div class="phone-nav">
+                  <div class="phone-logo-dot"></div>
+                  <div class="phone-burger"><span></span><span></span><span></span></div>
+                </div>
+                <div class="phone-hero">
+                  <div class="phone-h1a"></div>
+                  <div class="phone-h1b"></div>
+                  <div class="phone-sub"></div>
+                  <div class="phone-cta"></div>
+                </div>
+                <div class="phone-block"></div>
+                <div class="phone-block2"></div>
+              </div>
+              <div class="phone-home"></div>
+            </div>
+          </div>
+
+          <!-- DESKTOP BROWSER -->
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot" style="background:#ff5f57"></div>
+                <div class="browser-dot" style="background:#ffbd2e"></div>
+                <div class="browser-dot" style="background:#28c840"></div>
+              </div>
+              <div class="browser-url">🔒 votre-metier-saint-etienne.fr</div>
+            </div>
+            <div class="mockup-site">
+              <div class="mockup-nav">
+                <div class="mockup-logo">
+                  <div class="mockup-logo-dot"></div>
+                  <div class="mockup-logo-text"></div>
+                </div>
+                <div class="mockup-nav-links">
+                  <div class="mockup-nav-link"></div>
+                  <div class="mockup-nav-link"></div>
+                  <div class="mockup-nav-link"></div>
+                </div>
+              </div>
+              <div class="mockup-hero-area">
+                <div class="mockup-h1a"></div>
+                <div class="mockup-h1b"></div>
+                <div class="mockup-sub-line"></div>
+                <div class="mockup-cta-btn"></div>
+              </div>
+              <div class="mockup-cards">
+                <div class="mockup-card">
+                  <div class="mockup-card-icon" style="background:rgba(56,189,248,0.15)"></div>
+                  <div class="mockup-card-t"></div>
+                  <div class="mockup-card-l"></div>
+                  <div class="mockup-card-l" style="width:70%"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-icon" style="background:rgba(167,139,250,0.15)"></div>
+                  <div class="mockup-card-t"></div>
+                  <div class="mockup-card-l"></div>
+                  <div class="mockup-card-l" style="width:80%"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-icon" style="background:rgba(52,211,153,0.15)"></div>
+                  <div class="mockup-card-t"></div>
+                  <div class="mockup-card-l"></div>
+                  <div class="mockup-card-l" style="width:60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TABLET -->
+          <div class="device-tablet">
+            <div class="tablet-frame">
+              <div class="tablet-camera"></div>
+              <div class="tablet-site">
+                <div class="tablet-nav">
+                  <div class="tablet-logo">
+                    <div class="tablet-logo-dot"></div>
+                    <div class="tablet-logo-text"></div>
+                  </div>
+                  <div class="tablet-nav-links">
+                    <div class="tablet-nav-link"></div>
+                    <div class="tablet-nav-link"></div>
+                    <div class="tablet-nav-link"></div>
+                  </div>
+                </div>
+                <div class="tablet-hero">
+                  <div class="tablet-h1a"></div>
+                  <div class="tablet-h1b"></div>
+                  <div class="tablet-sub"></div>
+                  <div class="tablet-cta"></div>
+                </div>
+                <div class="tablet-cards">
+                  <div class="tablet-card">
+                    <div class="tablet-card-icon" style="background:rgba(56,189,248,0.15)"></div>
+                    <div class="tablet-card-t"></div>
+                    <div class="tablet-card-l"></div>
+                    <div class="tablet-card-l" style="width:60%"></div>
+                  </div>
+                  <div class="tablet-card">
+                    <div class="tablet-card-icon" style="background:rgba(167,139,250,0.15)"></div>
+                    <div class="tablet-card-t"></div>
+                    <div class="tablet-card-l"></div>
+                    <div class="tablet-card-l" style="width:75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div><!-- /.scene-clip -->
+        <div class="speed-badge">
+          <div class="speed-score">
+            <div class="speed-ring"><span class="speed-ring-num">100</span></div>
+            <span class="speed-ring-label">PageSpeed</span>
+          </div>
+          <div class="speed-sep"></div>
+          <div class="speed-metrics">
+            <div class="speed-metric"><span class="speed-metric-val">0.4s</span><span class="speed-metric-key">FCP</span></div>
+            <div class="speed-metric"><span class="speed-metric-val">0.6s</span><span class="speed-metric-key">TTI</span></div>
+            <div class="speed-metric"><span class="speed-metric-val">0 ms</span><span class="speed-metric-key">TBT</span></div>
+          </div>
+        </div>
+      </div>
+    </div></div><!-- end display:none suppressed section -->
 
   <!-- PACKS -->
   <section class="section" id="offres">
