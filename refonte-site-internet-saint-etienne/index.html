@@ -287,6 +287,42 @@
     .migration-step h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
     .migration-step p { font-size: 13px; color: var(--text-2); line-height: 1.6; }
 
+    /* ── MOCKUP ── */
+    .demo-wrap { position: relative; margin: 56px auto 32px; max-width: 680px; }
+    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+    .browser-bar { background: rgba(255,255,255,0.03); padding: 10px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .browser-dots { display: flex; gap: 6px; }
+    .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .browser-url { flex: 1; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 5px 12px; font-size: 11px; color: rgba(255,255,255,0.3); text-align: center; font-family: 'Inter', sans-serif; }
+    .mockup-site { background: #0c0c14; }
+    .mockup-nav { background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.04); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .mockup-logo { display: flex; gap: 8px; align-items: center; }
+    .mockup-logo-dot { width: 22px; height: 22px; background: linear-gradient(135deg,#38bdf8,#818cf8); border-radius: 6px; flex-shrink:0; }
+    .mockup-logo-text { width: 56px; height: 9px; background: rgba(255,255,255,0.12); border-radius: 4px; }
+    .mockup-nav-links { display: flex; gap: 14px; }
+    .mockup-nav-link { width: 38px; height: 7px; background: rgba(255,255,255,0.07); border-radius: 3px; }
+    .mockup-hero-area { padding: 28px 24px 20px; text-align: center; }
+    .mockup-h1a { width: 55%; height: 18px; background: rgba(255,255,255,0.18); border-radius: 5px; margin: 0 auto 8px; }
+    .mockup-h1b { width: 40%; height: 18px; background: rgba(56,189,248,0.35); border-radius: 5px; margin: 0 auto 16px; }
+    .mockup-sub-line { width: 65%; height: 8px; background: rgba(255,255,255,0.06); border-radius: 3px; margin: 0 auto 20px; }
+    .mockup-cta-btn { width: 130px; height: 32px; background: linear-gradient(135deg,#7c3aed,#6366f1); border-radius: 8px; margin: 0 auto; }
+    .mockup-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; padding: 14px 24px 20px; }
+    .mockup-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 12px; }
+    .mockup-card-icon { width: 22px; height: 22px; border-radius: 5px; margin-bottom: 8px; }
+    .mockup-card-t { width: 75%; height: 7px; background: rgba(255,255,255,0.13); border-radius: 3px; margin-bottom: 6px; }
+    .mockup-card-l { height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; margin-bottom: 3px; }
+    .speed-badge { position: absolute; bottom: -20px; right: 20px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(34,197,94,0.05); }
+    .speed-ring { width: 52px; height: 52px; border-radius: 50%; background: conic-gradient(#22c55e 100%, rgba(255,255,255,0.04) 0); display: flex; align-items: center; justify-content: center; position: relative; flex-shrink:0; }
+    .speed-ring::before { content:''; position:absolute; width:40px; height:40px; border-radius:50%; background:#0f101c; }
+    .speed-ring-num { position:relative; font-size:13px; font-weight:800; color:#22c55e; font-family:'Inter',sans-serif; }
+    .speed-ring-label { font-size:9px; color:rgba(255,255,255,0.35); margin-top:4px; text-align:center; font-family:'Inter',sans-serif; }
+    .speed-rows { display:flex; flex-direction:column; gap:5px; }
+    .speed-row { display:flex; align-items:center; gap:8px; }
+    .speed-dot { width:7px; height:7px; border-radius:50%; background:#22c55e; flex-shrink:0; }
+    .speed-row-label { font-size:10px; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; }
+    .speed-row-val { font-size:10px; font-weight:700; color:#22c55e; margin-left:8px; font-family:'Inter',sans-serif; }
+    @media(max-width:768px){ .demo-wrap{margin:40px 0 24px;} .speed-badge{position:static;margin-top:16px;width:100%;box-sizing:border-box;border-radius:10px;} .mockup-cards{grid-template-columns:1fr;} }
+
     /* ── POUR QUI ── */
     .for-who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; }
     .for-who-item { display: flex; align-items: flex-start; gap: 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; transition: border-color 0.25s; }
@@ -567,14 +603,14 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>Site trop lent sur mobile</h3>
-          <p>Un site qui charge en plus de 3 secondes perd 50 % de ses visiteurs. Google vous pénalise dans le 42 comme ailleurs — vos clients partent chez la concurrence.</p>
+          <p>Un site qui charge en plus de 3 secondes perd 50 % de ses visiteurs. À Saint-Étienne comme partout dans la Loire, Google abaisse votre positionnement et renvoie vos clients chez le concurrent d'à côté.</p>
         </div>
         <div class="problem-card reveal d3">
           <div class="problem-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <h3>Prisonnier de votre prestataire</h3>
-          <p>La moindre modification demande de contacter une agence web, d'attendre des semaines et de payer à chaque fois. Vous êtes bloqué.</p>
+          <p>Beaucoup d'agences web stéphanoises facturent chaque modification et restent injoignables entre deux projets. Un message WhatsApp ne devrait pas coûter 150 €.</p>
         </div>
       </div>
     </div>
@@ -599,7 +635,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>Zéro frais au départ</h3>
-          <p>Pas de chèque de 3 000 € à signer à une agence web stéphanoise. La refonte complète est incluse dans l'abonnement — vous payez quand votre site est en ligne.</p>
+          <p>Pas de chèque de 3 000 € à signer avant de voir une seule maquette. La refonte complète est incluse dans l'abonnement — vous payez uniquement quand votre site est en ligne et validé.</p>
         </div>
         <div class="solution-card reveal d3">
           <div class="solution-icon" style="background:rgba(37,211,102,0.12);">
@@ -607,6 +643,77 @@
           </div>
           <h3>1 modification par semaine incluse</h3>
           <p>Un message WhatsApp suffit. Texte, photo, nouveau service — une demande par semaine, traitée sous 48h. Sans ticket, sans surcoût.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCKUP VISUEL -->
+  <section class="section">
+    <div class="inner" style="text-align:center;">
+      <div class="section-label reveal">Exemple concret</div>
+      <h2 class="section-h2 reveal d1">À quoi ressemble un site No Web</h2>
+      <p class="section-body reveal d2">HTML pur, zéro plugin, zéro WordPress. Ce que Google PageSpeed Insights voit quand il audite l'un de nos sites.</p>
+      <div class="demo-wrap reveal d3">
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <div class="browser-dot" style="background:#ff5f57"></div>
+              <div class="browser-dot" style="background:#ffbd2e"></div>
+              <div class="browser-dot" style="background:#28c840"></div>
+            </div>
+            <div class="browser-url">🔒 votre-metier-saint-etienne.fr</div>
+          </div>
+          <div class="mockup-site">
+            <div class="mockup-nav">
+              <div class="mockup-logo">
+                <div class="mockup-logo-dot"></div>
+                <div class="mockup-logo-text"></div>
+              </div>
+              <div class="mockup-nav-links">
+                <div class="mockup-nav-link"></div>
+                <div class="mockup-nav-link"></div>
+                <div class="mockup-nav-link"></div>
+              </div>
+            </div>
+            <div class="mockup-hero-area">
+              <div class="mockup-h1a"></div>
+              <div class="mockup-h1b"></div>
+              <div class="mockup-sub-line"></div>
+              <div class="mockup-cta-btn"></div>
+            </div>
+            <div class="mockup-cards">
+              <div class="mockup-card">
+                <div class="mockup-card-icon" style="background:rgba(56,189,248,0.15)"></div>
+                <div class="mockup-card-t"></div>
+                <div class="mockup-card-l"></div>
+                <div class="mockup-card-l" style="width:70%"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-icon" style="background:rgba(167,139,250,0.15)"></div>
+                <div class="mockup-card-t"></div>
+                <div class="mockup-card-l"></div>
+                <div class="mockup-card-l" style="width:80%"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-icon" style="background:rgba(52,211,153,0.15)"></div>
+                <div class="mockup-card-t"></div>
+                <div class="mockup-card-l"></div>
+                <div class="mockup-card-l" style="width:60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="speed-badge">
+          <div>
+            <div class="speed-ring"><span class="speed-ring-num">100</span></div>
+            <div class="speed-ring-label">PageSpeed</div>
+          </div>
+          <div class="speed-rows">
+            <div class="speed-row"><div class="speed-dot"></div><span class="speed-row-label">First Contentful Paint</span><span class="speed-row-val">0.4s</span></div>
+            <div class="speed-row"><div class="speed-dot"></div><span class="speed-row-label">Time to Interactive</span><span class="speed-row-val">0.6s</span></div>
+            <div class="speed-row"><div class="speed-dot"></div><span class="speed-row-label">Total Blocking Time</span><span class="speed-row-val">0 ms</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -822,6 +929,22 @@
         <div class="faq-item">
           <button class="faq-q">Que se passe-t-il si je souhaite arrêter l'abonnement ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
           <div class="faq-a">L'abonnement est sans engagement. Vous pouvez arrêter à tout moment avec un préavis d'un mois. Le site reste en ligne jusqu'à la fin de la période payée. Si vous souhaitez récupérer les fichiers de votre site, c'est possible sur demande.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Est-ce que je garde mon nom de domaine ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Oui, absolument. Votre nom de domaine vous appartient et reste enregistré à votre nom. Je m'occupe uniquement de pointer les DNS vers votre nouveau site. Si vous n'avez pas encore de domaine, je peux en enregistrer un pour vous directement.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Que se passe-t-il si mon site tombe en panne ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">L'hébergement est inclus dans l'abonnement et surveillé en continu. En cas d'incident, je suis alerté automatiquement et j'interviens sans que vous ayez à faire quoi que ce soit. Pas de ticket de support, pas d'attente — un message WhatsApp suffit si vous constatez quelque chose.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Pourquoi pas WordPress ou Wix ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">WordPress représente 43 % des sites piratés sur le web, nécessite des mises à jour constantes et plafonne rarement au-dessus de 60/100 PageSpeed sans optimisations lourdes. Wix et Squarespace sont encore plus limités en SEO. Le HTML pur ne se met pas à jour, ne se pirate pas et charge en moins d'une seconde — c'est la seule technologie qui garantit un 100/100 PageSpeed sans compromis.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Est-ce que je peux modifier le site moi-même ? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Non — et c'est voulu. Le HTML pur n'a pas d'interface d'administration, c'est ce qui le rend aussi rapide et sécurisé. En contrepartie, une modification par semaine est incluse dans tous les packs : un message WhatsApp, je m'en charge sous 48h. Pour des besoins plus importants, le Pack Premier inclut des modifications illimitées.</div>
         </div>
       </div>
     </div>
