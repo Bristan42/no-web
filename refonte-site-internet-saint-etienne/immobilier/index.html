@@ -438,7 +438,7 @@
     
     <h1>Refonte de site internet<br>pour votre <em>agence immobilière</em></h1>
     <p class="hero-sub">Maquette livrée sous 48h — zéro frais au départ.<br>Pages de biens ultra-rapides, formulaire d'estimation en ligne, migration SEO sécurisée.</p>
-    <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
+    <a href="#contact" class="hero-cta">Refonte de site internet gratuit →</a>
     <p class="hero-note">Maquette offerte · Sans engagement · Réponse sous 48h</p>
   </section>
 
@@ -558,7 +558,7 @@
         </div>
       </div>
       <div class="packs-cta reveal">
-        <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
+        <a href="#contact" class="hero-cta">Refonte de site internet gratuit →</a>
         <span class="packs-cta-note">Sans engagement · Aperçu visuel offert sous 48h</span>
       </div>
     </div>
@@ -699,7 +699,7 @@
             <textarea name="message" rows="3" placeholder="Ex : Mon site WordPress avec plugin IDX est lent et invisible sur Google. Je perds des mandats face à mes concurrents. Je souhaite un site professionnel avec formulaire d'estimation."></textarea>
           </div>
           <div><label for="formule">Formule souhaitée</label><select id="formule" name="formule"><option>Visible — 200 €/mois</option><option selected>Premier — 500 €/mois</option><option>Dominant — Sur devis</option></select></div>
-          <button type="submit" class="form-submit" id="form-btn">Recevoir ma maquette gratuite →</button>
+          <button type="submit" class="form-submit" id="form-btn">Refonte de site internet gratuit →</button>
           <div id="success-msg" class="success-msg">✓ Merci ! Je vous recontacte sous 48h avec un aperçu de votre futur site.</div>
           <div id="error-msg" style="display:none;color:#f87171;font-size:13px;margin-top:8px;text-align:center;">Une erreur est survenue — écrivez-moi directement sur WhatsApp.</div>
         </form>
@@ -735,7 +735,7 @@
       const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) });
       const json = await res.json();
       if (json.success) { document.getElementById('success-msg').style.display = 'block'; e.target.reset(); btn.textContent = '✓ Envoyé'; } else throw new Error();
-    } catch { document.getElementById('error-msg').style.display = 'block'; btn.textContent = 'Recevoir ma maquette gratuite →'; btn.disabled = false; }
+    } catch { document.getElementById('error-msg').style.display = 'block'; btn.textContent = 'Refonte de site internet gratuit →'; btn.disabled = false; }
   }
 </script>
 </body>
