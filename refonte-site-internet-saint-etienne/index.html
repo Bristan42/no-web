@@ -289,9 +289,9 @@
 
     /* ── MOCKUP ── */
     .demo-wrap { margin: 56px auto 48px; max-width: 900px; }
-    .devices-scene { display: flex; align-items: flex-end; justify-content: center; gap: 16px; }
+    .devices-scene { display: flex; align-items: flex-end; justify-content: center; gap: 20px; }
     /* -- Desktop browser -- */
-    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); flex: 1; min-width: 0; }
+    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); width: 500px; flex-shrink: 0; }
     .browser-bar { background: rgba(255,255,255,0.03); padding: 10px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
     .browser-dots { display: flex; gap: 6px; }
     .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -352,7 +352,7 @@
     .phone-block2 { height: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 5px; margin: 6px 8px 10px; }
     .phone-home { width: 28px; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; margin: 6px auto 8px; }
     /* -- Speed badge -- */
-    .speed-badge { margin-top: 20px; display: inline-flex; align-items: center; gap: 16px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 14px; padding: 14px 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+    .speed-badge { margin: 24px auto 0; display: inline-flex; align-items: center; gap: 16px; background: #0f101c; border: 1px solid rgba(34,197,94,0.25); border-radius: 14px; padding: 14px 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
     .speed-ring { width: 52px; height: 52px; border-radius: 50%; background: conic-gradient(#22c55e 100%, rgba(255,255,255,0.04) 0); display: flex; align-items: center; justify-content: center; position: relative; flex-shrink:0; }
     .speed-ring::before { content:''; position:absolute; width:40px; height:40px; border-radius:50%; background:#0f101c; }
     .speed-ring-num { position:relative; font-size:13px; font-weight:800; color:#22c55e; font-family:'Inter',sans-serif; }
@@ -362,7 +362,7 @@
     .speed-dot { width:7px; height:7px; border-radius:50%; background:#22c55e; flex-shrink:0; }
     .speed-row-label { font-size:10px; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; }
     .speed-row-val { font-size:10px; font-weight:700; color:#22c55e; margin-left:8px; font-family:'Inter',sans-serif; }
-    @media(max-width:768px){ .demo-wrap{margin:40px 0 32px;} .device-phone,.device-tablet{display:none;} .devices-scene{display:block;} .speed-badge{display:flex;width:100%;box-sizing:border-box;border-radius:10px;margin-top:16px;} }
+    @media(max-width:768px){ .demo-wrap{margin:40px 0 32px;} .device-phone,.device-tablet{display:none;} .devices-scene{display:block;} .browser-frame{width:100%;} .speed-badge{display:flex;width:100%;box-sizing:border-box;border-radius:10px;margin-top:16px;} }
 
     /* ── POUR QUI ── */
     .for-who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; }
