@@ -38,6 +38,5 @@ Allow: /
 
 # Silos non finalisés — masqués de Google
 Disallow: /creation-site-internet*
-Disallow: /creation-site-vitrine*
 
 Sitemap: https://no-web.fr/sitemap.xml
