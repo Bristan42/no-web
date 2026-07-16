@@ -210,9 +210,9 @@
     .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
     .hero h1 { font-size: clamp(30px, 3.5vw, 50px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 56px; }
     .hero h1 em { font-style: normal; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-stats { display: flex; justify-content: flex-start; gap: 1px; margin: 0; max-width: 100%; width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; }
-    .hero-stat { flex: 1; text-align: center; padding: 16px 12px; position: relative; }
-    .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.06); }
+    .hero-stats { display: flex; justify-content: flex-start; gap: 8px; margin: 0; max-width: 100%; width: 100%; background: none; border: none; border-radius: 0; overflow: visible; }
+    .hero-stat { flex: 1; text-align: center; padding: 14px 10px; position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; }
+    .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.08); }
     .hero-stat-num { display: block; font-size: clamp(20px, 2.5vw, 26px); font-weight: 800; letter-spacing: -1px; line-height: 1; margin-bottom: 5px; }
     .hero-stat-num.blue { background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-stat-num.green { background: linear-gradient(135deg, #34D399, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -645,7 +645,7 @@
           <span class="hero-stat-label">maquette offerte</span>
         </div>
       </div>
-      <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
+      <a href="#contact" class="hero-cta">Refonte de site internet gratuit →</a>
       <p class="hero-note">Sans engagement · SEO préservé · Hébergement inclus</p>
     </div>
     <div class="demo-wrap">
@@ -1038,7 +1038,7 @@
 
       </div>
       <div class="packs-cta reveal">
-        <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
+        <a href="#contact" class="hero-cta">Refonte de site internet gratuit →</a>
         <span class="packs-cta-note">Sans engagement · Aperçu visuel offert sous 48h</span>
       </div>
     </div>
@@ -1258,7 +1258,7 @@
               <option>Dominant — Sur devis</option>
             </select>
           </div>
-          <button type="submit" class="form-submit" id="form-btn">Recevoir ma maquette gratuite →</button>
+          <button type="submit" class="form-submit" id="form-btn">Refonte de site internet gratuit →</button>
           <div id="success-msg" class="success-msg">✓ Merci ! Je vous recontacte sous 48h avec un aperçu de votre futur site.</div>
           <div id="error-msg" style="display:none;color:#f87171;font-size:13px;margin-top:8px;text-align:center;">Une erreur est survenue — écrivez-moi directement sur WhatsApp.</div>
         </form>
@@ -1334,7 +1334,7 @@
       } else throw new Error();
     } catch {
       document.getElementById('error-msg').style.display = 'block';
-      btn.textContent = 'Recevoir ma maquette gratuite →'; btn.disabled = false;
+      btn.textContent = 'Refonte de site internet gratuit →'; btn.disabled = false;
     }
   }
 </script>
