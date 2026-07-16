@@ -210,7 +210,8 @@
     .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
     .hero h1 { font-size: clamp(30px, 3.5vw, 50px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 56px; }
     .hero h1 em { font-style: normal; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-stats { display: flex; justify-content: flex-start; gap: 8px; margin: 0; max-width: 100%; width: 100%; background: none; border: none; border-radius: 0; overflow: visible; }
+    .hero-h1-group { display: flex; flex-direction: column; width: fit-content; }
+    .hero-stats { display: flex; justify-content: flex-start; gap: 8px; margin: 0; width: 100%; background: none; border: none; border-radius: 0; overflow: visible; }
     .hero-stat { flex: 1; text-align: center; padding: 14px 10px; position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; }
     .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.08); }
     .hero-stat-num { display: block; font-size: clamp(20px, 2.5vw, 26px); font-weight: 800; letter-spacing: -1px; line-height: 1; margin-bottom: 5px; }
@@ -630,6 +631,7 @@
   <section class="hero">
 
     <div class="hero-left">
+      <div class="hero-h1-group">
       <h1>Refonte de site internet<br>à <em>Saint-Étienne</em></h1>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -644,6 +646,7 @@
           <span class="hero-stat-num gold">48h</span>
           <span class="hero-stat-label">maquette offerte</span>
         </div>
+      </div>
       </div>
       <a href="#contact" class="hero-cta">Refonte de site internet gratuit →</a>
       <p class="hero-note">Sans engagement · SEO préservé · Hébergement inclus</p>
