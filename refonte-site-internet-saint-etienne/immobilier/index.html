@@ -95,15 +95,37 @@
     .nav-item-btn:hover, .nav-item:hover .nav-item-btn { color: #fff; background: rgba(255,255,255,.06); }
     .nav-item-btn svg { transition: transform 0.2s; flex-shrink: 0; }
     .nav-item:hover .nav-item-btn svg { transform: rotate(180deg); }
-    .mega-drop { position: fixed; top: 60px; left: 50%; transform: translateX(-50%) translateY(-6px); opacity: 0; pointer-events: none; background: rgba(10,16,36,0.97); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; box-shadow: 0 24px 60px rgba(0,0,0,0.6); backdrop-filter: blur(24px); transition: opacity 0.18s ease, transform 0.18s ease; min-width: 260px; }
-    .mega-drop::before { content: ''; position: absolute; bottom: 100%; left: 0; right: 0; height: 16px; }
-    .mega-drop-inner { padding: 24px 28px; }
-    .mega-drop.wide { min-width: 580px; }
-    .nav-item:hover .mega-drop { opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0); transition: opacity .18s, transform .18s; }
-    .mega-drop-title { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.07); }
-    .mega-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 24px; }
-    .mega-cols.two-cols { grid-template-columns: repeat(2, 1fr); }
-    .mega-link { display: block; font-size: 13px; color: rgba(255,255,255,.6); text-decoration: none; padding: 6px 0; transition: color 0.15s; white-space: nowrap; }
+    /* ── Mega dropdown ── */
+    .mega-drop {
+      position: absolute; top: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      opacity: 0; pointer-events: none;
+      background: rgb(6,9,20);
+      border: 1px solid rgba(255,255,255,.07);
+      border-top: 1.5px solid rgba(124,92,252,0.45);
+      border-radius: 14px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.8);
+      backdrop-filter: blur(32px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      padding: 16px 20px;
+    }
+    .mega-drop::before {
+      content: ''; position: absolute; bottom: 100%; left: 0; right: 0; height: 12px;
+    }
+    .nav-item:hover .mega-drop { opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0); }
+
+    .mega-drop-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 20px; }
+    .mega-drop-inner.two-cols { grid-template-columns: repeat(2, 1fr); }
+    .mega-col-label {
+      font-size: 8.5px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase;
+      color: rgba(255,255,255,.28); margin-bottom: 7px; padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .mega-link {
+      display: block; font-size: 12px; color: rgba(255,255,255,.52);
+      text-decoration: none; padding: 3.5px 0;
+      transition: color 0.1s; white-space: nowrap;
+    }
     .mega-link:hover { color: #fff; }
     .mega-parent-link { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; margin-bottom: 14px; }
     .mega-parent-link svg { opacity: .5; }
@@ -252,86 +274,103 @@
   </a>
   <nav class="nav-menu" id="navMenu">
 
+      <!-- Création site internet -->
       <div class="nav-item">
-      <button class="nav-item-btn">
-        Création site internet
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="mega-drop wide">
-        <div class="mega-drop-inner">
-        <a href="/creation-site-internet-saint-etienne/" class="mega-parent-link">
-          Création site internet Saint-Étienne
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <div class="mega-drop-title">Par métier</div>
-        <div class="mega-cols">
-          <div>
-            <a href="/creation-site-internet-avocat/" class="mega-link">Avocat</a>
-            <a href="/creation-site-internet-plombier" class="mega-link">Plombier</a>
-            <a href="/creation-site-internet-artisan" class="mega-link">Artisan</a>
-            <a href="/creation-site-internet-serrurier" class="mega-link">Serrurier</a>
-            <a href="/creation-site-internet-expert-comptable" class="mega-link">Expert comptable</a>
-            <a href="/creation-site-internet-electricien" class="mega-link">Électricien</a>
-            <a href="/creation-site-internet-menuisier" class="mega-link">Menuisier</a>
-            <a href="/creation-site-internet-macon" class="mega-link">Maçon</a>
-          </div>
-          <div>
-            <a href="/creation-site-internet-peintre" class="mega-link">Peintre en bâtiment</a>
-            <a href="/creation-site-internet-platrier" class="mega-link">Plâtrier</a>
-            <a href="/creation-site-internet-btp" class="mega-link">BTP</a>
-            <a href="/creation-site-internet-architecte" class="mega-link">Architecte</a>
-            <a href="/creation-site-internet-agence-immobiliere" class="mega-link">Agence immobilière</a>
-            <a href="/creation-site-internet-dentiste" class="mega-link">Dentiste</a>
-            <a href="/creation-site-internet-cabinet-conseil" class="mega-link">Cabinet de conseil</a>
-            <a href="/creation-site-internet-kine" class="mega-link">Kiné</a>
-          </div>
-          <div>
-            <a href="/creation-site-internet-osteopathe" class="mega-link">Ostéopathe</a>
-            <a href="/creation-site-internet-psychologue" class="mega-link">Psychologue</a>
-            <a href="/creation-site-internet-therapeute" class="mega-link">Thérapeute</a>
-            <a href="/creation-site-internet-couvreur" class="mega-link">Couvreur</a>
-            <a href="/creation-site-internet-notaire" class="mega-link">Notaire</a>
-            <a href="/creation-site-internet-huissier" class="mega-link">Huissier de justice</a>
+        <button class="nav-item-btn">
+          Création site internet
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mega-drop">
+          <div class="mega-drop-inner">
+            <div>
+              <div class="mega-col-label">Artisanat & BTP</div>
+              <a href="/creation-site-internet-saint-etienne" class="mega-parent-link">→ Saint-Étienne</a>
+              <a href="/creation-site-internet-artisan" class="mega-link">Artisan</a>
+              <a href="/creation-site-internet-plombier" class="mega-link">Plombier</a>
+              <a href="/creation-site-internet-serrurier" class="mega-link">Serrurier</a>
+              <a href="/creation-site-internet-electricien" class="mega-link">Électricien</a>
+              <a href="/creation-site-internet-menuisier" class="mega-link">Menuisier</a>
+              <a href="/creation-site-internet-macon" class="mega-link">Maçon</a>
+              <a href="/creation-site-internet-platrier" class="mega-link">Plâtrier</a>
+              <a href="/creation-site-internet-couvreur" class="mega-link">Couvreur</a>
+              <a href="/creation-site-internet-peintre" class="mega-link">Peintre en bâtiment</a>
+              <a href="/creation-site-internet-btp" class="mega-link">BTP</a>
+            </div>
+            <div>
+              <div class="mega-col-label">Santé & Bien-être</div>
+              <a href="/creation-site-internet-kine" class="mega-link">Kiné</a>
+              <a href="/creation-site-internet-osteopathe" class="mega-link">Ostéopathe</a>
+              <a href="/creation-site-internet-psychologue" class="mega-link">Psychologue</a>
+              <a href="/creation-site-internet-therapeute" class="mega-link">Thérapeute</a>
+              <a href="/creation-site-internet-dentiste" class="mega-link">Dentiste</a>
+            </div>
+            <div>
+              <div class="mega-col-label">Conseil & Juridique</div>
+              <a href="/creation-site-internet-avocat" class="mega-link">Avocat</a>
+              <a href="/creation-site-internet-expert-comptable" class="mega-link">Expert comptable</a>
+              <a href="/creation-site-internet-cabinet-conseil" class="mega-link">Cabinet de conseil</a>
+              <a href="/creation-site-internet-architecte" class="mega-link">Architecte</a>
+              <a href="/creation-site-internet-agence-immobiliere" class="mega-link">Agence immobilière</a>
+              <a href="/creation-site-internet-notaire" class="mega-link">Notaire</a>
+              <a href="/creation-site-internet-huissier" class="mega-link">Huissier de justice</a>
+            </div>
           </div>
         </div>
-        </div><!-- /mega-drop-inner -->
       </div>
-    </div>
 
+      <!-- Site vitrine -->
       <div class="nav-item">
-      <button class="nav-item-btn">
-        Site vitrine
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="mega-drop">
-        <div class="mega-drop-inner">
-        <a href="/creation-site-vitrine-saint-etienne/" class="mega-parent-link">
-          Création site vitrine Saint-Étienne
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <div class="mega-drop-title">Par métier</div>
-        <div class="mega-cols two-cols">
-          <div>
-            <a href="/creation-site-vitrine-artisan/" class="mega-link">Artisan</a>
-            <a href="/creation-site-vitrine-plombier" class="mega-link">Plombier</a>
-            <a href="/creation-site-vitrine-chasseur-de-tetes" class="mega-link">Chasseur de têtes</a>
-            <a href="/creation-site-vitrine-chauffagiste" class="mega-link">Chauffagiste</a>
-            <a href="/creation-site-vitrine-couvreur" class="mega-link">Couvreur</a>
-          </div>
-          <div>
-            <a href="/creation-site-vitrine-dentiste" class="mega-link">Dentiste</a>
-            <a href="/creation-site-vitrine-decorateur" class="mega-link">Décorateur</a>
-            <a href="/creation-site-vitrine-jardinier" class="mega-link">Jardinier</a>
-            <a href="/creation-site-vitrine-serrurier" class="mega-link">Serrurier</a>
+        <button class="nav-item-btn">
+          Site vitrine
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mega-drop">
+          <div class="mega-drop-inner two-cols">
+            <div>
+              <div class="mega-col-label">Artisanat & Services</div>
+              <a href="/creation-site-vitrine-saint-etienne" class="mega-parent-link">→ Saint-Étienne</a>
+              <a href="/creation-site-vitrine-artisan" class="mega-link">Artisan</a>
+              <a href="/creation-site-vitrine-plombier" class="mega-link">Plombier</a>
+              <a href="/creation-site-vitrine-chauffagiste" class="mega-link">Chauffagiste</a>
+              <a href="/creation-site-vitrine-couvreur" class="mega-link">Couvreur</a>
+              <a href="/creation-site-vitrine-jardinier" class="mega-link">Jardinier</a>
+              <a href="/creation-site-vitrine-serrurier" class="mega-link">Serrurier</a>
+            </div>
+            <div>
+              <div class="mega-col-label">Santé & Autre</div>
+              <a href="/creation-site-vitrine-dentiste" class="mega-link">Dentiste</a>
+              <a href="/creation-site-vitrine-decorateur" class="mega-link">Décorateur</a>
+              <a href="/creation-site-vitrine-chasseur-de-tetes" class="mega-link">Chasseur de têtes</a>
+            </div>
           </div>
         </div>
-        </div><!-- /mega-drop-inner -->
       </div>
-    </div>
 
+      <!-- Refonte -->
       <div class="nav-item">
-      <a href="/refonte-site-internet-saint-etienne" class="nav-item-btn">Refonte site internet</a>
-    </div>
+        <button class="nav-item-btn">
+          Refonte site internet
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mega-drop">
+          <div class="mega-drop-inner two-cols">
+            <div>
+              <div class="mega-col-label">Type de projet</div>
+              <a href="/refonte-site-internet-saint-etienne" class="mega-parent-link">→ Saint-Étienne</a>
+              <a href="/refonte-site-internet-saint-etienne/vitrine" class="mega-link">Site vitrine</a>
+              <a href="/refonte-site-internet-saint-etienne/wordpress" class="mega-link">WordPress</a>
+              <a href="/refonte-site-internet-saint-etienne/webflow" class="mega-link">Webflow</a>
+            </div>
+            <div>
+              <div class="mega-col-label">Par secteur</div>
+              <a href="/refonte-site-internet-saint-etienne/immobilier" class="mega-link">Immobilier</a>
+              <a href="/refonte-site-internet-saint-etienne/equestre" class="mega-link">Structures équestres</a>
+              <a href="/refonte-site-internet-saint-etienne/mairie" class="mega-link">Mairie</a>
+              <a href="/refonte-site-internet-saint-etienne/pme" class="mega-link">PME</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </nav>
   <div class="nav-right">
