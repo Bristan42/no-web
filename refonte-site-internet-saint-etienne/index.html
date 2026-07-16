@@ -196,6 +196,14 @@
     /* ── LAYOUT ── */
     main { position: relative; z-index: 1; padding-top: 60px; }
     .section { border-bottom: 1px solid var(--border); }
+    .clients-section { overflow: hidden; padding: 40px 0; position: relative; z-index: 1; }
+    .clients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); text-align: center; margin-bottom: 20px; }
+    .clients-track { display: flex; align-items: center; gap: 0; animation: clients-marquee 32s linear infinite; width: max-content; }
+    .clients-section:hover .clients-track { animation-play-state: paused; }
+    .client-logo-link { display: flex; align-items: center; padding: 0 48px; opacity: 0.35; filter: brightness(0) invert(1); transition: opacity 0.25s; }
+    .client-logo-link:hover { opacity: 1; }
+    .client-logo { height: 28px; width: auto; max-width: 140px; object-fit: contain; }
+    @keyframes clients-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .section-alt { background: rgba(255,255,255,0.018); }
     .inner { max-width: 860px; margin: 0 auto; padding: 80px 40px; }
     .inner-wide { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
@@ -784,6 +792,33 @@
         </div>
       </div>
   </section>
+
+  <!-- CLIENTS MARQUEE -->
+  <div class="clients-section">
+    <p class="clients-label">Ils me font confiance</p>
+    <div class="clients-track">
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+    </div>
+  </div>
 
   <!-- PROBLÈMES -->
   <section class="section">
