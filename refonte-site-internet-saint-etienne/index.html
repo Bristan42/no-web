@@ -289,9 +289,9 @@
 
     /* ── MOCKUP ── */
     .demo-wrap { margin: 56px auto 48px; max-width: 900px; }
-    .devices-scene { display: flex; align-items: flex-end; justify-content: center; gap: 24px; width: fit-content; margin: 0 auto; }
+    .devices-scene { display: flex; align-items: flex-end; justify-content: center; gap: 0; width: fit-content; margin: 0 auto; }
     /* -- Desktop browser -- */
-    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); width: 500px; flex-shrink: 0; }
+    .browser-frame { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); width: 500px; flex-shrink: 0; position: relative; z-index: 1; }
     .browser-bar { background: rgba(255,255,255,0.03); padding: 10px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
     .browser-dots { display: flex; gap: 6px; }
     .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -314,7 +314,7 @@
     .mockup-card-t { width: 75%; height: 7px; background: rgba(255,255,255,0.13); border-radius: 3px; margin-bottom: 6px; }
     .mockup-card-l { height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; margin-bottom: 3px; }
     /* -- Tablet -- */
-    .device-tablet { width: 220px; flex-shrink: 0; }
+    .device-tablet { width: 220px; flex-shrink: 0; margin-left: -60px; position: relative; z-index: 2; }
     .tablet-frame { background: #13131f; border: 5px solid #1d1d2e; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 48px rgba(0,0,0,0.55); }
     .tablet-camera { width: 6px; height: 6px; background: rgba(255,255,255,0.08); border-radius: 50%; margin: 7px auto; }
     .tablet-site { background: #0c0c14; }
@@ -335,7 +335,7 @@
     .tablet-card-t { width: 70%; height: 5px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-bottom: 4px; }
     .tablet-card-l { height: 4px; background: rgba(255,255,255,0.04); border-radius: 2px; margin-bottom: 3px; }
     /* -- Phone -- */
-    .device-phone { width: 100px; flex-shrink: 0; }
+    .device-phone { width: 100px; flex-shrink: 0; margin-right: -40px; position: relative; z-index: 2; }
     .phone-frame { background: #13131f; border: 5px solid #1d1d2e; border-radius: 26px; overflow: hidden; box-shadow: 0 20px 48px rgba(0,0,0,0.55); }
     .phone-notch { width: 32px; height: 8px; background: #1d1d2e; border-radius: 0 0 5px 5px; margin: 0 auto; }
     .phone-site { background: #0c0c14; }
@@ -371,7 +371,7 @@
       .speed-badge { margin-top: 16px; }
       /* tablette : scale 0.75 → scène 651px large, 288px haute */
       .scene-clip { overflow: hidden; height: 290px; }
-      .devices-scene { flex-wrap: nowrap; gap: 24px; width: fit-content; margin-left: calc(50vw - 434px); transform: scale(0.75); transform-origin: top center; }
+      .devices-scene { flex-wrap: nowrap; gap: 24px; width: fit-content; margin-left: calc(50vw - 360px); transform: scale(0.75); transform-origin: top center; }
     }
     @media(max-width:480px){
       /* mobile : scale 0.43 → scène 373px large, 165px haute */
@@ -430,7 +430,10 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) { .nav-menu { display: none; } .nav-burger { display: block; } .nav-wa-btn { display: none; } }
+    .show-mobile { display: none; }
     @media (max-width: 768px) {
+      .hide-mobile { display: none; }
+      .show-mobile { display: inline; }
       nav { padding: 0 20px; }
       .hero { padding: 100px 20px 80px; }
       .hero h1 { margin-bottom: 44px; }
@@ -988,7 +991,7 @@
   <section class="section section-alt">
     <div class="inner">
       <div class="section-label reveal">Cible</div>
-      <h2 class="section-h2 reveal d1">Pour qui est cette offre de refonte<br>à Saint-Étienne et dans la Loire ?</h2>
+      <h2 class="section-h2 reveal d1"><span class="hide-mobile">Pour qui est cette offre de refonte<br>à Saint-Étienne et dans la Loire ?</span><span class="show-mobile">Pour qui est<br>cette offre de refonte ?</span></h2>
       <div class="for-who-grid">
         <div class="for-who-item reveal d1">
           <div class="for-who-icon" style="background:rgba(56,189,248,0.12);">
