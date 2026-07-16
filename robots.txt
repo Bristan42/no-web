@@ -36,7 +36,5 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-# Silos non finalisés — masqués de Google
-Disallow: /creation-site-internet*
 
 Sitemap: https://no-web.fr/sitemap.xml
