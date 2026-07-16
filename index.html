@@ -716,23 +716,13 @@
     }
 
     /* ─────────────────── MARQUEE ─────────────────── */
-    .marquee-wrapper {
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      overflow: hidden; padding: 14px 0; position: relative; z-index: 1;
-    }
-    .marquee-track {
-      display: flex; gap: 0;
-      animation: marquee 28s linear infinite;
-      width: max-content;
-    }
-    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
-    .marquee-item {
-      display: flex; align-items: center; gap: 10px;
-      padding: 0 32px; white-space: nowrap;
-      font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--text-3);
-    }
-    .marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--purple); flex-shrink: 0; }
+    .clients-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; padding: 20px 0; position: relative; z-index: 1; }
+    .clients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); text-align: center; margin-bottom: 16px; }
+    .clients-track { display: flex; align-items: center; gap: 0; animation: marquee 32s linear infinite; width: max-content; }
+    .clients-section:hover .clients-track { animation-play-state: paused; }
+    .client-logo-link { display: flex; align-items: center; padding: 0 48px; opacity: 0.35; filter: brightness(0) invert(1); transition: opacity 0.25s; }
+    .client-logo-link:hover { opacity: 1; }
+    .client-logo { height: 28px; width: auto; max-width: 140px; object-fit: contain; }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
     /* ─────────────────── DEVICE SHOWCASE ─────────────────── */
@@ -1449,25 +1439,21 @@
     </div>
   </div>
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrapper">
-    <div class="marquee-track" id="marquee">
-      <div class="marquee-item"><span class="marquee-dot"></span>100 / 100 PageSpeed</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Zéro frais de création</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Design sur-mesure</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Satisfait ou remboursé</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Support direct WhatsApp</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Expertise SEO</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Livré en 48 h</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>HTML / CSS pur — rien à hacker</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>100 / 100 PageSpeed</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Zéro frais de création</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Design sur-mesure</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Satisfait ou remboursé</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Support direct WhatsApp</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Expertise SEO</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>Livré en 48 h</div>
-      <div class="marquee-item"><span class="marquee-dot"></span>HTML / CSS pur — rien à hacker</div>
+  <!-- CLIENTS MARQUEE -->
+  <div class="clients-section">
+    <p class="clients-label">Ils me font confiance</p>
+    <div class="clients-track">
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <!-- Duplicate pour boucle infinie -->
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
     </div>
   </div>
 
