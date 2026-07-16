@@ -204,8 +204,8 @@
     .section-body { font-size: 16px; color: var(--text-2); line-height: 1.7; max-width: 600px; }
 
     /* ── HERO ── */
-    .hero { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 56px; padding: 40px 60px; min-height: calc(100vh - 70px); text-align: left; position: relative; }
-    .hero-left { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+    .hero { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 64px; padding: 40px 60px; min-height: calc(100vh - 70px); text-align: left; position: relative; }
+    .hero-left { flex: 0 1 460px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 6px 14px; margin-bottom: 28px; }
     .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
     .hero h1 { font-size: clamp(30px, 3.5vw, 50px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 28px; }
@@ -365,7 +365,15 @@
     .speed-metric { display:flex; flex-direction:column; align-items:center; gap:2px; }
     .speed-metric-val { font-size:13px; font-weight:700; color:#22c55e; font-family:'Inter',sans-serif; line-height:1; }
     .speed-metric-key { font-size:9px; color:rgba(255,255,255,0.35); font-family:'Inter',sans-serif; white-space:nowrap; }
-    @media(max-width:768px){
+    @media(max-width:950px){
+      /* Hero : retour en colonne unique */
+      .hero { flex-direction: column; align-items: center; text-align: center; padding: 64px 20px 48px; min-height: auto; gap: 0; justify-content: flex-start; }
+      .hero-left { flex: none; width: 100%; align-items: center; text-align: center; }
+      .hero h1 { margin-bottom: 28px; }
+      .hero-stats { margin: 0 auto 28px; width: 100%; max-width: 480px; justify-content: center; }
+      .hero-cta { margin-top: 28px; }
+      .hero-note { margin-top: 12px; max-width: 320px; margin-left: auto; margin-right: auto; text-align: center; }
+      /* Illustration : centrage en colonne */
       .demo-wrap { flex: none; margin: 24px -20px 0; padding: 0; width: calc(100% + 40px); }
       .browser-frame { width: 500px; order: 0; flex-shrink: 0; }
       .device-phone { display: block; width: 100px; }
@@ -375,6 +383,9 @@
       .devices-scene { flex-wrap: nowrap; gap: 0; width: fit-content; margin-left: calc(50vw - 360px); transform: scale(0.75); transform-origin: top center; }
     }
     @media(max-width:480px){
+      .hero-stat { padding: 16px 8px; }
+      .hero-stat-num { font-size: 20px; }
+      .hero-stat-label { white-space: nowrap; font-size: 10px; }
       .scene-clip { height: 168px; }
       .devices-scene { transform: scale(0.43); }
     }
@@ -435,15 +446,7 @@
       .hide-mobile { display: none; }
       .show-mobile { display: inline; }
       nav { padding: 0 20px; }
-      .hero { flex-direction: column; align-items: center; text-align: center; padding: 64px 20px 48px; min-height: auto; gap: 0; justify-content: flex-start; }
-      .hero-left { width: 100%; align-items: center; text-align: center; }
-      .hero h1 { margin-bottom: 28px; }
-      .hero-stats { margin: 0 auto 28px; width: 100%; max-width: 100%; justify-content: center; }
-      .hero-stat { padding: 16px 8px; }
-      .hero-stat-num { font-size: 20px; }
-      .hero-stat-label { white-space: nowrap; font-size: 10px; }
-      .hero-cta { margin-top: 28px; }
-      .hero-note { margin-top: 12px; font-size: 11px; max-width: 280px; margin-left: auto; margin-right: auto; text-align: center; }
+      .hero-note { font-size: 11px; }
       .inner, .inner-wide { padding: 56px 24px; }
       .problems-grid, .solution-grid, .migration-steps, .pricing-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
