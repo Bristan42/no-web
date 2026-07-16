@@ -210,7 +210,7 @@
     .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
     .hero h1 { font-size: clamp(30px, 3.5vw, 50px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 28px; }
     .hero h1 em { font-style: normal; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-stats { display: flex; justify-content: flex-start; gap: 1px; margin: 0 0 28px; max-width: 420px; width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; }
+    .hero-stats { display: flex; justify-content: flex-start; gap: 1px; margin: 0; max-width: 420px; width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; }
     .hero-stat { flex: 1; text-align: center; padding: 16px 12px; position: relative; }
     .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.06); }
     .hero-stat-num { display: block; font-size: clamp(20px, 2.5vw, 26px); font-weight: 800; letter-spacing: -1px; line-height: 1; margin-bottom: 5px; }
@@ -370,7 +370,7 @@
       .hero { flex-direction: column; align-items: center; text-align: center; padding: 64px 20px 48px; min-height: auto; gap: 0; justify-content: flex-start; }
       .hero-left { flex: none; width: 100%; align-items: center; text-align: center; }
       .hero h1 { margin-bottom: 28px; }
-      .hero-stats { margin: 0 auto 28px; width: 100%; max-width: 480px; justify-content: center; }
+      .hero-stats { margin: 0 auto; width: 100%; max-width: 480px; justify-content: center; }
       .hero-cta { margin-top: 28px; }
       .hero-note { margin-top: 12px; max-width: 320px; margin-left: auto; margin-right: auto; text-align: center; }
       /* Illustration : centrage en colonne */
@@ -399,8 +399,8 @@
     .for-who-item p { font-size: 13px; color: var(--text-2); line-height: 1.5; }
 
     /* ── CTA INTERMÉDIAIRE (packs) ── */
-    .packs-cta { margin-top: 40px; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .packs-cta-note { font-size: 13px; color: var(--text-3); }
+    .packs-cta { margin-top: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+    .packs-cta-note { font-size: 13px; color: var(--text-3); text-align: center; }
 
     /* ── FAQ ── */
     .faq-list { margin-top: 48px; display: flex; flex-direction: column; gap: 12px; }
