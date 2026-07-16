@@ -115,7 +115,7 @@
       position: absolute; left: 50%; transform: translateX(-50%);
       display: flex; align-items: center; gap: 4px;
     }
-    .nav-item { position: static; } /* static pour que le dropdown se positionne par rapport à nav */
+    .nav-item { position: relative; } /* relatif à chaque nav-item pour que le dropdown suive le bouton */
     .nav-item-btn {
       display: flex; align-items: center; gap: 5px;
       font-size: 13px; font-weight: 500; color: rgba(255,255,255,.7);
