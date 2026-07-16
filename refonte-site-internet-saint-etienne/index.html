@@ -363,11 +363,12 @@
     .speed-row-label { font-size:10px; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; }
     .speed-row-val { font-size:10px; font-weight:700; color:#22c55e; margin-left:8px; font-family:'Inter',sans-serif; }
     @media(max-width:768px){
-      .demo-wrap { margin: 40px auto 32px; padding: 0 20px; }
-      .devices-scene { flex-wrap: wrap; gap: 12px; width: 100%; margin: 0; justify-content: center; align-items: flex-end; }
-      .browser-frame { width: 100%; order: -1; flex-shrink: 1; }
-      .device-phone { display: block; width: 88px; }
-      .device-tablet { display: block; width: 185px; }
+      .demo-wrap { margin: 32px auto 24px; padding: 0 16px; }
+      .scene-clip { overflow: hidden; height: 132px; }
+      .devices-scene { flex-wrap: nowrap; gap: 24px; width: fit-content; margin-left: calc(50% - 434px); transform: scale(0.39); transform-origin: top center; }
+      .browser-frame { width: 500px; order: 0; flex-shrink: 0; }
+      .device-phone { display: block; width: 100px; }
+      .device-tablet { display: block; width: 220px; }
       .speed-badge { display: flex; width: 100%; box-sizing: border-box; border-radius: 10px; margin-top: 16px; }
     }
 
@@ -698,11 +699,12 @@
 
   <!-- MOCKUP VISUEL -->
   <section class="section">
-    <div class="inner" style="text-align:center;">
+    <div class="inner">
       <div class="section-label reveal">Exemple concret</div>
       <h2 class="section-h2 reveal d1">À quoi ressemble un site No Web</h2>
       <p class="section-body reveal d2">HTML pur, zéro plugin, zéro WordPress. Ce que Google PageSpeed Insights voit quand il audite l'un de nos sites.</p>
       <div class="demo-wrap reveal d3">
+        <div class="scene-clip">
         <div class="devices-scene">
 
           <!-- PHONE -->
@@ -819,6 +821,7 @@
           </div>
 
         </div>
+        </div><!-- /.scene-clip -->
         <div class="speed-badge">
           <div>
             <div class="speed-ring"><span class="speed-ring-num">100</span></div>
