@@ -179,6 +179,15 @@
     .nav-wa-btn { display: inline-flex; align-items: center; gap: 7px; background: #25D366; color: #0a2e16; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 20px; text-decoration: none; white-space: nowrap; transition: opacity 0.2s, transform 0.15s; box-shadow: 0 0 16px rgba(37,211,102,0.3); }
     .nav-wa-btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
+    /* ── CLIENTS ── */
+    .clients-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 40px; }
+    .clients-inner { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+    .clients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); }
+    .clients-logos { display: flex; align-items: center; gap: 52px; flex-wrap: wrap; justify-content: center; }
+    .client-logo-link { display: flex; align-items: center; opacity: 0.4; filter: grayscale(1) brightness(2); transition: opacity 0.3s, filter 0.3s; }
+    .client-logo-link:hover { opacity: 0.9; filter: grayscale(0) brightness(1); }
+    .client-logo { height: 26px; width: auto; max-width: 130px; object-fit: contain; }
+
     /* ── LAYOUT ── */
     main { position: relative; z-index: 1; padding-top: 60px; }
     .section { border-bottom: 1px solid var(--border); }
@@ -434,6 +443,24 @@
     <a href="#contact" class="hero-cta">Recevoir ma maquette gratuite →</a>
     <p class="hero-note">Maquette offerte · Sans engagement · Réponse sous 48h</p>
   </section>
+
+  <!-- CLIENTS -->
+  <div class="clients-section">
+    <div class="clients-inner">
+      <p class="clients-label">Ils me font confiance</p>
+      <div class="clients-logos">
+        <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
+          <img src="/logos/slidor.svg" alt="Slidor" class="client-logo">
+        </a>
+        <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
+          <img src="/logos/veracash.svg" alt="Veracash" class="client-logo">
+        </a>
+        <a href="https://global-expertises.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link">
+          <img src="/logos/global-expertises.png" alt="Global Expertises" class="client-logo">
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- PROBLÈMES -->
   <section class="section">
