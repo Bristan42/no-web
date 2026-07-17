@@ -1044,7 +1044,16 @@
       .hero-actions { margin-top: 28px; }
       .hero-preview { margin-top: 28px; }
     }
-  </style>
+  
+    /* Pack Visible bleu */
+    .plan.blue{border-color:rgba(56,189,248,0.35);background:rgba(56,189,248,0.04)}
+    .plan.blue:hover{border-color:rgba(56,189,248,0.6);box-shadow:0 24px 60px rgba(56,189,248,0.15)}
+    .plan.blue .plan-tag{color:#38bdf8}
+    .plan.blue .plan-btn{background:linear-gradient(135deg,#0ea5e9,#38bdf8);border-color:transparent;color:#fff}
+    .plan.blue .plan-btn:hover{opacity:.9}
+    /* Plan items blancs */
+    .plan-items span{color:#fff!important}
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1482,7 +1491,7 @@
       <div class="pricing-grid">
 
         <!-- VISIBLE -->
-        <div class="plan reveal d1">
+        <div class="plan blue reveal d1">
           <div class="plan-badge-slot"></div>
           <div class="plan-tag">Visible</div>
           <div class="plan-headline">Site professionnel clé en main</div>
