@@ -217,7 +217,7 @@
 
 
     /* ─────────────────── HERO ─────────────────── */
-    .hero {
+    /* old hero – overridden below */.hero {
       position: relative; z-index: 1;
       min-height: 100vh;
       display: flex; flex-direction: column;
@@ -1053,6 +1053,32 @@
     .plan.blue .plan-btn:hover{opacity:.9}
     /* Plan items blancs */
     .plan-items span{color:#fff!important}
+
+    /* ── HERO ── */
+    .hero { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 64px; padding: 40px 40px; min-height: calc(100vh - 70px); text-align: left; position: relative; }
+    .hero-left { flex: 0 1 620px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 6px 14px; margin-bottom: 28px; }
+    .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 8px #38bdf8; }
+    .hero h1 { font-size: clamp(30px, 3.5vw, 50px); font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 56px; }
+    .hero h1 em { font-style: normal; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-h1-group { display: flex; flex-direction: column; width: fit-content; }
+    .hero-stats { display: flex; justify-content: flex-start; gap: 8px; margin: 0; width: 100%; background: none; border: none; border-radius: 0; overflow: visible; }
+    .hero-stat { flex: 1; text-align: center; padding: 14px 10px; position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; }
+    .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.08); }
+    .hero-stat-num { display: block; font-size: clamp(20px, 2.5vw, 26px); font-weight: 800; letter-spacing: -1px; line-height: 1; margin-bottom: 5px; }
+    .hero-stat-num.blue { background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-stat-num.green { background: linear-gradient(135deg, #34D399, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-stat-num.gold { background: linear-gradient(135deg, #FBBF24, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-stat-label { font-size: 11px; color: var(--text-3); line-height: 1.3; white-space: nowrap; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--grad); color: #fff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 12px; text-decoration: none; box-shadow: 0 0 24px rgba(124,58,237,0.4); transition: opacity 0.2s, transform 0.15s; margin-top: 40px; }
+    .hero-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+    .hero-note { margin-top: 28px; font-size: 12px; color: var(--text-3); }
+    @media(max-width:950px){
+      /* Hero : retour en colonne unique */
+      .hero { flex-direction: column; align-items: center; text-align: center; padding: 64px 20px 48px; min-height: auto; gap: 0; justify-content: flex-start; }
+    .hero-cta-wrap{display:inline-flex;flex-direction:column;align-items:center;gap:10px}
+    .packs-cta{margin-top:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+    .packs-cta-note{font-size:13px;color:var(--text-3);text-align:center}
 </style>
   <script type="application/ld+json">
   {
@@ -1368,92 +1394,135 @@
 
   <!-- HERO -->
   <main>
-  <section class="hero">
-
-    <h1>
-      <span class="h1-eyebrow">Agence Web à Saint-Étienne</span>
-      <span>Création de votre site internet.</span>
-      <span class="gold-text">100% gratuit sous 48 heures.</span>
-    </h1>
-
-    <p class="hero-sub">
-      Votre site pro livré en 48h, sans payer un centime au départ. Je crée, j'héberge et je maintiens votre site. Une modification&nbsp;? Un message WhatsApp suffit — en ligne sous 48h.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">
-        Recevoir mon site gratuitement
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-
-    <!-- Faux aperçu d'interface -->
-    <div class="hero-preview">
-      <div class="hero-preview-glow"></div>
-      <div class="preview-card">
-        <div class="preview-header">
-          <div class="preview-dots">
-            <span></span><span></span><span></span>
-          </div>
-          <span class="preview-title">Projets clients en cours</span>
+    <section class="hero">
+    <div class="hero-left">
+      <div class="hero-h1-group">
+      <h1>Agence Web à Saint-Étienne<br>Création de votre site internet.<br><em>100% gratuit sous 48 heures.</em></h1>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num blue">HTML</span>
+          <span class="hero-stat-label">zéro WordPress</span>
         </div>
-        <div class="preview-rows">
-          <div class="preview-row">
-            <div class="preview-row-icon" style="background:rgba(124,58,237,0.12);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <div class="hero-stat">
+          <span class="hero-stat-num green">0 €</span>
+          <span class="hero-stat-label">aucun frais initial</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num gold">48h</span>
+          <span class="hero-stat-label">maquette offerte</span>
+        </div>
+      </div>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="#contact" class="hero-cta">Recevoir mon site gratuitement</a>
+        <p class="hero-note">Sans engagement · Maquette offerte sous 48h</p>
+      </div>
+    </div>
+    <div class="demo-wrap">
+        <div class="scene-clip">
+        <div class="devices-scene">
+          <!-- PHONE -->
+          <div class="device-phone">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-site">
+                <div class="phone-nav">
+                  <div class="phone-logo-dot"></div>
+                  <div class="phone-burger"><span></span><span></span><span></span></div>
+                </div>
+                <div class="phone-hero">
+                  <div class="phone-h1a"></div>
+                  <div class="phone-h1b"></div>
+                  <div class="phone-sub"></div>
+                  <div class="phone-cta"></div>
+                </div>
+                <div class="phone-block"></div>
+                <div class="phone-block2"></div>
+              </div>
+              <div class="phone-home"></div>
             </div>
-            <div class="preview-row-text">
-              <div class="preview-row-name">Dupont Électricité — Saint-Étienne</div>
-              <div class="preview-row-desc">Site vitrine · Livraison sous 48h</div>
-            </div>
-            <span class="preview-row-badge badge-live">En ligne</span>
           </div>
-          <div class="preview-row">
-            <div class="preview-row-icon" style="background:rgba(94,106,210,0.12);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <!-- DESKTOP BROWSER -->
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot" style="background:#ff5f57"></div>
+                <div class="browser-dot" style="background:#ffbd2e"></div>
+                <div class="browser-dot" style="background:#28c840"></div>
+              </div>
+              <div class="browser-url">🔒 votre-metier-saint-etienne.fr</div>
             </div>
-            <div class="preview-row-text">
-              <div class="preview-row-name">Martin Plomberie — Lyon</div>
-              <div class="preview-row-desc">Galerie réalisations mise à jour</div>
+            <div class="mockup-site">
+              <div class="mockup-nav">
+                <div class="mockup-logo">
+                  <div class="mockup-logo-dot"></div>
+                  <div class="mockup-logo-text"></div>
+                </div>
+                <div class="mockup-nav-links">
+                  <div class="mockup-nav-link"></div>
+                  <div class="mockup-nav-link"></div>
+                  <div class="mockup-nav-link"></div>
+                </div>
+              </div>
+              <div class="mockup-hero-area">
+                <div class="mockup-h1a"></div>
+                <div class="mockup-h1b"></div>
+                <div class="mockup-sub-line"></div>
+                <div class="mockup-cta-btn"></div>
+              </div>
+              <div class="mockup-cards">
+                <div class="mockup-card"><div class="mockup-card-icon" style="background:rgba(56,189,248,0.15)"></div><div class="mockup-card-t"></div><div class="mockup-card-l"></div><div class="mockup-card-l" style="width:70%"></div></div>
+                <div class="mockup-card"><div class="mockup-card-icon" style="background:rgba(167,139,250,0.15)"></div><div class="mockup-card-t"></div><div class="mockup-card-l"></div><div class="mockup-card-l" style="width:80%"></div></div>
+                <div class="mockup-card"><div class="mockup-card-icon" style="background:rgba(52,211,153,0.15)"></div><div class="mockup-card-t"></div><div class="mockup-card-l"></div><div class="mockup-card-l" style="width:60%"></div></div>
+              </div>
             </div>
-            <span class="preview-row-badge badge-wip">En cours</span>
           </div>
-          <div class="preview-row">
-            <div class="preview-row-icon" style="background:rgba(251,191,36,0.1);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <!-- TABLET -->
+          <div class="device-tablet">
+            <div class="tablet-frame">
+              <div class="tablet-camera"></div>
+              <div class="tablet-site">
+                <div class="tablet-nav">
+                  <div class="tablet-logo">
+                    <div class="tablet-logo-dot"></div>
+                    <div class="tablet-logo-text"></div>
+                  </div>
+                  <div class="tablet-nav-links">
+                    <div class="tablet-nav-link"></div>
+                    <div class="tablet-nav-link"></div>
+                    <div class="tablet-nav-link"></div>
+                  </div>
+                </div>
+                <div class="tablet-hero">
+                  <div class="tablet-h1a"></div>
+                  <div class="tablet-h1b"></div>
+                  <div class="tablet-sub"></div>
+                  <div class="tablet-cta"></div>
+                </div>
+                <div class="tablet-cards">
+                  <div class="tablet-card"><div class="tablet-card-icon" style="background:rgba(56,189,248,0.15)"></div><div class="tablet-card-t"></div><div class="tablet-card-l"></div><div class="tablet-card-l" style="width:60%"></div></div>
+                  <div class="tablet-card"><div class="tablet-card-icon" style="background:rgba(167,139,250,0.15)"></div><div class="tablet-card-t"></div><div class="tablet-card-l"></div><div class="tablet-card-l" style="width:75%"></div></div>
+                </div>
+              </div>
             </div>
-            <div class="preview-row-text">
-              <div class="preview-row-name">Dr. Lefèvre Ostéopathe — Paris</div>
-              <div class="preview-row-desc">Nouveau client · Maquette envoyée</div>
-            </div>
-            <span class="preview-row-badge badge-new">Nouveau</span>
+          </div>
+        </div>
+        </div>
+        <div class="speed-badge">
+          <div class="speed-score">
+            <div class="speed-ring"><span class="speed-ring-num">100</span></div>
+            <span class="speed-ring-label">PageSpeed</span>
+          </div>
+          <div class="speed-sep"></div>
+          <div class="speed-metrics">
+            <div class="speed-metric"><span class="speed-metric-val">0.4s</span><span class="speed-metric-key">FCP</span></div>
+            <div class="speed-metric"><span class="speed-metric-val">0.6s</span><span class="speed-metric-key">TTI</span></div>
+            <div class="speed-metric"><span class="speed-metric-val">0 ms</span><span class="speed-metric-key">TBT</span></div>
           </div>
         </div>
       </div>
-    </div>
   </section>
-
-  <!-- STATS -->
-  <div class="stats-section reveal">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-num">Satisfait</div>
-        <div class="stat-label">ou remboursé</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num" style="color:#25D366;">WhatsApp</div>
-        <div class="stat-label">support direct inclus</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num grad"><span class="count" data-t="0">0</span> €</div>
-        <div class="stat-label">de frais de création</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num gold">48 h</div>
-        <div class="stat-label">pour recevoir votre site</div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- CLIENTS MARQUEE -->
   <div class="clients-section">
