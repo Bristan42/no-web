@@ -58,7 +58,25 @@
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:none}.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
     @media(max-width:960px){.nav-menu{display:none}.nav-burger{display:block}.nav-wa-btn{display:none}}
     @media(max-width:768px){nav{padding:0 20px}.hero{padding:60px 24px;min-height:auto}.inner,.inner-wide{padding:56px 24px}.problems-grid,.solution-grid,.migration-steps,.pricing-grid{grid-template-columns:1fr}.contact-inner-2col{grid-template-columns:1fr;gap:40px;padding:56px 24px}.contact-wa{display:flex;width:100%;justify-content:center}.contact-note{text-align:center}footer{flex-direction:column;gap:16px;text-align:center;padding:24px}}
-  </style>
+  
+    /* Clients logos marquee */
+    .clients-section{overflow:hidden;padding:40px 0;position:relative;z-index:1}
+    .clients-label{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-3);text-align:center;margin-bottom:32px}
+    .clients-track{display:flex;align-items:center;gap:48px;width:max-content;animation:clients-marquee 28s linear infinite}
+    .clients-track:hover{animation-play-state:paused}
+    @keyframes clients-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .client-logo-link{display:inline-flex;align-items:center;flex-shrink:0;opacity:.5;transition:opacity .25s;text-decoration:none}
+    .client-logo-link:hover{opacity:1}
+    .client-logo{height:28px;width:auto;filter:brightness(0) invert(1)}
+    /* Pack Visible bleu */
+    .plan.blue{border-color:rgba(56,189,248,0.35);background:rgba(56,189,248,0.04)}
+    .plan.blue:hover{border-color:rgba(56,189,248,0.6);box-shadow:0 24px 60px rgba(56,189,248,0.15)}
+    .plan.blue .plan-tag{color:#38bdf8}
+    .plan.blue .plan-btn{background:linear-gradient(135deg,#0ea5e9,#38bdf8);border-color:transparent;color:#fff}
+    .plan.blue .plan-btn:hover{opacity:.9}
+    /* Plan items blancs */
+    .plan-items span{color:#fff!important}
+</style>
 </head>
 <body>
 <div class="glow-1"></div><div class="glow-2"></div>
@@ -155,6 +173,34 @@
     <p class="hero-note">Maquette offerte · Sans engagement · Réponse sous 48h</p>
   </section>
 
+  <!-- CLIENTS MARQUEE -->
+  <div class="clients-section">
+    <p class="clients-label">Ils me font confiance</p>
+    <div class="clients-track">
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+      <a href="https://www.slidor.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/slidor.svg" alt="Slidor" class="client-logo"></a>
+      <a href="https://www.veracash.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/veracash.svg" alt="Veracash" class="client-logo"></a>
+      <a href="https://www.lepalaisdurotin.com/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/palais-du-rotin.svg" alt="Le Palais du Rotin" class="client-logo"></a>
+      <a href="https://ad-experts.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/ad-experts.svg" alt="AD Experts" class="client-logo"></a>
+      <a href="https://expertise-toiture.fr/" target="_blank" rel="nofollow noopener noreferrer" class="client-logo-link"><img src="/logos/expertise-toiture.png" alt="Expertise Toiture" class="client-logo"></a>
+    </div>
+  </div>
+
+
   <section class="section">
     <div class="inner-wide">
       <div class="section-label reveal">Le problème</div>
@@ -188,7 +234,7 @@
       <h2 class="section-h2 reveal d1">Trois formules.<br>Pas de surprise.</h2>
       <p class="section-body reveal d2">Choisissez selon votre ambition. Vous pouvez changer de formule à tout moment. Aucun frais au départ.</p>
       <div class="pricing-grid">
-        <div class="plan reveal d1"><div class="plan-badge-slot"></div><div class="plan-tag">Pack Visible</div><div class="plan-headline">Site ostéopathe professionnel clé en main</div><div class="plan-price">200 <sub>€/mois HT</sub></div><hr class="plan-sep"><div class="plan-items"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Site internet livré sous 48h</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fiche Google Business optimisée</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Hébergement, HTTPS et sécurité inclus</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>1 modification/semaine sous 48h</span></div><a href="#contact" class="plan-btn">DÉMARRER</a></div>
+        <div class="plan blue reveal d1"><div class="plan-badge-slot"></div><div class="plan-tag">Pack Visible</div><div class="plan-headline">Site ostéopathe professionnel clé en main</div><div class="plan-price">200 <sub>€/mois HT</sub></div><hr class="plan-sep"><div class="plan-items"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Site internet livré sous 48h</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fiche Google Business optimisée</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Hébergement, HTTPS et sécurité inclus</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(56,189,248,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>1 modification/semaine sous 48h</span></div><a href="#contact" class="plan-btn">DÉMARRER</a></div>
         <div class="plan featured reveal d2"><div class="plan-featured-glow"></div><div class="plan-badge-slot"><div class="plan-badge">⭐ Le plus choisi</div></div><div class="plan-tag">Pack Premier</div><div class="plan-headline">Devenez le numéro&nbsp;1 ostéopathe de votre ville</div><div class="plan-price">500 <sub>€/mois HT</sub></div><hr class="plan-sep"><div class="plan-items"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(167,139,250,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Inclut le Pack Visible</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(167,139,250,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Stratégie d'articles SEO ciblés</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(167,139,250,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Boost via nos partenaires web</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(167,139,250,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Rapport mensuel positions Google</span></div><a href="#contact" class="plan-btn">DÉMARRER</a></div>
         <div class="plan gold reveal d3"><div class="plan-badge-slot"></div><div class="plan-tag">Pack Sur-Mesure</div><div class="plan-headline">Fonctionnalités avancées sur mesure</div><div class="plan-price">Sur <sub>devis</sub></div><hr class="plan-sep"><div class="plan-items"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(212,175,55,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Inclut les Packs Visible &amp; Premier</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(212,175,55,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Catalogue, galerie ou espace membre</span><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(212,175,55,0.15)"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Intégrations spécifiques à votre métier</span></div><a href="#contact" class="plan-btn">OBTENIR UN DEVIS</a></div>
       </div>
