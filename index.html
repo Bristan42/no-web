@@ -401,8 +401,9 @@
     .section-h2 { margin-top: 14px;
       font-size: clamp(24px, 3.5vw, 46px);
       font-weight: 700; letter-spacing: -1px; line-height: 1.15;
-      max-width: 540px;
+      max-width: 720px;
     }
+    .device-text .section-h2, .contact-inner .section-h2 { font-size: clamp(24px, 2.6vw, 38px); }
     .section-body {
       margin-top: 14px; font-size: 15px; color: var(--text-2);
       line-height: 1.75; max-width: 480px;
@@ -708,8 +709,8 @@
     }
 
     /* ─────────────────── MARQUEE ─────────────────── */
-    .clients-section { border-bottom: 1px solid var(--border); overflow: hidden; padding: 20px 0; position: relative; z-index: 1; }
-    .clients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); text-align: center; margin-bottom: 36px; }
+    .clients-section { overflow: hidden; padding: 36px 0 48px; position: relative; z-index: 1; }
+    .clients-label { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); text-align: center; margin-bottom: 48px; margin-top: 8px; }
     .clients-track { display: flex; align-items: center; gap: 0; animation: marquee 32s linear infinite; width: max-content; }
     .clients-section:hover .clients-track { animation-play-state: paused; }
     .client-logo-link { display: flex; align-items: center; padding: 0 48px; opacity: 0.35; filter: brightness(0) invert(1); transition: opacity 0.25s; }
@@ -1809,7 +1810,7 @@
   <section class="section">
     <div class="inner-wide">
       <div class="section-label reveal">Le problème</div>
-      <h2 class="section-h2 reveal d1">Sans site vitrine professionnel,<br>vos prospects choisissent vos concurrents</h2>
+      <h2 class="section-h2 reveal d1">Vos concurrents ont un site.<br>Vos prospects les choisissent.</h2>
       <p class="section-body reveal d2">Un site amateur créé en 2015 sur Wix, non responsive et invisible sur Google : votre image professionnelle en souffre et vous perdez des clients chaque jour sans le savoir.</p>
       <div class="problems-grid">
         <div class="problem-card reveal d1"><div class="problem-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Site amateur ou inexistant</h3><p>Un site créé sur un constructeur gratuit, sans optimisation SEO, avec une mise en page rigide et des polices dépassées. Vos prospects l'ignorent et choisissent un concurrent qui inspire confiance.</p></div>
