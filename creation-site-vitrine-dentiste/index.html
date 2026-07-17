@@ -175,7 +175,17 @@
       .hero-stats{margin:0 auto;width:100%;max-width:480px;justify-content:center}
       .hero-cta{margin-top:28px}
       .hero-cta-wrap{display:inline-flex;flex-direction:column;align-items:center;gap:10px}.hero-note{margin-top:0;max-width:320px;margin-left:auto;margin-right:auto;text-align:center}
-      .demo-wrap{display:none}
+      .demo-wrap{flex:none;margin:24px -20px 0;padding:0;width:calc(100% + 40px)}
+      .browser-frame{width:500px;order:0;flex-shrink:0}
+      .device-phone{display:block;width:100px}
+      .device-tablet{display:block;width:220px}
+      .speed-badge{margin-top:16px}
+      .scene-clip{overflow:hidden;height:290px;width:auto}
+      .devices-scene{flex-wrap:nowrap;gap:0;width:fit-content;margin-left:calc(50vw - 360px);transform:scale(0.75);transform-origin:top center}
+    }
+    @media(max-width:480px){
+      .scene-clip{height:168px}
+      .devices-scene{transform:scale(0.43)}
     }
 </style>
 </head>
