@@ -446,15 +446,22 @@
     /* ─────────────────── POUR QUI ─────────────────── */
     .targets-wrapper { border-bottom: 1px solid var(--border); }
     .targets-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
-    .targets-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .targets-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; align-items: stretch; }
+    .target-link { display: flex; height: 100%; }
     .target-card {
       display: flex; flex-direction: column; gap: 12px;
       padding: 22px 18px; border-radius: 14px;
       border: 1px solid var(--border); background: var(--bg-card);
       transition: border-color 0.25s, background 0.25s, transform 0.2s;
-      cursor: pointer;
+      cursor: pointer; width: 100%;
     }
     .target-card:hover { border-color: var(--border-h); background: var(--bg-card-h); transform: translateY(-2px); }
+    .silo-cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 32px; }
+    .silo-card { display: flex; flex-direction: column; gap: 8px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; text-decoration: none; color: inherit; transition: border-color .25s, transform .25s; }
+    .silo-card:hover { border-color: var(--border-h); transform: translateY(-2px); }
+    .silo-card-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #38bdf8; }
+    .silo-card-title { font-size: 15px; font-weight: 700; line-height: 1.3; }
+    .silo-card-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
     .target-icon {
       width: 40px; height: 40px; border-radius: 10px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
@@ -468,7 +475,7 @@
     .pricing-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
     .pricing-grid { margin-top: 60px; display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
     @media (max-width: 860px) { .pricing-grid { grid-template-columns: 1fr; max-width: 400px; } }
-    @media (max-width: 860px) { .targets-grid { grid-template-columns: repeat(2,1fr); gap: 10px; } }
+    @media (max-width: 860px) { .targets-grid { grid-template-columns: repeat(2,1fr); gap: 10px; } .silo-cards-grid { grid-template-columns: 1fr; } }
 
     .plan {
       border: 1px solid var(--border);
@@ -2182,62 +2189,62 @@ footer { display: flex; align-items: center; justify-content: space-between; pad
       <div class="section-label reveal">Pour qui ?</div>
       <h2 class="section-h2 reveal d1">Idéal pour les artisans<br>et indépendants locaux</h2>
       <div class="targets-grid">
-        <a href="/creation-site-internet-electricien/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal">
+        <a href="/creation-site-internet-electricien/" class="target-link"><div class="target-card reveal">
           <div class="target-icon" style="background:rgba(251,191,36,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#FCD34D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
           <div class="target-name">Électriciens</div>
           <div class="target-desc">Dépannage, installation, mise aux normes — des clients urgents qui cherchent sur Google.</div>
         </div></a>
-        <a href="/creation-site-internet-plombier/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal d1">
+        <a href="/creation-site-internet-plombier/" class="target-link"><div class="target-card reveal d1">
           <div class="target-icon" style="background:rgba(96,165,250,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
           <div class="target-name">Plombiers</div>
           <div class="target-desc">Fuite, chauffe-eau, salle de bain — vos futurs clients veulent une réponse rapide.</div>
         </div></a>
-        <a href="/creation-site-internet-btp/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal d2">
+        <a href="/creation-site-internet-btp/" class="target-link"><div class="target-card reveal d2">
           <div class="target-icon" style="background:rgba(251,146,60,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div class="target-name">Maçons & BTP</div>
           <div class="target-desc">Rénovation, extension, gros oeuvre — montrez vos chantiers et décrochez des devis.</div>
         </div></a>
-        <a href="/creation-site-vitrine-jardinier/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal d3">
+        <a href="/creation-site-vitrine-jardinier/" class="target-link"><div class="target-card reveal d3">
           <div class="target-icon" style="background:rgba(52,211,153,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg></div>
           <div class="target-name">Paysagistes</div>
           <div class="target-desc">Jardin, terrasse, entretien — vos photos de réalisations valent mille mots.</div>
         </div></a>
-        <a href="/creation-site-internet-kine/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal">
+        <a href="/creation-site-internet-kine/" class="target-link"><div class="target-card reveal">
           <div class="target-icon" style="background:rgba(244,114,182,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
           <div class="target-name">Santé & Bien-être</div>
           <div class="target-desc">Kiné, ostéo, coach — rassurez et convertissez avant même le premier rendez-vous.</div>
         </div></a>
-        <a href="/creation-site-internet-avocat/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal d1">
+        <a href="/creation-site-internet-avocat/" class="target-link"><div class="target-card reveal d1">
           <div class="target-icon" style="background:rgba(167,139,250,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
           <div class="target-name">Avocats & Consultants</div>
           <div class="target-desc">Crédibilité et expertise : votre site doit inspirer confiance dès la première seconde.</div>
         </div></a>
-        <a href="/creation-site-internet-expert-comptable/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal d2">
+        <a href="/creation-site-internet-expert-comptable/" class="target-link"><div class="target-card reveal d2">
           <div class="target-icon" style="background:rgba(56,189,248,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
           <div class="target-name">Comptables</div>
           <div class="target-desc">Bilan, TVA, création de société — vos prospects cherchent un expert de confiance.</div>
         </div></a>
-        <a href="/creation-site-internet-saint-etienne/" style="text-decoration:none;color:inherit;display:block;"><div class="target-card reveal d3">
+        <a href="/creation-site-internet-saint-etienne/" class="target-link"><div class="target-card reveal d3">
           <div class="target-icon" style="background:rgba(134,239,172,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M14 14h7v7h-7z"/><path d="M3 14h7v7H3z"/></svg></div>
           <div class="target-name">Nettoyage & Services</div>
           <div class="target-desc">Bureaux, maisons, vitres — des clients réguliers qui comparent avant de choisir.</div>
         </div></a>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;">
-        <a href="/creation-site-internet-saint-etienne/" style="display:flex;flex-direction:column;gap:8px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--border-h)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#38bdf8;">Création</span>
-          <span style="font-size:15px;font-weight:700;line-height:1.3;">Création de site internet</span>
-          <span style="font-size:13px;color:var(--text-2);line-height:1.5;">Vous n'avez pas encore de site ou voulez repartir de zéro avec un site pro.</span>
+      <div class="silo-cards-grid">
+        <a href="/creation-site-internet-saint-etienne/" class="silo-card">
+          <span class="silo-card-label">Création</span>
+          <span class="silo-card-title">Création de site internet</span>
+          <span class="silo-card-desc">Vous n'avez pas encore de site ou voulez repartir de zéro avec un site pro.</span>
         </a>
-        <a href="/creation-site-vitrine-saint-etienne/" style="display:flex;flex-direction:column;gap:8px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--border-h)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#38bdf8;">Vitrine</span>
-          <span style="font-size:15px;font-weight:700;line-height:1.3;">Création de site vitrine</span>
-          <span style="font-size:13px;color:var(--text-2);line-height:1.5;">Un site simple, rapide et efficace pour présenter votre activité et générer des contacts.</span>
+        <a href="/creation-site-vitrine-saint-etienne/" class="silo-card">
+          <span class="silo-card-label">Vitrine</span>
+          <span class="silo-card-title">Création de site vitrine</span>
+          <span class="silo-card-desc">Un site simple, rapide et efficace pour présenter votre activité et générer des contacts.</span>
         </a>
-        <a href="/refonte-site-internet-saint-etienne/" style="display:flex;flex-direction:column;gap:8px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:inherit;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--border-h)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#38bdf8;">Refonte</span>
-          <span style="font-size:15px;font-weight:700;line-height:1.3;">Refonte de site internet</span>
-          <span style="font-size:13px;color:var(--text-2);line-height:1.5;">Votre site existe mais est lent, vieillissant ou invisible sur Google. On le remplace.</span>
+        <a href="/refonte-site-internet-saint-etienne/" class="silo-card">
+          <span class="silo-card-label">Refonte</span>
+          <span class="silo-card-title">Refonte de site internet</span>
+          <span class="silo-card-desc">Votre site existe mais est lent, vieillissant ou invisible sur Google. On le remplace.</span>
         </a>
       </div>
     </div>
