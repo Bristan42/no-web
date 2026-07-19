@@ -1,0 +1,246 @@
+{
+  "SLUG": "maconnerie-martin",
+  "DOMAIN": "maconnerie-martin.fr",
+  "ENTREPRISE": "Maçonnerie Martin",
+  "PRENOM": "Thomas",
+  "VILLE": "Saint-Étienne",
+  "DEPARTEMENT": "42",
+  "REGION": "Auvergne-Rhône-Alpes",
+  "CODE_POSTAL": "42000",
+  "LAT": "45.4347",
+  "LNG": "4.3903",
+  "TEL_DISPLAY": "06 31 87 64 01",
+  "TEL_RAW": "0631876401",
+  "EMAIL": "contact@maconnerie-martin.fr",
+  "EXPERIENCE": "15",
+  "NB_CHANTIERS": "280",
+  "NOTE": "4.9",
+  "NB_AVIS": "47",
+  "SIRET": "123 456 789 00012",
+  "ANNEE_CREATION": "2009",
+  "ANNEE": "2025",
+  "RAYON": "40",
+  "FORM_ACTION": "https://formspree.io/f/XXXXXXXX",
+
+  "AVIS": [
+    {
+      "NOM": "Marie Fontaine",
+      "INITIALES": "MF",
+      "TEXTE": "Thomas a réalisé notre extension en 6 semaines, dans les délais et le budget prévus. Travail très soigné, équipe propre sur le chantier. Je recommande sans hésiter.",
+      "PROJET": "Extension 35 m² — Saint-Étienne"
+    },
+    {
+      "NOM": "Luc Perrier",
+      "INITIALES": "LP",
+      "TEXTE": "Ravalement de façade impeccable. Devis clair, pas de surprises. L'entreprise est sérieuse, ponctuelle et les finitions sont vraiment de qualité.",
+      "PROJET": "Ravalement façade — Firminy"
+    },
+    {
+      "NOM": "Sophie et Julien",
+      "INITIALES": "SJ",
+      "TEXTE": "Nous avons fait appel à Maçonnerie Martin pour abattre des murs et créer une grande ouverture dans notre salon. Résultat magnifique et chantier propre du début à la fin.",
+      "PROJET": "Rénovation intérieure — Saint-Chamond"
+    }
+  ],
+
+  "SERVICES": [
+    {
+      "SLUG": "extension-maison",
+      "NOM": "Extension de maison",
+      "NOM_COURT": "Extension",
+      "TITRE_H1": "Extension de maison à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} réalise vos extensions de maison à {{VILLE}} ({{DEPARTEMENT}}). Agrandissement, surélévation, garage — devis gratuit sous 48h.",
+      "INTRO": "Agrandissez votre maison sans déménager. Chambre supplémentaire, bureau, cuisine ouverte, garage — nous intégrons l'extension à votre bâti existant pour un résultat homogène et durable.",
+      "AVANTAGES": [
+        "Étude de faisabilité et dépôt de permis de construire",
+        "Fondations adaptées à votre terrain",
+        "Raccordement aux réseaux existants inclus",
+        "Isolation thermique aux normes RT 2020",
+        "Finitions extérieures coordonnées à votre maison"
+      ],
+      "FAQ": [
+        {
+          "Q": "Quel est le prix d'une extension de maison à {{VILLE}} ?",
+          "A": "Le coût dépend de la surface, du type de structure et des finitions souhaitées. Comptez en général entre 1 200 € et 2 500 € par m². Une extension de 30 m² revient donc entre 36 000 € et 75 000 €. Nous établissons un devis détaillé et gratuit après visite sur place."
+        },
+        {
+          "Q": "Faut-il un permis de construire pour une extension ?",
+          "A": "Oui, au-delà de 20 m² (ou 40 m² en zone urbaine avec PLU), un permis de construire est obligatoire. Nous vous accompagnons dans les démarches administratives et pouvons prendre en charge le dépôt du dossier."
+        },
+        {
+          "Q": "Combien de temps dure un chantier d'extension ?",
+          "A": "En moyenne 6 à 12 semaines selon la surface et la complexité. Nous établissons un planning précis dès la signature du devis, avec des points d'étape réguliers."
+        }
+      ]
+    },
+    {
+      "SLUG": "ravalement-facade",
+      "NOM": "Ravalement de façade",
+      "NOM_COURT": "Ravalement",
+      "TITRE_H1": "Ravalement de façade à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}}, spécialiste du ravalement de façade à {{VILLE}} ({{DEPARTEMENT}}). Nettoyage, traitement, enduit, peinture — devis gratuit.",
+      "INTRO": "Redonnez à votre maison son aspect d'origine tout en l'imperméabilisant et en améliorant son isolation. Nettoyage haute pression, traitement hydrofuge, enduit monocouche ou peinture — nous choisissons la technique adaptée à votre type de façade.",
+      "AVANTAGES": [
+        "Diagnostic préalable de la façade inclus",
+        "Nettoyage haute pression et traitement anti-mousse",
+        "Choix du système d'enduit adapté (monocouche, gratté, taloché)",
+        "Application de peinture façade ou revêtement épais",
+        "Traitement des fissures et joints de dilatation"
+      ],
+      "FAQ": [
+        {
+          "Q": "Quel est le prix d'un ravalement de façade à {{VILLE}} ?",
+          "A": "Le prix varie selon la surface, l'état de la façade et la finition souhaitée. En moyenne, comptez entre 30 € et 80 € par m². La visite de diagnostic est gratuite et le devis vous est remis sous 48h."
+        },
+        {
+          "Q": "Le ravalement de façade est-il obligatoire ?",
+          "A": "Le Code de la construction impose le ravalement tous les 10 ans dans certaines communes. Indépendamment de la réglementation, un ravalement régulier protège votre maison de l'humidité et préserve sa valeur."
+        },
+        {
+          "Q": "Peut-on bénéficier d'aides pour un ravalement ?",
+          "A": "Si le ravalement est couplé à une isolation thermique par l'extérieur (ITE), vous pouvez bénéficier de MaPrimeRénov' et des CEE. Nous vous informons des dispositifs applicables lors de la visite."
+        }
+      ]
+    },
+    {
+      "SLUG": "gros-oeuvre",
+      "NOM": "Gros œuvre & construction",
+      "NOM_COURT": "Gros œuvre",
+      "TITRE_H1": "Gros œuvre à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}}, maçon spécialisé gros œuvre à {{VILLE}} ({{DEPARTEMENT}}). Fondations, dalle, murs porteurs — devis gratuit sous 48h.",
+      "INTRO": "Le gros œuvre, c'est la structure de votre bâtiment. Fondations, murs porteurs, planchers, chapes — nous construisons sur des bases solides, dans le respect des DTU et des règles parasismiques.",
+      "AVANTAGES": [
+        "Terrassement et fondations adaptées à la nature du sol",
+        "Maçonnerie blocs béton, briques ou béton coffrant",
+        "Planchers hourdis ou béton coulé",
+        "Chapes traditionnelles et chapes fluides",
+        "Respect des DTU maçonnerie et des normes parasismiques"
+      ],
+      "FAQ": [
+        {
+          "Q": "Combien coûte la construction d'une maison en gros œuvre à {{VILLE}} ?",
+          "A": "Le gros œuvre représente environ 25 à 35 % du coût total de construction. Pour une maison de 100 m², comptez entre 60 000 € et 110 000 € pour le seul gros œuvre. Un devis précis est établi après étude de sol et dépôt de permis."
+        },
+        {
+          "Q": "Quel délai pour la construction du gros œuvre ?",
+          "A": "Pour une maison de taille standard, le gros œuvre prend entre 3 et 5 mois selon la complexité et la météo. Nous intégrons toujours des marges de sécurité dans le planning."
+        },
+        {
+          "Q": "Travaillez-vous avec des architectes ?",
+          "A": "Oui, nous intervenons en tant qu'entreprise générale sur plans d'architecte ou de bureau d'études. Nous pouvons aussi vous recommander des partenaires locaux si vous n'avez pas encore de maître d'œuvre."
+        }
+      ]
+    },
+    {
+      "SLUG": "renovation-interieure",
+      "NOM": "Rénovation intérieure",
+      "NOM_COURT": "Rénovation",
+      "TITRE_H1": "Rénovation intérieure à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} intervient pour vos rénovations intérieures à {{VILLE}} ({{DEPARTEMENT}}). Abattage de cloisons, création d'ouvertures — devis gratuit.",
+      "INTRO": "Transformer l'intérieur de votre maison demande de la précision et une bonne connaissance des structures. Abattage de cloisons porteuses, création de portes et fenêtres, reprises en sous-œuvre — nous intervenons en sécurisant toujours la structure existante.",
+      "AVANTAGES": [
+        "Diagnostic structure avant toute démolition",
+        "Abattage de murs porteurs avec pose de poutres IPN ou béton",
+        "Création d'ouvertures (portes, baies, fenêtres)",
+        "Reprise de plancher et ragréage",
+        "Coordination avec les autres corps de métier"
+      ],
+      "FAQ": [
+        {
+          "Q": "Peut-on abattre n'importe quel mur ?",
+          "A": "Non. Avant toute démolition, nous vérifions si le mur est porteur. Si c'est le cas, nous posons une poutre (IPN ou béton) pour reprendre les charges. Cette étape est critique pour la solidité de votre bâtiment."
+        },
+        {
+          "Q": "Faut-il un permis pour des travaux intérieurs ?",
+          "A": "En général, les travaux intérieurs ne nécessitent pas de permis de construire. Une déclaration préalable peut être requise si vous modifiez la façade (nouvelle fenêtre visible). Nous vous guidons sur les démarches."
+        },
+        {
+          "Q": "Combien coûte l'abattage d'un mur porteur ?",
+          "A": "Comptez entre 1 500 € et 4 000 € selon la longueur du mur et le type de poutre à poser. Le diagnostic et le devis sont gratuits."
+        }
+      ]
+    },
+    {
+      "SLUG": "dallage-terrasse",
+      "NOM": "Dallage & terrasse béton",
+      "NOM_COURT": "Dallage",
+      "TITRE_H1": "Dallage et terrasse à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} réalise vos dallages et terrasses béton à {{VILLE}} ({{DEPARTEMENT}}). Béton désactivé, balayé, imprimé — devis gratuit.",
+      "INTRO": "Dalle de garage, terrasse désactivée, allée carrossable, aire de stationnement — nous réalisons des dallages durables adaptés à l'usage et à la charge prévue. Finitions soignées : béton désactivé, taloché, balayé ou imprimé.",
+      "AVANTAGES": [
+        "Terrassement et mise en forme du support",
+        "Pose de film polyane et ferraillage si nécessaire",
+        "Béton dosé selon usage (terrasse, dalle industrielle, voirie)",
+        "Finitions : désactivé, taloché, balayé, imprimé",
+        "Joints de dilatation positionnés selon les règles de l'art"
+      ],
+      "FAQ": [
+        {
+          "Q": "Quel prix pour une dalle béton ou une terrasse à {{VILLE}} ?",
+          "A": "Le prix dépend de la surface, de l'épaisseur et de la finition. Comptez entre 50 € et 120 € par m² posé et fini. La visite et le devis sont gratuits."
+        },
+        {
+          "Q": "Quelle épaisseur pour une dalle de terrasse ?",
+          "A": "Pour une terrasse piétonne, 10 à 12 cm suffisent. Pour une dalle de garage ou une allée carrossable, nous préconisons 15 à 20 cm avec ferraillage adapté."
+        },
+        {
+          "Q": "Combien de temps dure un chantier de dallage ?",
+          "A": "La pose prend 1 à 3 jours selon la surface. Le béton doit sécher au minimum 28 jours avant toute sollicitation importante (véhicule, mobilier lourd)."
+        }
+      ]
+    },
+    {
+      "SLUG": "mur-cloture",
+      "NOM": "Mur de clôture & soutènement",
+      "NOM_COURT": "Mur & clôture",
+      "TITRE_H1": "Mur de clôture et soutènement à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} construit vos murs de clôture et de soutènement à {{VILLE}} ({{DEPARTEMENT}}). Parpaing, pierre, béton banché — devis gratuit.",
+      "INTRO": "Clôture de jardin, mur de propriété, mur de soutènement sur terrain en pente — nous maçonnons en parpaing, brique, pierre apparente ou béton banché selon vos goûts et les contraintes du terrain.",
+      "AVANTAGES": [
+        "Fondations adaptées à la nature du sol et à la hauteur",
+        "Maçonnerie parpaing, brique, pierre ou béton banché",
+        "Murs de soutènement avec drainage arrière inclus",
+        "Enduit ou finition pierre apparente selon votre choix",
+        "Pose de chaperons et couronnements pour l'étanchéité"
+      ],
+      "FAQ": [
+        {
+          "Q": "Quelle hauteur maximale pour un mur de clôture ?",
+          "A": "La réglementation varie selon la commune. En général, entre 1,80 m et 2,60 m sont autorisés sans déclaration préalable. Au-delà ou en limite de propriété, une déclaration est souvent requise. Nous vous guidons."
+        },
+        {
+          "Q": "Quel prix pour un mur de clôture en parpaing à {{VILLE}} ?",
+          "A": "Comptez entre 150 € et 350 € par mètre linéaire selon la hauteur, la fondation et la finition. Devis gratuit après visite."
+        },
+        {
+          "Q": "Un mur de soutènement nécessite-t-il un ingénieur ?",
+          "A": "Pour des murs de plus de 1,50 m de hauteur retenant une forte charge, une note de calcul d'un bureau d'études est recommandée. Nous travaillons avec des partenaires locaux et intégrons cette prestation dans notre offre si nécessaire."
+        }
+      ]
+    }
+  ],
+
+  "ZONES": [
+    { "VILLE": "Saint-Chamond", "SLUG": "saint-chamond", "CODE_POSTAL": "42400" },
+    { "VILLE": "Firminy", "SLUG": "firminy", "CODE_POSTAL": "42700" },
+    { "VILLE": "Roanne", "SLUG": "roanne", "CODE_POSTAL": "42300" },
+    { "VILLE": "Montbrison", "SLUG": "montbrison", "CODE_POSTAL": "42600" },
+    { "VILLE": "Rive-de-Gier", "SLUG": "rive-de-gier", "CODE_POSTAL": "42800" },
+    { "VILLE": "Le Chambon-Feugerolles", "SLUG": "chambon-feugerolles", "CODE_POSTAL": "42500" },
+    { "VILLE": "Andrézieux-Bouthéon", "SLUG": "andrezieux-boutheon", "CODE_POSTAL": "42160" }
+  ],
+
+  "PHOTOS": {
+    "HERO": "",
+    "REALISATIONS": ["", "", "", "", ""]
+  },
+
+  "MENTIONS": {
+    "FORME_JURIDIQUE": "SARL",
+    "CAPITAL": "10 000",
+    "RCS": "Saint-Étienne",
+    "TVA_INTRA": "FR 12 123456789",
+    "HEBERGEUR": "Cloudflare Pages",
+    "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
+  }
+}

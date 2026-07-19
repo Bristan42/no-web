@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos réalisations — {{ENTREPRISE}} | Maçon à {{VILLE}}</title>
+<meta name="description" content="Découvrez les chantiers réalisés par {{ENTREPRISE}}, maçon à {{VILLE}}. Extensions, ravalements, gros œuvre, rénovations — {{NB_CHANTIERS}} chantiers depuis {{EXPERIENCE}} ans.">
+<link rel="canonical" href="https://{{DOMAIN}}/realisations/">
+{{SHARED_STYLE}}
+<style>
+.reals-hero{padding:80px 24px 60px;background:var(--navy);text-align:center}
+.reals-hero h1{font-size:clamp(26px,4vw,44px);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:12px}
+.reals-hero p{font-size:16px;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto}
+.reals-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:32px 24px 0}
+.filter-btn{padding:8px 18px;border:1.5px solid var(--border);border-radius:20px;background:transparent;font-size:13px;font-weight:600;color:var(--text-2);cursor:pointer;transition:all .15s}
+.filter-btn.active,.filter-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.reals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:40px auto;padding:0 24px}
+.real-card{border-radius:10px;overflow:hidden;background:var(--card);border:1.5px solid var(--border);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.real-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.12)}
+.real-photo{aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy) 0%,#2a3f54 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.real-photo-placeholder{color:rgba(255,255,255,.15);font-size:48px;font-weight:900;font-family:Georgia,serif}
+.real-photo img{width:100%;height:100%;object-fit:cover}
+.real-tag{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+.real-body{padding:16px}
+.real-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.real-meta{font-size:12px;color:var(--text-3)}
+@media(max-width:768px){.reals-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.reals-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+{{HEADER}}
+
+<div class="reals-hero">
+  <div class="hero-eyebrow reveal" style="color:rgba(255,255,255,.5);margin-bottom:12px">Galerie de chantiers</div>
+  <h1 class="reveal d1">Nos réalisations à {{VILLE}}<br>et dans le {{DEPARTEMENT}}</h1>
+  <p class="reveal d2">{{NB_CHANTIERS}} chantiers réalisés depuis {{EXPERIENCE}} ans — extensions, ravalements, gros œuvre, dallage.</p>
+</div>
+
+<div class="reals-filters reveal">
+  <button class="filter-btn active" data-filter="all">Tous les chantiers</button>
+  <button class="filter-btn" data-filter="extension">Extensions</button>
+  <button class="filter-btn" data-filter="ravalement">Ravalements</button>
+  <button class="filter-btn" data-filter="gros-oeuvre">Gros œuvre</button>
+  <button class="filter-btn" data-filter="renovation">Rénovation</button>
+  <button class="filter-btn" data-filter="dallage">Dallage</button>
+</div>
+
+<div class="reals-grid">
+  <div class="real-card reveal" data-cat="extension">
+    <div class="real-photo">
+      {{PHOTO_REAL_1}}
+      <div class="real-tag">Extension</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Extension de 35 m²</div>
+      <div class="real-meta">{{VILLE}} · 2024</div>
+    </div>
+  </div>
+  <div class="real-card reveal d1" data-cat="ravalement">
+    <div class="real-photo">
+      {{PHOTO_REAL_2}}
+      <div class="real-tag">Ravalement</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Ravalement façade enduit monocouche</div>
+      <div class="real-meta">Firminy · 2024</div>
+    </div>
+  </div>
+  <div class="real-card reveal d2" data-cat="gros-oeuvre">
+    <div class="real-photo">
+      {{PHOTO_REAL_3}}
+      <div class="real-tag">Gros œuvre</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Construction garage double</div>
+      <div class="real-meta">Saint-Chamond · 2023</div>
+    </div>
+  </div>
+  <div class="real-card reveal d1" data-cat="renovation">
+    <div class="real-photo">
+      {{PHOTO_REAL_4}}
+      <div class="real-tag">Rénovation</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Abattage mur porteur + IPN</div>
+      <div class="real-meta">{{VILLE}} · 2023</div>
+    </div>
+  </div>
+  <div class="real-card reveal d2" data-cat="dallage">
+    <div class="real-photo">
+      {{PHOTO_REAL_5}}
+      <div class="real-tag">Dallage</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Terrasse béton désactivé 80 m²</div>
+      <div class="real-meta">Rive-de-Gier · 2023</div>
+    </div>
+  </div>
+  <div class="real-card reveal d3" data-cat="extension">
+    <div class="real-photo">
+      <div class="real-photo-placeholder">+</div>
+      <div class="real-tag">Extension</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Surélévation R+1</div>
+      <div class="real-meta">Montbrison · 2022</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section" style="margin-top:0">
+  <div class="cta-inner">
+    <div>
+      <h2>Vous avez un projet similaire ?</h2>
+      <p>Demandez un devis gratuit — visite sur place offerte dans le {{DEPARTEMENT}}.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="tel:{{TEL_RAW}}" class="btn btn-white btn-xl">{{TEL_DISPLAY}}</a>
+      <a href="/devis/" class="btn btn-ghost-white btn-lg">Formulaire devis</a>
+      <div class="cta-note">Réponse garantie sous 48h</div>
+    </div>
+  </div>
+</div>
+
+{{FOOTER}}
+{{SHARED_SCRIPT}}
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.real-card').forEach(card => {
+      card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
