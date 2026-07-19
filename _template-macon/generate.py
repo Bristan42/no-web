@@ -23,11 +23,16 @@ with open(config_path, encoding="utf-8") as f:
 
 SLUG = config["SLUG"]
 OUTPUT = BASE / "output" / SLUG
+IMAGES_SRC = BASE / "images"
 
 # ── Nettoyage + création dossier output ──────────────────────────────────────
 if OUTPUT.exists():
     shutil.rmtree(OUTPUT)
 OUTPUT.mkdir(parents=True)
+
+# Copie du dossier images source s'il existe
+if IMAGES_SRC.exists():
+    shutil.copytree(IMAGES_SRC, OUTPUT / "images")
 
 print(f"✓ Dossier output : {OUTPUT}")
 
@@ -200,7 +205,7 @@ real_photos = photos.get("REALISATIONS", ["", "", "", "", ""])
 
 def photo_tag(src, alt="Réalisation maçonnerie"):
     if src:
-        return f'<img src="{src}" alt="{alt}" loading="lazy">'
+        return f'<img src="{src}" alt="{alt}" loading="lazy" decoding="async" width="800" height="600">'
     return '<div class="real-photo-placeholder">M</div>'
 
 # ── PAGE : index.html ─────────────────────────────────────────────────────────

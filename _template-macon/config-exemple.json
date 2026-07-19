@@ -232,7 +232,13 @@
 
   "PHOTOS": {
     "HERO": "",
-    "REALISATIONS": ["", "", "", "", ""]
+    "REALISATIONS": [
+      "/images/real-1.jpg",
+      "/images/real-2.jpg",
+      "/images/real-3.jpg",
+      "/images/real-4.jpg",
+      "/images/real-5.jpg"
+    ]
   },
 
   "MENTIONS": {
