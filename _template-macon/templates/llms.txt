@@ -1,0 +1,41 @@
+# {{ENTREPRISE}}
+
+> Entreprise de maçonnerie à {{VILLE}} ({{DEPARTEMENT}}). Gros œuvre, extension de maison, ravalement de façade, rénovation intérieure, dallage & terrasse, mur de clôture. Devis gratuit sous 48h. Qualibat certifié, assurance décennale.
+
+## Informations clés
+
+- **Nom :** {{ENTREPRISE}}
+- **Ville :** {{VILLE}} ({{CODE_POSTAL}}, {{DEPARTEMENT}})
+- **Téléphone :** {{TEL_DISPLAY}}
+- **Email :** {{EMAIL}}
+- **Site web :** https://{{DOMAIN}}
+- **Fondée en :** {{ANNEE_CREATION}}
+- **Certifications :** Qualibat, Assurance décennale
+- **Note Google :** {{NOTE}}/5 ({{NB_AVIS}} avis)
+- **Expérience :** {{EXPERIENCE}} ans
+
+## Prestations
+
+- Gros œuvre & construction (dalles, murs porteurs, fondations)
+- Extension & surélévation de maison
+- Ravalement de façade (enduit, crépi, isolation par l'extérieur)
+- Rénovation intérieure (cloisons, carrelage, chapes)
+- Dallage & terrasse
+- Mur de clôture & soutènement
+
+## Zone d'intervention
+
+{{VILLE}} et tout le {{DEPARTEMENT}} ({{CODE_POSTAL}}).
+
+## Pages du site
+
+- [Accueil](https://{{DOMAIN}}/) — Présentation et formulaire de devis
+- [Nos réalisations](https://{{DOMAIN}}/realisations/) — Photos de chantiers
+- [Demander un devis](https://{{DOMAIN}}/devis/) — Formulaire de contact
+- [Gros œuvre](https://{{DOMAIN}}/gros-oeuvre/)
+- [Extension maison](https://{{DOMAIN}}/extension-maison/)
+- [Ravalement de façade](https://{{DOMAIN}}/ravalement-facade/)
+- [Rénovation intérieure](https://{{DOMAIN}}/renovation-interieure/)
+- [Dallage & terrasse](https://{{DOMAIN}}/dallage-terrasse/)
+- [Mur de clôture](https://{{DOMAIN}}/mur-cloture/)
+- [Mentions légales](https://{{DOMAIN}}/mentions-legales/)

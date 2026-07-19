@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales/
+Sitemap: https://maconnerie-martin.fr/sitemap.xml

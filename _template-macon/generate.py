@@ -223,6 +223,12 @@ devis_html = apply_vars(devis_tpl, build_vars())
 write_page(OUTPUT / "devis", devis_html)
 print("✓ devis/index.html")
 
+# ── PAGE : merci ──────────────────────────────────────────────────────────────
+merci_tpl = (TEMPLATES / "merci.html").read_text(encoding="utf-8")
+merci_html = apply_vars(merci_tpl, build_vars())
+write_page(OUTPUT / "merci", merci_html)
+print("✓ merci/index.html")
+
 # ── PAGE : réalisations ───────────────────────────────────────────────────────
 reals_tpl = (TEMPLATES / "realisations.html").read_text(encoding="utf-8")
 reals_vars = build_vars()
@@ -294,6 +300,43 @@ for zone in zones:
     zone_html = apply_vars(zone_tpl, zone_vars)
     write_page(OUTPUT / f"macon-{zone['SLUG']}", zone_html)
     print(f"✓ macon-{zone['SLUG']}/index.html")
+
+# ── SITEMAP XML ──────────────────────────────────────────────────────────────
+domain = config["DOMAIN"]
+sitemap_urls = [f"https://{domain}/"]
+for svc in services:
+    sitemap_urls.append(f"https://{domain}/{svc['SLUG']}/")
+for zone in zones:
+    sitemap_urls.append(f"https://{domain}/macon-{zone['SLUG']}/")
+sitemap_urls += [
+    f"https://{domain}/realisations/",
+    f"https://{domain}/devis/",
+]
+# merci et mentions légales exclus du sitemap (noindex)
+
+sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+sitemap_xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+for url in sitemap_urls:
+    sitemap_xml += f"  <url><loc>{url}</loc><changefreq>monthly</changefreq><priority>{'1.0' if url.endswith(domain+'/') else '0.8'}</priority></url>\n"
+sitemap_xml += "</urlset>\n"
+(OUTPUT / "sitemap.xml").write_text(sitemap_xml, encoding="utf-8")
+print("✓ sitemap.xml")
+
+# ── _REDIRECTS Cloudflare Pages ───────────────────────────────────────────────
+redirects = "/contact/  /devis/  301\n/devis/?merci  /merci/  301\n"
+(OUTPUT / "_redirects").write_text(redirects, encoding="utf-8")
+print("✓ _redirects")
+
+# ── robots.txt ────────────────────────────────────────────────────────────────
+robots = f"User-agent: *\nAllow: /\nDisallow: /mentions-legales/\nSitemap: https://{domain}/sitemap.xml\n"
+
+# ── llms.txt ──────────────────────────────────────────────────────────────────
+llms_tpl = (TEMPLATES / "llms.txt").read_text(encoding="utf-8")
+llms_txt = apply_vars(llms_tpl, build_vars())
+(OUTPUT / "llms.txt").write_text(llms_txt, encoding="utf-8")
+print("✓ llms.txt")
+(OUTPUT / "robots.txt").write_text(robots, encoding="utf-8")
+print("✓ robots.txt")
 
 # ── Résumé ────────────────────────────────────────────────────────────────────
 pages = list(OUTPUT.rglob("index.html"))

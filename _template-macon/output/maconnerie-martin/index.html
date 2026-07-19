@@ -19,7 +19,13 @@
   "geo": {"@type":"GeoCoordinates","latitude":"45.4347","longitude":"4.3903"},
   "openingHours": "Mo-Fr 07:30-18:00",
   "hasCredential": ["Qualibat","Assurance décennale"],
-  "foundingDate": "2009"
+  "foundingDate": "2009",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5"
+  }
 }
 </script>
 <style>
@@ -28,7 +34,9 @@
   --navy:#1C2B3A;
   --navy-light:#243547;
   --accent:#C8621A;
-  --accent-h:#D9711F;
+  --accent-btn:#A85216;
+  --accent-dark:#9B4B13;
+  --accent-h:#B85A18;
   --bg:#FFFFFF;
   --bg-alt:#F6F4F0;
   --text:#1A1A1A;
@@ -51,23 +59,29 @@ img{max-width:100%;display:block}
 
 /* ── HEADER ── */
 header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06)}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{display:flex;align-items:center;gap:10px}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-mark{width:36px;height:36px;background:var(--accent);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo-mark svg{color:#fff}
 .logo-name{font-size:15px;font-weight:700;color:#fff;letter-spacing:-.01em;line-height:1.2}
-.logo-name span{display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,.45);letter-spacing:.04em}
-.header-right{display:flex;align-items:center;gap:12px}
+.logo-name span{display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,.65);letter-spacing:.04em}
+/* Nav desktop */
+.header-nav{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.header-nav a{font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:6px 12px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap}
+.header-nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.header-right{display:flex;align-items:center;gap:20px;flex-shrink:0}
+/* Séparateur visuel entre tel et bouton */
+.header-right::before{content:'';display:block;width:1px;height:20px;background:rgba(255,255,255,.15)}
 .header-tel{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.85);font-size:14px;font-weight:600}
 .header-tel svg{color:var(--accent);flex-shrink:0}
 .btn{display:inline-flex;align-items:center;gap:7px;font-family:inherit;font-size:14px;font-weight:700;padding:10px 20px;border-radius:var(--r);border:none;cursor:pointer;transition:all .18s;text-decoration:none;white-space:nowrap;line-height:1}
-.btn-accent{background:var(--accent);color:#fff}
-.btn-accent:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 4px 16px rgba(200,98,26,.35)}
+.btn-accent{background:var(--accent-btn);color:#fff}
+.btn-accent:hover{background:var(--accent);transform:translateY(-1px);box-shadow:0 4px 16px rgba(168,82,22,.35)}
 .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25)}
 .btn-outline:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
 .btn-lg{font-size:16px;padding:14px 28px}
 .btn-xl{font-size:17px;padding:16px 36px;border-radius:8px}
-.btn-white{background:#fff;color:var(--accent);font-weight:800}
+.btn-white{background:#fff;color:var(--accent-dark);font-weight:800}
 .btn-white:hover{background:#FFF8F4;box-shadow:0 6px 24px rgba(0,0,0,.15)}
 .btn-ghost-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
 .btn-ghost-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
@@ -127,7 +141,7 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .t-icon{width:40px;height:40px;background:rgba(200,98,26,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .t-icon svg{color:var(--accent)}
 .t-num{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1}
-.t-label{font-size:12px;color:rgba(255,255,255,.45);margin-top:2px}
+.t-label{font-size:12px;color:rgba(255,255,255,.65);margin-top:2px}
 
 /* ── SECTIONS ── */
 .section{padding:88px 24px}
@@ -139,13 +153,15 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .split-header{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
 
 /* ── SERVICES ── */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.srv{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:28px 24px;transition:all .22s}
-.srv:hover{border-color:var(--accent);box-shadow:var(--sh-lg);transform:translateY(-3px)}
-.srv-icon{width:48px;height:48px;background:rgba(200,98,26,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.srv{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:22px 20px;transition:all .22s;display:flex;flex-direction:column}
+.srv:hover{border-color:var(--accent);box-shadow:var(--sh-lg);transform:translateY(-2px)}
+.srv-icon{width:44px;height:44px;background:rgba(200,98,26,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;flex-shrink:0}
 .srv-icon svg{color:var(--accent)}
-.srv h3{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:-.01em}
-.srv p{font-size:14px;color:var(--text-2);line-height:1.6}
+.srv h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.01em}
+.srv p{font-size:13px;color:var(--text-2);line-height:1.6;flex:1}
+.srv-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--accent);margin-top:14px;transition:gap .15s}
+.srv-link:hover{gap:8px}
 
 /* ── RÉALISATIONS ── */
 .real-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -213,31 +229,38 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .faq-item.open .faq-a{display:block}
 
 /* ── CTA ── */
-.cta-section{background:var(--accent);padding:72px 24px}
+.cta-section{background:var(--accent-dark);padding:72px 24px}
 .cta-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
 .cta-inner h2{font-size:clamp(22px,3vw,36px);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:8px}
-.cta-inner p{font-size:16px;color:rgba(255,255,255,.75)}
+.cta-inner p{font-size:16px;color:rgba(255,255,255,.9)}
 .cta-actions{display:flex;flex-direction:column;gap:10px;align-items:center;flex-shrink:0}
-.cta-note{font-size:12px;color:rgba(255,255,255,.5)}
+.cta-note{font-size:12px;color:rgba(255,255,255,.8)}
 
 /* ── FOOTER ── */
 footer{background:var(--navy);padding:56px 24px 32px}
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
 .footer-brand .logo-name{font-size:16px}
-.footer-tagline{font-size:13px;color:rgba(255,255,255,.4);margin-top:10px;line-height:1.55}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.65);margin-top:10px;line-height:1.55}
 .footer-contact{margin-top:16px;display:flex;flex-direction:column;gap:9px}
-.footer-contact a{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s}
+.footer-contact a{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.75);transition:color .15s}
 .footer-contact a:hover{color:#fff}
 .footer-contact svg{color:var(--accent);flex-shrink:0}
-.footer-col h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
+.footer-col h3{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:14px}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.footer-col ul a{font-size:13px;color:rgba(255,255,255,.5);transition:color .15s}
+.footer-col ul a{font-size:13px;color:rgba(255,255,255,.7);transition:color .15s}
 .footer-col ul a:hover{color:#fff}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;flex-wrap:wrap}
-.footer-bottom-txt{font-size:12px;color:rgba(255,255,255,.25)}
-.footer-bottom-txt a{color:rgba(255,255,255,.4);transition:color .15s}
+.footer-bottom-txt{font-size:12px;color:rgba(255,255,255,.6)}
+.footer-bottom-txt a{color:rgba(255,255,255,.75);transition:color .15s}
 .footer-bottom-txt a:hover{color:#fff}
+
+/* ── MOBILE STICKY CTA ── */
+.mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mob-cta-call{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
+.mob-cta-call svg{color:var(--accent);flex-shrink:0}
+.mob-cta-devis{flex:1.4;display:flex;align-items:center;justify-content:center;padding:13px 10px;background:var(--accent);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
+.mob-cta-devis:hover{background:var(--accent-h)}
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
@@ -250,9 +273,12 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .cta-inner{grid-template-columns:1fr;text-align:center}
   .cta-actions{flex-direction:row;flex-wrap:wrap;justify-content:center}
 }
+@media(max-width:960px){.header-nav{display:none}}
 @media(max-width:768px){
-  .header-tel,.header-right .btn{display:none}
+  .header-tel,.header-right .btn,.header-right::before{display:none}
   .burger{display:flex}
+  .mob-cta{display:flex}
+  body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
   .section{padding:56px 20px}
   .hero-inner{padding:60px 20px}
   .hero h1{font-size:30px}
@@ -277,10 +303,17 @@ footer{background:var(--navy);padding:56px 24px 32px}
   <div class="header-inner">
     <a href="/" class="logo">
       <div class="logo-mark">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="9" height="11" rx="1"/><rect x="13" y="10" width="9" height="6" rx="1"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
       </div>
       <div class="logo-name">Maçonnerie Martin<span>Maçonnerie — Saint-Étienne</span></div>
     </a>
+    <nav class="header-nav">
+      <a href="#services">Prestations</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#avis">Avis</a>
+      <a href="#zone">Zone</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="header-right">
       <a href="tel:0631876401" class="header-tel">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -309,6 +342,9 @@ footer{background:var(--navy);padding:56px 24px 32px}
   </div>
   <a href="#devis" class="btn btn-accent" onclick="closeDrawer()">Demander un devis gratuit</a>
 </nav>
+
+<!-- ── MAIN ── -->
+<main>
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -363,6 +399,8 @@ footer{background:var(--navy);padding:56px 24px 32px}
           <label class="form-label" for="msg">Votre projet (facultatif)</label>
           <textarea id="msg" name="message" placeholder="Surface, délai souhaité, commune..."></textarea>
         </div>
+        <input type="hidden" name="_subject" value="Nouveau devis — Maçonnerie Martin">
+        <input type="hidden" name="_next" value="https://maconnerie-martin.fr/merci/">
         <button type="submit" class="form-submit">Envoyer ma demande →</button>
         <p class="form-note">Aucun engagement — réponse sous 48h</p>
       </form>
@@ -395,44 +433,45 @@ footer{background:var(--navy);padding:56px 24px 32px}
 <!-- ── SERVICES ── -->
 <section class="section" id="services">
   <div class="inner">
-    <div class="split-header">
-      <div>
-        <div class="section-label reveal">Nos prestations</div>
-        <h2 class="section-h2 reveal d1">Ce que nous réalisons<br>à Saint-Étienne et alentours</h2>
-        <p class="section-sub reveal d2">Du gros œuvre à la finition — nous intervenons sur tous vos chantiers, particuliers et professionnels.</p>
-      </div>
-      <a href="tel:0631876401" class="btn btn-accent reveal d2">Appeler maintenant</a>
-    </div>
+    <div class="section-label reveal">Nos prestations</div>
+    <h2 class="section-h2 reveal d1">Ce que nous réalisons<br>à Saint-Étienne et alentours</h2>
+    <p class="section-sub reveal d2">Du gros œuvre à la finition — nous intervenons sur tous vos chantiers, particuliers et professionnels.</p>
     <div class="services-grid">
       <div class="srv reveal d1">
-        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
         <h3>Gros œuvre & construction</h3>
-        <p>Fondations, dalle, murs porteurs, chapes. Nous construisons des bases solides pour vos projets neufs ou en extension.</p>
+        <p>Fondations, dalle, murs porteurs, chapes. Bases solides pour vos projets neufs ou en extension.</p>
+        <a href="/gros-oeuvre/" class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
       <div class="srv reveal d2">
-        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3>Extension & surélévation</h3>
-        <p>Agrandissez votre maison — chambre supplémentaire, garage, cuisine ouverte. Intégration parfaite à l'existant.</p>
+        <p>Chambre supplémentaire, garage, cuisine ouverte. Intégration parfaite à l'existant.</p>
+        <a href="/extension-maison/" class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
       <div class="srv reveal d3">
-        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
         <h3>Ravalement de façade</h3>
-        <p>Nettoyage, traitement, enduit, peinture façade. Redonnez à votre maison son aspect d'origine en l'imperméabilisant.</p>
+        <p>Nettoyage, traitement, enduit, peinture façade. Imperméabilisation garantie.</p>
+        <a href="/ravalement-facade/" class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
       <div class="srv reveal d4">
-        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <h3>Rénovation intérieure</h3>
-        <p>Démolition de cloisons, reprise de structure, création d'ouvertures. Transformation complète de vos espaces intérieurs.</p>
+        <p>Abattage de cloisons, création d'ouvertures, reprise de structure.</p>
+        <a href="/renovation-interieure/" class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
       <div class="srv reveal d5">
-        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="14" width="20" height="8" rx="1"/><path d="M6 14V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8"/></svg></div>
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="14" width="20" height="8" rx="1"/><path d="M6 14V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8"/></svg></div>
         <h3>Dallage & terrasse</h3>
-        <p>Dalle béton, terrasse désactivée ou gravillonnée, allée carrossable. Résistance dans le temps, finition soignée.</p>
+        <p>Dalle béton, désactivé, allée carrossable. Résistance dans le temps.</p>
+        <a href="/dallage-terrasse/" class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
       <div class="srv reveal d6">
-        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
         <h3>Mur de clôture & soutènement</h3>
-        <p>Mur parpaing, pierre, béton banché. Clôtures, murets de jardin, murs de soutènement sur terrain en pente.</p>
+        <p>Parpaing, pierre, béton banché. Clôtures et murs de soutènement sur pente.</p>
+        <a href="/mur-cloture/" class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
     </div>
   </div>
@@ -540,47 +579,51 @@ footer{background:var(--navy);padding:56px 24px 32px}
     <div class="section-label reveal">Avis clients</div>
     <h2 class="section-h2 reveal d1">Ce que disent nos clients<br>à Saint-Étienne</h2>
     <p class="section-sub reveal d2">47 avis vérifiés sur Google — note moyenne 4.9/5.</p>
-    <div class="avis-grid">
-      <div class="avis reveal d1">
-        <div class="stars">
+    <div class="avis-grid" itemscope itemtype="https://schema.org/LocalBusiness">
+      <meta itemprop="name" content="Maçonnerie Martin">
+      <div class="avis reveal d1" itemscope itemprop="review" itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="avis-text">Thomas a réalisé notre extension en 6 semaines, dans les délais et le budget prévus. Travail très soigné, équipe propre sur le chantier. Je recommande sans hésiter.</p>
-        <div class="avis-author">
+        <p class="avis-text" itemprop="reviewBody">Thomas a réalisé notre extension en 6 semaines, dans les délais et le budget prévus. Travail très soigné, équipe propre sur le chantier. Je recommande sans hésiter.</p>
+        <div class="avis-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="avis-av">MF</div>
-          <div><div class="avis-name">Marie Fontaine</div><div class="avis-proj">Extension 35 m² — Saint-Étienne</div></div>
+          <div><div class="avis-name" itemprop="name">Marie Fontaine</div><div class="avis-proj">Extension 35 m² — Saint-Étienne</div></div>
         </div>
       </div>
-      <div class="avis reveal d2">
-        <div class="stars">
+      <div class="avis reveal d2" itemscope itemprop="review" itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="avis-text">Ravalement de façade impeccable. Devis clair, pas de surprises. L'entreprise est sérieuse, ponctuelle et les finitions sont vraiment de qualité.</p>
-        <div class="avis-author">
+        <p class="avis-text" itemprop="reviewBody">Ravalement de façade impeccable. Devis clair, pas de surprises. L'entreprise est sérieuse, ponctuelle et les finitions sont vraiment de qualité.</p>
+        <div class="avis-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="avis-av">LP</div>
-          <div><div class="avis-name">Luc Perrier</div><div class="avis-proj">Ravalement façade — Firminy</div></div>
+          <div><div class="avis-name" itemprop="name">Luc Perrier</div><div class="avis-proj">Ravalement façade — Firminy</div></div>
         </div>
       </div>
-      <div class="avis reveal d3">
-        <div class="stars">
+      <div class="avis reveal d3" itemscope itemprop="review" itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <p class="avis-text">Nous avons fait appel à Maçonnerie Martin pour abattre des murs et créer une grande ouverture dans notre salon. Résultat magnifique et chantier propre du début à la fin.</p>
-        <div class="avis-author">
+        <p class="avis-text" itemprop="reviewBody">Nous avons fait appel à Maçonnerie Martin pour abattre des murs et créer une grande ouverture dans notre salon. Résultat magnifique et chantier propre du début à la fin.</p>
+        <div class="avis-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="avis-av">SJ</div>
-          <div><div class="avis-name">Sophie et Julien</div><div class="avis-proj">Rénovation intérieure — Saint-Chamond</div></div>
+          <div><div class="avis-name" itemprop="name">Sophie et Julien</div><div class="avis-proj">Rénovation intérieure — Saint-Chamond</div></div>
         </div>
       </div>
     </div>
@@ -670,6 +713,17 @@ footer{background:var(--navy);padding:56px 24px 32px}
   </div>
 </div>
 
+<!-- ── MOBILE STICKY CTA ── -->
+</main>
+
+<div class="mob-cta" id="mobCta">
+  <a href="tel:0631876401" class="mob-cta-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="/devis/" class="mob-cta-devis">Devis gratuit →</a>
+</div>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-inner">
@@ -692,18 +746,18 @@ footer{background:var(--navy);padding:56px 24px 32px}
         </div>
       </div>
       <div class="footer-col">
-        <h4>Prestations</h4>
+        <h3>Prestations</h3>
         <ul>
           <li><a href="/gros-oeuvre/">Gros œuvre</a></li>
           <li><a href="/extension-maison/">Extension maison</a></li>
           <li><a href="/ravalement-facade/">Ravalement de façade</a></li>
-          <li><a href="/renovation/">Rénovation intérieure</a></li>
+          <li><a href="/renovation-interieure/">Rénovation intérieure</a></li>
           <li><a href="/dallage-terrasse/">Dallage & terrasse</a></li>
           <li><a href="/mur-cloture/">Mur de clôture</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Zones</h4>
+        <h3>Zones</h3>
         <ul><li><a href="/macon-saint-chamond/">Maçon à Saint-Chamond</a></li>
 <li><a href="/macon-firminy/">Maçon à Firminy</a></li>
 <li><a href="/macon-roanne/">Maçon à Roanne</a></li>
@@ -714,7 +768,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 </ul>
       </div>
       <div class="footer-col">
-        <h4>Entreprise</h4>
+        <h3>Entreprise</h3>
         <ul>
           <li><a href="/realisations/">Nos réalisations</a></li>
           <li><a href="/devis/">Demander un devis</a></li>
@@ -734,15 +788,19 @@ footer{background:var(--navy);padding:56px 24px 32px}
 // ── Menu burger ──
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('drawer');
+const mobCta = document.getElementById('mobCta');
 burger.addEventListener('click', () => {
   burger.classList.toggle('open');
   drawer.classList.toggle('open');
-  document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+  const isOpen = drawer.classList.contains('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (mobCta) mobCta.style.display = isOpen ? 'none' : '';
 });
 function closeDrawer() {
   burger.classList.remove('open');
   drawer.classList.remove('open');
   document.body.style.overflow = '';
+  if (mobCta) mobCta.style.display = '';
 }
 
 // ── Scroll reveal ──

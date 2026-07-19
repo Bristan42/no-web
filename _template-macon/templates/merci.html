@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demande reçue — {{ENTREPRISE}}</title>
+<meta name="robots" content="noindex,nofollow">
+{{SHARED_STYLE}}
+<style>
+.merci-wrap{min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;padding:60px 24px}
+.merci-card{max-width:560px;width:100%;text-align:center}
+.merci-icon{width:80px;height:80px;background:rgba(200,98,26,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.merci-icon svg{color:var(--accent)}
+.merci-h1{font-size:clamp(24px,3.5vw,36px);font-weight:800;letter-spacing:-.03em;color:var(--text);margin-bottom:12px;text-wrap:balance}
+.merci-sub{font-size:17px;color:var(--text-2);line-height:1.65;margin-bottom:40px}
+.merci-steps{display:flex;flex-direction:column;background:var(--bg-alt);border-radius:12px;overflow:hidden;margin-bottom:40px;text-align:left}
+.merci-step{display:flex;align-items:flex-start;gap:16px;padding:18px 24px;border-bottom:1px solid var(--border)}
+.merci-step:last-child{border-bottom:none}
+.merci-step-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.merci-step-num.done{background:rgba(34,197,94,.15);color:#16a34a}
+.merci-step-text strong{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
+.merci-step-text span{font-size:13px;color:var(--text-2)}
+.merci-actions{display:flex;flex-direction:column;gap:12px;align-items:center}
+.merci-actions .btn{width:100%;max-width:400px;justify-content:center}
+.btn-secondary{background:var(--bg-alt);color:var(--text-2);border:1.5px solid var(--border)}
+.btn-secondary:hover{background:var(--border);color:var(--text)}
+</style>
+</head>
+<body>
+{{HEADER}}
+
+<div class="merci-wrap">
+  <div class="merci-card">
+    <div class="merci-icon">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <h1 class="merci-h1">Votre demande a bien été reçue !</h1>
+    <p class="merci-sub">{{PRENOM}} vous recontactera sous <strong>48h</strong> pour discuter de votre projet et organiser une visite gratuite sur place.</p>
+
+    <div class="merci-steps">
+      <div class="merci-step">
+        <div class="merci-step-num done">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="merci-step-text">
+          <strong>Demande envoyée</strong>
+          <span>Votre message a bien été transmis à {{ENTREPRISE}}.</span>
+        </div>
+      </div>
+      <div class="merci-step">
+        <div class="merci-step-num">2</div>
+        <div class="merci-step-text">
+          <strong>Rappel sous 48h</strong>
+          <span>{{PRENOM}} vous contacte pour préciser votre projet.</span>
+        </div>
+      </div>
+      <div class="merci-step">
+        <div class="merci-step-num">3</div>
+        <div class="merci-step-text">
+          <strong>Visite + devis gratuit</strong>
+          <span>Déplacement offert dans le {{DEPARTEMENT}} — devis détaillé remis sous 48h.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merci-actions">
+      <a href="tel:{{TEL_RAW}}" class="btn btn-accent btn-lg">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        {{TEL_DISPLAY}}
+      </a>
+      <a href="/" class="btn btn-secondary btn-lg">← Retour à l'accueil</a>
+    </div>
+  </div>
+</div>
+
+{{FOOTER}}
+{{SHARED_SCRIPT}}
+</body>
+</html>
