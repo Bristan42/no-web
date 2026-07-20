@@ -21,6 +21,9 @@
   "ANNEE": "2025",
   "RAYON": "40",
   "FORM_ACTION": "/merci/",
+  "GOOGLE_MAPS_KEY": "",
+  "GOOGLE_PLACE_ID": "",
+  "GOOGLE_GMB_URL": "",
 
   "AVIS": [
     {
@@ -91,6 +94,18 @@
         {
           "Q": "Combien de temps dure un chantier d'extension ?",
           "A": "En moyenne 6 à 12 semaines selon la surface et la complexité. Nous établissons un planning précis dès la signature du devis, avec des points d'étape réguliers."
+        },
+        {
+          "Q": "Peut-on faire une extension sans architecte ?",
+          "A": "En dessous de 150 m² de surface totale après travaux, le recours à un architecte n'est pas obligatoire pour les particuliers. Au-delà de ce seuil, il devient légalement requis. Nous vous conseillons lors de la visite sur la démarche adaptée à votre projet."
+        },
+        {
+          "Q": "L'extension est-elle couverte par la garantie décennale ?",
+          "A": "Oui. Tous nos travaux de gros œuvre et de maçonnerie sont couverts par notre assurance décennale. Elle protège votre extension contre les désordres compromettant sa solidité ou la rendant impropre à l'habitation, pendant 10 ans à compter de la réception du chantier."
+        },
+        {
+          "Q": "Peut-on habiter la maison pendant les travaux d'extension ?",
+          "A": "Dans la grande majorité des cas, oui. Les travaux se déroulent à l'extérieur et la liaison avec l'existant est réalisée en fin de chantier. Nous convenons avec vous d'un planning pour minimiser les nuisances au quotidien."
         }
       ]
     },
@@ -141,6 +156,14 @@
         {
           "Q": "Peut-on bénéficier d'aides pour un ravalement ?",
           "A": "Si le ravalement est couplé à une isolation thermique par l'extérieur (ITE), vous pouvez bénéficier de MaPrimeRénov' et des CEE. Nous vous informons des dispositifs applicables lors de la visite."
+        },
+        {
+          "Q": "À quelle fréquence faut-il ravaler une façade ?",
+          "A": "Un ravalement de qualité dure généralement entre 10 et 20 ans selon l'exposition, le matériau et le climat local. Des fissures, des mousses persistantes ou une peinture qui s'écaille sont des signes qu'il est temps d'intervenir. Nous établissons un diagnostic gratuit lors de la visite."
+        },
+        {
+          "Q": "Quelle est la différence entre enduit et peinture façade ?",
+          "A": "L'enduit (monocouche, gratté, taloché) est un revêtement minéral plus durable, directement appliqué sur la maçonnerie, moins sensible à l'humidité. La peinture façade est une solution plus rapide et moins coûteuse, adaptée aux supports déjà enduits en bon état. Nous recommandons la solution adaptée à votre type de mur lors du diagnostic."
         }
       ]
     },
@@ -191,6 +214,14 @@
         {
           "Q": "Travaillez-vous avec des architectes ?",
           "A": "Oui, nous intervenons en tant qu'entreprise générale sur plans d'architecte ou de bureau d'études. Nous pouvons aussi vous recommander des partenaires locaux si vous n'avez pas encore de maître d'œuvre."
+        },
+        {
+          "Q": "Quelle est la différence entre parpaing et béton coffrant ?",
+          "A": "Le parpaing (bloc béton creux) est la solution la plus courante : rapide à monter, économique et adapté à la plupart des constructions. Le béton coffrant intègre une isolation thermique dans le bloc, réduisant les ponts thermiques et améliorant le confort. Nous choisissons le matériau selon les contraintes de votre projet."
+        },
+        {
+          "Q": "La garantie décennale couvre-t-elle le gros œuvre ?",
+          "A": "Oui, et c'est même le cœur de la garantie décennale. Fondations, murs porteurs, planchers et chapes sont couverts pendant 10 ans contre tout désordre compromettant la solidité de l'ouvrage ou le rendant impropre à l'habitation."
         }
       ]
     },
@@ -241,6 +272,14 @@
         {
           "Q": "Combien coûte l'abattage d'un mur porteur ?",
           "A": "Comptez entre 1 500 € et 4 000 € selon la longueur du mur et le type de poutre à poser. Le diagnostic et le devis sont gratuits."
+        },
+        {
+          "Q": "Combien de temps dure l'abattage d'un mur porteur ?",
+          "A": "L'abattage lui-même prend 1 à 2 jours. La pose de la poutre de substitution (IPN ou béton) nécessite 1 à 3 jours supplémentaires selon la longueur. Comptez 3 à 5 jours de chantier au total pour une intervention standard."
+        },
+        {
+          "Q": "Faut-il un bureau d'études pour abattre un mur porteur ?",
+          "A": "Pour les cas courants (petite portée, faibles charges), notre expérience suffit pour dimensionner correctement la poutre. Pour les situations complexes (grande portée, bâtiment ancien, charges importantes), nous faisons appel à un bureau d'études partenaire, dont la prestation peut être intégrée dans notre offre."
         }
       ]
     },
@@ -291,6 +330,14 @@
         {
           "Q": "Combien de temps dure un chantier de dallage ?",
           "A": "La pose prend 1 à 3 jours selon la surface. Le béton doit sécher au minimum 28 jours avant toute sollicitation importante (véhicule, mobilier lourd)."
+        },
+        {
+          "Q": "Quelle est la différence entre béton désactivé et béton imprimé ?",
+          "A": "Le béton désactivé est lavé avant séchage pour faire apparaître les gravillons en surface : rendu naturel, antidérapant, très durable. Le béton imprimé reçoit des tampons reproduisant des motifs (dallage, opus, bois) : plus décoratif, il nécessite un produit de protection tous les 2-3 ans. Nous vous conseillons selon votre usage et votre budget."
+        },
+        {
+          "Q": "Peut-on poser du carrelage sur une dalle béton extérieure ?",
+          "A": "Oui, à condition que la dalle soit parfaitement plane, sans fissure et que les joints de dilatation soient respectés. Nous réalisons des dalles prêtes à carreler sur demande, avec une planéité garantie au réglet."
         }
       ]
     },
@@ -341,6 +388,14 @@
         {
           "Q": "Un mur de soutènement nécessite-t-il un ingénieur ?",
           "A": "Pour des murs de plus de 1,50 m de hauteur retenant une forte charge, une note de calcul d'un bureau d'études est recommandée. Nous travaillons avec des partenaires locaux et intégrons cette prestation dans notre offre si nécessaire."
+        },
+        {
+          "Q": "Quelle fondation pour un mur de clôture ?",
+          "A": "Pour un mur de 1 à 1,50 m, une semelle filante de 40 à 60 cm de profondeur est généralement suffisante. Pour un mur de soutènement ou sur terrain argileux ou en pente, nous prévoyons des fondations renforcées. La visite gratuite permet de définir la solution adaptée à votre terrain."
+        },
+        {
+          "Q": "Combien de temps prend la construction d'un mur de clôture ?",
+          "A": "Pour un mur standard de 10 à 20 mètres linéaires, comptez 2 à 5 jours selon la hauteur et les finitions choisies. Un mur de soutènement plus complexe peut nécessiter 1 à 2 semaines. Un planning précis est établi dès la signature du devis."
         }
       ]
     }

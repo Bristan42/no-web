@@ -174,6 +174,9 @@ def build_vars(extra=None):
     v["MENTIONS_TVA_INTRA"]       = mentions.get("TVA_INTRA", "")
     v["MENTIONS_HEBERGEUR"]       = mentions.get("HEBERGEUR", "Cloudflare Pages")
     v["MENTIONS_HEBERGEUR_ADRESSE"] = mentions.get("HEBERGEUR_ADRESSE", "")
+    v["GOOGLE_MAPS_KEY"] = config.get("GOOGLE_MAPS_KEY", "")
+    v["GOOGLE_PLACE_ID"] = config.get("GOOGLE_PLACE_ID", "")
+    v["GOOGLE_GMB_URL"]  = config.get("GOOGLE_GMB_URL", "")
 
     if extra:
         v.update(extra)
@@ -293,6 +296,60 @@ for svc in services:
             f'</button><div class="faq-a"><p>{a}</p></div></div>\n'
         )
 
+    # FAQ Schema JSON-LD
+    faq_entities = []
+    for item in svc.get("FAQ", []):
+        q = _apply_simple(item.get("Q", ""))
+        a = _apply_simple(item.get("A", ""))
+        faq_entities.append({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}})
+    faq_schema_json = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_entities}, ensure_ascii=False)
+
+    # Google Reviews section + script
+    gmaps_key = config.get("GOOGLE_MAPS_KEY", "")
+    place_id  = config.get("GOOGLE_PLACE_ID", "")
+    gmb_url   = config.get("GOOGLE_GMB_URL", "")
+    if gmaps_key and place_id:
+        gmb_btn = (f'<div class="gmb-footer reveal d3"><a href="{gmb_url}" target="_blank" rel="noopener" class="btn btn-outline">Voir tous les avis sur Google</a>'
+                   f'<p class="gmb-note">Avis collectés via Google My Business</p></div>') if gmb_url else ""
+        gmb_section_html = (
+            '<section class="section" id="avis-google">'
+            '<div class="inner">'
+            '<div class="section-label reveal">Avis Google</div>'
+            f'<h2 class="section-h2 reveal d1">Ce que disent<br>nos clients</h2>'
+            '<div id="gmb-reviews" class="gmb-grid reveal d2"><div class="gmb-loading">Chargement des avis…</div></div>'
+            f'{gmb_btn}'
+            '</div></section>'
+        )
+        gmb_script = (
+            '<script>'
+            f'window.__PLACE_ID="{place_id}";'
+            'function __initGMB(){'
+            'var d=document.createElement("div");'
+            'var s=new google.maps.places.PlacesService(d);'
+            'var el=document.getElementById("gmb-reviews");'
+            'if(!el)return;'
+            'el.innerHTML="<div class=\\"gmb-loading\\">Chargement…</div>";'
+            'try{s.getDetails({placeId:window.__PLACE_ID,fields:["reviews","rating"]},function(p,st){'
+            'if(st!==google.maps.places.PlacesServiceStatus.OK||!p||!p.reviews){el.innerHTML="";return;}'
+            'el.innerHTML=p.reviews.slice(0,5).map(function(r){'
+            'var stars="★".repeat(r.rating)+"☆".repeat(5-r.rating);'
+            'var av=r.profile_photo_url'
+            '?"<img class=\\"gmb-avatar\\" src=\\""+r.profile_photo_url+"\\" alt=\\""+r.author_name+"\\" loading=\\"lazy\\">"'
+            ':"<div class=\\"gmb-avatar-letter\\">"+r.author_name.charAt(0)+"</div>";'
+            'return"<div class=\\"gmb-card\\"><div class=\\"gmb-header\\">"+av'
+            '+"<div><div class=\\"gmb-name\\">"+r.author_name+"</div><div class=\\"gmb-stars\\">"+stars+"</div></div>"'
+            '+"<div class=\\"gmb-date\\">"+r.relative_time_description+"</div></div>"'
+            '+"<p class=\\"gmb-text\\">"+r.text+"</p></div>";'
+            '}).join("");'
+            '});}catch(e){el.innerHTML="";}'
+            '}'
+            '</script>'
+            f'<script async src="https://maps.googleapis.com/maps/api/js?key={gmaps_key}&libraries=places&callback=__initGMB"></script>'
+        )
+    else:
+        gmb_section_html = ""
+        gmb_script = ""
+
     # Galerie photos
     gallery_photos = svc.get("GALLERY", [])
     if not gallery_photos:
@@ -367,6 +424,10 @@ for svc in services:
         "SERVICE_GALLERY_HTML":     gallery_html,
         "SERVICE_TEMOIGNAGE_HTML":  temo_html,
         "SERVICE_PRIX_HTML":        prix_html,
+        "SERVICE_FAQ_SCHEMA":       faq_schema_json,
+        "GMB_SECTION_HTML":         gmb_section_html,
+        "GMB_SCRIPT":               gmb_script,
+        "ZONE_CHIPS":               zone_chips_html,
     })
     # Résoudre les variables internes (ex: {{VILLE}} dans TITRE_H1)
     for key in ("SERVICE_TITRE_H1", "SERVICE_DESCRIPTION_SEO", "SERVICE_INTRO"):

@@ -20,6 +20,7 @@
   "areaServed": "Saint-Étienne et 42"
 }
 </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelle hauteur maximale pour un mur de clôture ?", "acceptedAnswer": {"@type": "Answer", "text": "La réglementation varie selon la commune. En général, entre 1,80 m et 2,60 m sont autorisés sans déclaration préalable. Au-delà ou en limite de propriété, une déclaration est souvent requise. Nous vous guidons."}}, {"@type": "Question", "name": "Quel prix pour un mur de clôture en parpaing à Saint-Étienne ?", "acceptedAnswer": {"@type": "Answer", "text": "Comptez entre 150 € et 350 € par mètre linéaire selon la hauteur, la fondation et la finition. Devis gratuit après visite."}}, {"@type": "Question", "name": "Un mur de soutènement nécessite-t-il un ingénieur ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour des murs de plus de 1,50 m de hauteur retenant une forte charge, une note de calcul d'un bureau d'études est recommandée. Nous travaillons avec des partenaires locaux et intégrons cette prestation dans notre offre si nécessaire."}}, {"@type": "Question", "name": "Quelle fondation pour un mur de clôture ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour un mur de 1 à 1,50 m, une semelle filante de 40 à 60 cm de profondeur est généralement suffisante. Pour un mur de soutènement ou sur terrain argileux ou en pente, nous prévoyons des fondations renforcées. La visite gratuite permet de définir la solution adaptée à votre terrain."}}, {"@type": "Question", "name": "Combien de temps prend la construction d'un mur de clôture ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour un mur standard de 10 à 20 mètres linéaires, comptez 2 à 5 jours selon la hauteur et les finitions choisies. Un mur de soutènement plus complexe peut nécessiter 1 à 2 semaines. Un planning précis est établi dès la signature du devis."}}]}</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -387,8 +388,33 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .prix-block{grid-template-columns:1fr}
   .svc-temo{padding:24px}
 }
+/* ── Avis Google (GMB) ── */
+.gmb-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gmb-card{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:20px 22px}
+.gmb-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.gmb-avatar{width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.gmb-avatar-letter{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.gmb-name{font-weight:700;font-size:13px;color:var(--text)}
+.gmb-stars{color:#f59e0b;font-size:12px;letter-spacing:1px}
+.gmb-date{font-size:11px;color:var(--text-3);margin-left:auto;flex-shrink:0}
+.gmb-text{font-size:13.5px;color:var(--text-2);line-height:1.65;margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.gmb-footer{margin-top:32px;text-align:center}
+.gmb-loading{color:var(--text-3);text-align:center;padding:40px;font-size:14px;grid-column:1/-1}
+.gmb-note{font-size:12px;color:var(--text-3);margin-top:10px}
+/* ── Zone d'intervention ── */
+.zone-svc-chips{margin-top:32px;display:flex;flex-wrap:wrap;gap:8px}
+.zone-svc-sub{margin-top:16px;font-size:15px;color:var(--text-2);line-height:1.6}
+/* ── Sticky CTA mobile ── */
+.sticky-mob{display:none}
+@media(max-width:768px){
+  .sticky-mob{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--navy);padding:10px 12px;gap:8px;box-shadow:0 -3px 16px rgba(0,0,0,.3);padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  .sticky-mob-call{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.08);color:#fff;padding:12px 8px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.12)}
+  .sticky-mob-devis{flex:1;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;padding:12px 8px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none}
+  body{padding-bottom:72px}
+  .gmb-grid{grid-template-columns:1fr}
+}
 /* ── Trust strip (certifs) — bande navy en continuité du hero ── */
-.srv-certs{background:var(--navy);padding:0;border-top:1px solid rgba(255,255,255,.07)}
+.srv-certs{background:var(--navy);padding:0}
 .srv-certs .certs-inner{gap:0}
 .srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none}
 .srv-certs .cert:hover{background:rgba(255,255,255,.04)}
@@ -531,6 +557,8 @@ footer{background:var(--navy);padding:56px 24px 32px}
   </div>
 </section>
 
+
+
 <section class="section">
   <div class="inner">
     <div class="section-label reveal">Notre processus</div>
@@ -580,8 +608,26 @@ footer{background:var(--navy);padding:56px 24px 32px}
       <div class="faq-item"><button class="faq-q">Quelle hauteur maximale pour un mur de clôture ?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><p>La réglementation varie selon la commune. En général, entre 1,80 m et 2,60 m sont autorisés sans déclaration préalable. Au-delà ou en limite de propriété, une déclaration est souvent requise. Nous vous guidons.</p></div></div>
 <div class="faq-item"><button class="faq-q">Quel prix pour un mur de clôture en parpaing à Saint-Étienne ?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><p>Comptez entre 150 € et 350 € par mètre linéaire selon la hauteur, la fondation et la finition. Devis gratuit après visite.</p></div></div>
 <div class="faq-item"><button class="faq-q">Un mur de soutènement nécessite-t-il un ingénieur ?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><p>Pour des murs de plus de 1,50 m de hauteur retenant une forte charge, une note de calcul d'un bureau d'études est recommandée. Nous travaillons avec des partenaires locaux et intégrons cette prestation dans notre offre si nécessaire.</p></div></div>
+<div class="faq-item"><button class="faq-q">Quelle fondation pour un mur de clôture ?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><p>Pour un mur de 1 à 1,50 m, une semelle filante de 40 à 60 cm de profondeur est généralement suffisante. Pour un mur de soutènement ou sur terrain argileux ou en pente, nous prévoyons des fondations renforcées. La visite gratuite permet de définir la solution adaptée à votre terrain.</p></div></div>
+<div class="faq-item"><button class="faq-q">Combien de temps prend la construction d'un mur de clôture ?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><p>Pour un mur standard de 10 à 20 mètres linéaires, comptez 2 à 5 jours selon la hauteur et les finitions choisies. Un mur de soutènement plus complexe peut nécessiter 1 à 2 semaines. Un planning précis est établi dès la signature du devis.</p></div></div>
 
     </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Zone d'intervention</div>
+    <h2 class="section-h2 reveal d1">Mur & clôture à Saint-Étienne<br>et dans tout le 42</h2>
+    <p class="zone-svc-sub reveal d2">Nous intervenons dans un rayon de 40 km autour de Saint-Étienne. Déplacement gratuit pour l'étude de votre projet.</p>
+    <div class="zone-svc-chips reveal d3"><a href="/macon-saint-chamond/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Saint-Chamond</a>
+<a href="/macon-firminy/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Firminy</a>
+<a href="/macon-roanne/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Roanne</a>
+<a href="/macon-montbrison/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Montbrison</a>
+<a href="/macon-rive-de-gier/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rive-de-Gier</a>
+<a href="/macon-chambon-feugerolles/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Le Chambon-Feugerolles</a>
+<a href="/macon-andrezieux-boutheon/" class="zone-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Andrézieux-Bouthéon</a>
+</div>
   </div>
 </section>
 
@@ -597,6 +643,14 @@ footer{background:var(--navy);padding:56px 24px 32px}
       <div class="cta-note">Réponse garantie sous 48h</div>
     </div>
   </div>
+</div>
+
+<div class="sticky-mob">
+  <a href="tel:0631876401" class="sticky-mob-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="/devis/" class="sticky-mob-devis">Devis gratuit 48h</a>
 </div>
 
 <footer>
@@ -657,6 +711,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
     </div>
   </div>
 </footer>
+
 <script>
 // ── Menu burger ──
 const burger = document.getElementById('burger');
