@@ -60,6 +60,25 @@
         "Finitions extérieures coordonnées à votre maison",
         "Garantie décennale — travaux assurés 10 ans"
       ],
+      "GALLERY": ["/images/real-2.jpg", "/images/real-3.jpg", "/images/real-1.jpg"],
+      "TEMOIGNAGE": {
+        "NOM": "Pierre D.",
+        "INITIALES": "PD",
+        "TEXTE": "Thomas a réalisé notre extension de 38 m² dans les délais et le budget prévus. Aucune mauvaise surprise, équipe propre et professionnelle du début à la fin.",
+        "PROJET": "Extension 38 m² — Firminy"
+      },
+      "PRIX": {
+        "FOURCHETTE": "1 200 – 2 500 €",
+        "UNITE": "par m² de surface créée",
+        "NOTE": "Pour une extension de 30 m², comptez entre 36 000 € et 75 000 € selon la structure et les finitions souhaitées.",
+        "LIGNES": [
+          "Étude de faisabilité et dépôt de permis",
+          "Terrassement et fondations adaptées",
+          "Gros œuvre, toiture et raccordements",
+          "Isolation thermique RT 2020 incluse",
+          "Devis détaillé après visite gratuite"
+        ]
+      },
       "FAQ": [
         {
           "Q": "Quel est le prix d'une extension de maison à {{VILLE}} ?",
@@ -91,6 +110,25 @@
         "Traitement des fissures et joints de dilatation",
         "Garantie décennale — travaux assurés 10 ans"
       ],
+      "GALLERY": ["/images/real-5.jpg", "/images/real-1.jpg", "/images/real-4.jpg"],
+      "TEMOIGNAGE": {
+        "NOM": "Anne M.",
+        "INITIALES": "AM",
+        "TEXTE": "Façade entièrement refaite en moins d'une semaine. Résultat impeccable, le prix était conforme au devis sans aucun ajout.",
+        "PROJET": "Ravalement façade — Saint-Étienne"
+      },
+      "PRIX": {
+        "FOURCHETTE": "30 – 80 €",
+        "UNITE": "par m² de façade",
+        "NOTE": "Pour une maison avec 120 m² de façade : comptez entre 3 600 € et 9 600 €. Le diagnostic préalable est offert.",
+        "LIGNES": [
+          "Diagnostic et état des lieux inclus",
+          "Nettoyage haute pression et traitement",
+          "Enduit monocouche, gratté ou taloché",
+          "Peinture façade ou revêtement épais",
+          "Devis détaillé après visite gratuite"
+        ]
+      },
       "FAQ": [
         {
           "Q": "Quel est le prix d'un ravalement de façade à {{VILLE}} ?",
@@ -122,6 +160,25 @@
         "Respect des DTU maçonnerie et des normes parasismiques",
         "Garantie décennale — travaux assurés 10 ans"
       ],
+      "GALLERY": ["/images/real-3.jpg", "/images/real-2.jpg", "/images/real-5.jpg"],
+      "TEMOIGNAGE": {
+        "NOM": "Laurent B.",
+        "INITIALES": "LB",
+        "TEXTE": "Fondations et gros œuvre réalisés avec soin et dans les délais. Thomas est intervenu rapidement après la signature, l'équipe est sérieuse.",
+        "PROJET": "Construction maison — Roanne"
+      },
+      "PRIX": {
+        "FOURCHETTE": "800 – 1 800 €",
+        "UNITE": "par m² de surface de plancher",
+        "NOTE": "Pour une maison de 100 m², le seul gros œuvre représente entre 80 000 € et 180 000 € selon la complexité du projet.",
+        "LIGNES": [
+          "Étude de sol et implantation incluse",
+          "Fondations adaptées (semelles, radier)",
+          "Maçonnerie blocs béton ou béton coffrant",
+          "Planchers, chapes et dalles DTU",
+          "Devis précis après étude du projet"
+        ]
+      },
       "FAQ": [
         {
           "Q": "Combien coûte la construction d'une maison en gros œuvre à {{VILLE}} ?",
@@ -153,6 +210,25 @@
         "Coordination avec les autres corps de métier",
         "Remise en état des zones impactées incluse"
       ],
+      "GALLERY": ["/images/real-4.jpg", "/images/real-1.jpg", "/images/real-3.jpg"],
+      "TEMOIGNAGE": {
+        "NOM": "Sophie & Julien",
+        "INITIALES": "SJ",
+        "TEXTE": "Mur porteur abattu sans aucune surprise, poutre posée proprement en une journée. Résultat magnifique, salon complètement transformé.",
+        "PROJET": "Ouverture mur porteur — Saint-Chamond"
+      },
+      "PRIX": {
+        "FOURCHETTE": "1 500 – 4 000 €",
+        "UNITE": "par intervention",
+        "NOTE": "Abattage mur porteur avec IPN : 1 500 – 3 000 €. Reprise de plancher ou sous-œuvre : 3 000 – 8 000 €.",
+        "LIGNES": [
+          "Diagnostic structure avant démolition",
+          "Pose de poutre IPN ou béton armé",
+          "Création d'ouvertures (portes, baies)",
+          "Reprise de plancher et ragréage inclus",
+          "Devis gratuit après visite sur place"
+        ]
+      },
       "FAQ": [
         {
           "Q": "Peut-on abattre n'importe quel mur ?",
@@ -184,6 +260,25 @@
         "Joints de dilatation positionnés selon les règles de l'art",
         "Nettoyage du chantier et évacuation des déchets inclus"
       ],
+      "GALLERY": ["/images/real-1.jpg", "/images/real-4.jpg", "/images/real-2.jpg"],
+      "TEMOIGNAGE": {
+        "NOM": "Nathalie R.",
+        "INITIALES": "NR",
+        "TEXTE": "Terrasse désactivée réalisée en 3 jours. Rendu magnifique, le béton est parfait, les joints sont bien placés. Je recommande sans hésiter.",
+        "PROJET": "Terrasse désactivée 55 m² — Saint-Étienne"
+      },
+      "PRIX": {
+        "FOURCHETTE": "40 – 120 €",
+        "UNITE": "par m² posé et fini",
+        "NOTE": "Béton taloché : 40 – 60 €/m². Béton désactivé : 60 – 90 €/m². Béton imprimé : 80 – 120 €/m².",
+        "LIGNES": [
+          "Terrassement et mise en forme inclus",
+          "Film polyane et ferraillage si nécessaire",
+          "Béton dosé selon usage et charge prévue",
+          "Joints de dilatation selon règles de l'art",
+          "Nettoyage chantier et évacuation déchets"
+        ]
+      },
       "FAQ": [
         {
           "Q": "Quel prix pour une dalle béton ou une terrasse à {{VILLE}} ?",
@@ -215,6 +310,25 @@
         "Pose de chaperons et couronnements pour l'étanchéité",
         "Garantie décennale — travaux assurés 10 ans"
       ],
+      "GALLERY": ["/images/real-1.jpg", "/images/real-3.jpg", "/images/real-5.jpg"],
+      "TEMOIGNAGE": {
+        "NOM": "Michel P.",
+        "INITIALES": "MP",
+        "TEXTE": "Mur de soutènement construit proprement, drainage arrière prévu dès le départ. Aucun souci depuis 2 ans, même après des pluies intenses.",
+        "PROJET": "Mur soutènement 14 ml — Firminy"
+      },
+      "PRIX": {
+        "FOURCHETTE": "150 – 350 €",
+        "UNITE": "par mètre linéaire",
+        "NOTE": "Mur parpaing enduit : 150 – 220 €/ml. Mur béton banché : 200 – 280 €/ml. Mur pierre apparente : 250 – 350 €/ml.",
+        "LIGNES": [
+          "Fondations adaptées à la hauteur et au sol",
+          "Maçonnerie parpaing, brique ou béton banché",
+          "Drainage arrière pour murs de soutènement",
+          "Enduit ou finition pierre selon votre choix",
+          "Devis gratuit après visite sur place"
+        ]
+      },
       "FAQ": [
         {
           "Q": "Quelle hauteur maximale pour un mur de clôture ?",

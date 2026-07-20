@@ -45,6 +45,38 @@
 .avantage h4{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
 /* ── FAQ — Option A (accordéon pleine largeur) ── */
 .faq-list{margin-top:48px!important;display:block!important}
+/* ── Galerie réalisations ── */
+.svc-gallery{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-radius:12px;overflow:hidden}
+.svc-gallery-item{overflow:hidden}
+.svc-gallery-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s ease}
+.svc-gallery-item:hover img{transform:scale(1.04)}
+/* ── Témoignage ── */
+.svc-temo{max-width:720px;margin:48px auto 0;background:var(--bg);border:1.5px solid var(--border);border-radius:14px;padding:36px 40px}
+.svc-temo-stars{color:var(--accent);font-size:16px;letter-spacing:3px;margin-bottom:18px}
+.svc-temo blockquote{font-size:clamp(16px,1.6vw,20px);font-style:italic;color:var(--text);line-height:1.7;margin:0 0 24px;padding-left:20px;border-left:3px solid var(--accent)}
+.svc-temo-author{display:flex;align-items:center;gap:14px}
+.svc-temo-avatar{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.svc-temo-nom{font-weight:700;font-size:14px;color:var(--text)}
+.svc-temo-projet{font-size:13px;color:var(--text-2)}
+/* ── Prix indicatifs ── */
+.prix-block{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.prix-left{background:var(--navy);border-radius:14px;padding:36px 32px;color:#fff}
+.prix-fourchette{font-size:clamp(26px,3.5vw,40px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em}
+.prix-unite{font-size:13px;color:rgba(255,255,255,.55);margin:6px 0 14px;font-weight:500}
+.prix-note{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.6;margin:0 0 28px;border-top:1px solid rgba(255,255,255,.1);padding-top:14px}
+.prix-cta-devis{display:inline-block;background:var(--accent);color:#fff;padding:13px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;transition:opacity .2s}
+.prix-cta-devis:hover{opacity:.88}
+.prix-inclus-title{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:14px}
+.prix-ligne{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--text);line-height:1.4}
+.prix-ligne:last-child{border-bottom:none}
+.prix-ligne svg{color:var(--accent);flex-shrink:0}
+.prix-bas{margin-top:20px;font-size:13px;color:var(--text-2);line-height:1.6;padding:14px 16px;background:var(--bg-alt);border-radius:8px;border-left:3px solid var(--accent)}
+@media(max-width:900px){
+  .svc-gallery{grid-template-columns:1fr 1fr}
+  .svc-gallery-item:nth-child(3){display:none}
+  .prix-block{grid-template-columns:1fr}
+  .svc-temo{padding:24px}
+}
 /* ── Trust strip (certifs) — bande navy en continuité du hero ── */
 .srv-certs{background:var(--navy);padding:0;border-top:1px solid rgba(255,255,255,.07)}
 .srv-certs .certs-inner{gap:0}
@@ -117,6 +149,14 @@
   </div>
 </div>
 
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Nos réalisations</div>
+    <h2 class="section-h2 reveal d1">Quelques chantiers<br>{{SERVICE_NOM_COURT}} réalisés</h2>
+    <div class="svc-gallery reveal d2">{{SERVICE_GALLERY_HTML}}</div>
+  </div>
+</section>
+
 <section class="section">
   <div class="inner">
     <div class="section-label reveal">Nos engagements</div>
@@ -126,6 +166,14 @@
 </section>
 
 <section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Ce qu'ils en disent</div>
+    <h2 class="section-h2 reveal d1">Avis client</h2>
+    <div class="svc-temo reveal d2">{{SERVICE_TEMOIGNAGE_HTML}}</div>
+  </div>
+</section>
+
+<section class="section">
   <div class="inner">
     <div class="section-label reveal">Notre processus</div>
     <h2 class="section-h2 reveal d1">Votre chantier {{SERVICE_NOM_COURT}}<br>en 4 étapes</h2>
@@ -150,6 +198,14 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="tarifs">
+  <div class="inner">
+    <div class="section-label reveal">Tarifs indicatifs</div>
+    <h2 class="section-h2 reveal d1">Prix {{SERVICE_NOM_COURT}}<br>à {{VILLE}}</h2>
+    <div class="prix-block reveal d2">{{SERVICE_PRIX_HTML}}</div>
   </div>
 </section>
 

@@ -293,6 +293,59 @@ for svc in services:
             f'</button><div class="faq-a"><p>{a}</p></div></div>\n'
         )
 
+    # Galerie photos
+    gallery_photos = svc.get("GALLERY", [])
+    if not gallery_photos:
+        gallery_photos = [p for p in real_photos[:3] if p]
+    gallery_html = ""
+    for photo in gallery_photos[:3]:
+        gallery_html += (
+            f'<div class="svc-gallery-item">'
+            f'<img src="{photo}" alt="Réalisation {svc["NOM_COURT"]} {config["VILLE"]}" '
+            f'loading="lazy" decoding="async" width="600" height="450">'
+            f'</div>\n'
+        )
+
+    # Témoignage
+    temo = svc.get("TEMOIGNAGE", {})
+    if temo:
+        temo_html = (
+            '<div class="svc-temo-stars">★★★★★</div>'
+            f'<blockquote>« {temo.get("TEXTE","")} »</blockquote>'
+            '<div class="svc-temo-author">'
+            f'<div class="svc-temo-avatar">{temo.get("INITIALES","")}</div>'
+            '<div>'
+            f'<div class="svc-temo-nom">{temo.get("NOM","")}</div>'
+            f'<div class="svc-temo-projet">{temo.get("PROJET","")}</div>'
+            '</div></div>'
+        )
+    else:
+        temo_html = ""
+
+    # Prix
+    prix = svc.get("PRIX", {})
+    check_svg = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+    prix_lignes_html = "".join(
+        f'<div class="prix-ligne">{check_svg}{ligne}</div>\n'
+        for ligne in prix.get("LIGNES", [])
+    )
+    if prix:
+        prix_html = (
+            '<div class="prix-left">'
+            f'<div class="prix-fourchette">{prix.get("FOURCHETTE","")}</div>'
+            f'<div class="prix-unite">{prix.get("UNITE","")}</div>'
+            f'<p class="prix-note">{prix.get("NOTE","")}</p>'
+            '<a href="/devis/" class="prix-cta-devis">Obtenir mon devis gratuit →</a>'
+            '</div>'
+            '<div class="prix-right">'
+            '<div class="prix-inclus-title">Compris dans notre devis :</div>'
+            f'{prix_lignes_html}'
+            '<p class="prix-bas">Devis gratuit et détaillé sous 48h après visite sur place. Sans engagement.</p>'
+            '</div>'
+        )
+    else:
+        prix_html = ""
+
     svc_photo = svc.get("PHOTO", "")
     svc_photo_html = (
         f'<div class="service-hero-media reveal d2">'
@@ -311,6 +364,9 @@ for svc in services:
         "SERVICE_AVANTAGES_HTML":   avantages_html,
         "SERVICE_FAQ_HTML":         faq_html,
         "SERVICE_HERO_PHOTO_HTML":  svc_photo_html,
+        "SERVICE_GALLERY_HTML":     gallery_html,
+        "SERVICE_TEMOIGNAGE_HTML":  temo_html,
+        "SERVICE_PRIX_HTML":        prix_html,
     })
     # Résoudre les variables internes (ex: {{VILLE}} dans TITRE_H1)
     for key in ("SERVICE_TITRE_H1", "SERVICE_DESCRIPTION_SEO", "SERVICE_INTRO"):
