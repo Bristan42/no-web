@@ -108,7 +108,7 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .mob-drawer .btn{width:100%;justify-content:center;font-size:16px;padding:15px}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero{position:relative;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
 .hero-texture{position:absolute;inset:0;opacity:.15;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.025) 2px,rgba(255,255,255,.025) 4px),repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(255,255,255,.01) 30px,rgba(255,255,255,.01) 31px);background-size:4px 4px,31px 4px}
 /* Pour activer une vraie photo : ajouter style="background-image:url('chemin/photo.jpg');background-size:cover;background-position:center;opacity:.35" sur .hero-photo */
 .hero-photo{position:absolute;inset:0;background:linear-gradient(135deg,#2C3E50 0%,#1C2B3A 60%,#0D1B2A 100%);opacity:.6}
@@ -158,20 +158,20 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 
 /* ── SERVICES ── */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.srv{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:22px 20px;transition:all .22s;display:flex;flex-direction:column}
+.srv{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:22px 20px;transition:all .22s;display:flex;flex-direction:column;color:inherit;text-decoration:none;cursor:pointer}
 .srv:hover{border-color:var(--accent);box-shadow:var(--sh-lg);transform:translateY(-2px)}
 .srv-icon{width:44px;height:44px;background:rgba(200,98,26,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;flex-shrink:0}
 .srv-icon svg{color:var(--accent)}
 .srv h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.01em}
 .srv p{font-size:13px;color:var(--text-2);line-height:1.6;flex:1}
 .srv-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--accent);margin-top:14px;transition:gap .15s}
-.srv-link:hover{gap:8px}
+.srv:hover .srv-link{gap:8px}
 
 /* ── RÉALISATIONS ── */
 .real-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .real{border-radius:10px;overflow:hidden;position:relative;background:var(--navy-light)}
 .real.feat{grid-column:span 2}
-.real-ph{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase}
+.real-ph{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;object-fit:cover}
 .real.feat .real-ph{aspect-ratio:16/9}
 .real:nth-child(1) .real-ph{background:linear-gradient(135deg,#263f52,#1c2b3a)}
 .real:nth-child(2) .real-ph{background:linear-gradient(135deg,#3d2a1a,#2a1a0e)}
@@ -191,13 +191,14 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .why p{font-size:14px;color:var(--text-2);line-height:1.6}
 
 /* ── CERTIFS ── */
-.certs{background:var(--navy);padding:36px 24px}
-.certs-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:48px;flex-wrap:wrap;justify-content:center}
-.cert{display:flex;align-items:center;gap:12px}
-.cert-badge{width:48px;height:48px;background:rgba(255,255,255,.07);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.04em;text-align:center;line-height:1.3;flex-shrink:0}
-.cert-badge.hi{background:rgba(200,98,26,.2);color:var(--accent)}
-.cert-name{font-size:13px;font-weight:700;color:#fff}
-.cert-desc{font-size:12px;color:rgba(255,255,255,.4)}
+.certs{background:var(--navy);padding:40px 24px}
+.certs-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cert{display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px 16px;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;transition:border-color .2s}
+.cert:hover{border-color:rgba(200,98,26,.35)}
+.cert-icon{width:52px;height:52px;background:rgba(200,98,26,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cert-icon svg{color:var(--accent)}
+.cert-name{font-size:14px;font-weight:700;color:#fff;line-height:1.3}
+.cert-desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.4}
 
 /* ── AVIS ── */
 .avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -221,8 +222,18 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .chip svg{color:var(--accent);flex-shrink:0}
 .chip.hi{background:rgba(200,98,26,.08);border-color:rgba(200,98,26,.3);color:var(--accent);font-weight:700}
 
+/* ── PROCESSUS (timeline) ── */
+.proc-timeline{margin-top:48px;position:relative;padding:0 12px}
+.proc-line{position:absolute;top:20px;left:calc(12px + 20px);right:calc(12px + 20px);height:2px;background:var(--border);z-index:0}
+.proc-line-fill{position:absolute;top:0;left:0;width:75%;height:100%;background:linear-gradient(90deg,var(--accent),rgba(200,98,26,.3))}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative;z-index:1}
+.proc-step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.proc-dot{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;border:3px solid var(--bg-alt);box-shadow:0 0 0 2px var(--accent);flex-shrink:0}
+.proc-h{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:4px}
+.proc-p{font-size:12.5px;color:var(--text-2);line-height:1.55}
+
 /* ── FAQ ── */
-.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:10px}
+.faq-list{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .faq-item{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s}
 .faq-item.open{border-color:rgba(200,98,26,.3)}
 .faq-q{width:100%;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-family:inherit;font-size:15px;font-weight:600;color:var(--text)}
@@ -272,6 +283,9 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .hero-card{display:none}
   .hero{min-height:auto}
   .trust-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:repeat(2,1fr)}
+  .proc-line{display:none}
+  .faq-list{grid-template-columns:1fr}
   .t-stat{border-right:none}
   .footer-top{grid-template-columns:1fr 1fr}
   .cta-inner{grid-template-columns:1fr;text-align:center}
@@ -284,6 +298,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .nav-drop-toggle svg{transition:transform .2s}
 .nav-drop:hover .nav-drop-toggle svg{transform:rotate(180deg)}
 .nav-drop-menu{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%) translateY(-4px);background:#1C2B3A;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:6px;min-width:230px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:500;box-shadow:0 12px 32px rgba(0,0,0,.4)}
+.nav-drop-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px}
 .nav-drop:hover .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
 .nav-drop-menu a{display:block;font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:8px 12px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap}
 .nav-drop-menu a:hover{color:#fff;background:rgba(255,255,255,.07)}
@@ -303,6 +318,8 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .hero h1{font-size:30px}
   .hero-sub{font-size:16px}
   .services-grid{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .faq-list{grid-template-columns:1fr}
   .real-grid{grid-template-columns:1fr 1fr}
   .real.feat{grid-column:span 2}
   .why-grid{grid-template-columns:1fr}
@@ -311,7 +328,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .footer-top{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;text-align:center}
   .split-header{flex-direction:column;align-items:flex-start}
-  .certs-inner{gap:24px}
+  .certs-inner{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -353,7 +370,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         06 31 87 64 01
       </a>
-      <a href="#devis" class="btn btn-accent">Devis gratuit</a>
+      <a href="/devis/" class="btn btn-accent">Devis gratuit</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
       <span></span><span></span><span></span>
@@ -399,7 +416,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
       <h1 class="reveal d1">Des travaux soignés,<br>un artisan <em>de confiance</em><br>à Saint-Étienne</h1>
       <p class="hero-sub reveal d2">Extension, ravalement, gros œuvre, rénovation — 15 ans d'expérience, assurance décennale, Qualibat certifié. Devis gratuit sous 48h, sans engagement.</p>
       <div class="hero-ctas reveal d3">
-        <a href="#devis" class="btn btn-accent btn-xl">Demander un devis gratuit</a>
+        <a href="/devis/" class="btn btn-accent btn-xl">Demander un devis gratuit</a>
         <a href="tel:0631876401" class="btn btn-outline btn-lg">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           06 31 87 64 01
@@ -415,7 +432,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
     <div class="hero-card" id="devis">
       <div class="hero-card-title">Votre devis gratuit</div>
       <div class="hero-card-sub">Réponse sous 48h — sans engagement</div>
-      <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+      <form action="/merci/" method="POST">
         <div class="form-group">
           <label class="form-label" for="nom">Nom & prénom</label>
           <input type="text" id="nom" name="nom" placeholder="Jean Dupont" autocomplete="name" required>
@@ -479,41 +496,70 @@ footer{background:var(--navy);padding:56px 24px 32px}
     <h2 class="section-h2 reveal d1">Ce que nous réalisons<br>à Saint-Étienne et alentours</h2>
     <p class="section-sub reveal d2">Du gros œuvre à la finition — nous intervenons sur tous vos chantiers, particuliers et professionnels.</p>
     <div class="services-grid">
-      <div class="srv reveal d1">
-        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+      <a href="/gros-oeuvre/" class="srv reveal d1">
+        <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
         <h3>Gros œuvre & construction</h3>
         <p>Fondations, dalle, murs porteurs, chapes. Bases solides pour vos projets neufs ou en extension.</p>
-        <a href="/gros-oeuvre/" class="srv-link" aria-label="En savoir plus sur le gros œuvre">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="srv reveal d2">
+        <span class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/extension-maison/" class="srv reveal d2">
         <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3>Extension & surélévation</h3>
         <p>Chambre supplémentaire, garage, cuisine ouverte. Intégration parfaite à l'existant.</p>
-        <a href="/extension-maison/" class="srv-link" aria-label="En savoir plus sur l'extension maison">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="srv reveal d3">
+        <span class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/ravalement-facade/" class="srv reveal d3">
         <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
         <h3>Ravalement de façade</h3>
         <p>Nettoyage, traitement, enduit, peinture façade. Imperméabilisation garantie.</p>
-        <a href="/ravalement-facade/" class="srv-link" aria-label="En savoir plus sur le ravalement de façade">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="srv reveal d4">
+        <span class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/renovation-interieure/" class="srv reveal d4">
         <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <h3>Rénovation intérieure</h3>
         <p>Abattage de cloisons, création d'ouvertures, reprise de structure.</p>
-        <a href="/renovation-interieure/" class="srv-link" aria-label="En savoir plus sur la rénovation intérieure">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="srv reveal d5">
+        <span class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/dallage-terrasse/" class="srv reveal d5">
         <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="14" width="20" height="8" rx="1"/><path d="M6 14V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8"/></svg></div>
         <h3>Dallage & terrasse</h3>
         <p>Dalle béton, désactivé, allée carrossable. Résistance dans le temps.</p>
-        <a href="/dallage-terrasse/" class="srv-link" aria-label="En savoir plus sur le dallage et terrasse">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="srv reveal d6">
+        <span class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+      <a href="/mur-cloture/" class="srv reveal d6">
         <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
         <h3>Mur de clôture & soutènement</h3>
         <p>Parpaing, pierre, béton banché. Clôtures et murs de soutènement sur pente.</p>
-        <a href="/mur-cloture/" class="srv-link" aria-label="En savoir plus sur le mur de clôture">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <span class="srv-link">En savoir plus <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESSUS ── -->
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Notre méthode</div>
+    <h2 class="section-h2 reveal d1">Votre chantier en 4 étapes simples</h2>
+    <div class="proc-timeline">
+      <div class="proc-line"><div class="proc-line-fill"></div></div>
+      <div class="proc-grid">
+        <div class="proc-step reveal d1">
+          <div class="proc-dot">1</div>
+          <div><div class="proc-h">Prise de contact</div><div class="proc-p">Appelez-nous ou remplissez le formulaire — réponse sous 24h.</div></div>
+        </div>
+        <div class="proc-step reveal d2">
+          <div class="proc-dot">2</div>
+          <div><div class="proc-h">Visite gratuite</div><div class="proc-p">Thomas se déplace sur place. Déplacement offert dans le 42.</div></div>
+        </div>
+        <div class="proc-step reveal d3">
+          <div class="proc-dot">3</div>
+          <div><div class="proc-h">Devis sous 48h</div><div class="proc-p">Devis détaillé poste par poste. Sans surprise, sans engagement.</div></div>
+        </div>
+        <div class="proc-step reveal d4">
+          <div class="proc-dot">4</div>
+          <div><div class="proc-h">Réalisation</div><div class="proc-p">Planning concerté. Notre équipe intervient aux dates convenues.</div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -527,29 +573,28 @@ footer{background:var(--navy);padding:56px 24px 32px}
     <p class="section-sub reveal d2">Chaque projet est unique. Voici un aperçu de nos dernières interventions à Saint-Étienne et alentours.</p>
     <div class="real-grid reveal d2">
       <div class="real feat">
-        <!-- <img class="real-ph" src="{{PHOTO_1}}" alt="Extension maison Saint-Étienne"> -->
-        <div class="real-ph">Extension + surélévation</div>
+        <img class="real-ph" src="/images/real-1.jpg" alt="Réalisation maçonnerie 1" loading="lazy" decoding="async" width="800" height="600">
         <div class="real-tag">Extension — Saint-Étienne</div>
       </div>
       <div class="real">
-        <div class="real-ph">Ravalement façade</div>
+        <img class="real-ph" src="/images/real-2.jpg" alt="Réalisation maçonnerie 2" loading="lazy" decoding="async" width="800" height="600">
         <div class="real-tag">Ravalement</div>
       </div>
       <div class="real">
-        <div class="real-ph">Dalle terrasse béton</div>
+        <img class="real-ph" src="/images/real-3.jpg" alt="Réalisation maçonnerie 3" loading="lazy" decoding="async" width="800" height="600">
         <div class="real-tag">Dallage</div>
       </div>
       <div class="real">
-        <div class="real-ph">Mur de soutènement</div>
+        <img class="real-ph" src="/images/real-4.jpg" alt="Réalisation maçonnerie 4" loading="lazy" decoding="async" width="800" height="600">
         <div class="real-tag">Soutènement</div>
       </div>
       <div class="real">
-        <div class="real-ph">Gros œuvre — Construction</div>
+        <img class="real-ph" src="/images/real-5.jpg" alt="Réalisation maçonnerie 5" loading="lazy" decoding="async" width="800" height="600">
         <div class="real-tag">Construction</div>
       </div>
     </div>
     <div class="real-cta reveal d3">
-      <a href="#devis" class="btn btn-accent btn-lg">Discuter de votre projet</a>
+      <a href="/devis/" class="btn btn-accent btn-lg">Discuter de votre projet</a>
     </div>
   </div>
 </section>
@@ -597,20 +642,24 @@ footer{background:var(--navy);padding:56px 24px 32px}
 <div class="certs">
   <div class="certs-inner">
     <div class="cert reveal">
-      <div class="cert-badge hi">QUALI<br>BAT</div>
-      <div><div class="cert-name">Qualibat</div><div class="cert-desc">Certification bâtiment</div></div>
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+      <div class="cert-name">Qualibat</div>
+      <div class="cert-desc">Certification bâtiment</div>
     </div>
     <div class="cert reveal d1">
-      <div class="cert-badge">10<br>ANS</div>
-      <div><div class="cert-name">Garantie décennale</div><div class="cert-desc">Travaux assurés 10 ans</div></div>
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+      <div class="cert-name">Garantie décennale</div>
+      <div class="cert-desc">Travaux assurés 10 ans</div>
     </div>
     <div class="cert reveal d2">
-      <div class="cert-badge">RC<br>PRO</div>
-      <div><div class="cert-name">RC Professionnelle</div><div class="cert-desc">Responsabilité civile</div></div>
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg></div>
+      <div class="cert-name">RC Professionnelle</div>
+      <div class="cert-desc">Responsabilité civile</div>
     </div>
     <div class="cert reveal d3">
-      <div class="cert-badge">SIRET<br>✓</div>
-      <div><div class="cert-name">Entreprise enregistrée</div><div class="cert-desc">123 456 789 00012</div></div>
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="cert-name">Devis sous 48h</div>
+      <div class="cert-desc">Gratuit, sans engagement</div>
     </div>
   </div>
 </div>

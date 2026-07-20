@@ -22,22 +22,47 @@
 </script>
 {{SHARED_STYLE}}
 <style>
-.service-hero{padding:80px 24px;background:var(--navy);position:relative;overflow:hidden}
+.service-hero{padding:0;background:var(--navy);position:relative;overflow:hidden}
 .service-hero-texture{position:absolute;inset:0;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.025) 2px,rgba(255,255,255,.025) 4px),repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(255,255,255,.01) 30px,rgba(255,255,255,.01) 31px)}
-.service-hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto}
+.service-hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;padding:52px 24px}
+.service-hero-content{min-width:0}
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;flex-wrap:wrap}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:color .15s}
 .breadcrumb a:hover{color:#fff}
 .breadcrumb svg{flex-shrink:0}
-.service-hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#fff;margin-bottom:16px;max-width:700px;text-wrap:balance}
+.service-hero h1{font-size:clamp(26px,3.5vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#fff;margin-bottom:16px;text-wrap:balance}
 .service-hero h1 em{font-style:normal;color:var(--accent)}
-.service-hero-sub{font-size:17px;color:rgba(255,255,255,.65);line-height:1.65;max-width:600px;margin-bottom:32px}
+.service-hero-sub{font-size:16px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:32px}
 .service-hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.avantages-list{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.avantage{display:flex;align-items:flex-start;gap:12px;padding:18px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px}
-.avantage svg{color:var(--accent);flex-shrink:0;margin-top:2px}
-.avantage span{font-size:14px;color:var(--text-2);line-height:1.5}
-@media(max-width:768px){.avantages-list{grid-template-columns:1fr}}
+.service-hero-media{border-radius:12px;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.service-hero-media img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+/* ── Nos engagements — icône gauche + texte droite ── */
+.avantages-list{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.avantage{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1.5px solid var(--border);border-radius:10px;transition:border-color .2s,box-shadow .2s}
+.avantage:hover{border-color:rgba(200,98,26,.4);box-shadow:0 4px 16px rgba(28,43,58,.07)}
+.avantage-icon{width:40px;height:40px;background:rgba(200,98,26,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.avantage-icon svg{color:var(--accent)}
+.avantage h4{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
+/* ── FAQ — Option A (accordéon pleine largeur) ── */
+.faq-list{margin-top:48px!important;display:block!important}
+/* ── Trust strip (certifs) — bande navy en continuité du hero ── */
+.srv-certs{background:var(--navy);padding:0;border-top:1px solid rgba(255,255,255,.07)}
+.srv-certs .certs-inner{gap:0}
+.srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none}
+.srv-certs .cert:hover{background:rgba(255,255,255,.04)}
+.srv-certs .cert-name{color:#fff}
+.srv-certs .cert-desc{color:rgba(255,255,255,.45)}
+.srv-certs .cert-icon{background:rgba(200,98,26,.18)}
+@media(max-width:960px){
+  .service-hero-inner{grid-template-columns:1fr;padding:60px 24px}
+  .service-hero-media{display:none}
+  .avantages-list{grid-template-columns:1fr}
+  .srv-certs .certs-inner{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .service-hero-ctas{flex-direction:column;align-items:stretch}
+  .service-hero-ctas .btn{text-align:center;justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -46,31 +71,57 @@
 <section class="service-hero">
   <div class="service-hero-texture"></div>
   <div class="service-hero-inner">
-    <nav class="breadcrumb">
-      <a href="/">Accueil</a>
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-      <span>{{SERVICE_NOM}}</span>
-    </nav>
-    <div class="hero-eyebrow reveal">{{SERVICE_NOM_COURT}} — {{VILLE}} ({{DEPARTEMENT}})</div>
-    <h1 class="reveal d1">{{SERVICE_TITRE_H1}}<br>par <em>{{ENTREPRISE}}</em></h1>
-    <p class="service-hero-sub reveal d2">{{SERVICE_INTRO}}</p>
-    <div class="service-hero-ctas reveal d3">
-      <a href="/devis/" class="btn btn-accent btn-xl">Devis gratuit sous 48h</a>
-      <a href="tel:{{TEL_RAW}}" class="btn btn-outline btn-lg">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        {{TEL_DISPLAY}}
-      </a>
+    <div class="service-hero-content">
+      <nav class="breadcrumb">
+        <a href="/">Accueil</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>{{SERVICE_NOM}}</span>
+      </nav>
+      <div class="hero-eyebrow reveal">{{SERVICE_NOM_COURT}} — {{VILLE}} ({{DEPARTEMENT}})</div>
+      <h1 class="reveal d1">{{SERVICE_TITRE_H1}}<br>par <em>{{ENTREPRISE}}</em></h1>
+      <p class="service-hero-sub reveal d2">{{SERVICE_INTRO}}</p>
+      <div class="service-hero-ctas reveal d3">
+        <a href="/devis/" class="btn btn-accent btn-xl">Devis gratuit sous 48h</a>
+        <a href="tel:{{TEL_RAW}}" class="btn btn-outline btn-lg">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          {{TEL_DISPLAY}}
+        </a>
+      </div>
     </div>
+    {{SERVICE_HERO_PHOTO_HTML}}
   </div>
 </section>
+
+<div class="certs srv-certs">
+  <div class="certs-inner">
+    <div class="cert reveal">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+      <div class="cert-name">Qualibat</div>
+      <div class="cert-desc">Certification bâtiment</div>
+    </div>
+    <div class="cert reveal d1">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+      <div class="cert-name">Garantie décennale</div>
+      <div class="cert-desc">Travaux assurés 10 ans</div>
+    </div>
+    <div class="cert reveal d2">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg></div>
+      <div class="cert-name">RC Professionnelle</div>
+      <div class="cert-desc">Responsabilité civile</div>
+    </div>
+    <div class="cert reveal d3">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="cert-name">Devis sous 48h</div>
+      <div class="cert-desc">Gratuit, sans engagement</div>
+    </div>
+  </div>
+</div>
 
 <section class="section">
   <div class="inner">
     <div class="section-label reveal">Nos engagements</div>
     <h2 class="section-h2 reveal d1">Ce que comprend<br>notre prestation {{SERVICE_NOM_COURT}}</h2>
-    <div class="avantages-list reveal d2">
-      {{SERVICE_AVANTAGES_HTML}}
-    </div>
+    <div class="avantages-list reveal d2">{{SERVICE_AVANTAGES_HTML}}</div>
   </div>
 </section>
 
@@ -78,23 +129,29 @@
   <div class="inner">
     <div class="section-label reveal">Notre processus</div>
     <h2 class="section-h2 reveal d1">Votre chantier {{SERVICE_NOM_COURT}}<br>en 4 étapes</h2>
-    <div class="migration-steps reveal d2">
-      <div class="step"><div class="step-num">1</div><h3>Prise de contact</h3><p>Vous nous décrivez votre projet par téléphone ou via le formulaire. Nous convenons d'une date de visite.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Visite gratuite</h3><p>{{PRENOM}} se déplace sur place pour évaluer votre chantier. Déplacement offert dans le {{DEPARTEMENT}}.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>Devis détaillé</h3><p>Vous recevez un devis précis sous 48h, poste par poste, sans surprise cachée. Aucun engagement.</p></div>
-      <div class="step"><div class="step-num">4</div><h3>Réalisation</h3><p>Après signature, nous planifions le chantier ensemble. Notre équipe intervient aux dates convenues.</p></div>
+    <div class="proc-timeline reveal d2">
+      <div class="proc-line"><div class="proc-line-fill"></div></div>
+      <div class="proc-grid">
+        <div class="proc-step">
+          <div class="proc-dot">1</div>
+          <div><div class="proc-h">Prise de contact</div><div class="proc-p">Par téléphone ou formulaire — nous convenons d'une date de visite.</div></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">2</div>
+          <div><div class="proc-h">Visite gratuite</div><div class="proc-p">{{PRENOM}} se déplace sur place. Déplacement offert dans le {{DEPARTEMENT}}.</div></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">3</div>
+          <div><div class="proc-h">Devis sous 48h</div><div class="proc-p">Devis détaillé poste par poste. Sans surprise, sans engagement.</div></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">4</div>
+          <div><div class="proc-h">Réalisation</div><div class="proc-p">Planning concerté. Notre équipe intervient aux dates convenues.</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="certs">
-  <div class="certs-inner">
-    <div class="cert reveal"><div class="cert-badge hi">QUALI<br>BAT</div><div><div class="cert-name">Qualibat</div><div class="cert-desc">Certification bâtiment</div></div></div>
-    <div class="cert reveal d1"><div class="cert-badge">10<br>ANS</div><div><div class="cert-name">Garantie décennale</div><div class="cert-desc">Travaux assurés 10 ans</div></div></div>
-    <div class="cert reveal d2"><div class="cert-badge">RC<br>PRO</div><div><div class="cert-name">RC Professionnelle</div><div class="cert-desc">Responsabilité civile</div></div></div>
-    <div class="cert reveal d3"><div class="cert-badge">DEVIS<br>48H</div><div><div class="cert-name">Réponse rapide</div><div class="cert-desc">Devis gratuit sous 48h</div></div></div>
-  </div>
-</div>
 
 <section class="section" id="faq">
   <div class="inner">

@@ -20,7 +20,7 @@
   "ANNEE_CREATION": "2009",
   "ANNEE": "2025",
   "RAYON": "40",
-  "FORM_ACTION": "https://formspree.io/f/XXXXXXXX",
+  "FORM_ACTION": "/merci/",
 
   "AVIS": [
     {
@@ -46,6 +46,7 @@
   "SERVICES": [
     {
       "SLUG": "extension-maison",
+      "PHOTO": "/images/real-2.jpg",
       "NOM": "Extension de maison",
       "NOM_COURT": "Extension",
       "TITRE_H1": "Extension de maison à {{VILLE}}",
@@ -56,7 +57,8 @@
         "Fondations adaptées à votre terrain",
         "Raccordement aux réseaux existants inclus",
         "Isolation thermique aux normes RT 2020",
-        "Finitions extérieures coordonnées à votre maison"
+        "Finitions extérieures coordonnées à votre maison",
+        "Garantie décennale — travaux assurés 10 ans"
       ],
       "FAQ": [
         {
@@ -75,6 +77,7 @@
     },
     {
       "SLUG": "ravalement-facade",
+      "PHOTO": "/images/real-5.jpg",
       "NOM": "Ravalement de façade",
       "NOM_COURT": "Ravalement",
       "TITRE_H1": "Ravalement de façade à {{VILLE}}",
@@ -85,7 +88,8 @@
         "Nettoyage haute pression et traitement anti-mousse",
         "Choix du système d'enduit adapté (monocouche, gratté, taloché)",
         "Application de peinture façade ou revêtement épais",
-        "Traitement des fissures et joints de dilatation"
+        "Traitement des fissures et joints de dilatation",
+        "Garantie décennale — travaux assurés 10 ans"
       ],
       "FAQ": [
         {
@@ -104,6 +108,7 @@
     },
     {
       "SLUG": "gros-oeuvre",
+      "PHOTO": "/images/real-3.jpg",
       "NOM": "Gros œuvre & construction",
       "NOM_COURT": "Gros œuvre",
       "TITRE_H1": "Gros œuvre à {{VILLE}}",
@@ -114,7 +119,8 @@
         "Maçonnerie blocs béton, briques ou béton coffrant",
         "Planchers hourdis ou béton coulé",
         "Chapes traditionnelles et chapes fluides",
-        "Respect des DTU maçonnerie et des normes parasismiques"
+        "Respect des DTU maçonnerie et des normes parasismiques",
+        "Garantie décennale — travaux assurés 10 ans"
       ],
       "FAQ": [
         {
@@ -133,6 +139,7 @@
     },
     {
       "SLUG": "renovation-interieure",
+      "PHOTO": "/images/real-4.jpg",
       "NOM": "Rénovation intérieure",
       "NOM_COURT": "Rénovation",
       "TITRE_H1": "Rénovation intérieure à {{VILLE}}",
@@ -143,7 +150,8 @@
         "Abattage de murs porteurs avec pose de poutres IPN ou béton",
         "Création d'ouvertures (portes, baies, fenêtres)",
         "Reprise de plancher et ragréage",
-        "Coordination avec les autres corps de métier"
+        "Coordination avec les autres corps de métier",
+        "Remise en état des zones impactées incluse"
       ],
       "FAQ": [
         {
@@ -162,6 +170,7 @@
     },
     {
       "SLUG": "dallage-terrasse",
+      "PHOTO": "/images/real-1.jpg",
       "NOM": "Dallage & terrasse béton",
       "NOM_COURT": "Dallage",
       "TITRE_H1": "Dallage et terrasse à {{VILLE}}",
@@ -172,7 +181,8 @@
         "Pose de film polyane et ferraillage si nécessaire",
         "Béton dosé selon usage (terrasse, dalle industrielle, voirie)",
         "Finitions : désactivé, taloché, balayé, imprimé",
-        "Joints de dilatation positionnés selon les règles de l'art"
+        "Joints de dilatation positionnés selon les règles de l'art",
+        "Nettoyage du chantier et évacuation des déchets inclus"
       ],
       "FAQ": [
         {
@@ -191,6 +201,7 @@
     },
     {
       "SLUG": "mur-cloture",
+      "PHOTO": "/images/real-1.jpg",
       "NOM": "Mur de clôture & soutènement",
       "NOM_COURT": "Mur & clôture",
       "TITRE_H1": "Mur de clôture et soutènement à {{VILLE}}",
@@ -201,7 +212,8 @@
         "Maçonnerie parpaing, brique, pierre ou béton banché",
         "Murs de soutènement avec drainage arrière inclus",
         "Enduit ou finition pierre apparente selon votre choix",
-        "Pose de chaperons et couronnements pour l'étanchéité"
+        "Pose de chaperons et couronnements pour l'étanchéité",
+        "Garantie décennale — travaux assurés 10 ans"
       ],
       "FAQ": [
         {

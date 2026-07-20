@@ -25,10 +25,14 @@ SLUG = config["SLUG"]
 OUTPUT = BASE / "output" / SLUG
 IMAGES_SRC = BASE / "images"
 
-# ── Nettoyage + création dossier output ──────────────────────────────────────
+# ── Nettoyage + création dossier output (préserve .git) ──────────────────────
 if OUTPUT.exists():
-    shutil.rmtree(OUTPUT)
-OUTPUT.mkdir(parents=True)
+    for item in OUTPUT.iterdir():
+        if item.name == ".git":
+            continue
+        shutil.rmtree(item) if item.is_dir() else item.unlink()
+else:
+    OUTPUT.mkdir(parents=True)
 
 # Copie du dossier images source s'il existe
 if IMAGES_SRC.exists():
@@ -205,14 +209,17 @@ real_photos = photos.get("REALISATIONS", ["", "", "", "", ""])
 
 def photo_tag(src, alt="Réalisation maçonnerie"):
     if src:
-        return f'<img src="{src}" alt="{alt}" loading="lazy" decoding="async" width="800" height="600">'
-    return '<div class="real-photo-placeholder">M</div>'
+        return f'<img class="real-ph" src="{src}" alt="{alt}" loading="lazy" decoding="async" width="800" height="600">'
+    return '<div class="real-ph">Photo à venir</div>'
 
 # ── PAGE : index.html ─────────────────────────────────────────────────────────
+photo_real_vars = {f"PHOTO_REAL_{i}": photo_tag(src, f"Réalisation maçonnerie {i}") for i, src in enumerate(real_photos[:5], 1)}
+
 base_vars = build_vars({
     "ZONE_CHIPS": zone_chips_html,
     "FOOTER_ZONE_LINKS": footer_zone_links_html,
     **avis_vars,
+    **photo_real_vars,
 })
 
 # index.html se suffit à lui-même (pas de {{SHARED_STYLE}} etc.)
@@ -253,14 +260,25 @@ print("✓ mentions-legales/index.html")
 service_tpl = (TEMPLATES / "service.html").read_text(encoding="utf-8")
 services = config.get("SERVICES", [])
 
+AVANTAGE_ICONS = [
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>',
+]
+
 for svc in services:
-    # Avantages → liste HTML
+    # Avantages → Option B (icône + titre)
     avantages_html = ""
-    for av in [_apply_simple(a) for a in svc.get("AVANTAGES", [])]:
+    for i, av in enumerate([_apply_simple(a) for a in svc.get("AVANTAGES", [])]):
+        icon = AVANTAGE_ICONS[i % len(AVANTAGE_ICONS)]
         avantages_html += (
             '<div class="avantage">'
-            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
-            f'<span>{av}</span></div>\n'
+            f'<div class="avantage-icon">{icon}</div>'
+            f'<h4>{av}</h4>'
+            '</div>\n'
         )
 
     # FAQ → HTML accordion
@@ -275,15 +293,24 @@ for svc in services:
             f'</button><div class="faq-a"><p>{a}</p></div></div>\n'
         )
 
+    svc_photo = svc.get("PHOTO", "")
+    svc_photo_html = (
+        f'<div class="service-hero-media reveal d2">'
+        f'<img src="{svc_photo}" alt="{svc["NOM"]} {config["VILLE"]}" '
+        f'width="480" height="360" loading="eager" decoding="async">'
+        f'</div>'
+    ) if svc_photo else ""
+
     svc_vars = build_vars({
-        "SERVICE_NOM":             svc["NOM"],
-        "SERVICE_SLUG":            svc["SLUG"],
-        "SERVICE_NOM_COURT":       svc["NOM_COURT"],
-        "SERVICE_TITRE_H1":        svc["TITRE_H1"],
-        "SERVICE_DESCRIPTION_SEO": svc["DESCRIPTION_SEO"],
-        "SERVICE_INTRO":           svc["INTRO"],
-        "SERVICE_AVANTAGES_HTML":  avantages_html,
-        "SERVICE_FAQ_HTML":        faq_html,
+        "SERVICE_NOM":              svc["NOM"],
+        "SERVICE_SLUG":             svc["SLUG"],
+        "SERVICE_NOM_COURT":        svc["NOM_COURT"],
+        "SERVICE_TITRE_H1":         svc["TITRE_H1"],
+        "SERVICE_DESCRIPTION_SEO":  svc["DESCRIPTION_SEO"],
+        "SERVICE_INTRO":            svc["INTRO"],
+        "SERVICE_AVANTAGES_HTML":   avantages_html,
+        "SERVICE_FAQ_HTML":         faq_html,
+        "SERVICE_HERO_PHOTO_HTML":  svc_photo_html,
     })
     # Résoudre les variables internes (ex: {{VILLE}} dans TITRE_H1)
     for key in ("SERVICE_TITRE_H1", "SERVICE_DESCRIPTION_SEO", "SERVICE_INTRO"):
