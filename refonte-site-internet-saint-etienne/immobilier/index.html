@@ -417,7 +417,45 @@ footer { display: flex; align-items: center; justify-content: space-between; pad
       .contact-note { text-align: center; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
     }
-  </style>
+  
+    /* ── GARANTIE REMBOURSEMENT ── */
+    .garantie-band {
+      margin: 0;
+      padding: 36px 24px;
+      background: linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(16,185,129,0.03) 100%);
+      border-top: 1px solid rgba(16,185,129,0.2);
+      border-bottom: 1px solid rgba(16,185,129,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .garantie-icon {
+      width: 52px; height: 52px; flex-shrink: 0;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #10b981;
+    }
+    .garantie-text { display: flex; flex-direction: column; gap: 4px; }
+    .garantie-headline {
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: 700;
+      color: var(--text-1, #fff);
+      letter-spacing: -0.3px;
+    }
+    .garantie-headline em { color: #10b981; font-style: normal; }
+    .garantie-sub {
+      font-size: 13px;
+      color: var(--text-3, rgba(255,255,255,0.45));
+    }
+    @media(max-width:600px){
+      .garantie-band { gap: 14px; padding: 28px 20px; }
+    }
+</style>
 </head>
 <body>
 
@@ -867,6 +905,16 @@ footer { display: flex; align-items: center; justify-content: space-between; pad
         </div>
 
       </div>
+  <div class="garantie-band reveal">
+    <div class="garantie-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+    </div>
+    <div class="garantie-text">
+      <div class="garantie-headline"><em>Zéro prospect en 12 mois ?</em> On vous rembourse tout.</div>
+      <div class="garantie-sub">Engagement 12 mois · 12 contacts garantis (formulaires + appels) · Remboursement intégral si non atteint · Conditions précisées dans le contrat</div>
+    </div>
+  </div>
+
       <div class="packs-cta reveal">
         <a href="#contact" class="hero-cta">Refonte de site internet gratuit →</a>
         <span class="packs-cta-note">Sans engagement · Aperçu visuel offert sous 48h</span>

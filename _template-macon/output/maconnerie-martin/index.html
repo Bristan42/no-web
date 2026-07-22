@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maçon à Saint-Étienne — Maçonnerie Martin | Devis gratuit 48h</title>
+<title>Maçon à Saint-Étienne — Maçonnerie Martin | Devis gratuit</title>
 <meta name="description" content="Maçonnerie Martin, maçon à Saint-Étienne (42). Gros œuvre, extension, ravalement, rénovation. Devis gratuit sous 48h. Qualibat certifié, assurance décennale.">
 <link rel="canonical" href="https://maconnerie-martin.fr/">
 <script type="application/ld+json">
@@ -331,6 +331,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .certs-inner{grid-template-columns:repeat(2,1fr)}
 }
 </style>
+
 </head>
 <body>
 
@@ -432,7 +433,9 @@ footer{background:var(--navy);padding:56px 24px 32px}
     <div class="hero-card" id="devis">
       <div class="hero-card-title">Votre devis gratuit</div>
       <div class="hero-card-sub">Réponse sous 48h — sans engagement</div>
-      <form action="/merci/" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="97f731bf-359e-46a8-99ec-429d7851a74d">
+        <input type="hidden" name="from_name" value="Maçonnerie Martin — Site web">
         <div class="form-group">
           <label class="form-label" for="nom">Nom & prénom</label>
           <input type="text" id="nom" name="nom" placeholder="Jean Dupont" autocomplete="name" required>

@@ -63,14 +63,9 @@ header_match = re.search(r'(<header[\s\S]*?</header>)', index_src)
 shared_header = header_match.group(1) if header_match else ""
 
 # Drawer mobile (juste après </header>)
-drawer_match = re.search(r'(</header>\s*<div class="mob-drawer"[\s\S]*?</div>)', index_src)
+drawer_match = re.search(r'(<nav class="mob-drawer"[\s\S]*?</nav>)', index_src)
 if drawer_match:
-    shared_header += "\n" + drawer_match.group(1).replace("</header>\n", "")
-else:
-    # Fallback : chercher le drawer seul
-    drawer_only = re.search(r'(<div class="mob-drawer"[\s\S]*?</div>\s*<!-- /drawer -->)', index_src)
-    if drawer_only:
-        shared_header += "\n" + drawer_only.group(1)
+    shared_header += "\n" + drawer_match.group(1)
 
 # ── Extraction FOOTER ─────────────────────────────────────────────────────────
 footer_match = re.search(r'(<footer[\s\S]*?</footer>)', index_src)
@@ -101,6 +96,13 @@ for z in zones:
         f'<li><a href="/macon-{z["SLUG"]}/">Maçon à {z["VILLE"]}</a></li>\n'
     )
 
+# ── Cloudflare Web Analytics ─────────────────────────────────────────────────
+def _cf_analytics_script():
+    token = config.get("CF_ANALYTICS_TOKEN", "")
+    if not token:
+        return ""
+    return f'<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "{token}"}}\' crossorigin="anonymous"></script>'
+
 # ── Variables de base — mapping simple pour pré-résolution ───────────────────
 _base_simple = {
     "ENTREPRISE":     config["ENTREPRISE"],
@@ -119,10 +121,12 @@ _base_simple = {
     "RAYON":          config["RAYON"],
     "DOMAIN":         config["DOMAIN"],
     "FORM_ACTION":    config["FORM_ACTION"],
-    "ANNEE":          config.get("ANNEE", "2025"),
-    "ANNEE_CREATION": config.get("ANNEE_CREATION", "2010"),
-    "LAT":            config.get("LAT", ""),
-    "LNG":            config.get("LNG", ""),
+    "WEB3FORMS_KEY":        config.get("WEB3FORMS_KEY", ""),
+    "CF_ANALYTICS_SCRIPT":  _cf_analytics_script(),
+    "ANNEE":                config.get("ANNEE", "2025"),
+    "ANNEE_CREATION":       config.get("ANNEE_CREATION", "2010"),
+    "LAT":                  config.get("LAT", ""),
+    "LNG":                  config.get("LNG", ""),
     "ZONE_CHIPS":           zone_chips_html,
     "FOOTER_ZONE_LINKS":    footer_zone_links_html,
 }
@@ -157,6 +161,7 @@ def build_vars(extra=None):
         "RAYON":          config["RAYON"],
         "DOMAIN":         config["DOMAIN"],
         "FORM_ACTION":    config["FORM_ACTION"],
+        "WEB3FORMS_KEY":  config.get("WEB3FORMS_KEY", ""),
         "ANNEE":          config.get("ANNEE", "2025"),
         "ANNEE_CREATION": config.get("ANNEE_CREATION", "2010"),
         "LAT":            config.get("LAT", ""),
@@ -165,6 +170,7 @@ def build_vars(extra=None):
         "HEADER":         shared_header,
         "FOOTER":         shared_footer,
         "SHARED_SCRIPT":  shared_script,
+        "CF_ANALYTICS_SCRIPT": _cf_analytics_script(),
     }
     # Mentions légales
     mentions = config.get("MENTIONS", {})
@@ -441,10 +447,16 @@ for svc in services:
 zone_tpl = (TEMPLATES / "zone.html").read_text(encoding="utf-8")
 
 for zone in zones:
+    z_ville = zone["VILLE"]
+    z_ent   = config["ENTREPRISE"]
+    z_title_long  = f"Maçon à {z_ville} — {z_ent} | Devis gratuit"
+    z_title_short = f"Maçon à {z_ville} — {z_ent}"
+    zone_title = z_title_long if len(z_title_long) <= 60 else z_title_short
     zone_vars = build_vars({
-        "ZONE_VILLE":      zone["VILLE"],
+        "ZONE_VILLE":      z_ville,
         "ZONE_SLUG":       zone["SLUG"],
         "ZONE_CODE_POSTAL": zone["CODE_POSTAL"],
+        "ZONE_TITLE":      zone_title,
     })
     zone_html = apply_vars(zone_tpl, zone_vars)
     write_page(OUTPUT / f"macon-{zone['SLUG']}", zone_html)
@@ -472,7 +484,7 @@ sitemap_xml += "</urlset>\n"
 print("✓ sitemap.xml")
 
 # ── _REDIRECTS Cloudflare Pages ───────────────────────────────────────────────
-redirects = "/contact/  /devis/  301\n/devis/?merci  /merci/  301\n"
+redirects = "/contact/  /devis/  301\n"
 (OUTPUT / "_redirects").write_text(redirects, encoding="utf-8")
 print("✓ _redirects")
 

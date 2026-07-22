@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maçon à {{VILLE}} — {{ENTREPRISE}} | Devis gratuit 48h</title>
+<title>Maçon à {{VILLE}} — {{ENTREPRISE}} | Devis gratuit</title>
 <meta name="description" content="{{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Gros œuvre, extension, ravalement, rénovation. Devis gratuit sous 48h. Qualibat certifié, assurance décennale.">
 <link rel="canonical" href="https://{{DOMAIN}}/">
 <script type="application/ld+json">
@@ -331,6 +331,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .certs-inner{grid-template-columns:repeat(2,1fr)}
 }
 </style>
+{{CF_ANALYTICS_SCRIPT}}
 </head>
 <body>
 
@@ -433,6 +434,8 @@ footer{background:var(--navy);padding:56px 24px 32px}
       <div class="hero-card-title">Votre devis gratuit</div>
       <div class="hero-card-sub">Réponse sous 48h — sans engagement</div>
       <form action="{{FORM_ACTION}}" method="POST">
+        <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+        <input type="hidden" name="from_name" value="{{ENTREPRISE}} — Site web">
         <div class="form-group">
           <label class="form-label" for="nom">Nom & prénom</label>
           <input type="text" id="nom" name="nom" placeholder="Jean Dupont" autocomplete="name" required>

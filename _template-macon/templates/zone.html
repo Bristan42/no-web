@@ -3,10 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maçon à {{ZONE_VILLE}} — {{ENTREPRISE}} | Devis gratuit</title>
+<title>{{ZONE_TITLE}}</title>
 <meta name="description" content="{{ENTREPRISE}}, maçon à {{ZONE_VILLE}}. Extension, ravalement, gros œuvre, rénovation — devis gratuit sous 48h. Artisan local certifié Qualibat.">
 <link rel="canonical" href="https://{{DOMAIN}}/macon-{{ZONE_SLUG}}/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"{{ENTREPRISE}}","description":"Maçon à {{ZONE_VILLE}} — extension, ravalement, gros œuvre, rénovation. Devis gratuit sous 48h.","url":"https://{{DOMAIN}}/macon-{{ZONE_SLUG}}/","telephone":"{{TEL_RAW}}","email":"{{EMAIL}}","address":{"@type":"PostalAddress","addressLocality":"{{ZONE_VILLE}}","postalCode":"{{ZONE_CODE_POSTAL}}","addressCountry":"FR"},"areaServed":{"@type":"City","name":"{{ZONE_VILLE}}"},"priceRange":"€€","openingHours":"Mo-Fr 08:00-18:00"}
+</script>
 {{SHARED_STYLE}}
+{{CF_ANALYTICS_SCRIPT}}
 </head>
 <body>
 {{HEADER}}

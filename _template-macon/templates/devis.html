@@ -39,15 +39,18 @@
 .trust-pill-small{display:inline-flex;align-items:center;gap:6px;background:rgba(200,98,26,.08);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px}
 @media(max-width:900px){.devis-layout{grid-template-columns:1fr;padding:48px 16px}.form-row{grid-template-columns:1fr}}
 </style>
+{{CF_ANALYTICS_SCRIPT}}
 </head>
 <body>
 {{HEADER}}
 
 <div class="devis-layout">
   <div class="devis-form-wrap reveal">
-    <div class="form-title">Demandez votre devis gratuit</div>
+    <h1 class="form-title">Demandez votre devis gratuit</h1>
     <div class="form-sub">Remplissez ce formulaire — {{PRENOM}} vous recontacte sous 48h pour fixer une visite sur place.</div>
     <form action="{{FORM_ACTION}}" method="POST">
+      <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+      <input type="hidden" name="from_name" value="{{ENTREPRISE}} — Site web">
       <div class="form-row">
         <div class="form-group">
           <label for="prenom">Prénom *</label>

@@ -20,7 +20,9 @@
   "ANNEE_CREATION": "2009",
   "ANNEE": "2025",
   "RAYON": "40",
-  "FORM_ACTION": "/merci/",
+  "FORM_ACTION": "https://api.web3forms.com/submit",
+  "WEB3FORMS_KEY": "97f731bf-359e-46a8-99ec-429d7851a74d",
+  "CF_ANALYTICS_TOKEN": "",
   "GOOGLE_MAPS_KEY": "",
   "GOOGLE_PLACE_ID": "",
   "GOOGLE_GMB_URL": "",
@@ -170,7 +172,7 @@
     {
       "SLUG": "gros-oeuvre",
       "PHOTO": "/images/real-3.jpg",
-      "NOM": "Gros œuvre & construction",
+      "NOM": "Gros œuvre",
       "NOM_COURT": "Gros œuvre",
       "TITRE_H1": "Gros œuvre à {{VILLE}}",
       "DESCRIPTION_SEO": "{{ENTREPRISE}}, maçon spécialisé gros œuvre à {{VILLE}} ({{DEPARTEMENT}}). Fondations, dalle, murs porteurs — devis gratuit sous 48h.",
@@ -344,7 +346,7 @@
     {
       "SLUG": "mur-cloture",
       "PHOTO": "/images/real-1.jpg",
-      "NOM": "Mur de clôture & soutènement",
+      "NOM": "Mur de clôture",
       "NOM_COURT": "Mur & clôture",
       "TITRE_H1": "Mur de clôture et soutènement à {{VILLE}}",
       "DESCRIPTION_SEO": "{{ENTREPRISE}} construit vos murs de clôture et de soutènement à {{VILLE}} ({{DEPARTEMENT}}). Parpaing, pierre, béton banché — devis gratuit.",
