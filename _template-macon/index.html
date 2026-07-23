@@ -462,7 +462,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
           <textarea id="msg" name="message" placeholder="Surface, délai souhaité, commune..."></textarea>
         </div>
         <input type="hidden" name="_subject" value="Nouveau devis — {{ENTREPRISE}}">
-        <input type="hidden" name="_next" value="https://{{DOMAIN}}/merci/">
+        <input type="hidden" name="redirect" value="https://{{DOMAIN}}/merci/">
         <button type="submit" class="form-submit">Envoyer ma demande →</button>
         <p class="form-note">Aucun engagement — réponse sous 48h</p>
       </form>
@@ -913,6 +913,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
-<script>document.querySelectorAll('input[name="_next"]').forEach(function(i){i.value=location.origin+"/merci/";});</script>
+<script>document.querySelectorAll('input[name="redirect"]').forEach(function(i){i.value=location.origin+"/merci/";});</script>
 </body>
 </html>

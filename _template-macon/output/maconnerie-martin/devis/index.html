@@ -462,7 +462,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
         <textarea id="message" name="message" placeholder="Surface approximative, contraintes particulières, délais souhaités..."></textarea>
       </div>
       <input type="hidden" name="_subject" value="Nouveau devis — Maçonnerie Martin">
-      <input type="hidden" name="_next" value="https://maconnerie-martin.fr/merci/">
+      <input type="hidden" name="redirect" value="https://maconnerie-martin.fr/merci/" class="next-url">
       <button type="submit" class="form-submit">Envoyer ma demande de devis</button>
       <div class="form-legal">En soumettant ce formulaire, vous acceptez d'être contacté par Maçonnerie Martin concernant votre demande. Aucune donnée transmise à des tiers.</div>
     </form>
@@ -599,5 +599,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+<script>document.querySelectorAll('input[name="redirect"]').forEach(function(i){i.value=location.origin+"/merci/";});</script>
 </body>
 </html>
