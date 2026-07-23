@@ -25,7 +25,7 @@
   "CF_ANALYTICS_TOKEN": "",
   "GOOGLE_MAPS_KEY": "",
   "GOOGLE_PLACE_ID": "",
-  "GOOGLE_GMB_URL": "",
+  "GOOGLE_GMB_URL": "https://www.google.com/maps/search/?api=1&query=MGO+MACONNERIE+GENERALE+DE+L'ONDAINE+57+Rue+Victor+Hugo+42700+Firminy",
   "AVIS": [
     {
       "NOM": "Nicolas",
@@ -49,7 +49,7 @@
   "SERVICES": [
     {
       "SLUG": "extension-maison",
-      "PHOTO": "/images/real-2.webp",
+      "PHOTO": "/images/mgo-4.webp",
       "NOM": "Extension de maison",
       "NOM_COURT": "Extension",
       "TITRE_H1": "Extension de maison à {{VILLE}}",
@@ -64,9 +64,9 @@
         "Garantie décennale — travaux assurés 10 ans"
       ],
       "GALLERY": [
-        "/images/real-2.webp",
-        "/images/real-3.webp",
-        "/images/real-1.webp"
+        "/images/mgo-4.webp",
+        "/images/mgo-3.webp",
+        "/images/real-2.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Client vérifié",
@@ -115,7 +115,7 @@
     },
     {
       "SLUG": "ravalement-facade",
-      "PHOTO": "/images/real-5.webp",
+      "PHOTO": "/images/mgo-1.webp",
       "NOM": "Ravalement de façade",
       "NOM_COURT": "Ravalement",
       "TITRE_H1": "Ravalement de façade à {{VILLE}}",
@@ -130,9 +130,9 @@
         "Garantie décennale — travaux assurés 10 ans"
       ],
       "GALLERY": [
-        "/images/real-5.webp",
-        "/images/real-1.webp",
-        "/images/real-4.webp"
+        "/images/mgo-1.webp",
+        "/images/mgo-4.webp",
+        "/images/real-5.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Alex F.",
@@ -177,7 +177,7 @@
     },
     {
       "SLUG": "gros-oeuvre",
-      "PHOTO": "/images/real-3.webp",
+      "PHOTO": "/images/mgo-3.webp",
       "NOM": "Gros œuvre",
       "NOM_COURT": "Gros œuvre",
       "TITRE_H1": "Gros œuvre à {{VILLE}}",
@@ -192,9 +192,9 @@
         "Garantie décennale — travaux assurés 10 ans"
       ],
       "GALLERY": [
-        "/images/real-3.webp",
-        "/images/real-2.webp",
-        "/images/real-5.webp"
+        "/images/mgo-3.webp",
+        "/images/mgo-1.webp",
+        "/images/real-3.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Client vérifié",
@@ -301,7 +301,7 @@
     },
     {
       "SLUG": "dallage-terrasse",
-      "PHOTO": "/images/real-1.webp",
+      "PHOTO": "/images/mgo-2.webp",
       "NOM": "Dallage & terrasse béton",
       "NOM_COURT": "Dallage",
       "TITRE_H1": "Dallage et terrasse à {{VILLE}}",
@@ -316,9 +316,9 @@
         "Nettoyage du chantier et évacuation des déchets inclus"
       ],
       "GALLERY": [
+        "/images/mgo-2.webp",
         "/images/real-1.webp",
-        "/images/real-4.webp",
-        "/images/real-2.webp"
+        "/images/real-4.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Alex F.",
@@ -464,11 +464,18 @@
   "PHOTOS": {
     "HERO": "",
     "REALISATIONS": [
-      "/images/real-1.webp",
-      "/images/real-2.webp",
-      "/images/real-3.webp",
-      "/images/real-4.webp",
-      "/images/real-5.webp"
+      "/images/mgo-1.webp",
+      "/images/mgo-2.webp",
+      "/images/mgo-3.webp",
+      "/images/mgo-4.webp",
+      "/images/real-1.webp"
+    ],
+    "ALTS": [
+      "Rénovation de façade en pierre avec échafaudage — chantier MGO Maçonnerie",
+      "Construction de piscine béton et plages — chantier MGO Maçonnerie",
+      "Construction maison R+1, coffrage et dalle béton — chantier MGO Maçonnerie",
+      "Extension ossature bois et mur en pierre — chantier MGO Maçonnerie",
+      "Terrasse béton (photo d'illustration)"
     ]
   },
   "MENTIONS": {
@@ -478,5 +485,6 @@
     "TVA_INTRA": "FR30493150528",
     "HEBERGEUR": "Cloudflare Pages",
     "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
-  }
+  },
+  "HORAIRES": "Mo-Fr 08:30-18:00"
 }

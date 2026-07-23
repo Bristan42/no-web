@@ -119,6 +119,7 @@ _base_simple = {
     "WEB3FORMS_KEY":        config.get("WEB3FORMS_KEY", ""),
     "CF_ANALYTICS_SCRIPT":  _cf_analytics_script(),
     "ANNEE":                config.get("ANNEE", "2025"),
+    "HORAIRES":             config.get("HORAIRES", "Mo-Fr 07:30-18:00"),
     "ANNEE_CREATION":       config.get("ANNEE_CREATION", "2010"),
     "LAT":                  config.get("LAT", ""),
     "LNG":                  config.get("LNG", ""),
@@ -158,6 +159,7 @@ def build_vars(extra=None):
         "FORM_ACTION":    config["FORM_ACTION"],
         "WEB3FORMS_KEY":  config.get("WEB3FORMS_KEY", ""),
         "ANNEE":          config.get("ANNEE", "2025"),
+        "HORAIRES":       config.get("HORAIRES", "Mo-Fr 07:30-18:00"),
         "ANNEE_CREATION": config.get("ANNEE_CREATION", "2010"),
         "LAT":            config.get("LAT", ""),
         "LNG":            config.get("LNG", ""),
@@ -175,6 +177,8 @@ def build_vars(extra=None):
     v["MENTIONS_TVA_INTRA"]       = mentions.get("TVA_INTRA", "")
     v["MENTIONS_HEBERGEUR"]       = mentions.get("HEBERGEUR", "Cloudflare Pages")
     v["MENTIONS_HEBERGEUR_ADRESSE"] = mentions.get("HEBERGEUR_ADRESSE", "")
+    _gmb = config.get("GOOGLE_GMB_URL", "")
+    v["GMB_BTN"] = (f'<div class="gmb-footer reveal d4" style="text-align:center;margin-top:18px"><a href="{_gmb}" target="_blank" rel="noopener" class="btn btn-outline">Voir tous les avis sur Google</a></div>') if _gmb else ""
     v["GOOGLE_MAPS_KEY"] = config.get("GOOGLE_MAPS_KEY", "")
     v["GOOGLE_PLACE_ID"] = config.get("GOOGLE_PLACE_ID", "")
     v["GOOGLE_GMB_URL"]  = config.get("GOOGLE_GMB_URL", "")
@@ -217,7 +221,10 @@ def photo_tag(src, alt="Réalisation maçonnerie"):
     return '<div class="real-ph">Photo à venir</div>'
 
 # ── PAGE : index.html ─────────────────────────────────────────────────────────
-photo_real_vars = {f"PHOTO_REAL_{i}": photo_tag(src, f"Réalisation maçonnerie {i}") for i, src in enumerate(real_photos[:5], 1)}
+photo_alts = photos.get("ALTS", [])
+def _alt(i):
+    return photo_alts[i-1] if i <= len(photo_alts) and photo_alts[i-1] else f"Réalisation maçonnerie {i}"
+photo_real_vars = {f"PHOTO_REAL_{i}": photo_tag(src, _alt(i)) for i, src in enumerate(real_photos[:5], 1)}
 
 base_vars = build_vars({
     "ZONE_CHIPS": zone_chips_html,
@@ -249,7 +256,7 @@ print("✓ merci/index.html")
 reals_tpl = (TEMPLATES / "realisations.html").read_text(encoding="utf-8")
 reals_vars = build_vars()
 for i, src in enumerate(real_photos[:5], 1):
-    reals_vars[f"PHOTO_REAL_{i}"] = photo_tag(src, f"Réalisation maçonnerie {i}")
+    reals_vars[f"PHOTO_REAL_{i}"] = photo_tag(src, _alt(i))
 reals_html = apply_vars(reals_tpl, reals_vars)
 write_page(OUTPUT / "realisations", reals_html)
 print("✓ realisations/index.html")

@@ -29,7 +29,7 @@
   "email": "{{EMAIL}}",
   "address": {"@type":"PostalAddress","addressLocality":"{{VILLE}}","postalCode":"{{CODE_POSTAL}}","addressCountry":"FR"},
   "geo": {"@type":"GeoCoordinates","latitude":"{{LAT}}","longitude":"{{LNG}}"},
-  "openingHours": "Mo-Fr 07:30-18:00",
+  "openingHours": "{{HORAIRES}}",
   "hasCredential": ["Assurance décennale"],
   "foundingDate": "{{ANNEE_CREATION}}",
   "aggregateRating": {
@@ -740,6 +740,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
       </div>
     </div>
     <p class="avis-total reveal d4"><strong>{{NB_AVIS}} avis</strong> — Note {{NOTE}}/5 sur Google</p>
+    {{GMB_BTN}}
   </div>
 </section>
 
