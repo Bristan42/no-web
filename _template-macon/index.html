@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23C8621A'/%3E%3Cpath d='M50 24 L78 46 V78 H60 V60 H40 V78 H22 V46 Z' fill='white'/%3E%3C/svg%3E">
 <title>Maçon à {{VILLE}} — {{ENTREPRISE}} | Devis gratuit</title>
 <meta name="description" content="{{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Gros œuvre, extension, ravalement, rénovation. Devis gratuit sous 48h. Qualibat certifié, assurance décennale.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{ENTREPRISE}}">
+<meta property="og:title" content="Maçon à {{VILLE}} — {{ENTREPRISE}} | Devis gratuit">
+<meta property="og:description" content="{{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Gros œuvre, extension, ravalement, rénovation. Devis gratuit sous 48h. Qualibat certifié, assurance décennale.">
+<meta property="og:url" content="https://{{DOMAIN}}/">
+<meta property="og:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maçon à {{VILLE}} — {{ENTREPRISE}} | Devis gratuit">
+<meta name="twitter:description" content="{{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Gros œuvre, extension, ravalement, rénovation. Devis gratuit sous 48h. Qualibat certifié, assurance décennale.">
+<meta name="twitter:image" content="https://{{DOMAIN}}/images/real-1.webp">
 <link rel="canonical" href="https://{{DOMAIN}}/">
 <script type="application/ld+json">
 {
@@ -41,12 +53,17 @@
   --bg-alt:#F6F4F0;
   --text:#1A1A1A;
   --text-2:#5E5A54;
-  --text-3:#9B9690;
+  --text-3:#6E6A63;
   --border:#E0DDD8;
   --r:6px;
   --sh:0 2px 12px rgba(28,43,58,.08);
   --sh-lg:0 8px 32px rgba(28,43,58,.14);
 }
+@media(prefers-color-scheme:dark){
+  :root{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
+}
+:root[data-theme="dark"]{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
+:root[data-theme="light"]{--bg:#FFFFFF;--bg-alt:#F6F4F0;--card:#FFFFFF;--text:#1A1A1A;--text-2:#5E5A54;--text-3:#6E6A63;--border:#E0DDD8}
 html{scroll-behavior:smooth}
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;color:var(--text);background:var(--bg);line-height:1.6}
 a{color:inherit;text-decoration:none}
@@ -299,7 +316,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .nav-drop:hover .nav-drop-toggle svg{transform:rotate(180deg)}
 .nav-drop-menu{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%) translateY(-4px);background:#1C2B3A;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:6px;min-width:230px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:500;box-shadow:0 12px 32px rgba(0,0,0,.4)}
 .nav-drop-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px}
-.nav-drop:hover .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-drop:hover .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}.nav-drop:focus-within .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}.nav-drop:focus-within .nav-drop-toggle svg{transform:rotate(180deg)}
 .nav-drop-menu a{display:block;font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:8px 12px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap}
 .nav-drop-menu a:hover{color:#fff;background:rgba(255,255,255,.07)}
 /* Mobile services sub-list */
@@ -435,6 +452,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
       <div class="hero-card-sub">Réponse sous 48h — sans engagement</div>
       <form action="{{FORM_ACTION}}" method="POST">
         <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
         <input type="hidden" name="from_name" value="{{ENTREPRISE}} — Site web">
         <div class="form-group">
           <label class="form-label" for="nom">Nom & prénom</label>
@@ -446,7 +464,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
         </div>
         <div class="form-group">
           <label class="form-label" for="projet">Type de projet</label>
-          <select id="projet" name="projet">
+          <select id="service" name="service" required>
             <option value="">Sélectionnez...</option>
             <option>Extension / surélévation</option>
             <option>Gros œuvre / construction</option>

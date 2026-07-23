@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23C8621A'/%3E%3Cpath d='M50 24 L78 46 V78 H60 V60 H40 V78 H22 V46 Z' fill='white'/%3E%3C/svg%3E">
 <title>Maçon à Saint-Chamond — Maçonnerie Martin | Devis gratuit</title>
 <meta name="description" content="Maçonnerie Martin, maçon à Saint-Chamond. Extension, ravalement, gros œuvre, rénovation — devis gratuit sous 48h. Artisan local certifié Qualibat.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Maçonnerie Martin">
+<meta property="og:title" content="Maçon à Saint-Chamond — Maçonnerie Martin | Devis gratuit">
+<meta property="og:description" content="Maçonnerie Martin, maçon à Saint-Chamond. Extension, ravalement, gros œuvre, rénovation — devis gratuit sous 48h. Artisan local certifié Qualibat.">
+<meta property="og:url" content="https://maconnerie-martin.fr/macon-saint-chamond/">
+<meta property="og:image" content="https://maconnerie-martin.fr/images/real-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maçon à Saint-Chamond — Maçonnerie Martin | Devis gratuit">
+<meta name="twitter:description" content="Maçonnerie Martin, maçon à Saint-Chamond. Extension, ravalement, gros œuvre, rénovation — devis gratuit sous 48h. Artisan local certifié Qualibat.">
+<meta name="twitter:image" content="https://maconnerie-martin.fr/images/real-1.webp">
 <link rel="canonical" href="https://maconnerie-martin.fr/macon-saint-chamond/">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Maçonnerie Martin","description":"Maçon à Saint-Chamond — extension, ravalement, gros œuvre, rénovation. Devis gratuit sous 48h.","url":"https://maconnerie-martin.fr/macon-saint-chamond/","telephone":"0631876401","email":"contact@maconnerie-martin.fr","address":{"@type":"PostalAddress","addressLocality":"Saint-Chamond","postalCode":"42400","addressCountry":"FR"},"areaServed":{"@type":"City","name":"Saint-Chamond"},"priceRange":"€€","openingHours":"Mo-Fr 08:00-18:00"}
@@ -22,12 +34,17 @@
   --bg-alt:#F6F4F0;
   --text:#1A1A1A;
   --text-2:#5E5A54;
-  --text-3:#9B9690;
+  --text-3:#6E6A63;
   --border:#E0DDD8;
   --r:6px;
   --sh:0 2px 12px rgba(28,43,58,.08);
   --sh-lg:0 8px 32px rgba(28,43,58,.14);
 }
+@media(prefers-color-scheme:dark){
+  :root{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
+}
+:root[data-theme="dark"]{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
+:root[data-theme="light"]{--bg:#FFFFFF;--bg-alt:#F6F4F0;--card:#FFFFFF;--text:#1A1A1A;--text-2:#5E5A54;--text-3:#6E6A63;--border:#E0DDD8}
 html{scroll-behavior:smooth}
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;color:var(--text);background:var(--bg);line-height:1.6}
 a{color:inherit;text-decoration:none}
@@ -201,7 +218,7 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .zone-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .chip{display:flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--text-2)}
 .chip svg{color:var(--accent);flex-shrink:0}
-.chip.hi{background:rgba(200,98,26,.08);border-color:rgba(200,98,26,.3);color:var(--accent);font-weight:700}
+.chip.hi{background:rgba(200,98,26,.08);border-color:rgba(200,98,26,.3);color:var(--accent);font-weight:700}.zone-chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--text-2);text-decoration:none;transition:border-color .15s,color .15s}.zone-chip:hover{border-color:var(--accent);color:var(--accent)}
 
 /* ── PROCESSUS (timeline) ── */
 .proc-timeline{margin-top:48px;position:relative;padding:0 12px}
@@ -248,14 +265,14 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .footer-col ul a:hover{color:#fff}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;flex-wrap:wrap}
 .footer-bottom-txt{font-size:12px;color:rgba(255,255,255,.6)}
-.footer-bottom-txt a{color:rgba(255,255,255,.75);transition:color .15s}
+.footer-bottom-txt a{color:rgba(255,255,255,.75);text-decoration:underline;transition:color .15s}
 .footer-bottom-txt a:hover{color:#fff}
 
 /* ── MOBILE STICKY CTA ── */
 .mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom));gap:10px}
 .mob-cta-call{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
 .mob-cta-call svg{color:var(--accent);flex-shrink:0}
-.mob-cta-devis{flex:1.4;display:flex;align-items:center;justify-content:center;padding:13px 10px;background:var(--accent);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
+.mob-cta-devis{flex:1.4;display:flex;align-items:center;justify-content:center;padding:13px 10px;background:var(--accent-btn);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
 .mob-cta-devis:hover{background:var(--accent-h)}
 
 /* ── RESPONSIVE ── */
@@ -280,7 +297,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .nav-drop:hover .nav-drop-toggle svg{transform:rotate(180deg)}
 .nav-drop-menu{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%) translateY(-4px);background:#1C2B3A;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:6px;min-width:230px;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:500;box-shadow:0 12px 32px rgba(0,0,0,.4)}
 .nav-drop-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px}
-.nav-drop:hover .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-drop:hover .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}.nav-drop:focus-within .nav-drop-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}.nav-drop:focus-within .nav-drop-toggle svg{transform:rotate(180deg)}
 .nav-drop-menu a{display:block;font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:8px 12px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap}
 .nav-drop-menu a:hover{color:#fff;background:rgba(255,255,255,.07)}
 /* Mobile services sub-list */
@@ -313,11 +330,6 @@ footer{background:var(--navy);padding:56px 24px 32px}
 }
 </style>
 <style>
-@media(prefers-color-scheme:dark){
-  :root{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
-}
-:root[data-theme="dark"]{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
-:root[data-theme="light"]{--bg:#FFFFFF;--bg-alt:#F6F4F0;--card:#FFFFFF;--text:#1A1A1A;--text-2:#5E5A54;--text-3:#9B9690;--border:#E0DDD8}
 .card{background:var(--card,var(--bg))}
 </style>
 
@@ -363,7 +375,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
     </button>
   </div>
 </header>
-<nav class="mob-drawer" id="drawer" aria-label="Menu mobile" aria-hidden="true">
+<nav class="mob-drawer" id="drawer" aria-label="Menu mobile" aria-hidden="true" inert>
   <a href="tel:0631876401" class="mob-drawer-tel">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     06 31 87 64 01
@@ -464,6 +476,14 @@ footer{background:var(--navy);padding:56px 24px 32px}
   </div>
 </div>
 
+<div class="mob-cta" id="mobCta">
+  <a href="tel:0631876401" class="mob-cta-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="/devis/" class="mob-cta-devis">Devis gratuit →</a>
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -533,6 +553,7 @@ burger.addEventListener('click', () => {
   const isOpen = drawer.classList.contains('open');
   burger.setAttribute('aria-expanded', isOpen);
   drawer.setAttribute('aria-hidden', !isOpen);
+  if (isOpen) drawer.removeAttribute('inert'); else drawer.setAttribute('inert', '');
   document.body.style.overflow = isOpen ? 'hidden' : '';
   if (mobCta) mobCta.style.display = isOpen ? 'none' : '';
 });
@@ -541,6 +562,7 @@ function closeDrawer() {
   drawer.classList.remove('open');
   burger.setAttribute('aria-expanded', 'false');
   drawer.setAttribute('aria-hidden', 'true');
+  drawer.setAttribute('inert', '');
   document.body.style.overflow = '';
   if (mobCta) mobCta.style.display = '';
 }
@@ -569,5 +591,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+<script>document.querySelectorAll('input[name="redirect"]').forEach(function(i){i.value=location.origin+"/merci/";});</script>
 </body>
 </html>

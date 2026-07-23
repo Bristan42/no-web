@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23C8621A'/%3E%3Cpath d='M50 24 L78 46 V78 H60 V60 H40 V78 H22 V46 Z' fill='white'/%3E%3C/svg%3E">
 <title>Devis maçonnerie gratuit — {{ENTREPRISE}} | {{VILLE}}</title>
 <meta name="description" content="Demandez un devis gratuit à {{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Réponse sous 48h. Extension, ravalement, gros œuvre, rénovation.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{ENTREPRISE}}">
+<meta property="og:title" content="Devis maçonnerie gratuit — {{ENTREPRISE}} | {{VILLE}}">
+<meta property="og:description" content="Demandez un devis gratuit à {{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Réponse sous 48h. Extension, ravalement, gros œuvre, rénovation.">
+<meta property="og:url" content="https://{{DOMAIN}}/devis/">
+<meta property="og:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Devis maçonnerie gratuit — {{ENTREPRISE}} | {{VILLE}}">
+<meta name="twitter:description" content="Demandez un devis gratuit à {{ENTREPRISE}}, maçon à {{VILLE}} ({{DEPARTEMENT}}). Réponse sous 48h. Extension, ravalement, gros œuvre, rénovation.">
+<meta name="twitter:image" content="https://{{DOMAIN}}/images/real-1.webp">
 <link rel="canonical" href="https://{{DOMAIN}}/devis/">
 {{SHARED_STYLE}}
 <style>
@@ -50,6 +62,7 @@
     <div class="form-sub">Remplissez ce formulaire — {{PRENOM}} vous recontacte sous 48h pour fixer une visite sur place.</div>
     <form action="{{FORM_ACTION}}" method="POST">
       <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
       <input type="hidden" name="from_name" value="{{ENTREPRISE}} — Site web">
       <div class="form-row">
         <div class="form-group">

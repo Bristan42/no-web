@@ -51,7 +51,7 @@
   "SERVICES": [
     {
       "SLUG": "extension-maison",
-      "PHOTO": "/images/real-2.jpg",
+      "PHOTO": "/images/real-2.webp",
       "NOM": "Extension de maison",
       "NOM_COURT": "Extension",
       "TITRE_H1": "Extension de maison à {{VILLE}}",
@@ -65,7 +65,7 @@
         "Finitions extérieures coordonnées à votre maison",
         "Garantie décennale — travaux assurés 10 ans"
       ],
-      "GALLERY": ["/images/real-2.jpg", "/images/real-3.jpg", "/images/real-1.jpg"],
+      "GALLERY": ["/images/real-2.webp", "/images/real-3.webp", "/images/real-1.webp"],
       "TEMOIGNAGE": {
         "NOM": "Pierre D.",
         "INITIALES": "PD",
@@ -113,7 +113,7 @@
     },
     {
       "SLUG": "ravalement-facade",
-      "PHOTO": "/images/real-5.jpg",
+      "PHOTO": "/images/real-5.webp",
       "NOM": "Ravalement de façade",
       "NOM_COURT": "Ravalement",
       "TITRE_H1": "Ravalement de façade à {{VILLE}}",
@@ -127,7 +127,7 @@
         "Traitement des fissures et joints de dilatation",
         "Garantie décennale — travaux assurés 10 ans"
       ],
-      "GALLERY": ["/images/real-5.jpg", "/images/real-1.jpg", "/images/real-4.jpg"],
+      "GALLERY": ["/images/real-5.webp", "/images/real-1.webp", "/images/real-4.webp"],
       "TEMOIGNAGE": {
         "NOM": "Anne M.",
         "INITIALES": "AM",
@@ -171,7 +171,7 @@
     },
     {
       "SLUG": "gros-oeuvre",
-      "PHOTO": "/images/real-3.jpg",
+      "PHOTO": "/images/real-3.webp",
       "NOM": "Gros œuvre",
       "NOM_COURT": "Gros œuvre",
       "TITRE_H1": "Gros œuvre à {{VILLE}}",
@@ -185,7 +185,7 @@
         "Respect des DTU maçonnerie et des normes parasismiques",
         "Garantie décennale — travaux assurés 10 ans"
       ],
-      "GALLERY": ["/images/real-3.jpg", "/images/real-2.jpg", "/images/real-5.jpg"],
+      "GALLERY": ["/images/real-3.webp", "/images/real-2.webp", "/images/real-5.webp"],
       "TEMOIGNAGE": {
         "NOM": "Laurent B.",
         "INITIALES": "LB",
@@ -229,7 +229,7 @@
     },
     {
       "SLUG": "renovation-interieure",
-      "PHOTO": "/images/real-4.jpg",
+      "PHOTO": "/images/real-4.webp",
       "NOM": "Rénovation intérieure",
       "NOM_COURT": "Rénovation",
       "TITRE_H1": "Rénovation intérieure à {{VILLE}}",
@@ -243,7 +243,7 @@
         "Coordination avec les autres corps de métier",
         "Remise en état des zones impactées incluse"
       ],
-      "GALLERY": ["/images/real-4.jpg", "/images/real-1.jpg", "/images/real-3.jpg"],
+      "GALLERY": ["/images/real-4.webp", "/images/real-1.webp", "/images/real-3.webp"],
       "TEMOIGNAGE": {
         "NOM": "Sophie & Julien",
         "INITIALES": "SJ",
@@ -287,7 +287,7 @@
     },
     {
       "SLUG": "dallage-terrasse",
-      "PHOTO": "/images/real-1.jpg",
+      "PHOTO": "/images/real-1.webp",
       "NOM": "Dallage & terrasse béton",
       "NOM_COURT": "Dallage",
       "TITRE_H1": "Dallage et terrasse à {{VILLE}}",
@@ -301,7 +301,7 @@
         "Joints de dilatation positionnés selon les règles de l'art",
         "Nettoyage du chantier et évacuation des déchets inclus"
       ],
-      "GALLERY": ["/images/real-1.jpg", "/images/real-4.jpg", "/images/real-2.jpg"],
+      "GALLERY": ["/images/real-1.webp", "/images/real-4.webp", "/images/real-2.webp"],
       "TEMOIGNAGE": {
         "NOM": "Nathalie R.",
         "INITIALES": "NR",
@@ -345,7 +345,7 @@
     },
     {
       "SLUG": "mur-cloture",
-      "PHOTO": "/images/real-1.jpg",
+      "PHOTO": "/images/real-1.webp",
       "NOM": "Mur de clôture",
       "NOM_COURT": "Mur & clôture",
       "TITRE_H1": "Mur de clôture et soutènement à {{VILLE}}",
@@ -359,7 +359,7 @@
         "Pose de chaperons et couronnements pour l'étanchéité",
         "Garantie décennale — travaux assurés 10 ans"
       ],
-      "GALLERY": ["/images/real-1.jpg", "/images/real-3.jpg", "/images/real-5.jpg"],
+      "GALLERY": ["/images/real-1.webp", "/images/real-3.webp", "/images/real-5.webp"],
       "TEMOIGNAGE": {
         "NOM": "Michel P.",
         "INITIALES": "MP",
@@ -416,11 +416,11 @@
   "PHOTOS": {
     "HERO": "",
     "REALISATIONS": [
-      "/images/real-1.jpg",
-      "/images/real-2.jpg",
-      "/images/real-3.jpg",
-      "/images/real-4.jpg",
-      "/images/real-5.jpg"
+      "/images/real-1.webp",
+      "/images/real-2.webp",
+      "/images/real-3.webp",
+      "/images/real-4.webp",
+      "/images/real-5.webp"
     ]
   },
 

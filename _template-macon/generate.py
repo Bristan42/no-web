@@ -47,14 +47,9 @@ index_src = (BASE / "index.html").read_text(encoding="utf-8")
 css_match = re.search(r'<style>([\s\S]*?)</style>', index_src)
 shared_css = f"<style>{css_match.group(1)}</style>" if css_match else ""
 
-# Ajoute styles spécifiques aux pages intérieures (dark mode cards manquants dans CSS base)
+# Le dark mode + .card sont désormais dans le CSS partagé de index.html (pas de doublon ici)
 shared_css += """
 <style>
-@media(prefers-color-scheme:dark){
-  :root{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
-}
-:root[data-theme="dark"]{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
-:root[data-theme="light"]{--bg:#FFFFFF;--bg-alt:#F6F4F0;--card:#FFFFFF;--text:#1A1A1A;--text-2:#5E5A54;--text-3:#9B9690;--border:#E0DDD8}
 .card{background:var(--card,var(--bg))}
 </style>"""
 
