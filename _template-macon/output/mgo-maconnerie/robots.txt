@@ -1,4 +1,3 @@
+# DÉMO PROSPECT — indexation bloquée jusqu'à validation client
 User-agent: *
-Allow: /
-Disallow: /mentions-legales/
-Sitemap: https://mgo-maconnerie.fr/sitemap.xml
+Disallow: /
