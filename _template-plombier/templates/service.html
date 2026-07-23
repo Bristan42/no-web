@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23C8621A'/%3E%3Cpath d='M50 24 L78 46 V78 H60 V60 H40 V78 H22 V46 Z' fill='white'/%3E%3C/svg%3E">
+<title>{{SERVICE_NOM}} à {{VILLE}} — {{ENTREPRISE}}</title>
+<meta name="description" content="{{SERVICE_DESCRIPTION_SEO}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{ENTREPRISE}}">
+<meta property="og:title" content="{{SERVICE_NOM}} à {{VILLE}} — {{ENTREPRISE}}">
+<meta property="og:description" content="{{SERVICE_DESCRIPTION_SEO}}">
+<meta property="og:url" content="https://{{DOMAIN}}/{{SERVICE_SLUG}}/">
+<meta property="og:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{SERVICE_NOM}} à {{VILLE}} — {{ENTREPRISE}}">
+<meta name="twitter:description" content="{{SERVICE_DESCRIPTION_SEO}}">
+<meta name="twitter:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<link rel="canonical" href="https://{{DOMAIN}}/{{SERVICE_SLUG}}/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{SERVICE_NOM}} à {{VILLE}}",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "{{ENTREPRISE}}",
+    "telephone": "{{TEL_RAW}}",
+    "address": {"@type":"PostalAddress","addressLocality":"{{VILLE}}","postalCode":"{{CODE_POSTAL}}","addressCountry":"FR"}
+  },
+  "areaServed": "{{VILLE}} et {{DEPARTEMENT}}"
+}
+</script>
+<script type="application/ld+json">{{SERVICE_FAQ_SCHEMA}}</script>
+{{SHARED_STYLE}}
+<style>
+.service-hero{padding:0;background:var(--navy);position:relative;overflow:hidden}
+.service-hero-texture{position:absolute;inset:0;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.025) 2px,rgba(255,255,255,.025) 4px),repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(255,255,255,.01) 30px,rgba(255,255,255,.01) 31px)}
+.service-hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;padding:52px 24px}
+.service-hero-content{min-width:0}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:color .15s}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb svg{flex-shrink:0}
+.service-hero h1{font-size:clamp(26px,3.5vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#fff;margin-bottom:16px;text-wrap:balance}
+.service-hero h1 em{font-style:normal;color:var(--accent)}
+.service-hero-sub{font-size:16px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:32px}
+.service-hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.service-hero-media{border-radius:12px;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.service-hero-media img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+/* ── Nos engagements — icône gauche + texte droite ── */
+.avantages-list{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.avantage{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1.5px solid var(--border);border-radius:10px;transition:border-color .2s,box-shadow .2s}
+.avantage:hover{border-color:rgba(200,98,26,.4);box-shadow:0 4px 16px rgba(28,43,58,.07)}
+.avantage-icon{width:40px;height:40px;background:rgba(200,98,26,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.avantage-icon svg{color:var(--accent)}
+.avantage h3{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
+/* ── FAQ — Option A (accordéon pleine largeur) ── */
+.faq-list{margin-top:48px!important;display:block!important}
+/* ── Galerie réalisations ── */
+.svc-gallery{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-radius:12px;overflow:hidden}
+.svc-gallery-item{overflow:hidden}
+.svc-gallery-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s ease}
+.svc-gallery-item:hover img{transform:scale(1.04)}
+/* ── Témoignage ── */
+.svc-temo{max-width:720px;margin:48px auto 0;background:var(--bg);border:1.5px solid var(--border);border-radius:14px;padding:36px 40px}
+.svc-temo-stars{color:var(--accent);font-size:16px;letter-spacing:3px;margin-bottom:18px}
+.svc-temo blockquote{font-size:clamp(16px,1.6vw,20px);font-style:italic;color:var(--text);line-height:1.7;margin:0 0 24px;padding-left:20px;border-left:3px solid var(--accent)}
+.svc-temo-author{display:flex;align-items:center;gap:14px}
+.svc-temo-avatar{width:44px;height:44px;border-radius:50%;background:var(--accent-btn);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.svc-temo-nom{font-weight:700;font-size:14px;color:var(--text)}
+.svc-temo-projet{font-size:13px;color:var(--text-2)}
+/* ── Prix indicatifs ── */
+.prix-block{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.prix-left{background:var(--navy);border-radius:14px;padding:36px 32px;color:#fff}
+.prix-fourchette{font-size:clamp(26px,3.5vw,40px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em}
+.prix-unite{font-size:13px;color:rgba(255,255,255,.55);margin:6px 0 14px;font-weight:500}
+.prix-note{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.6;margin:0 0 28px;border-top:1px solid rgba(255,255,255,.1);padding-top:14px}
+.prix-cta-devis{display:inline-block;background:var(--accent-btn);color:#fff;padding:13px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;transition:opacity .2s}
+.prix-cta-devis:hover{opacity:.88}
+.prix-inclus-title{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:14px}
+.prix-ligne{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--text);line-height:1.4}
+.prix-ligne:last-child{border-bottom:none}
+.prix-ligne svg{color:var(--accent);flex-shrink:0}
+.prix-bas{margin-top:20px;font-size:13px;color:var(--text-2);line-height:1.6;padding:14px 16px;background:var(--bg-alt);border-radius:8px;border-left:3px solid var(--accent)}
+@media(max-width:900px){
+  .svc-gallery{grid-template-columns:1fr 1fr}
+  .svc-gallery-item:nth-child(3){display:none}
+  .prix-block{grid-template-columns:1fr}
+  .svc-temo{padding:24px}
+}
+/* ── Avis Google (GMB) ── */
+.gmb-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gmb-card{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:20px 22px}
+.gmb-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.gmb-avatar{width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.gmb-avatar-letter{width:38px;height:38px;border-radius:50%;background:var(--accent-btn);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.gmb-name{font-weight:700;font-size:13px;color:var(--text)}
+.gmb-stars{color:#f59e0b;font-size:12px;letter-spacing:1px}
+.gmb-date{font-size:11px;color:var(--text-3);margin-left:auto;flex-shrink:0}
+.gmb-text{font-size:13.5px;color:var(--text-2);line-height:1.65;margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.gmb-footer{margin-top:32px;text-align:center}
+.gmb-loading{color:var(--text-3);text-align:center;padding:40px;font-size:14px;grid-column:1/-1}
+.gmb-note{font-size:12px;color:var(--text-3);margin-top:10px}
+/* ── Zone d'intervention ── */
+.zone-svc-chips{margin-top:32px;display:flex;flex-wrap:wrap;gap:8px}.zone-chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--text-2);text-decoration:none;transition:border-color .15s,color .15s}.zone-chip:hover{border-color:var(--accent);color:var(--accent)}
+.zone-svc-sub{margin-top:16px;font-size:15px;color:var(--text-2);line-height:1.6}
+/* ── Sticky CTA mobile ── */
+.sticky-mob{display:none}
+@media(max-width:768px){
+  .sticky-mob{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--navy);padding:10px 12px;gap:8px;box-shadow:0 -3px 16px rgba(0,0,0,.3);padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  .sticky-mob-call{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.08);color:#fff;padding:12px 8px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.12)}
+  .sticky-mob-devis{flex:1;display:flex;align-items:center;justify-content:center;background:var(--accent-btn);color:#fff;padding:12px 8px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none}
+  body{padding-bottom:72px}
+  .gmb-grid{grid-template-columns:1fr}
+}
+/* ── Trust strip (certifs) — bande navy en continuité du hero ── */
+.srv-certs{background:var(--navy);padding:0}
+.srv-certs .certs-inner{gap:0}
+.srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none}
+.srv-certs .cert:hover{background:rgba(255,255,255,.04)}
+.srv-certs .cert-name{color:#fff}
+.srv-certs .cert-desc{color:rgba(255,255,255,.72)}
+.srv-certs .cert-icon{background:rgba(200,98,26,.18)}
+@media(max-width:960px){
+  .service-hero-inner{grid-template-columns:1fr;padding:60px 24px}
+  .service-hero-media{display:none}
+  .avantages-list{grid-template-columns:1fr}
+  .srv-certs .certs-inner{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .service-hero-ctas{flex-direction:column;align-items:stretch}
+  .service-hero-ctas .btn{text-align:center;justify-content:center}
+}
+</style>
+{{CF_ANALYTICS_SCRIPT}}
+</head>
+<body>
+{{HEADER}}
+<main id="main-content">
+
+<section class="service-hero">
+  <div class="service-hero-texture"></div>
+  <div class="service-hero-inner">
+    <div class="service-hero-content">
+      <nav class="breadcrumb">
+        <a href="/">Accueil</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>{{SERVICE_NOM}}</span>
+      </nav>
+      <div class="hero-eyebrow reveal">{{SERVICE_NOM_COURT}} — {{VILLE}} ({{DEPARTEMENT}})</div>
+      <h1 class="reveal d1">{{SERVICE_TITRE_H1}}<br>par <em>{{ENTREPRISE}}</em></h1>
+      <p class="service-hero-sub reveal d2">{{SERVICE_INTRO}}</p>
+      <div class="service-hero-ctas reveal d3">
+        <a href="/devis/" class="btn btn-accent btn-xl">Devis gratuit sous 48h</a>
+        <a href="tel:{{TEL_RAW}}" class="btn btn-outline btn-lg">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          {{TEL_DISPLAY}}
+        </a>
+      </div>
+    </div>
+    {{SERVICE_HERO_PHOTO_HTML}}
+  </div>
+</section>
+
+<div class="certs srv-certs">
+  <div class="certs-inner">
+    <div class="cert reveal">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+      <div class="cert-name">{{EXPERIENCE}} ans</div>
+      <div class="cert-desc">d'expérience</div>
+    </div>
+    <div class="cert reveal d1">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+      <div class="cert-name">Garantie décennale</div>
+      <div class="cert-desc">Travaux assurés 10 ans</div>
+    </div>
+    <div class="cert reveal d2">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg></div>
+      <div class="cert-name">RC Professionnelle</div>
+      <div class="cert-desc">Responsabilité civile</div>
+    </div>
+    <div class="cert reveal d3">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="cert-name">Devis sous 48h</div>
+      <div class="cert-desc">Gratuit, sans engagement</div>
+    </div>
+  </div>
+</div>
+
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Nos réalisations</div>
+    <h2 class="section-h2 reveal d1">Quelques chantiers<br>{{SERVICE_NOM_COURT}} réalisés</h2>
+    <div class="svc-gallery reveal d2">{{SERVICE_GALLERY_HTML}}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <div class="section-label reveal">Nos engagements</div>
+    <h2 class="section-h2 reveal d1">Ce que comprend<br>notre prestation {{SERVICE_NOM_COURT}}</h2>
+    <div class="avantages-list reveal d2">{{SERVICE_AVANTAGES_HTML}}</div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Ce qu'ils en disent</div>
+    <h2 class="section-h2 reveal d1">Avis client</h2>
+    <div class="svc-temo reveal d2">{{SERVICE_TEMOIGNAGE_HTML}}</div>
+  </div>
+</section>
+
+{{GMB_SECTION_HTML}}
+
+<section class="section">
+  <div class="inner">
+    <div class="section-label reveal">Notre processus</div>
+    <h2 class="section-h2 reveal d1">Votre chantier {{SERVICE_NOM_COURT}}<br>en 4 étapes</h2>
+    <div class="proc-timeline reveal d2">
+      <div class="proc-line"><div class="proc-line-fill"></div></div>
+      <div class="proc-grid">
+        <div class="proc-step">
+          <div class="proc-dot">1</div>
+          <div><div class="proc-h">Prise de contact</div><div class="proc-p">Par téléphone ou formulaire — nous convenons d'une date de visite.</div></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">2</div>
+          <div><div class="proc-h">Visite gratuite</div><div class="proc-p">{{PRENOM}} se déplace sur place. Déplacement offert dans le {{DEPARTEMENT}}.</div></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">3</div>
+          <div><div class="proc-h">Devis sous 48h</div><div class="proc-p">Devis détaillé poste par poste. Sans surprise, sans engagement.</div></div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-dot">4</div>
+          <div><div class="proc-h">Réalisation</div><div class="proc-p">Planning concerté. Notre équipe intervient aux dates convenues.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="tarifs">
+  <div class="inner">
+    <div class="section-label reveal">Tarifs indicatifs</div>
+    <h2 class="section-h2 reveal d1">Prix {{SERVICE_NOM_COURT}}<br>à {{VILLE}}</h2>
+    <div class="prix-block reveal d2">{{SERVICE_PRIX_HTML}}</div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="inner">
+    <div class="section-label reveal">Questions fréquentes</div>
+    <h2 class="section-h2 reveal d1">Vos questions sur<br>{{SERVICE_NOM}} à {{VILLE}}</h2>
+    <div class="faq-list reveal d2">
+      {{SERVICE_FAQ_HTML}}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="inner">
+    <div class="section-label reveal">Zone d'intervention</div>
+    <h2 class="section-h2 reveal d1">{{SERVICE_NOM_COURT}} à {{VILLE}}<br>et dans tout le {{DEPARTEMENT}}</h2>
+    <p class="zone-svc-sub reveal d2">Nous intervenons dans un rayon de {{RAYON}} km autour de {{VILLE}}. Déplacement gratuit pour l'étude de votre projet.</p>
+    <div class="zone-svc-chips reveal d3">{{ZONE_CHIPS}}</div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <h2>Vous avez un projet<br>de {{SERVICE_NOM_COURT}} à {{VILLE}} ?</h2>
+      <p>Devis gratuit sous 48h — visite sur place offerte. Sans engagement.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="tel:{{TEL_RAW}}" class="btn btn-white btn-xl">{{TEL_DISPLAY}}</a>
+      <a href="/devis/" class="btn btn-ghost-white btn-lg">Formulaire en ligne</a>
+      <div class="cta-note">Réponse garantie sous 48h</div>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-mob">
+  <a href="tel:{{TEL_RAW}}" class="sticky-mob-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="/devis/" class="sticky-mob-devis">Devis gratuit 48h</a>
+</div>
+
+</main>
+
+<div class="mob-cta" id="mobCta">
+  <a href="tel:{{TEL_RAW}}" class="mob-cta-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="/devis/" class="mob-cta-devis">Devis gratuit →</a>
+</div>
+
+{{FOOTER}}
+{{GMB_SCRIPT}}
+{{SHARED_SCRIPT}}
+</body>
+</html>

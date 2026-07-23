@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23C8621A'/%3E%3Cpath d='M50 24 L78 46 V78 H60 V60 H40 V78 H22 V46 Z' fill='white'/%3E%3C/svg%3E">
+<title>Devis plomberie gratuit — {{ENTREPRISE}} | {{VILLE}}</title>
+<meta name="description" content="Demandez un devis gratuit à {{ENTREPRISE}}, plombier à {{VILLE}} ({{DEPARTEMENT}}). Réponse sous 48h. Extension, ravalement, gros œuvre, rénovation.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{ENTREPRISE}}">
+<meta property="og:title" content="Devis plomberie gratuit — {{ENTREPRISE}} | {{VILLE}}">
+<meta property="og:description" content="Demandez un devis gratuit à {{ENTREPRISE}}, plombier à {{VILLE}} ({{DEPARTEMENT}}). Réponse sous 48h. Extension, ravalement, gros œuvre, rénovation.">
+<meta property="og:url" content="https://{{DOMAIN}}/devis/">
+<meta property="og:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Devis plomberie gratuit — {{ENTREPRISE}} | {{VILLE}}">
+<meta name="twitter:description" content="Demandez un devis gratuit à {{ENTREPRISE}}, plombier à {{VILLE}} ({{DEPARTEMENT}}). Réponse sous 48h. Extension, ravalement, gros œuvre, rénovation.">
+<meta name="twitter:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<link rel="canonical" href="https://{{DOMAIN}}/devis/">
+{{SHARED_STYLE}}
+<style>
+.devis-layout{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:start;max-width:1100px;margin:0 auto;padding:80px 24px}
+.devis-form-wrap{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:40px}
+.form-title{font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;letter-spacing:-.02em}
+.form-sub{font-size:14px;color:var(--text-2);margin-bottom:32px;line-height:1.5}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;color:var(--text);background:var(--bg);transition:border-color .15s;box-sizing:border-box;font-family:inherit}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{width:100%;padding:14px 24px;background:var(--accent-btn);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;transition:background .15s;margin-top:8px}
+.form-submit:hover{background:#b5571a}
+.form-legal{font-size:12px;color:var(--text-3);margin-top:10px;line-height:1.5}
+.devis-info{display:flex;flex-direction:column;gap:24px}
+.devis-info-card{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:28px}
+.devis-info-card h2{font-size:16px;font-weight:700;color:var(--text);margin-bottom:16px;letter-spacing:-.01em}
+.devis-steps{display:flex;flex-direction:column;gap:14px}
+.devis-step{display:flex;align-items:flex-start;gap:12px}
+.devis-step-num{width:26px;height:26px;border-radius:50%;background:var(--accent-btn);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.devis-step-text strong{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
+.devis-step-text span{font-size:13px;color:var(--text-2)}
+.contact-lines{display:flex;flex-direction:column;gap:12px}
+.contact-line{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text-2)}
+.contact-line a{color:var(--text);font-weight:600;text-decoration:none}
+.contact-line a:hover{color:var(--accent)}
+.contact-line svg{color:var(--accent);flex-shrink:0}
+.trust-pills-small{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.trust-pill-small{display:inline-flex;align-items:center;gap:6px;background:rgba(200,98,26,.08);color:var(--accent);font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px}
+@media(max-width:900px){.devis-layout{grid-template-columns:1fr;padding:48px 16px}.form-row{grid-template-columns:1fr}}
+</style>
+{{CF_ANALYTICS_SCRIPT}}
+</head>
+<body>
+{{HEADER}}
+<main id="main-content">
+
+<div class="devis-layout">
+  <div class="devis-form-wrap reveal">
+    <h1 class="form-title">Demandez votre devis gratuit</h1>
+    <div class="form-sub">Remplissez ce formulaire — {{PRENOM}} vous recontacte sous 48h pour fixer une visite sur place.</div>
+    <form action="{{FORM_ACTION}}" method="POST">
+      <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="from_name" value="{{ENTREPRISE}} — Site web">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="prenom">Prénom *</label>
+          <input type="text" id="prenom" name="prenom" required placeholder="Jean">
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom *</label>
+          <input type="text" id="nom" name="nom" required placeholder="Dupont">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="tel">Téléphone *</label>
+        <input type="tel" id="tel" name="tel" required placeholder="06 00 00 00 00">
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="jean.dupont@gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="ville">Commune du chantier *</label>
+        <input type="text" id="ville" name="ville" required placeholder="{{VILLE}}">
+      </div>
+      <div class="form-group">
+        <label for="service">Type de travaux *</label>
+        <select id="service" name="service" required>
+          <option value="">— Choisissez —</option>
+          <option value="depannage">Dépannage / fuite</option>
+          <option value="chauffe-eau">Chauffe-eau / ballon</option>
+          <option value="salle-de-bains">Salle de bains</option>
+          <option value="chauffage">Chauffage / chaudière</option>
+          <option value="debouchage">Débouchage</option>
+          <option value="renovation-plomberie">Rénovation plomberie</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Décrivez votre projet</label>
+        <textarea id="message" name="message" placeholder="Surface approximative, contraintes particulières, délais souhaités..."></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Nouveau devis — {{ENTREPRISE}}">
+      <input type="hidden" name="redirect" value="https://{{DOMAIN}}/merci/">
+      <button type="submit" class="form-submit">Envoyer ma demande de devis</button>
+      <div class="form-legal">En soumettant ce formulaire, vous acceptez d'être contacté par {{ENTREPRISE}} concernant votre demande. Aucune donnée transmise à des tiers.</div>
+    </form>
+  </div>
+
+  <div class="devis-info">
+    <div class="devis-info-card reveal d1">
+      <h2>Comment ça se passe ?</h2>
+      <div class="devis-steps">
+        <div class="devis-step"><div class="devis-step-num">1</div><div class="devis-step-text"><strong>Vous envoyez votre demande</strong><span>Via ce formulaire ou par téléphone.</span></div></div>
+        <div class="devis-step"><div class="devis-step-num">2</div><div class="devis-step-text"><strong>{{PRENOM}} vous rappelle sous 48h</strong><span>Pour préciser votre projet et fixer une visite.</span></div></div>
+        <div class="devis-step"><div class="devis-step-num">3</div><div class="devis-step-text"><strong>Visite gratuite sur place</strong><span>Déplacement offert dans le {{DEPARTEMENT}}.</span></div></div>
+        <div class="devis-step"><div class="devis-step-num">4</div><div class="devis-step-text"><strong>Devis détaillé sous 48h</strong><span>Prix ferme, postes détaillés. Sans engagement.</span></div></div>
+      </div>
+    </div>
+    <div class="devis-info-card reveal d2">
+      <h2>Vous préférez appeler ?</h2>
+      <div class="contact-lines">
+        <div class="contact-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:{{TEL_RAW}}">{{TEL_DISPLAY}}</a></div>
+        <div class="contact-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      </div>
+      <div class="trust-pills-small">
+        <div class="trust-pill-small"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Artisan local</div>
+        <div class="trust-pill-small"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Décennale</div>
+        <div class="trust-pill-small"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Devis gratuit</div>
+        <div class="trust-pill-small"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>{{NOTE}}/5 Google</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+{{FOOTER}}
+{{SHARED_SCRIPT}}
+<script>document.querySelectorAll('input[name="redirect"]').forEach(function(i){i.value=location.origin+"/merci/";});</script>
+</body>
+</html>

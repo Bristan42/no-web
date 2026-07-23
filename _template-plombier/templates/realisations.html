@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23C8621A'/%3E%3Cpath d='M50 24 L78 46 V78 H60 V60 H40 V78 H22 V46 Z' fill='white'/%3E%3C/svg%3E">
+<title>Nos réalisations — {{ENTREPRISE}} | Plombier à {{VILLE}}</title>
+<meta name="description" content="Découvrez les interventions réalisées par {{ENTREPRISE}}, plombier à {{VILLE}}. Salles de bains, chauffe-eau, chauffage, dépannages — {{EXPERIENCE}} ans de savoir-faire à {{VILLE}}.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{ENTREPRISE}}">
+<meta property="og:title" content="Nos réalisations — {{ENTREPRISE}} | Plombier à {{VILLE}}">
+<meta property="og:description" content="Découvrez les interventions réalisées par {{ENTREPRISE}}, plombier à {{VILLE}}. Salles de bains, chauffe-eau, chauffage, dépannages — {{EXPERIENCE}} ans de savoir-faire à {{VILLE}}.">
+<meta property="og:url" content="https://{{DOMAIN}}/realisations/">
+<meta property="og:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nos réalisations — {{ENTREPRISE}} | Plombier à {{VILLE}}">
+<meta name="twitter:description" content="Découvrez les interventions réalisées par {{ENTREPRISE}}, plombier à {{VILLE}}. Salles de bains, chauffe-eau, chauffage, dépannages — {{EXPERIENCE}} ans de savoir-faire à {{VILLE}}.">
+<meta name="twitter:image" content="https://{{DOMAIN}}/images/real-1.webp">
+<link rel="canonical" href="https://{{DOMAIN}}/realisations/">
+{{SHARED_STYLE}}
+<style>
+.reals-hero{padding:80px 24px 60px;background:var(--navy);text-align:center}
+.reals-hero h1{font-size:clamp(26px,4vw,44px);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:12px}
+.reals-hero p{font-size:16px;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto}
+.reals-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:32px 24px 0}
+.filter-btn{padding:8px 18px;border:1.5px solid var(--border);border-radius:20px;background:transparent;font-size:13px;font-weight:600;color:var(--text-2);cursor:pointer;transition:all .15s}
+.filter-btn.active,.filter-btn:hover{background:var(--accent-btn);border-color:var(--accent-btn);color:#fff}
+.reals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:40px auto;padding:0 24px}
+.real-card{border-radius:10px;overflow:hidden;background:var(--card);border:1.5px solid var(--border);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.real-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.12)}
+.real-photo{aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy) 0%,#2a3f54 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.real-photo-placeholder{color:rgba(255,255,255,.15);font-size:48px;font-weight:900;font-family:Georgia,serif}
+.real-photo img{width:100%;height:100%;object-fit:cover}
+.reals-cat{position:absolute;top:10px;left:10px;background:var(--accent-btn);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+.real-body{padding:16px}
+.real-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.real-meta{font-size:12px;color:var(--text-3)}
+@media(max-width:768px){.reals-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.reals-grid{grid-template-columns:1fr}}
+</style>
+{{CF_ANALYTICS_SCRIPT}}
+</head>
+<body>
+{{HEADER}}
+<main id="main-content">
+
+<div class="reals-hero">
+  <div class="hero-eyebrow reveal" style="color:rgba(255,255,255,.5);margin-bottom:12px">Exemples de prestations</div>
+  <h1 class="reveal d1">Nos prestations en images</h1>
+  <p class="reveal d2">Aperçu de nos savoir-faire — salle de bains, chauffe-eau, chauffage, débouchage. Photos à titre d'illustration.</p>
+</div>
+
+<div class="reals-filters reveal">
+  <button class="filter-btn active" data-filter="all">Toutes les prestations</button>
+  <button class="filter-btn" data-filter="sdb">Salle de bainss</button>
+  <button class="filter-btn" data-filter="chauffe-eau">Chauffe-eaus</button>
+  <button class="filter-btn" data-filter="chauffage">Chauffage</button>
+  <button class="filter-btn" data-filter="depannage">Dépannage</button>
+  <button class="filter-btn" data-filter="renovation">Rénovation</button>
+</div>
+
+<div class="reals-grid">
+  <div class="real-card reveal" data-cat="sdb">
+    <div class="real-photo">
+      {{PHOTO_REAL_1}}
+      <div class="reals-cat">Salle de bains</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Rénovation de salle de bains</div>
+      <div class="real-meta">Plomberie générale</div>
+    </div>
+  </div>
+  <div class="real-card reveal d1" data-cat="chauffe-eau">
+    <div class="real-photo">
+      {{PHOTO_REAL_2}}
+      <div class="reals-cat">Chauffe-eau</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Remplacement de chauffe-eau</div>
+      <div class="real-meta">Ravalement & façade</div>
+    </div>
+  </div>
+  <div class="real-card reveal d2" data-cat="chauffage">
+    <div class="real-photo">
+      {{PHOTO_REAL_3}}
+      <div class="reals-cat">Chauffage</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Installation de chaudière</div>
+      <div class="real-meta">Gros œuvre</div>
+    </div>
+  </div>
+  <div class="real-card reveal d1" data-cat="depannage">
+    <div class="real-photo">
+      {{PHOTO_REAL_4}}
+      <div class="reals-cat">Dépannage</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Recherche et réparation de fuite</div>
+      <div class="real-meta">Rénovation intérieure</div>
+    </div>
+  </div>
+  <div class="real-card reveal d2" data-cat="renovation">
+    <div class="real-photo">
+      {{PHOTO_REAL_5}}
+      <div class="reals-cat">Rénovation</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Rénovation de réseau de plomberie</div>
+      <div class="real-meta">Aménagement extérieur</div>
+    </div>
+  </div>
+  <div class="real-card reveal d3" data-cat="sdb">
+    <div class="real-photo">
+      <div class="real-photo-placeholder">+</div>
+      <div class="reals-cat">Salle de bains</div>
+    </div>
+    <div class="real-body">
+      <div class="real-title">Douche à l'italienne</div>
+      <div class="real-meta">Extension & surélévation</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section" style="margin-top:0">
+  <div class="cta-inner">
+    <div>
+      <h2>Vous avez un projet similaire ?</h2>
+      <p>Demandez un devis gratuit — visite sur place offerte dans le {{DEPARTEMENT}}.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="tel:{{TEL_RAW}}" class="btn btn-white btn-xl">{{TEL_DISPLAY}}</a>
+      <a href="/devis/" class="btn btn-ghost-white btn-lg">Formulaire devis</a>
+      <div class="cta-note">Réponse garantie sous 48h</div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<div class="mob-cta" id="mobCta">
+  <a href="tel:{{TEL_RAW}}" class="mob-cta-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a href="/devis/" class="mob-cta-devis">Devis gratuit →</a>
+</div>
+
+{{FOOTER}}
+{{SHARED_SCRIPT}}
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.real-card').forEach(card => {
+      card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

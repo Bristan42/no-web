@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales/
+Sitemap: https://plomberie-fabre.fr/sitemap.xml
