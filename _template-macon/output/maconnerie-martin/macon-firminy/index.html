@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://maconnerie-martin.fr/images/real-1.webp">
 <link rel="canonical" href="https://maconnerie-martin.fr/macon-firminy/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Maçonnerie Martin","description":"Maçon à Firminy — extension, ravalement, gros œuvre, rénovation. Devis gratuit sous 48h.","url":"https://maconnerie-martin.fr/macon-firminy/","telephone":"0631876401","email":"contact@maconnerie-martin.fr","address":{"@type":"PostalAddress","addressLocality":"Firminy","postalCode":"42700","addressCountry":"FR"},"areaServed":{"@type":"City","name":"Firminy"},"priceRange":"€€","openingHours":"Mo-Fr 08:00-18:00"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Maçonnerie Martin","description":"Maçon à Firminy — extension, ravalement, gros œuvre, rénovation. Devis gratuit sous 48h.","url":"https://maconnerie-martin.fr/macon-firminy/","telephone":"0631876401","email":"contact@maconnerie-martin.fr","address":{"@type":"PostalAddress","addressLocality":"Firminy","postalCode":"42700","addressCountry":"FR"},"areaServed":{"@type":"City","name":"Firminy"},"priceRange":"€€","openingHours":"Mo-Fr 07:30-18:00"}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -540,7 +540,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-txt">© 2025 Maçonnerie Martin — Maçon à Saint-Étienne (42) — SIRET 123 456 789 00012</div>
+      <div class="footer-bottom-txt">© 2026 Maçonnerie Martin — Maçon à Saint-Étienne (42) — SIRET 123 456 789 00012</div>
       <div class="footer-bottom-txt">Site réalisé par <a href="https://no-web.fr" target="_blank" rel="noopener">No Web</a></div>
     </div>
   </div>
@@ -581,8 +581,8 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
     const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); const b=i.querySelector('.faq-q'); if(b) b.setAttribute('aria-expanded','false'); });
+    if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
   });
 });
 

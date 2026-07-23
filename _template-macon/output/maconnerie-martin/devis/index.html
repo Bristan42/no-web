@@ -563,7 +563,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-txt">© 2025 Maçonnerie Martin — Maçon à Saint-Étienne (42) — SIRET 123 456 789 00012</div>
+      <div class="footer-bottom-txt">© 2026 Maçonnerie Martin — Maçon à Saint-Étienne (42) — SIRET 123 456 789 00012</div>
       <div class="footer-bottom-txt">Site réalisé par <a href="https://no-web.fr" target="_blank" rel="noopener">No Web</a></div>
     </div>
   </div>
@@ -604,8 +604,8 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
     const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); const b=i.querySelector('.faq-q'); if(b) b.setAttribute('aria-expanded','false'); });
+    if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
   });
 });
 
