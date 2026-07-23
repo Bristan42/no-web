@@ -281,7 +281,7 @@ for svc in services:
         avantages_html += (
             '<div class="avantage">'
             f'<div class="avantage-icon">{icon}</div>'
-            f'<h4>{av}</h4>'
+            f'<h3>{av}</h3>'
             '</div>\n'
         )
 

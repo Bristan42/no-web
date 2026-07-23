@@ -55,7 +55,7 @@
 .avantage:hover{border-color:rgba(200,98,26,.4);box-shadow:0 4px 16px rgba(28,43,58,.07)}
 .avantage-icon{width:40px;height:40px;background:rgba(200,98,26,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .avantage-icon svg{color:var(--accent)}
-.avantage h4{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
+.avantage h3{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
 /* ── FAQ — Option A (accordéon pleine largeur) ── */
 .faq-list{margin-top:48px!important;display:block!important}
 /* ── Galerie réalisations ── */
@@ -121,7 +121,7 @@
 .srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none}
 .srv-certs .cert:hover{background:rgba(255,255,255,.04)}
 .srv-certs .cert-name{color:#fff}
-.srv-certs .cert-desc{color:rgba(255,255,255,.45)}
+.srv-certs .cert-desc{color:rgba(255,255,255,.72)}
 .srv-certs .cert-icon{background:rgba(200,98,26,.18)}
 @media(max-width:960px){
   .service-hero-inner{grid-template-columns:1fr;padding:60px 24px}
@@ -138,6 +138,7 @@
 </head>
 <body>
 {{HEADER}}
+<main id="main-content">
 
 <section class="service-hero">
   <div class="service-hero-texture"></div>
@@ -290,6 +291,8 @@
   </a>
   <a href="/devis/" class="sticky-mob-devis">Devis gratuit 48h</a>
 </div>
+
+</main>
 
 <div class="mob-cta" id="mobCta">
   <a href="tel:{{TEL_RAW}}" class="mob-cta-call">
