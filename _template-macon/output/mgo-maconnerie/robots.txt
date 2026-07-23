@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales/
+Sitemap: https://mgo-maconnerie.fr/sitemap.xml
