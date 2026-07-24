@@ -459,6 +459,7 @@ for zone in zones:
         "ZONE_SLUG":       zone["SLUG"],
         "ZONE_CODE_POSTAL": zone["CODE_POSTAL"],
         "ZONE_TITLE":      zone_title,
+        "ZONE_LOCAL":      (f'<p class="reveal d2" style="font-size:15px;color:var(--text-2);line-height:1.7;max-width:760px;margin-bottom:40px">{zone["LOCAL"]}</p>' if zone.get("LOCAL") else ""),
     })
     zone_html = apply_vars(zone_tpl, zone_vars)
     write_page(OUTPUT / f"macon-{zone['SLUG']}", zone_html)

@@ -428,37 +428,44 @@
     {
       "VILLE": "Le Chambon-Feugerolles",
       "SLUG": "chambon-feugerolles",
-      "CODE_POSTAL": "42500"
+      "CODE_POSTAL": "42500",
+      "LOCAL": "Voisine immédiate de Firminy dans la vallée de l'Ondaine, Le Chambon-Feugerolles compte un bâti ancien important — maisons en pierre, murs de soutènement, façades à reprendre. Extension, ouverture de mur porteur ou ravalement : nous couvrons toute la commune avec des délais courts grâce à la proximité."
     },
     {
       "VILLE": "Unieux",
       "SLUG": "unieux",
-      "CODE_POSTAL": "42240"
+      "CODE_POSTAL": "42240",
+      "LOCAL": "À quelques minutes de Firminy, Unieux domine les gorges de la Loire : terrains en pente, murs de soutènement et sous-œuvre y sont des demandes classiques. Nous intervenons sur tout le territoire communal, du bourg aux quartiers résidentiels, pour les projets neufs comme les reprises sur bâti ancien."
     },
     {
       "VILLE": "Fraisses",
       "SLUG": "fraisses",
-      "CODE_POSTAL": "42490"
+      "CODE_POSTAL": "42490",
+      "LOCAL": "Entre Firminy et Unieux, Fraisses est l'une des communes les plus proches de notre base : idéal pour un suivi de chantier régulier. Extension, dalle, clôture ou rénovation — nous accompagnons les particuliers de la commune sur tous types de travaux de maçonnerie."
     },
     {
       "VILLE": "Saint-Étienne",
       "SLUG": "saint-etienne",
-      "CODE_POSTAL": "42000"
+      "CODE_POSTAL": "42000",
+      "LOCAL": "Chef-lieu du département à un quart d'heure de Firminy, Saint-Étienne concentre un habitat très varié : maisons de ville en pierre, pavillons des quartiers sud, immeubles anciens. Création d'ouvertures, reprise en sous-œuvre, ravalement ou extension — nous intervenons dans tous les quartiers stéphanois."
     },
     {
       "VILLE": "Roche-la-Molière",
       "SLUG": "roche-la-moliere",
-      "CODE_POSTAL": "42230"
+      "CODE_POSTAL": "42230",
+      "LOCAL": "Entre Saint-Étienne et la vallée de l'Ondaine, Roche-la-Molière mêle centre ancien et lotissements récents. Murs de clôture, terrasses, extensions de pavillons : nous réalisons tous les travaux de maçonnerie courants, avec la visite de chiffrage offerte."
     },
     {
       "VILLE": "La Ricamarie",
       "SLUG": "la-ricamarie",
-      "CODE_POSTAL": "42150"
+      "CODE_POSTAL": "42150",
+      "LOCAL": "Sur la route entre Saint-Étienne et Firminy, La Ricamarie fait partie de notre secteur de proximité. Bâti minier ancien, murs en pierre, façades à conforter : nous connaissons les spécificités du bâti local et intervenons pour les réparations comme pour les projets complets."
     },
     {
       "VILLE": "Saint-Just-Saint-Rambert",
       "SLUG": "saint-just-saint-rambert",
-      "CODE_POSTAL": "42170"
+      "CODE_POSTAL": "42170",
+      "LOCAL": "Aux portes de la plaine du Forez, Saint-Just-Saint-Rambert est la commune la plus peuplée du secteur : pavillons récents côté Saint-Just, bourg ancien côté Saint-Rambert. Extension, dallage, mur de clôture ou rénovation — nous y assurons l'ensemble de nos prestations."
     }
   ],
   "PHOTOS": {
