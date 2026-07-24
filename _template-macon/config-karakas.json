@@ -1,0 +1,491 @@
+{
+ "SLUG": "karakas-maconnerie",
+ "DOMAIN": "karakas-maconnerie.fr",
+ "ENTREPRISE": "Karakas Maçonnerie",
+ "PRENOM": "Cetin",
+ "VILLE": "Saint-Chamond",
+ "DEPARTEMENT": "42",
+ "REGION": "Auvergne-Rhône-Alpes",
+ "CODE_POSTAL": "42400",
+ "LAT": 45.4763,
+ "LNG": 4.515,
+ "TEL_DISPLAY": "06 68 18 18 11",
+ "TEL_RAW": "0668181811",
+ "EMAIL": "",
+ "EXPERIENCE": "",
+ "NB_CHANTIERS": "",
+ "NOTE": "4,8",
+ "NB_AVIS": 6,
+ "SIRET": "450 033 832 00020",
+ "ANNEE_CREATION": "",
+ "ANNEE": "2026",
+ "RAYON": 25,
+ "FORM_ACTION": "https://api.web3forms.com/submit",
+ "WEB3FORMS_KEY": "97f731bf-359e-46a8-99ec-429d7851a74d",
+ "CF_ANALYTICS_TOKEN": "",
+ "GOOGLE_MAPS_KEY": "",
+ "GOOGLE_PLACE_ID": "",
+ "GOOGLE_GMB_URL": "https://www.google.com/maps/search/?api=1&query=Entreprise+Karakas+23+Grande+Rue+42400+Saint-Chamond",
+ "AVIS": [
+  {
+   "NOM": "Guillaume Petillot",
+   "INITIALES": "GP",
+   "TEXTE": "Une équipe fort sympathique et qui ne rechigne pas à travailler ! Merci à M. Karakas et son équipe d'avoir accepté notre chantier, un peu compliqué, que d'autres avaient refusé. Tout s'est très bien déroulé.",
+   "PROJET": "Avis Google vérifié"
+  },
+  {
+   "NOM": "Burak Tepeyurt",
+   "INITIALES": "BT",
+   "TEXTE": "Une équipe au top, très sérieux, et j'insiste car c'est vraiment rare de trouver des professionnels autant investis dans leur travail. Rien à dire.",
+   "PROJET": "Avis Google vérifié"
+  },
+  {
+   "NOM": "Sophie Angays-cazet",
+   "INITIALES": "SA",
+   "TEXTE": "Une équipe de pro au top ! Travail de qualité, soigné, et un super relationnel. Des passionnés, je recommande !",
+   "PROJET": "Avis Google vérifié"
+  }
+ ],
+ "SERVICES": [
+  {
+   "SLUG": "gros-oeuvre",
+   "PHOTO": "/images/kk-structure.webp",
+   "NOM": "Gros œuvre & béton armé",
+   "NOM_COURT": "Gros œuvre",
+   "TITRE_H1": "Gros œuvre et béton armé à {{VILLE}}",
+   "DESCRIPTION_SEO": "Karakas Maçonnerie — gros œuvre, coffrage et béton armé à {{VILLE}} (42). Fondations, murs porteurs, structure. Devis gratuit.",
+   "INTRO": "Le gros œuvre, c'est notre cœur de métier. Fondations, coffrage, ferraillage, murs porteurs, planchers béton : nous réalisons la structure de votre construction dans les règles de l'art, pour un bâti solide et durable.",
+   "AVANTAGES": [
+    "Coffrage et ferraillage sur mesure",
+    "Fondations et semelles béton armé",
+    "Murs porteurs et élévation",
+    "Planchers et poutres béton",
+    "Respect des normes et des DTU",
+    "Chantier suivi de A à Z"
+   ],
+   "GALLERY": [
+    "/images/kk-structure.webp",
+    "/images/kk-dalle.webp",
+    "/images/kk-fondation.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Guillaume P.",
+    "INITIALES": "GP",
+    "TEXTE": "Chantier compliqué que d'autres avaient refusé, accepté et parfaitement mené. Équipe sérieuse et sympathique.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon le projet",
+    "NOTE": "Le gros œuvre se chiffre au projet (surface, structure, accès). Chaque devis est établi après visite, gratuitement et sans engagement.",
+    "LIGNES": [
+     "Étude et métré sur place",
+     "Coffrage, ferraillage, coulage",
+     "Fondations et murs porteurs",
+     "Planchers et structure béton",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Qu'appelle-t-on le gros œuvre à {{VILLE}} ?",
+     "A": "Le gros œuvre regroupe tout ce qui assure la solidité et la structure du bâtiment : fondations, murs porteurs, coffrage, ferraillage, planchers et béton armé. C'est la base de toute construction durable."
+    },
+    {
+     "Q": "Réalisez-vous les fondations et le béton armé ?",
+     "A": "Oui, c'est notre spécialité. Nous réalisons les fondations, semelles, coffrages, ferraillages et coulages béton selon les règles de l'art et les normes en vigueur."
+    },
+    {
+     "Q": "Intervenez-vous sur des chantiers difficiles ?",
+     "A": "Oui. Nous acceptons régulièrement des chantiers que d'autres refusent (accès compliqué, reprise en sous-œuvre). Nous étudions chaque situation avant de nous engager."
+    },
+    {
+     "Q": "Travaillez-vous pour les particuliers et les professionnels ?",
+     "A": "Les deux. Nous intervenons pour les particuliers comme pour les bâtiments industriels et les travaux publics dans le bassin stéphanois."
+    },
+    {
+     "Q": "Vos travaux sont-ils garantis ?",
+     "A": "Oui, nos travaux de maçonnerie et de gros œuvre sont couverts par notre assurance. Les attestations sont fournies avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "dallage-terrasse",
+   "PHOTO": "/images/kk-dalle.webp",
+   "NOM": "Dalles, chapes & planchers béton",
+   "NOM_COURT": "Dalles béton",
+   "TITRE_H1": "Dalles, chapes et planchers béton à {{VILLE}}",
+   "DESCRIPTION_SEO": "Karakas Maçonnerie — dalles, chapes et planchers béton à {{VILLE}} (42). Dallage, terrasse, hérisson, béton armé. Devis gratuit.",
+   "INTRO": "Dalle de maison, plancher, terrasse ou chape : nous réalisons vos ouvrages béton sur un support préparé dans les règles (hérisson, film, treillis soudé) pour une planéité et une solidité irréprochables.",
+   "AVANTAGES": [
+    "Dalles béton armé sur hérisson",
+    "Planchers et dalles portées",
+    "Chapes de nivellement",
+    "Terrasses et dallages extérieurs",
+    "Treillis soudé et ferraillage",
+    "Finition tirée à la règle"
+   ],
+   "GALLERY": [
+    "/images/kk-dalle.webp",
+    "/images/kk-fondation.webp",
+    "/images/kk-structure.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Sophie A.",
+    "INITIALES": "SA",
+    "TEXTE": "Travail de qualité, soigné, avec un super relationnel. Je recommande.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon la surface",
+    "NOTE": "Le prix d'une dalle dépend de la surface, de l'épaisseur et de la préparation du sol. Devis gratuit après visite.",
+    "LIGNES": [
+     "Préparation du sol et hérisson",
+     "Pose du treillis soudé",
+     "Coulage et talochage",
+     "Dalle, plancher ou chape",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte une dalle béton à {{VILLE}} ?",
+     "A": "Le prix dépend de la surface, de l'épaisseur, du ferraillage et de la préparation du terrain. Comptez généralement plusieurs dizaines d'euros par m². Le devis est gratuit après visite."
+    },
+    {
+     "Q": "Faut-il un hérisson sous la dalle ?",
+     "A": "Pour une dalle sur terre-plein, oui : le hérisson (couche de cailloux drainants) assure la stabilité et coupe les remontées d'humidité. Nous le mettons en œuvre systématiquement quand c'est nécessaire."
+    },
+    {
+     "Q": "Réalisez-vous les planchers d'étage ?",
+     "A": "Oui, nous coulons des planchers béton (dalles portées, poutrelles-hourdis) avec le ferraillage adapté à la portée et aux charges."
+    },
+    {
+     "Q": "Faites-vous aussi les terrasses ?",
+     "A": "Oui, dalles et dallages de terrasse extérieure, avec pente d'évacuation et finition selon votre revêtement (carrelage, béton désactivé…)."
+    },
+    {
+     "Q": "Quel délai pour couler une dalle ?",
+     "A": "Après préparation du support, le coulage se fait en une journée. Le délai global dépend de la surface et du séchage avant la suite des travaux."
+    }
+   ]
+  },
+  {
+   "SLUG": "mur-cloture",
+   "PHOTO": "/images/kk-fondation.webp",
+   "NOM": "Fondations & terrassement",
+   "NOM_COURT": "Fondations",
+   "TITRE_H1": "Fondations et terrassement à {{VILLE}}",
+   "DESCRIPTION_SEO": "Karakas Maçonnerie — fondations, semelles et terrassement à {{VILLE}} (42). Base solide pour votre construction. Devis gratuit.",
+   "INTRO": "Toute construction solide commence par de bonnes fondations. Terrassement, semelles filantes, longrines, vide sanitaire : nous préparons et coulons la base de votre projet avec le ferraillage et le béton adaptés au sol.",
+   "AVANTAGES": [
+    "Terrassement et implantation",
+    "Semelles filantes et plots",
+    "Longrines et vide sanitaire",
+    "Ferraillage aux normes",
+    "Béton armé dosé selon le sol",
+    "Étude du terrain avant travaux"
+   ],
+   "GALLERY": [
+    "/images/kk-fondation.webp",
+    "/images/kk-dalle.webp",
+    "/images/kk-structure.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Guillaume P.",
+    "INITIALES": "GP",
+    "TEXTE": "Chantier compliqué que d'autres avaient refusé, accepté et parfaitement mené. Équipe sérieuse et sympathique.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon le terrain",
+    "NOTE": "Le coût des fondations dépend de la nature du sol, de la profondeur et du linéaire. Chaque devis est établi après étude du terrain, gratuitement.",
+    "LIGNES": [
+     "Terrassement et implantation",
+     "Coffrage et ferraillage des semelles",
+     "Coulage béton armé",
+     "Vide sanitaire ou dalle",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Comment se déroulent des fondations à {{VILLE}} ?",
+     "A": "Après implantation et terrassement, nous réalisons les semelles filantes (coffrage, ferraillage, béton armé), puis l'élévation ou le vide sanitaire selon le projet. Tout est adapté à la nature de votre sol."
+    },
+    {
+     "Q": "Faites-vous le terrassement ?",
+     "A": "Oui, nous réalisons le terrassement et l'implantation nécessaires aux fondations, avec les engins adaptés à l'accès du chantier."
+    },
+    {
+     "Q": "Qu'est-ce qu'un vide sanitaire ?",
+     "A": "C'est un espace ventilé entre le sol et le plancher bas, qui protège la maison de l'humidité et facilite le passage des réseaux. Nous le réalisons couramment sur nos chantiers."
+    },
+    {
+     "Q": "Adaptez-vous les fondations au type de sol ?",
+     "A": "Oui. La profondeur, le ferraillage et le dosage du béton dépendent de la nature du terrain. Nous étudions chaque sol avant de chiffrer."
+    },
+    {
+     "Q": "Les fondations sont-elles garanties ?",
+     "A": "Oui, ces travaux de structure sont couverts par notre assurance. Les attestations sont jointes au devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "extension-maison",
+   "PHOTO": "/images/kk-structure.webp",
+   "NOM": "Agrandissement & extension",
+   "NOM_COURT": "Extension",
+   "TITRE_H1": "Agrandissement et extension à {{VILLE}}",
+   "DESCRIPTION_SEO": "Karakas Maçonnerie — agrandissement, extension et surélévation à {{VILLE}} (42). Gros œuvre clé en main. Devis gratuit.",
+   "INTRO": "Besoin d'une pièce en plus ? Nous réalisons le gros œuvre de votre extension ou surélévation : fondations, murs, plancher et toiture-terrasse, en liaison propre avec l'existant, pour agrandir votre maison durablement.",
+   "AVANTAGES": [
+    "Extension de plain-pied ou à étage",
+    "Surélévation et reprise de charges",
+    "Liaison soignée avec l'existant",
+    "Fondations et murs porteurs",
+    "Plancher et dalle de l'extension",
+    "Coordination avec vos autres corps de métier"
+   ],
+   "GALLERY": [
+    "/images/kk-structure.webp",
+    "/images/kk-fondation.webp",
+    "/images/kk-materiaux.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Burak T.",
+    "INITIALES": "BT",
+    "TEXTE": "Des professionnels très sérieux et investis, c'est rare. Rien à redire sur le travail.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon le projet",
+    "NOTE": "Une extension se chiffre au projet (surface, structure, liaison, accès). Devis gratuit après visite et étude de faisabilité.",
+    "LIGNES": [
+     "Étude de faisabilité et métré",
+     "Fondations et gros œuvre",
+     "Murs, plancher et structure",
+     "Liaison avec la maison existante",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte une extension à {{VILLE}} ?",
+     "A": "Le prix dépend de la surface, du type d'extension (plain-pied, étage, surélévation) et de la liaison avec l'existant. Nous chiffrons chaque projet après visite, gratuitement."
+    },
+    {
+     "Q": "Réalisez-vous les surélévations ?",
+     "A": "Oui, à condition que la structure existante le permette. Nous étudions la reprise des charges et les fondations avant de nous engager."
+    },
+    {
+     "Q": "Faut-il un permis de construire ?",
+     "A": "Au-delà d'une certaine surface, oui. Nous vous orientons sur les démarches, mais le dépôt du permis reste à réaliser avec un architecte ou en mairie selon le projet."
+    },
+    {
+     "Q": "Travaillez-vous avec d'autres artisans ?",
+     "A": "Oui. Nous réalisons le gros œuvre et coordonnons notre intervention avec les autres corps de métier (charpente, couverture, second œuvre)."
+    },
+    {
+     "Q": "Combien de temps dure un chantier d'extension ?",
+     "A": "Cela dépend de la taille et de la complexité. Le gros œuvre représente en général quelques semaines ; un planning précis est donné avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "renovation-interieure",
+   "PHOTO": "/images/kk-materiaux.webp",
+   "NOM": "Ouverture de mur & démolition",
+   "NOM_COURT": "Mur porteur",
+   "TITRE_H1": "Ouverture de mur porteur et démolition à {{VILLE}}",
+   "DESCRIPTION_SEO": "Karakas Maçonnerie — ouverture de mur porteur, démolition et reprise en sous-œuvre à {{VILLE}} (42). Devis gratuit.",
+   "INTRO": "Ouvrir un mur porteur, abattre une cloison, créer une baie : ces travaux touchent à la structure et ne s'improvisent pas. Nous réalisons les ouvertures et démolitions avec pose de linteau et reprise de charges en toute sécurité.",
+   "AVANTAGES": [
+    "Ouverture de mur porteur",
+    "Création de baies et de passages",
+    "Pose de linteaux et IPN",
+    "Reprise en sous-œuvre",
+    "Démolition maîtrisée",
+    "Étaiement et sécurité du chantier"
+   ],
+   "GALLERY": [
+    "/images/kk-materiaux.webp",
+    "/images/kk-structure.webp",
+    "/images/kk-fondation.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Burak T.",
+    "INITIALES": "BT",
+    "TEXTE": "Des professionnels très sérieux et investis, c'est rare. Rien à redire sur le travail.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon l'ouverture",
+    "NOTE": "Le prix d'une ouverture dépend de la portée, du type de linteau et de la reprise de charges. Devis gratuit après visite technique.",
+    "LIGNES": [
+     "Étude de la structure et des charges",
+     "Étaiement et sécurité",
+     "Ouverture et pose du linteau/IPN",
+     "Finitions et reprise des tableaux",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Peut-on ouvrir un mur porteur à {{VILLE}} ?",
+     "A": "Oui, à condition de reprendre correctement les charges avec un linteau ou une poutre (IPN) dimensionnés. C'est un travail de structure que nous réalisons avec étaiement et dans les règles de sécurité."
+    },
+    {
+     "Q": "Comment savoir si un mur est porteur ?",
+     "A": "Son épaisseur, sa position et son rôle dans la structure sont des indices. Nous le vérifions lors de la visite avant tout travaux — ne jamais ouvrir un mur sans cette étude."
+    },
+    {
+     "Q": "Posez-vous des IPN et des linteaux ?",
+     "A": "Oui, nous dimensionnons et posons linteaux béton et poutres acier (IPN/HEA) selon la portée et les charges à reprendre."
+    },
+    {
+     "Q": "Faites-vous la démolition ?",
+     "A": "Oui, démolition de cloisons, de murs et petites démolitions maîtrisées, avec évacuation des gravats et protection du chantier."
+    },
+    {
+     "Q": "Ces travaux sont-ils garantis ?",
+     "A": "Oui, la reprise de structure est couverte par notre assurance. Les attestations sont fournies avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "ravalement-facade",
+   "PHOTO": "/images/kk-materiaux.webp",
+   "NOM": "Maçonnerie générale & façade",
+   "NOM_COURT": "Maçonnerie",
+   "TITRE_H1": "Maçonnerie générale et façade à {{VILLE}}",
+   "DESCRIPTION_SEO": "Karakas Maçonnerie — maçonnerie générale, murs, enduits et façade à {{VILLE}} (42). Tous travaux de maçonnerie. Devis gratuit.",
+   "INTRO": "Murs en parpaing ou en brique, enduits, réfection de façade, garage, petits travaux : nous prenons en charge toute votre maçonnerie générale avec le même sérieux, du plus petit ouvrage au chantier complet.",
+   "AVANTAGES": [
+    "Murs en parpaing et en brique",
+    "Enduits et réfection de façade",
+    "Construction de garage et d'annexe",
+    "Petits travaux de maçonnerie",
+    "Reprise de fissures",
+    "Travail propre et soigné"
+   ],
+   "GALLERY": [
+    "/images/kk-materiaux.webp",
+    "/images/kk-structure.webp",
+    "/images/kk-dalle.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Sophie A.",
+    "INITIALES": "SA",
+    "TEXTE": "Travail de qualité, soigné, avec un super relationnel. Je recommande.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon les travaux",
+    "NOTE": "La maçonnerie générale se chiffre selon la nature et l'ampleur des travaux. Nous répondons aussi aux petits chantiers. Devis gratuit.",
+    "LIGNES": [
+     "Visite et conseil sur place",
+     "Murs, enduits ou réfection",
+     "Construction d'annexe ou garage",
+     "Petits travaux acceptés",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Faites-vous les petits travaux de maçonnerie à {{VILLE}} ?",
+     "A": "Oui. Contrairement à beaucoup, nous acceptons aussi les petits chantiers (un mur, une reprise, un enduit) avec le même sérieux qu'un gros œuvre complet."
+    },
+    {
+     "Q": "Montez-vous des murs en parpaing et en brique ?",
+     "A": "Oui, murs de refend, de clôture, d'annexe ou porteurs, en parpaing, brique ou béton, avec le chaînage nécessaire."
+    },
+    {
+     "Q": "Réalisez-vous les enduits de façade ?",
+     "A": "Oui, enduits et réfection de façade (dégrossi, finition) pour protéger et embellir vos murs."
+    },
+    {
+     "Q": "Construisez-vous des garages et annexes ?",
+     "A": "Oui, du terrassement à la structure, nous réalisons le gros œuvre de garages, annexes et dépendances."
+    },
+    {
+     "Q": "Intervenez-vous rapidement ?",
+     "A": "Nous nous déplaçons gratuitement pour le devis dans un rayon de 25 km autour de Saint-Chamond et donnons un planning clair dès l'acceptation."
+    }
+   ]
+  }
+ ],
+ "ZONES": [
+  {
+   "VILLE": "Saint-Étienne",
+   "SLUG": "saint-etienne",
+   "CODE_POSTAL": "42000",
+   "LOCAL": "Métropole voisine, Saint-Étienne concentre de nombreux projets de construction, d'extension et de rénovation. Gros œuvre, dalles, ouvertures de murs porteurs : nous intervenons sur toute la ville et ses quartiers, avec des équipes habituées aux contraintes de chantiers urbains."
+  },
+  {
+   "VILLE": "Rive-de-Gier",
+   "SLUG": "rive-de-gier",
+   "CODE_POSTAL": "42800",
+   "LOCAL": "Dans la vallée du Gier, Rive-de-Gier compte un habitat ancien et industriel qui demande souvent reprises de structure et gros œuvre. Fondations, planchers béton, ouvertures : nous y menons régulièrement des chantiers, y compris les plus techniques."
+  },
+  {
+   "VILLE": "La Grand-Croix",
+   "SLUG": "la-grand-croix",
+   "CODE_POSTAL": "42320",
+   "LOCAL": "À quelques minutes de Saint-Chamond, La Grand-Croix voit se multiplier extensions et constructions neuves. Nous y réalisons fondations, dalles et gros œuvre, avec des délais courts grâce à la proximité."
+  },
+  {
+   "VILLE": "L'Horme",
+   "SLUG": "l-horme",
+   "CODE_POSTAL": "42152",
+   "LOCAL": "Commune de la vallée du Gier, L'Horme mêle maisons individuelles et bâti à rénover. Dalles, murs porteurs, agrandissements : nous accompagnons particuliers et professionnels sur tous leurs travaux de maçonnerie."
+  },
+  {
+   "VILLE": "Lorette",
+   "SLUG": "lorette",
+   "CODE_POSTAL": "42420",
+   "LOCAL": "À Lorette, nous intervenons sur le gros œuvre des constructions neuves comme sur les reprises de structure du bâti existant : fondations, planchers, ouvertures de murs porteurs et maçonnerie générale."
+  },
+  {
+   "VILLE": "Saint-Paul-en-Jarez",
+   "SLUG": "saint-paul-en-jarez",
+   "CODE_POSTAL": "42740",
+   "LOCAL": "Sur les hauteurs de la vallée, Saint-Paul-en-Jarez accueille de nombreux projets d'extension et de maison individuelle. Nous y réalisons terrassement, fondations et gros œuvre adaptés au terrain."
+  },
+  {
+   "VILLE": "Sorbiers",
+   "SLUG": "sorbiers",
+   "CODE_POSTAL": "42290",
+   "LOCAL": "Entre Saint-Chamond et Saint-Étienne, Sorbiers est une commune résidentielle propice aux extensions et aux dalles de terrasse. Nous y intervenons pour tous vos travaux de gros œuvre et de maçonnerie générale."
+  }
+ ],
+ "PHOTOS": {
+  "HERO": "",
+  "REALISATIONS": [
+   "/images/kk-structure.webp",
+   "/images/kk-dalle.webp",
+   "/images/kk-fondation.webp",
+   "/images/kk-materiaux.webp"
+  ],
+  "ALTS": [
+   "Coffrage et ferraillage d'un ouvrage en béton armé — chantier Karakas Maçonnerie à Saint-Chamond",
+   "Dalle béton armée sur hérisson avec treillis soudé — Karakas Maçonnerie",
+   "Préparation d'une dalle et fondations ferraillées — Karakas Maçonnerie",
+   "Approvisionnement en parpaings sur un chantier de gros œuvre — Karakas Maçonnerie"
+  ]
+ },
+ "MENTIONS": {
+  "FORME_JURIDIQUE": "Entreprise individuelle",
+  "CAPITAL": "",
+  "RCS": "Saint-Étienne",
+  "TVA_INTRA": "",
+  "HEBERGEUR": "Cloudflare Pages",
+  "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
+ },
+ "HORAIRES": "Mo-Fr 08:00-12:00,13:00-19:00; Sa 08:00-12:00"
+}
