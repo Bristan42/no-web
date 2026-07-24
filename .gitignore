@@ -1,1 +1,5 @@
 .wrangler/
+
+_template-*/images-*/
+_template-*/output/*/.wrangler/
+stripe-icon.png
