@@ -185,17 +185,17 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .srv:hover .srv-link{gap:8px}
 
 /* ── RÉALISATIONS ── */
-.real-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.real{border-radius:10px;overflow:hidden;position:relative;background:var(--navy-light)}
-.real.feat{grid-column:span 2}
-.real-ph{width:100%;height:auto;aspect-ratio:4/3;display:block;object-fit:cover}
-.real.feat .real-ph{aspect-ratio:16/9}
+.real-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.real{border-radius:14px;overflow:hidden;position:relative;background:var(--navy-light)}
+.real.feat{grid-column:auto}
+.real-ph{width:100%;height:auto;aspect-ratio:3/2;display:block;object-fit:cover;transition:transform .55s ease}
+.real.feat .real-ph{aspect-ratio:3/2}
 .real:nth-child(1) .real-ph{background:linear-gradient(135deg,#263f52,#1c2b3a)}
 .real:nth-child(2) .real-ph{background:linear-gradient(135deg,#3d2a1a,#2a1a0e)}
 .real:nth-child(3) .real-ph{background:linear-gradient(135deg,#1a3d2a,#0e2a1a)}
 .real:nth-child(4) .real-ph{background:linear-gradient(135deg,#3d1a2a,#2a0e1a)}
 .real:nth-child(5) .real-ph{background:linear-gradient(135deg,#2d2a3d,#1a1a2a)}
-.real-tag{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:4px;padding:4px 10px;font-size:11px;font-weight:600;color:#fff;letter-spacing:.04em;text-transform:uppercase}
+.real-tag{position:absolute;bottom:12px;left:12px;z-index:2;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:6px;padding:5px 11px;font-size:11px;font-weight:600;color:#fff;letter-spacing:.04em;text-transform:uppercase}.real::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60%;background:linear-gradient(to top,rgba(8,12,20,.72),transparent);pointer-events:none}.real:hover .real-ph{transform:scale(1.06)}
 .real-cta{margin-top:32px;text-align:center}
 
 /* ── POURQUOI ── */
