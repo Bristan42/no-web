@@ -424,37 +424,44 @@
     {
       "VILLE": "Andrézieux-Bouthéon",
       "SLUG": "andrezieux-boutheon",
-      "CODE_POSTAL": "42160"
+      "CODE_POSTAL": "42160",
+      "LOCAL": "Située à quelques minutes de Veauche, Andrézieux-Bouthéon s'étend des bords de Loire aux zones d'activités : pavillons, appartements et locaux professionnels y ont chacun leurs besoins en plomberie. Fuite, chauffe-eau, salle de bains ou entretien de chaudière — nous couvrons l'ensemble de la commune, de La Chapelle à Bouthéon, avec des délais courts grâce à la proximité."
     },
     {
       "VILLE": "Saint-Galmier",
       "SLUG": "saint-galmier",
-      "CODE_POSTAL": "42330"
+      "CODE_POSTAL": "42330",
+      "LOCAL": "Entre plaine et coteaux, Saint-Galmier compte de nombreuses maisons anciennes dont les réseaux de plomberie ont vieilli : remplacement de canalisations, mise aux normes, chauffe-eau et salles de bains font partie de nos interventions types dans ce secteur, dans le bourg comme dans les hameaux alentour."
     },
     {
       "VILLE": "Montrond-les-Bains",
       "SLUG": "montrond-les-bains",
-      "CODE_POSTAL": "42210"
+      "CODE_POSTAL": "42210",
+      "LOCAL": "De l'autre côté de la Loire, Montrond-les-Bains est à moins d'un quart d'heure de notre base de Veauche — un vrai plus pour les dépannages urgents. Maisons individuelles, résidences ou locaux d'activité : nous intervenons sur tous types d'installations, de la simple fuite au remplacement complet d'équipements."
     },
     {
       "VILLE": "Saint-Just-Saint-Rambert",
       "SLUG": "saint-just-saint-rambert",
-      "CODE_POSTAL": "42170"
+      "CODE_POSTAL": "42170",
+      "LOCAL": "Commune la plus peuplée du secteur, Saint-Just-Saint-Rambert présente un habitat varié, des maisons de bourg de Saint-Rambert aux quartiers pavillonnaires de Saint-Just. Nous y assurons l'ensemble de nos prestations : dépannage, remplacement de chauffe-eau, rénovation de salle de bains et de réseaux."
     },
     {
       "VILLE": "Sury-le-Comtal",
       "SLUG": "sury-le-comtal",
-      "CODE_POSTAL": "42450"
+      "CODE_POSTAL": "42450",
+      "LOCAL": "À Sury-le-Comtal, accessible en quelques minutes par la plaine du Forez, nous intervenons pour les particuliers comme pour les professionnels : recherche de fuite, débouchage, remplacement d'équipements sanitaires ou rénovation complète de plomberie."
     },
     {
       "VILLE": "La Fouillouse",
       "SLUG": "la-fouillouse",
-      "CODE_POSTAL": "42480"
+      "CODE_POSTAL": "42480",
+      "LOCAL": "Aux portes de Saint-Étienne, La Fouillouse mêle pavillons récents et maisons de bourg — deux types d'installations que nous connaissons bien. Dépannage, entretien de chaudière, désembouage ou projet de salle de bains : nous couvrons toute la commune et ses abords."
     },
     {
       "VILLE": "Veauchette",
       "SLUG": "veauchette",
-      "CODE_POSTAL": "42340"
+      "CODE_POSTAL": "42340",
+      "LOCAL": "Voisine immédiate de Veauche, Veauchette bénéficie de nos meilleurs délais : en cas d'urgence, nous pouvons souvent être sur place très rapidement. Tous nos services y sont disponibles, du simple remplacement de robinet à la rénovation complète de salle de bains."
     }
   ],
   "PHOTOS": {
