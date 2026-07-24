@@ -1,0 +1,495 @@
+{
+  "SLUG": "courage-maconnerie",
+  "DOMAIN": "courage-maconnerie.fr",
+  "ENTREPRISE": "Courage Maçonnerie",
+  "PRENOM": "Bastien",
+  "VILLE": "Saint-Just-Saint-Rambert",
+  "DEPARTEMENT": "42",
+  "REGION": "Auvergne-Rhône-Alpes",
+  "CODE_POSTAL": "42170",
+  "LAT": "45.4948",
+  "LNG": "4.2394",
+  "TEL_DISPLAY": "06 72 80 68 37",
+  "TEL_RAW": "0672806837",
+  "EMAIL": "couragesas@gmail.com",
+  "EXPERIENCE": "",
+  "NB_CHANTIERS": "",
+  "NOTE": "5,0",
+  "NB_AVIS": "9",
+  "SIRET": "817 658 164 00022",
+  "ANNEE_CREATION": "",
+  "ANNEE": "2026",
+  "RAYON": "25",
+  "FORM_ACTION": "https://api.web3forms.com/submit",
+  "WEB3FORMS_KEY": "97f731bf-359e-46a8-99ec-429d7851a74d",
+  "CF_ANALYTICS_TOKEN": "",
+  "GOOGLE_MAPS_KEY": "",
+  "GOOGLE_PLACE_ID": "",
+  "GOOGLE_GMB_URL": "https://www.google.com/maps/search/?api=1&query=Courage+ma%C3%A7onnerie+6+Rue+Amp%C3%A8re+42170+Saint-Just-Saint-Rambert",
+  "AVIS": [
+    {
+      "NOM": "Julien V.",
+      "INITIALES": "JV",
+      "TEXTE": "Excellente société de maçonnerie spécialisée en pierre & pisé. Diagnostic précis, conseils pertinents, finitions impeccables et chantier toujours propre.",
+      "PROJET": "Rénovation pierre — avis Google"
+    },
+    {
+      "NOM": "Véronique P.",
+      "INITIALES": "VP",
+      "TEXTE": "Je suis très satisfaite du travail réalisé par l'équipe. Je recommande à 100% !",
+      "PROJET": "Avis Google vérifié"
+    },
+    {
+      "NOM": "Client vérifié",
+      "INITIALES": "★",
+      "TEXTE": "Travail soigné, respect du bâti ancien et des matériaux d'origine. Une entreprise sérieuse à qui l'on peut confier une rénovation de caractère.",
+      "PROJET": "Rénovation de façade — Saint-Just-Saint-Rambert"
+    }
+  ],
+  "SERVICES": [
+    {
+      "SLUG": "ravalement-facade",
+      "PHOTO": "/images/cr-facade.webp",
+      "NOM": "Ravalement & façade en pierre",
+      "NOM_COURT": "Façade pierre",
+      "TITRE_H1": "Rénovation de façade en pierre à {{VILLE}}",
+      "DESCRIPTION_SEO": "Courage Maçonnerie — ravalement & façade en pierre à {{VILLE}} ({{DEPARTEMENT}}). Spécialiste pierre et bâti ancien. Devis gratuit.",
+      "INTRO": "Redonnez tout son cachet à votre façade en pierre. Rejointoiement à la chaux, reprise de galets et de brique, enduit traditionnel — nous respectons le bâti ancien et les matériaux d'origine pour un rendu authentique et durable.",
+      "AVANTAGES": [
+        "Rejointoiement à la chaux (respect du bâti ancien)",
+        "Reprise de pierres, galets et briques",
+        "Enduit traditionnel à la chaux ou pierre apparente",
+        "Traitement de l'humidité et des fissures",
+        "Encadrements de fenêtres en pierre",
+        "Finitions soignées, chantier propre"
+      ],
+      "GALLERY": [
+        "/images/cr-facade.webp",
+        "/images/cr-encadrement1.webp",
+        "/images/cr-encadrement2.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Julien V.",
+        "INITIALES": "JV",
+        "TEXTE": "Spécialiste pierre & pisé. Diagnostic précis, finitions impeccables, chantier toujours propre.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "60 – 150 €",
+        "UNITE": "par m² de façade",
+        "NOTE": "Un rejointoiement pierre à la chaux revient en général entre 60 € et 150 € par m² selon l'état du mur et l'accès. Diagnostic et devis gratuits.",
+        "LIGNES": [
+          "Diagnostic de la façade inclus",
+          "Rejointoiement ou enduit à la chaux",
+          "Reprise des pierres et encadrements",
+          "Traitement des fissures et de l'humidité",
+          "Devis détaillé après visite gratuite"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Combien coûte une rénovation de façade en pierre à {{VILLE}} ?",
+          "A": "Le prix dépend de la surface, de l'état du mur et de la technique (rejointoiement, enduit à la chaux, pierre apparente). Comptez en moyenne 60 à 150 € par m². Le diagnostic et le devis sont gratuits."
+        },
+        {
+          "Q": "Pourquoi utiliser de la chaux plutôt que du ciment ?",
+          "A": "La chaux laisse respirer les murs anciens en pierre, évite les remontées d'humidité et respecte l'aspect d'origine. Le ciment, trop étanche, peut au contraire abîmer un bâti ancien. C'est un choix essentiel pour une rénovation durable."
+        },
+        {
+          "Q": "Intervenez-vous sur les maisons anciennes et le pisé ?",
+          "A": "Oui, c'est notre spécialité. Nous maîtrisons les techniques traditionnelles (pierre, galets, brique, pisé, chaux) et adaptons chaque intervention au caractère de votre bâtiment."
+        },
+        {
+          "Q": "Refaites-vous les encadrements de fenêtres en pierre ?",
+          "A": "Oui. Nous créons et restaurons les encadrements en pierre taillée (linteaux, jambages, appuis), à l'identique ou en création, pour valoriser votre façade."
+        },
+        {
+          "Q": "Vos travaux de façade sont-ils garantis ?",
+          "A": "Oui, nos travaux de maçonnerie sont couverts par notre assurance décennale. Les attestations sont fournies avec le devis."
+        }
+      ]
+    },
+    {
+      "SLUG": "gros-oeuvre",
+      "PHOTO": "/images/cr-escalier.webp",
+      "NOM": "Gros œuvre & escaliers",
+      "NOM_COURT": "Gros œuvre",
+      "TITRE_H1": "Gros œuvre et maçonnerie à {{VILLE}}",
+      "DESCRIPTION_SEO": "Courage Maçonnerie — gros œuvre & escaliers à {{VILLE}} ({{DEPARTEMENT}}). Spécialiste pierre et bâti ancien. Devis gratuit.",
+      "INTRO": "Du sol au toit, nous réalisons la structure de vos projets : fondations, murs porteurs, dalles, mais aussi escaliers maçonnés sur mesure. Un travail solide, dans le respect des règles de l'art et du bâti existant.",
+      "AVANTAGES": [
+        "Fondations et reprises en sous-œuvre",
+        "Murs porteurs en pierre, parpaing ou brique",
+        "Dalles et planchers",
+        "Escaliers maçonnés sur mesure",
+        "Reprise de structure sur bâti ancien",
+        "Garantie décennale — travaux assurés 10 ans"
+      ],
+      "GALLERY": [
+        "/images/cr-escalier.webp",
+        "/images/cr-ouverture.webp",
+        "/images/cr-facade.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Véronique P.",
+        "INITIALES": "VP",
+        "TEXTE": "Très satisfaite du travail de l'équipe. Je recommande à 100% !",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "800 – 1 800 €",
+        "UNITE": "par m² de plancher",
+        "NOTE": "Le gros œuvre représente une part importante d'un projet. Le prix dépend fortement de la nature du chantier — nous établissons un devis précis après visite.",
+        "LIGNES": [
+          "Étude et implantation incluses",
+          "Fondations adaptées au terrain",
+          "Maçonnerie pierre, parpaing ou brique",
+          "Dalles, planchers, escaliers",
+          "Devis précis après visite"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Réalisez-vous des escaliers en pierre ou béton ?",
+          "A": "Oui, nous réalisons des escaliers maçonnés sur mesure, en béton ou habillés de pierre, y compris dans des bâtiments anciens où l'intégration à l'existant demande un vrai savoir-faire."
+        },
+        {
+          "Q": "Faites-vous les reprises en sous-œuvre ?",
+          "A": "Oui. Reprise de fondations, consolidation de murs anciens, remplacement de linteaux : nous intervenons sur les structures fragilisées en sécurisant le bâti."
+        },
+        {
+          "Q": "Travaillez-vous la pierre autant que le parpaing ?",
+          "A": "Oui. Nous maîtrisons la maçonnerie traditionnelle en pierre comme les techniques modernes (parpaing, béton), et choisissons selon votre projet et le caractère du bâtiment."
+        },
+        {
+          "Q": "Le gros œuvre est-il couvert par la garantie décennale ?",
+          "A": "Oui, c'est le cœur de la garantie décennale : fondations, murs porteurs, planchers sont couverts 10 ans contre tout désordre affectant la solidité de l'ouvrage."
+        },
+        {
+          "Q": "Combien de temps dure un chantier de gros œuvre ?",
+          "A": "Cela dépend de l'ampleur — de quelques jours pour une reprise ponctuelle à plusieurs semaines pour une structure complète. Un planning précis est établi dès la signature."
+        }
+      ]
+    },
+    {
+      "SLUG": "renovation-interieure",
+      "PHOTO": "/images/cr-ouverture.webp",
+      "NOM": "Rénovation de bâti ancien",
+      "NOM_COURT": "Rénovation",
+      "TITRE_H1": "Rénovation de bâti ancien à {{VILLE}}",
+      "DESCRIPTION_SEO": "Courage Maçonnerie — rénovation de bâti ancien à {{VILLE}} ({{DEPARTEMENT}}). Spécialiste pierre et bâti ancien. Devis gratuit.",
+      "INTRO": "Créer une ouverture dans un mur en pierre, abattre une cloison, restaurer un mur intérieur en pierre apparente : la rénovation d'une maison ancienne demande de la précision et le respect de la structure. Nous sécurisons toujours l'existant.",
+      "AVANTAGES": [
+        "Création d'ouvertures (portes, fenêtres) dans le bâti ancien",
+        "Abattage de mur porteur avec pose de linteau",
+        "Murs intérieurs en pierre apparente",
+        "Reprise de structure et consolidation",
+        "Encadrements en pierre ou brique",
+        "Remise en état des zones impactées incluse"
+      ],
+      "GALLERY": [
+        "/images/cr-ouverture.webp",
+        "/images/cr-encadrement2.webp",
+        "/images/cr-escalier.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Julien V.",
+        "INITIALES": "JV",
+        "TEXTE": "Spécialiste pierre & pisé. Diagnostic précis, finitions impeccables, chantier toujours propre.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "1 500 – 4 000 €",
+        "UNITE": "par intervention",
+        "NOTE": "Création d'ouverture avec linteau : 1 500 – 3 500 € selon la portée et le type de mur (pierre, plus exigeant). Devis gratuit après visite.",
+        "LIGNES": [
+          "Diagnostic de la structure avant travaux",
+          "Pose de linteau (béton, acier ou pierre)",
+          "Création d'ouvertures et encadrements",
+          "Reprise et remise en état incluses",
+          "Devis gratuit après visite sur place"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Peut-on créer une ouverture dans un mur en pierre ?",
+          "A": "Oui. C'est un travail délicat qui demande de reprendre les charges avec un linteau adapté avant d'ouvrir. Notre expérience du bâti ancien garantit une intervention sûre et un encadrement soigné."
+        },
+        {
+          "Q": "Comment abattre un mur porteur en toute sécurité ?",
+          "A": "Nous vérifions d'abord si le mur est porteur, puis nous étayons et posons une poutre (béton, acier ou pierre) pour reprendre les charges. Cette étape est critique pour la solidité de votre maison."
+        },
+        {
+          "Q": "Restaurez-vous les murs en pierre apparente ?",
+          "A": "Oui. Nettoyage, rejointoiement à la chaux, reprise des pierres : nous redonnons vie aux murs intérieurs en pierre pour un intérieur de caractère."
+        },
+        {
+          "Q": "Faut-il un permis pour ces travaux ?",
+          "A": "Les travaux intérieurs ne nécessitent en général pas de permis. Une déclaration préalable peut être requise si vous créez une ouverture visible en façade. Nous vous guidons."
+        },
+        {
+          "Q": "Ces travaux sont-ils garantis ?",
+          "A": "Oui, les travaux touchant à la structure relèvent de notre garantie décennale."
+        }
+      ]
+    },
+    {
+      "SLUG": "mur-cloture",
+      "PHOTO": "/images/cr-soutenement.webp",
+      "NOM": "Murs en pierre & soutènement",
+      "NOM_COURT": "Murs & soutènement",
+      "TITRE_H1": "Murs en pierre et soutènement à {{VILLE}}",
+      "DESCRIPTION_SEO": "Courage Maçonnerie — murs en pierre & soutènement à {{VILLE}} ({{DEPARTEMENT}}). Spécialiste pierre et bâti ancien. Devis gratuit.",
+      "INTRO": "Mur de clôture en pierre, mur de soutènement sur terrain en pente, restauration de mur ancien : nous construisons et restaurons des ouvrages solides et esthétiques, en pierre sèche, hourdée ou maçonnée selon le contexte.",
+      "AVANTAGES": [
+        "Murs de soutènement en pierre (terrains en pente)",
+        "Murs de clôture en pierre ou maçonnés",
+        "Restauration de murs anciens",
+        "Drainage arrière inclus pour les soutènements",
+        "Pierre sèche, hourdée ou parement",
+        "Garantie décennale — travaux assurés 10 ans"
+      ],
+      "GALLERY": [
+        "/images/cr-soutenement.webp",
+        "/images/cr-facade.webp",
+        "/images/cr-encadrement1.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Véronique P.",
+        "INITIALES": "VP",
+        "TEXTE": "Très satisfaite du travail de l'équipe. Je recommande à 100% !",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "200 – 450 €",
+        "UNITE": "par mètre linéaire",
+        "NOTE": "Mur en pierre : 250 – 450 €/ml selon la hauteur et le type (pierre sèche, hourdée, parement). Mur de soutènement avec drainage : sur devis après étude du terrain.",
+        "LIGNES": [
+          "Étude du terrain et des fondations",
+          "Maçonnerie pierre (sèche, hourdée, parement)",
+          "Drainage arrière pour les soutènements",
+          "Couronnement et finitions",
+          "Devis gratuit après visite"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Combien coûte un mur en pierre à {{VILLE}} ?",
+          "A": "Comptez 250 à 450 € par mètre linéaire selon la hauteur, la technique (pierre sèche, hourdée, parement) et l'accès. Un mur de soutènement, plus technique, est chiffré après étude du terrain."
+        },
+        {
+          "Q": "Faites-vous les murs en pierre sèche traditionnels ?",
+          "A": "Oui. Nous maîtrisons la pierre sèche comme la pierre hourdée, pour des murs de clôture, de restanque ou de soutènement respectueux des techniques locales."
+        },
+        {
+          "Q": "Un mur de soutènement nécessite-t-il un drainage ?",
+          "A": "Oui, impérativement. Un drainage arrière évacue les eaux et évite la poussée qui ferait céder le mur. Nous l'intégrons systématiquement à nos murs de soutènement."
+        },
+        {
+          "Q": "Restaurez-vous les vieux murs en pierre ?",
+          "A": "Oui. Reprise des pierres descellées, rejointoiement à la chaux, consolidation : nous redonnons solidité et cachet à vos murs anciens."
+        },
+        {
+          "Q": "Ces ouvrages sont-ils garantis ?",
+          "A": "Oui, nos murs de soutènement et ouvrages maçonnés sont couverts par notre garantie décennale."
+        }
+      ]
+    },
+    {
+      "SLUG": "extension-maison",
+      "PHOTO": "/images/cr-encadrement1.webp",
+      "NOM": "Restauration de pierre & encadrements",
+      "NOM_COURT": "Pierre taillée",
+      "TITRE_H1": "Restauration de pierre et encadrements à {{VILLE}}",
+      "DESCRIPTION_SEO": "Courage Maçonnerie — restauration de pierre & encadrements à {{VILLE}} ({{DEPARTEMENT}}). Spécialiste pierre et bâti ancien. Devis gratuit.",
+      "INTRO": "Linteaux, jambages, appuis de fenêtre, encadrements de porte : la pierre taillée fait le caractère d'une maison ancienne. Nous créons et restaurons ces éléments à l'identique, dans le respect du style d'origine.",
+      "AVANTAGES": [
+        "Encadrements de fenêtres et portes en pierre",
+        "Linteaux, jambages et appuis taillés",
+        "Restauration à l'identique d'éléments anciens",
+        "Création d'œils-de-bœuf et ouvertures cintrées",
+        "Pose de pierre de taille et parement",
+        "Finitions et rejointoiement à la chaux"
+      ],
+      "GALLERY": [
+        "/images/cr-encadrement1.webp",
+        "/images/cr-encadrement2.webp",
+        "/images/cr-facade.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Julien V.",
+        "INITIALES": "JV",
+        "TEXTE": "Spécialiste pierre & pisé. Diagnostic précis, finitions impeccables, chantier toujours propre.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "Sur devis",
+        "UNITE": "selon l'élément",
+        "NOTE": "Chaque élément en pierre taillée est unique. Le prix dépend de la nature de la pierre, des dimensions et du travail de taille. Devis gratuit après visite.",
+        "LIGNES": [
+          "Relevé et étude de l'élément à créer ou restaurer",
+          "Fourniture de pierre adaptée au bâti",
+          "Taille et pose dans les règles de l'art",
+          "Rejointoiement à la chaux",
+          "Devis détaillé après visite"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Créez-vous des encadrements de fenêtres en pierre ?",
+          "A": "Oui, c'est l'une de nos spécialités. Nous réalisons linteaux, jambages et appuis en pierre taillée, en création ou en restauration à l'identique d'éléments existants."
+        },
+        {
+          "Q": "Pouvez-vous restaurer un encadrement ancien abîmé ?",
+          "A": "Oui. Nous remplaçons les pierres dégradées, reprenons les joints à la chaux et redonnons à l'encadrement son aspect d'origine."
+        },
+        {
+          "Q": "Réalisez-vous des ouvertures cintrées ou des œils-de-bœuf ?",
+          "A": "Oui. Nous créons des ouvertures cintrées, arcs et œils-de-bœuf en pierre ou brique, comme sur les belles façades anciennes de la région."
+        },
+        {
+          "Q": "Quelle pierre utilisez-vous ?",
+          "A": "Nous choisissons une pierre en accord avec votre bâti (granit, pierre locale…) pour une intégration parfaite. Nous vous conseillons lors de la visite."
+        },
+        {
+          "Q": "Ce travail est-il couvert par une garantie ?",
+          "A": "Oui, nos travaux de maçonnerie et de taille de pierre sont couverts par notre assurance décennale."
+        }
+      ]
+    },
+    {
+      "SLUG": "dallage-terrasse",
+      "PHOTO": "/images/cr-facade.webp",
+      "NOM": "Maçonnerie générale",
+      "NOM_COURT": "Maçonnerie",
+      "TITRE_H1": "Maçonnerie générale à {{VILLE}}",
+      "DESCRIPTION_SEO": "Courage Maçonnerie — maçonnerie générale à {{VILLE}} ({{DEPARTEMENT}}). Spécialiste pierre et bâti ancien. Devis gratuit.",
+      "INTRO": "Au-delà de la pierre, nous réalisons tous vos travaux de maçonnerie courante : petits ouvrages, réparations, dalles, aménagements extérieurs. Un seul artisan de confiance pour l'ensemble de vos besoins.",
+      "AVANTAGES": [
+        "Petite maçonnerie et réparations",
+        "Dalles et chapes",
+        "Aménagements extérieurs",
+        "Reprise de fissures et scellements",
+        "Création de regards et ouvrages divers",
+        "Conseil et devis gratuits"
+      ],
+      "GALLERY": [
+        "/images/cr-facade.webp",
+        "/images/cr-soutenement.webp",
+        "/images/cr-escalier.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Véronique P.",
+        "INITIALES": "VP",
+        "TEXTE": "Très satisfaite du travail de l'équipe. Je recommande à 100% !",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "Sur devis",
+        "UNITE": "selon les travaux",
+        "NOTE": "Les petits travaux de maçonnerie sont chiffrés selon leur nature. N'hésitez pas à nous décrire votre besoin pour un devis rapide et gratuit.",
+        "LIGNES": [
+          "Diagnostic de votre besoin",
+          "Travaux de maçonnerie courante",
+          "Matériaux adaptés à l'ouvrage",
+          "Travail propre et soigné",
+          "Devis gratuit et sans engagement"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Faites-vous les petits travaux de maçonnerie ?",
+          "A": "Oui. Réparation de muret, reprise d'enduit, scellement, création d'un regard, comblement de fissures : aucun chantier n'est trop petit. Décrivez-nous votre besoin."
+        },
+        {
+          "Q": "Réalisez-vous des dalles et chapes ?",
+          "A": "Oui, nous coulons dalles et chapes pour vos sols intérieurs et extérieurs, avec une préparation soignée du support."
+        },
+        {
+          "Q": "Intervenez-vous rapidement pour une petite réparation ?",
+          "A": "Nous faisons au mieux selon notre planning de chantiers. Contactez-nous en décrivant votre besoin, nous vous donnons un délai et un prix."
+        },
+        {
+          "Q": "Le devis est-il vraiment gratuit ?",
+          "A": "Oui, le déplacement pour la visite de chiffrage et le devis sont gratuits et sans engagement."
+        },
+        {
+          "Q": "Où intervenez-vous ?",
+          "A": "À Saint-Just-Saint-Rambert et dans un rayon d'environ 25 km : Andrézieux-Bouthéon, Montbrison, Saint-Étienne et la plaine du Forez."
+        }
+      ]
+    }
+  ],
+  "ZONES": [
+    {
+      "VILLE": "Andrézieux-Bouthéon",
+      "SLUG": "andrezieux-boutheon",
+      "CODE_POSTAL": "42160",
+      "LOCAL": "Voisine de Saint-Just-Saint-Rambert, Andrézieux-Bouthéon compte de nombreuses maisons de caractère et bâtisses en pierre. Rénovation de façade, encadrements, murs de soutènement : nous intervenons sur tout le bâti ancien de la commune, avec des délais courts grâce à la proximité."
+    },
+    {
+      "VILLE": "Montbrison",
+      "SLUG": "montbrison",
+      "CODE_POSTAL": "42600",
+      "LOCAL": "Ancienne capitale du Forez, Montbrison est riche d'un patrimoine bâti exceptionnel — pierre, brique, encadrements anciens. Notre savoir-faire en rénovation traditionnelle s'y exprime pleinement, du rejointoiement à la chaux à la restauration d'éléments de pierre taillée."
+    },
+    {
+      "VILLE": "Saint-Étienne",
+      "SLUG": "saint-etienne",
+      "CODE_POSTAL": "42000",
+      "LOCAL": "À une vingtaine de minutes, Saint-Étienne mêle immeubles anciens en pierre et maisons de faubourg. Ravalement de façade, murs, reprises de structure : nous intervenons sur le bâti ancien stéphanois avec le même soin du détail."
+    },
+    {
+      "VILLE": "Saint-Galmier",
+      "SLUG": "saint-galmier",
+      "CODE_POSTAL": "42330",
+      "LOCAL": "Village de caractère de la plaine du Forez, Saint-Galmier possède un cœur ancien en pierre que nous savons rénover dans les règles de l'art — façades, encadrements, murets, dans le respect du style local."
+    },
+    {
+      "VILLE": "Sury-le-Comtal",
+      "SLUG": "sury-le-comtal",
+      "CODE_POSTAL": "42450",
+      "LOCAL": "Proche de notre base, Sury-le-Comtal compte de belles demeures anciennes et des murs en pierre à restaurer. Nous y réalisons ravalements, encadrements et murs de soutènement avec la même exigence de finition."
+    },
+    {
+      "VILLE": "Bonson",
+      "SLUG": "bonson",
+      "CODE_POSTAL": "42160",
+      "LOCAL": "Commune voisine sur les bords de Loire, Bonson bénéficie de nos meilleurs délais. Du petit chantier de maçonnerie à la rénovation complète d'une façade en pierre, nous couvrons tous vos besoins."
+    },
+    {
+      "VILLE": "Veauche",
+      "SLUG": "veauche",
+      "CODE_POSTAL": "42340",
+      "LOCAL": "À Veauche et dans la plaine du Forez, nous intervenons sur le bâti ancien comme sur les projets courants de maçonnerie : façades, murs, encadrements, avec un interlocuteur unique du devis à la réception."
+    }
+  ],
+  "PHOTOS": {
+    "HERO": "",
+    "REALISATIONS": [
+      "/images/cr-facade.webp",
+      "/images/cr-escalier.webp",
+      "/images/cr-soutenement.webp",
+      "/images/cr-ouverture.webp",
+      "/images/cr-encadrement1.webp",
+      "/images/cr-encadrement2.webp"
+    ],
+    "ALTS": [
+      "Façade en pierre et brique rénovée par Courage Maçonnerie à Saint-Just-Saint-Rambert",
+      "Escalier maçonné en pierre — chantier Courage Maçonnerie",
+      "Mur de soutènement en pierre réalisé par Courage Maçonnerie",
+      "Création d'ouverture dans un mur en pierre — bâti ancien",
+      "Encadrement de fenêtre en pierre taillée",
+      "Encadrement de fenêtre restauré en pierre"
+    ]
+  },
+  "MENTIONS": {
+    "FORME_JURIDIQUE": "SAS",
+    "CAPITAL": "",
+    "RCS": "Saint-Étienne",
+    "TVA_INTRA": "FR92817658164",
+    "HEBERGEUR": "Cloudflare Pages",
+    "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
+  },
+  "HORAIRES": "Mo-Fr 08:00-20:00"
+}
