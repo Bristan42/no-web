@@ -5,7 +5,7 @@ R=[
  ("Dépannage, chauffe-eau, salle de bains, chauffage — 12 ans d'expérience, assurance décennale, artisan local. Devis gratuit, sans engagement.",
   "Dépannage, chauffe-eau, salle de bains, chauffage — disponible de 7h30 à 22h, assurance décennale, artisan local. Devis gratuit, sans engagement."),
  (">12 ans d'expérience</div>", ">Artisan local</div>"),
- ('<div class="t-num">12 ans</div><div class="t-label">d\'expérience</div>','<div class="t-num">7h30–22h</div><div class="t-label">disponibilité</div>'),
+ ('<div class="t-num">12 ans</div><div class="t-label">d\'expérience</div>','<div class="t-num">7h30 – 22h</div><div class="t-label">disponibilité</div>'),
  ('<div class="cert-name">12 ans</div>\n      <div class="cert-desc">d\'expérience</div>','<div class="cert-name">7h30 – 22h</div>\n      <div class="cert-desc">disponibilité</div>'),
  ("<h3>12 ans d'expérience</h3>", "<h3>Large amplitude horaire</h3>"),
  ("Depuis 2013, nous réalisons tous vos travaux de plomberie et de chauffage avec le même soin et le respect des règles de l'art.",

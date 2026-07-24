@@ -49,7 +49,7 @@
   "SERVICES": [
     {
       "SLUG": "depannage-plomberie",
-      "PHOTO": "/images/op-1.webp",
+      "PHOTO": "/images/stock-depannage.webp",
       "NOM": "Dépannage & urgences",
       "NOM_COURT": "Dépannage",
       "TITRE_H1": "Dépannage plomberie à {{VILLE}}",
@@ -64,9 +64,9 @@
         "Travail propre — protection et nettoyage du chantier"
       ],
       "GALLERY": [
+        "/images/stock-depannage.webp",
         "/images/op-1.webp",
-        "/images/op-4.webp",
-        "/images/op-2.webp"
+        "/images/op-4.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Sonia A.",
@@ -128,7 +128,7 @@
       "GALLERY": [
         "/images/op-4.webp",
         "/images/op-1.webp",
-        "/images/op-2.webp"
+        "/images/stock-depannage.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Michèle D.",
@@ -235,7 +235,7 @@
     },
     {
       "SLUG": "chauffage",
-      "PHOTO": "/images/op-4.webp",
+      "PHOTO": "/images/stock-chaudiere.webp",
       "NOM": "Chauffage & chaudière",
       "NOM_COURT": "Chauffage",
       "TITRE_H1": "Chauffage et chaudière à {{VILLE}}",
@@ -250,9 +250,9 @@
         "Conseils sur les aides (MaPrimeRénov', CEE) selon projet"
       ],
       "GALLERY": [
-        "/images/op-4.webp",
-        "/images/op-1.webp",
-        "/images/op-5.webp"
+        "/images/stock-chaudiere.webp",
+        "/images/stock-radiateur.webp",
+        "/images/op-4.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Michèle D.",
@@ -297,7 +297,7 @@
     },
     {
       "SLUG": "debouchage",
-      "PHOTO": "/images/op-1.webp",
+      "PHOTO": "/images/stock-debouchage.webp",
       "NOM": "Débouchage canalisations",
       "NOM_COURT": "Débouchage",
       "TITRE_H1": "Débouchage de canalisations à {{VILLE}}",
@@ -312,9 +312,9 @@
         "Prix annoncé avant intervention"
       ],
       "GALLERY": [
-        "/images/op-1.webp",
-        "/images/op-4.webp",
-        "/images/op-3.webp"
+        "/images/stock-debouchage.webp",
+        "/images/stock-depannage.webp",
+        "/images/op-1.webp"
       ],
       "TEMOIGNAGE": {
         "NOM": "Sonia A.",
