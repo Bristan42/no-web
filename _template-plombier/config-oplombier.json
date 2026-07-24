@@ -1,0 +1,486 @@
+{
+  "SLUG": "o-plombier",
+  "DOMAIN": "o-plombier.fr",
+  "ENTREPRISE": "Ô'Plombier",
+  "PRENOM": "Votre artisan",
+  "VILLE": "Veauche",
+  "DEPARTEMENT": "42",
+  "REGION": "Auvergne-Rhône-Alpes",
+  "CODE_POSTAL": "42340",
+  "LAT": "45.5646",
+  "LNG": "4.2924",
+  "TEL_DISPLAY": "06 50 95 23 11",
+  "TEL_RAW": "0650952311",
+  "EMAIL": "contact@o-plombier.fr",
+  "EXPERIENCE": "12",
+  "NB_CHANTIERS": "",
+  "NOTE": "4,9",
+  "NB_AVIS": "42",
+  "SIRET": "à confirmer",
+  "ANNEE_CREATION": "2013",
+  "ANNEE": "2026",
+  "RAYON": "25",
+  "FORM_ACTION": "https://api.web3forms.com/submit",
+  "WEB3FORMS_KEY": "97f731bf-359e-46a8-99ec-429d7851a74d",
+  "CF_ANALYTICS_TOKEN": "",
+  "GOOGLE_MAPS_KEY": "",
+  "GOOGLE_PLACE_ID": "",
+  "GOOGLE_GMB_URL": "https://www.google.com/maps/search/?api=1&query=%C3%94%27PLOMBIER+84+Rue+Robert+Schumann+42340+Veauche",
+  "AVIS": [
+    {
+      "NOM": "Maxime D.",
+      "INITIALES": "MD",
+      "TEXTE": "Travail impeccable ! Ô'Plombier a réalisé ma salle de bain et mes toilettes avec beaucoup de soin et une vraie attention aux détails. Délais respectés, finitions parfaites, conseils avisés… Je recommande les yeux fermés !",
+      "PROJET": "Salle de bains — avis Google"
+    },
+    {
+      "NOM": "Sonia A.",
+      "INITIALES": "SA",
+      "TEXTE": "Plombier très réactif et professionnel. Appelé en urgence un samedi, il est intervenu rapidement et a pris le temps de bien analyser la situation.",
+      "PROJET": "Dépannage urgence — avis Google"
+    },
+    {
+      "NOM": "Michèle D.",
+      "INITIALES": "MD",
+      "TEXTE": "Super travail ! Plombier très sympa. Je vais encore faire appel à lui pour d'autres travaux.",
+      "PROJET": "Avis Google"
+    }
+  ],
+  "SERVICES": [
+    {
+      "SLUG": "depannage-plomberie",
+      "PHOTO": "/images/op-1.webp",
+      "NOM": "Dépannage & urgences",
+      "NOM_COURT": "Dépannage",
+      "TITRE_H1": "Dépannage plomberie à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} intervient rapidement à {{VILLE}} ({{DEPARTEMENT}}) : fuite d'eau, WC bouché, chauffe-eau en panne. Prix annoncé avant intervention.",
+      "INTRO": "Une fuite, un WC qui coule, plus d'eau chaude ? Nous intervenons rapidement à {{VILLE}} et alentours. Le diagnostic est clair et le prix est annoncé avant toute réparation — pas de mauvaise surprise.",
+      "AVANTAGES": [
+        "Intervention rapide sur {{VILLE}} et sa région",
+        "Prix annoncé avant toute réparation",
+        "Recherche de fuite non destructive quand c'est possible",
+        "Réparation durable, pas de bricolage provisoire",
+        "Véhicule équipé : la plupart des pannes réglées en 1 passage",
+        "Travail propre — protection et nettoyage du chantier"
+      ],
+      "GALLERY": [
+        "/images/op-1.webp",
+        "/images/op-4.webp",
+        "/images/op-2.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Sonia A.",
+        "INITIALES": "SA",
+        "TEXTE": "Appelé en urgence un samedi, il est intervenu rapidement et a pris le temps de bien analyser la situation. Très réactif et professionnel.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "90 – 250 €",
+        "UNITE": "par intervention courante",
+        "NOTE": "Déplacement + diagnostic + 1re heure : 90 à 160 € selon distance et horaire. Réparation de fuite simple : 120 à 250 €. Prix exact annoncé avant intervention.",
+        "LIGNES": [
+          "Déplacement et diagnostic inclus",
+          "Prix ferme annoncé avant réparation",
+          "Pièces courantes en stock dans le véhicule",
+          "Vérification complète après réparation",
+          "Aucun frais caché"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "En combien de temps pouvez-vous intervenir à {{VILLE}} ?",
+          "A": "Pour une urgence (fuite importante, dégât des eaux), nous faisons le maximum pour intervenir dans la journée, souvent en quelques heures selon la tournée en cours. Pour un dépannage non urgent, un rendez-vous est fixé sous 24 à 48h."
+        },
+        {
+          "Q": "Que faire en attendant le plombier en cas de fuite ?",
+          "A": "Coupez l'arrivée d'eau générale (robinet près du compteur), coupez l'électricité dans la zone touchée si l'eau est proche de prises, et épongez. Prenez des photos pour votre assurance. Nous vous guidons par téléphone si besoin."
+        },
+        {
+          "Q": "Combien coûte un dépannage plomberie ?",
+          "A": "Comptez 90 à 160 € pour le déplacement, le diagnostic et la première heure selon la distance et l'horaire, puis le tarif des pièces éventuelles. Le prix complet est toujours annoncé et validé avec vous AVANT la réparation."
+        },
+        {
+          "Q": "Intervenez-vous le soir et le week-end ?",
+          "A": "Nos horaires habituels sont du lundi au vendredi. Pour les vraies urgences (fuite majeure), contactez-nous : selon la situation, nous trouvons une solution ou vous orientons pour mettre l'installation en sécurité."
+        },
+        {
+          "Q": "La réparation est-elle garantie ?",
+          "A": "Oui. Nos réparations sont couvertes par notre RC professionnelle et notre garantie décennale pour les travaux qui en relèvent. Si un problème identique se reproduit rapidement après notre passage, nous revenons le corriger."
+        }
+      ]
+    },
+    {
+      "SLUG": "chauffe-eau",
+      "PHOTO": "/images/op-4.webp",
+      "NOM": "Chauffe-eau & ballon",
+      "NOM_COURT": "Chauffe-eau",
+      "TITRE_H1": "Remplacement de chauffe-eau à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} remplace et installe votre chauffe-eau à {{VILLE}} : électrique, thermodynamique, gaz. Devis gratuit, pose dans les règles de l'art.",
+      "INTRO": "Plus d'eau chaude, ballon qui fuit ou trop vieux ? Nous remplaçons votre chauffe-eau rapidement : électrique, thermodynamique ou gaz, en vous conseillant la capacité et la technologie adaptées à votre foyer et à votre budget.",
+      "AVANTAGES": [
+        "Conseil sur la capacité adaptée à votre foyer",
+        "Électrique, thermodynamique ou gaz",
+        "Dépose et évacuation de l'ancien ballon incluses",
+        "Pose aux normes : groupe de sécurité, raccordements neufs",
+        "Mise en service et réglages inclus",
+        "Garantie décennale sur l'installation"
+      ],
+      "GALLERY": [
+        "/images/op-4.webp",
+        "/images/op-1.webp",
+        "/images/op-2.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Michèle D.",
+        "INITIALES": "MD",
+        "TEXTE": "Super travail ! Plombier très sympa. Je vais encore faire appel à lui pour d'autres travaux.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "800 – 4 500 €",
+        "UNITE": "fourniture et pose",
+        "NOTE": "Chauffe-eau électrique posé : 800 – 1 800 € selon capacité. Thermodynamique : 2 500 – 4 500 € (éligible aux aides). Devis gratuit avant toute intervention.",
+        "LIGNES": [
+          "Dépose et évacuation de l'ancien appareil",
+          "Fourniture du chauffe-eau (marques reconnues)",
+          "Groupe de sécurité et raccordements neufs",
+          "Mise en service et vérifications",
+          "Devis ferme avant travaux"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Quelle capacité de chauffe-eau choisir ?",
+          "A": "En règle générale : 100 L pour 1-2 personnes, 150-200 L pour 3-4 personnes, 250-300 L au-delà. Nous affinons selon vos habitudes (bains, douches successives) lors du devis."
+        },
+        {
+          "Q": "Électrique ou thermodynamique : que choisir ?",
+          "A": "L'électrique classique est moins cher à l'achat (800-1 800 € posé). Le thermodynamique consomme 2 à 3 fois moins d'électricité et ouvre droit à des aides, mais coûte plus cher à l'installation (2 500-4 500 €). Il est rentabilisé en quelques années si votre local s'y prête — on vous dit honnêtement si c'est pertinent chez vous."
+        },
+        {
+          "Q": "Combien de temps dure le remplacement ?",
+          "A": "Un remplacement standard (même emplacement, même énergie) prend une demi-journée. Vous retrouvez l'eau chaude quelques heures après la pose, le temps de la chauffe."
+        },
+        {
+          "Q": "Quelle est la durée de vie d'un chauffe-eau ?",
+          "A": "En moyenne 10 à 15 ans selon la dureté de l'eau et l'entretien. Des signes comme une eau moins chaude, un bruit de bouilloire ou des traces de rouille annoncent la fin de vie — mieux vaut anticiper que subir la panne."
+        },
+        {
+          "Q": "Reprenez-vous l'ancien ballon ?",
+          "A": "Oui, la dépose et l'évacuation en filière de recyclage sont incluses dans nos devis."
+        }
+      ]
+    },
+    {
+      "SLUG": "salle-de-bains",
+      "PHOTO": "/images/op-5.webp",
+      "NOM": "Salle de bains & sanitaires",
+      "NOM_COURT": "Salle de bains",
+      "TITRE_H1": "Rénovation de salle de bains à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} crée et rénove votre salle de bains à {{VILLE}} : douche à l'italienne, baignoire, WC, meubles. Devis gratuit.",
+      "INTRO": "De la douche à l'italienne au remplacement complet de votre salle de bains, nous gérons la plomberie, la pose des équipements et la coordination avec les autres corps de métier pour un résultat fonctionnel et durable.",
+      "AVANTAGES": [
+        "Étude de l'implantation et conseils matériaux",
+        "Douche à l'italienne, baignoire, WC suspendu",
+        "Meubles vasque et robinetterie toutes gammes",
+        "Étanchéité soignée (natte ou SPEC) sous carrelage",
+        "Coordination carreleur/électricien si besoin",
+        "Garantie décennale sur les réseaux"
+      ],
+      "GALLERY": [
+        "/images/op-5.webp",
+        "/images/op-3.webp",
+        "/images/op-2.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Maxime D.",
+        "INITIALES": "MD",
+        "TEXTE": "Salle de bain et toilettes réalisées avec beaucoup de soin. Délais respectés, finitions parfaites. Je recommande les yeux fermés !",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "3 000 – 15 000 €",
+        "UNITE": "selon l'ampleur du projet",
+        "NOTE": "Douche à l'italienne seule : 3 000 – 7 000 €. Rénovation complète d'une salle de bains : 5 000 – 15 000 € selon surface et équipements.",
+        "LIGNES": [
+          "Étude et plan d'implantation inclus",
+          "Dépose de l'existant et évacuation",
+          "Plomberie, évacuations et alimentation",
+          "Pose des équipements et robinetterie",
+          "Devis détaillé poste par poste"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Combien coûte une rénovation de salle de bains à {{VILLE}} ?",
+          "A": "Une rénovation complète revient en général entre 5 000 € et 15 000 € selon la surface, les équipements choisis et l'état des réseaux. Une douche à l'italienne seule : 3 000 à 7 000 €. Le devis détaillé poste par poste est gratuit."
+        },
+        {
+          "Q": "Combien de temps durent les travaux ?",
+          "A": "Comptez 1 à 2 semaines pour une rénovation complète, selon la surface et les corps de métier à coordonner. Nous établissons un planning précis avant le début du chantier."
+        },
+        {
+          "Q": "Peut-on remplacer une baignoire par une douche ?",
+          "A": "Oui, c'est l'une de nos demandes les plus fréquentes. Le remplacement inclut la modification des évacuations, l'étanchéité et la pose du receveur ou d'une douche à l'italienne. Comptez 3 à 5 jours de travaux."
+        },
+        {
+          "Q": "Gérez-vous le carrelage et l'électricité ?",
+          "A": "Nous réalisons toute la plomberie et la pose des équipements, et nous coordonnons des artisans partenaires de confiance pour le carrelage et l'électricité — un seul interlocuteur pour tout le chantier."
+        },
+        {
+          "Q": "Les travaux sont-ils garantis ?",
+          "A": "Oui : les réseaux (alimentation, évacuation) relèvent de notre garantie décennale, et l'ensemble de nos poses est couvert par notre RC professionnelle."
+        }
+      ]
+    },
+    {
+      "SLUG": "chauffage",
+      "PHOTO": "/images/op-4.webp",
+      "NOM": "Chauffage & chaudière",
+      "NOM_COURT": "Chauffage",
+      "TITRE_H1": "Chauffage et chaudière à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}}, chauffagiste à {{VILLE}} : installation, remplacement et entretien de chaudières, radiateurs, plancher chauffant. Devis gratuit.",
+      "INTRO": "Chaudière en fin de vie, radiateurs froids, projet de plancher chauffant ? Nous installons, remplaçons et entretenons votre système de chauffage pour un confort optimal et des factures maîtrisées.",
+      "AVANTAGES": [
+        "Remplacement de chaudière gaz (condensation)",
+        "Radiateurs : pose, remplacement, équilibrage",
+        "Plancher chauffant hydraulique",
+        "Désembouage de circuit de chauffage",
+        "Entretien annuel avec attestation",
+        "Conseils sur les aides (MaPrimeRénov', CEE) selon projet"
+      ],
+      "GALLERY": [
+        "/images/op-4.webp",
+        "/images/op-1.webp",
+        "/images/op-5.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Michèle D.",
+        "INITIALES": "MD",
+        "TEXTE": "Super travail ! Plombier très sympa. Je vais encore faire appel à lui pour d'autres travaux.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "150 – 7 000 €",
+        "UNITE": "selon la prestation",
+        "NOTE": "Entretien annuel de chaudière : 120 – 200 €. Remplacement chaudière gaz condensation posée : 3 500 – 7 000 € selon modèle et configuration.",
+        "LIGNES": [
+          "Étude de votre installation existante",
+          "Fourniture (marques reconnues) et pose",
+          "Mise en service et réglages",
+          "Attestation d'entretien fournie",
+          "Devis ferme avant travaux"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "L'entretien annuel de la chaudière est-il obligatoire ?",
+          "A": "Oui, pour toute chaudière de 4 à 400 kW, l'entretien annuel est une obligation légale. Il conditionne aussi la garantie de l'appareil et votre couverture assurance. Nous délivrons l'attestation après chaque visite."
+        },
+        {
+          "Q": "Combien coûte le remplacement d'une chaudière gaz ?",
+          "A": "Une chaudière gaz à condensation posée revient en général entre 3 500 € et 7 000 € selon la marque, la puissance et la complexité du raccordement. Le devis est gratuit et détaillé."
+        },
+        {
+          "Q": "Mes radiateurs sont froids en bas ou gargouillent, que faire ?",
+          "A": "C'est souvent un besoin de purge, d'équilibrage, ou un circuit emboué. Un désembouage redonne toute son efficacité à l'installation et fait baisser la consommation. Nous diagnostiquons avant de proposer l'intervention adaptée."
+        },
+        {
+          "Q": "Puis-je bénéficier d'aides pour changer de chauffage ?",
+          "A": "Selon le projet et vos revenus, des aides existent (MaPrimeRénov', CEE). Les conditions évoluent régulièrement : nous faisons le point honnêtement avec vous au moment du devis sur ce qui s'applique à votre cas."
+        },
+        {
+          "Q": "Installez-vous des pompes à chaleur ?",
+          "A": "Selon votre projet, nous vous orientons : nous réalisons les installations qui relèvent de notre savoir-faire et travaillons avec des partenaires qualifiés pour les projets qui exigent des certifications spécifiques. On vous le dit clairement dès le devis."
+        }
+      ]
+    },
+    {
+      "SLUG": "debouchage",
+      "PHOTO": "/images/op-1.webp",
+      "NOM": "Débouchage canalisations",
+      "NOM_COURT": "Débouchage",
+      "TITRE_H1": "Débouchage de canalisations à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} débouche vos canalisations à {{VILLE}} : évier, WC, douche, colonne. Matériel professionnel, intervention rapide.",
+      "INTRO": "Évier qui se vide mal, WC bouché, odeurs qui remontent ? Nous intervenons avec du matériel professionnel — furet électrique, pompe, caméra d'inspection — pour déboucher durablement, pas juste déplacer le bouchon.",
+      "AVANTAGES": [
+        "Débouchage évier, WC, douche, baignoire",
+        "Furet électrique et pompe haute pression",
+        "Caméra d'inspection pour localiser le problème",
+        "Traitement des odeurs et conseils préventifs",
+        "Intervention propre — zone protégée et nettoyée",
+        "Prix annoncé avant intervention"
+      ],
+      "GALLERY": [
+        "/images/op-1.webp",
+        "/images/op-4.webp",
+        "/images/op-3.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Sonia A.",
+        "INITIALES": "SA",
+        "TEXTE": "Appelé en urgence un samedi, il est intervenu rapidement et a pris le temps de bien analyser la situation. Très réactif et professionnel.",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "100 – 600 €",
+        "UNITE": "selon l'accès et l'ampleur",
+        "NOTE": "Débouchage simple (évier, WC) : 100 – 300 €. Curage de colonne ou réseau avec caméra : 200 – 600 €. Prix annoncé avant intervention.",
+        "LIGNES": [
+          "Diagnostic de l'origine du bouchon",
+          "Débouchage mécanique professionnel",
+          "Inspection caméra si nécessaire",
+          "Vérification de l'écoulement complet",
+          "Conseils pour éviter la récidive"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Combien coûte un débouchage à {{VILLE}} ?",
+          "A": "Un débouchage simple (évier, WC, douche) revient entre 100 € et 300 €. Si le bouchon est profond (colonne, réseau enterré) et nécessite caméra ou curage, comptez 200 à 600 €. Le prix est annoncé avant l'intervention."
+        },
+        {
+          "Q": "Les produits déboucheurs du commerce sont-ils efficaces ?",
+          "A": "Rarement sur un vrai bouchon, et ils abîment les canalisations (surtout le PVC) tout en étant dangereux à manipuler. Si l'eau ne s'écoule plus du tout, évitez d'en verser : cela complique notre intervention."
+        },
+        {
+          "Q": "Comment savoir d'où vient le bouchon ?",
+          "A": "Si un seul équipement est touché, le bouchon est local. Si plusieurs équipements refoulent en même temps, il est dans la colonne ou le réseau. Notre caméra d'inspection localise précisément le problème."
+        },
+        {
+          "Q": "Le débouchage est-il garanti ?",
+          "A": "Nous vérifions l'écoulement complet avant de partir. Si le même bouchon se reforme dans les jours qui suivent, c'est le signe d'un problème structurel (contre-pente, racines, casse) : l'inspection caméra permet alors de le traiter à la source."
+        },
+        {
+          "Q": "Comment éviter les bouchons ?",
+          "A": "Un panier filtre sur les bondes, jamais de graisse ni de lingettes dans les canalisations, et un entretien à l'eau bouillante régulier. Pour les colonnes sensibles, un curage préventif tous les 2-3 ans évite les urgences."
+        }
+      ]
+    },
+    {
+      "SLUG": "renovation-plomberie",
+      "PHOTO": "/images/op-1.webp",
+      "NOM": "Rénovation de plomberie",
+      "NOM_COURT": "Rénovation",
+      "TITRE_H1": "Rénovation de plomberie à {{VILLE}}",
+      "DESCRIPTION_SEO": "{{ENTREPRISE}} rénove vos réseaux de plomberie à {{VILLE}} : remplacement cuivre/PER, colonnes, mise aux normes. Devis gratuit.",
+      "INTRO": "Canalisations vétustes, plomb à éradiquer, fuites à répétition, pression irrégulière ? Nous rénovons partiellement ou totalement vos réseaux d'alimentation et d'évacuation, en cuivre ou en PER, avec un minimum de dégâts sur l'existant.",
+      "AVANTAGES": [
+        "Remplacement des réseaux vétustes (plomb, acier, vieux cuivre)",
+        "Alimentation en cuivre ou PER selon le contexte",
+        "Reprise des évacuations et colonnes",
+        "Pose de vannes d'arrêt par zone",
+        "Remise aux normes (clapets, groupe de sécurité)",
+        "Garantie décennale sur les réseaux"
+      ],
+      "GALLERY": [
+        "/images/op-1.webp",
+        "/images/op-5.webp",
+        "/images/op-4.webp"
+      ],
+      "TEMOIGNAGE": {
+        "NOM": "Maxime D.",
+        "INITIALES": "MD",
+        "TEXTE": "Salle de bain et toilettes réalisées avec beaucoup de soin. Délais respectés, finitions parfaites. Je recommande les yeux fermés !",
+        "PROJET": "Avis Google vérifié"
+      },
+      "PRIX": {
+        "FOURCHETTE": "1 500 – 8 000 €",
+        "UNITE": "selon l'ampleur",
+        "NOTE": "Reprise partielle (cuisine ou salle d'eau) : 1 500 – 3 500 €. Rénovation complète d'un appartement : 3 000 – 8 000 € selon surface et accès.",
+        "LIGNES": [
+          "Diagnostic complet de l'installation",
+          "Remplacement des tronçons vétustes",
+          "Cuivre ou PER selon configuration",
+          "Essais de pression et vérifications",
+          "Devis détaillé après visite gratuite"
+        ]
+      },
+      "FAQ": [
+        {
+          "Q": "Quand faut-il rénover sa plomberie ?",
+          "A": "Des fuites répétées, une eau colorée au robinet, une pression en baisse ou des canalisations en plomb (interdites pour l'eau potable) sont des signaux clairs. Dans un logement de plus de 40 ans jamais rénové, un diagnostic s'impose avant d'autres travaux."
+        },
+        {
+          "Q": "Cuivre ou PER : que choisir ?",
+          "A": "Le cuivre est durable (50 ans et plus), résistant et recyclable, mais plus cher en pose. Le PER est plus économique, rapide à poser et insensible à la corrosion, idéal en rénovation. Nous recommandons selon la configuration — souvent un mix des deux."
+        },
+        {
+          "Q": "Faut-il tout casser pour remplacer la plomberie ?",
+          "A": "Non. En rénovation, nous passons les nouveaux réseaux par les gaines existantes, plinthes techniques ou coffrages, en limitant les saignées au strict nécessaire. L'état des lieux préalable définit le chemin le moins invasif."
+        },
+        {
+          "Q": "Combien de temps dure une rénovation complète ?",
+          "A": "Pour un appartement, comptez 3 à 10 jours selon la surface et l'accessibilité. L'eau n'est coupée que par tranches : vous gardez un point d'eau fonctionnel chaque soir."
+        },
+        {
+          "Q": "Ces travaux sont-ils garantis ?",
+          "A": "Oui, les réseaux d'alimentation et d'évacuation relèvent de la garantie décennale. Chaque chantier se termine par des essais de pression documentés."
+        }
+      ]
+    }
+  ],
+  "ZONES": [
+    {
+      "VILLE": "Andrézieux-Bouthéon",
+      "SLUG": "andrezieux-boutheon",
+      "CODE_POSTAL": "42160"
+    },
+    {
+      "VILLE": "Saint-Galmier",
+      "SLUG": "saint-galmier",
+      "CODE_POSTAL": "42330"
+    },
+    {
+      "VILLE": "Montrond-les-Bains",
+      "SLUG": "montrond-les-bains",
+      "CODE_POSTAL": "42210"
+    },
+    {
+      "VILLE": "Saint-Just-Saint-Rambert",
+      "SLUG": "saint-just-saint-rambert",
+      "CODE_POSTAL": "42170"
+    },
+    {
+      "VILLE": "Sury-le-Comtal",
+      "SLUG": "sury-le-comtal",
+      "CODE_POSTAL": "42450"
+    },
+    {
+      "VILLE": "La Fouillouse",
+      "SLUG": "la-fouillouse",
+      "CODE_POSTAL": "42480"
+    },
+    {
+      "VILLE": "Veauchette",
+      "SLUG": "veauchette",
+      "CODE_POSTAL": "42340"
+    }
+  ],
+  "PHOTOS": {
+    "HERO": "",
+    "REALISATIONS": [
+      "/images/op-5.webp",
+      "/images/op-3.webp",
+      "/images/op-2.webp",
+      "/images/op-1.webp",
+      "/images/op-4.webp"
+    ],
+    "ALTS": [
+      "Salle de bains rénovée par Ô'Plombier — douche, meuble vasque et sèche-serviettes",
+      "Douche d'angle neuve posée par Ô'Plombier",
+      "Colonne de douche thermostatique installée par Ô'Plombier",
+      "Réseaux d'alimentation et d'évacuation neufs avec adoucisseur",
+      "Surpresseur et filtration d'eau installés par Ô'Plombier"
+    ]
+  },
+  "MENTIONS": {
+    "FORME_JURIDIQUE": "à confirmer",
+    "CAPITAL": "",
+    "RCS": "Saint-Étienne",
+    "TVA_INTRA": "à confirmer",
+    "HEBERGEUR": "Cloudflare Pages",
+    "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
+  },
+  "HORAIRES": "Mo-Fr 07:30-22:00"
+}

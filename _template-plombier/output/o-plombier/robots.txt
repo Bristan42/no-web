@@ -1,0 +1,3 @@
+# DÉMO PROSPECT — indexation bloquée jusqu'à validation client
+User-agent: *
+Disallow: /
