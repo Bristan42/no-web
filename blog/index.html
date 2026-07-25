@@ -11,7 +11,7 @@
  <meta property="og:description" content="Guides pratiques pour aider les artisans de la Loire à être visibles sur Google et à trouver des clients.">
  <meta property="og:url" content="https://no-web.fr/blog/">
  <meta property="og:type" content="website">
- <meta property="og:image" content="https://no-web.fr/bristan.webp">
+ <meta property="og:image" content="https://no-web.fr/blog/img/macon-chantier-extension-gros-oeuvre.webp">
  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Blog","@id":"https://no-web.fr/blog/#blog","name":"Conseils No Web","description":"Conseils pour aider les artisans de la Loire à être visibles sur Google et à trouver des clients.","url":"https://no-web.fr/blog/","inLanguage":"fr-FR","publisher":{"@type":"Organization","name":"No Web","url":"https://no-web.fr","logo":{"@type":"ImageObject","url":"https://no-web.fr/logo.svg"}},"blogPost":[{"@type":"BlogPosting","headline":"Maçon : comment trouver des clients et remplir son planning en 2026","url":"https://no-web.fr/blog/trouver-clients-macon/","datePublished":"2026-07-24","author":{"@type":"Person","name":"Bristan Farré"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://no-web.fr/"},{"@type":"ListItem","position":2,"name":"Conseils","item":"https://no-web.fr/blog/"}]}]}</script>
  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
  <style>
@@ -55,9 +55,10 @@
  /* Featured card */
  .featured-card{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color .25s,background .25s;margin-bottom:56px}
  .featured-card:hover{border-color:rgba(124,92,252,0.4);background:var(--bg-card-h)}
- .featured-visual{position:relative;background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(56,189,248,0.08));min-height:230px;display:flex;align-items:center;justify-content:center;padding:32px}
+ .featured-visual{position:relative;background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(56,189,248,0.08));min-height:230px;display:flex;align-items:center;justify-content:center;padding:32px;overflow:hidden}
  .featured-visual svg{width:80px;height:80px;opacity:.9}
- .featured-tagpill{position:absolute;top:18px;left:18px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c4b5fd;background:rgba(124,58,237,0.2);border:1px solid rgba(124,92,252,0.35);padding:5px 11px;border-radius:20px}
+ .featured-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+ .featured-tagpill{position:absolute;top:18px;left:18px;z-index:2;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c4b5fd;background:rgba(124,58,237,0.2);border:1px solid rgba(124,92,252,0.35);padding:5px 11px;border-radius:20px}
  .featured-body{padding:36px 36px}
  .featured-cat{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#38bdf8;margin-bottom:14px}
  .featured-body h2{font-size:25px;font-weight:800;letter-spacing:-0.8px;line-height:1.2;margin-bottom:14px}
@@ -146,7 +147,7 @@
   <a href="/blog/trouver-clients-macon/" class="featured-card">
    <div class="featured-visual">
     <span class="featured-tagpill">Nouveau</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
+    <img src="/blog/img/macon-chantier-extension-gros-oeuvre.webp" width="800" height="600" class="featured-img" alt="Chantier de maçonnerie : extension de maison en gros œuvre avec échafaudage">
    </div>
    <div class="featured-body">
     <div class="featured-cat">Acquisition client · Maçonnerie</div>
