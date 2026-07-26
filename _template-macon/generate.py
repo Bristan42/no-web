@@ -25,6 +25,144 @@ SLUG = config["SLUG"]
 OUTPUT = BASE / "output" / SLUG
 IMAGES_SRC = BASE / "images"
 
+# ══════════════════════════════════════════════════════════════════════════════
+# GÉNÉRATEUR v2 — corrections automatiques (fin des retouches manuelles par démo)
+# ══════════════════════════════════════════════════════════════════════════════
+_EXP   = str(config.get("EXPERIENCE", "")).strip()
+_ANNEE = str(config.get("ANNEE_CREATION", "")).strip()
+_EMAIL = str(config.get("EMAIL", "")).strip()
+_SPEC      = config.get("SPECIALITE", "").strip() or "Maçonnerie"
+_SPEC_SUB  = config.get("SPECIALITE_SUB", "").strip() or "générale"
+_SPEC_PHR  = config.get("SPECIALITE_PHRASE", "").strip() or f"spécialiste en {_SPEC.lower()}"
+_SPEC_PHR_CAP = _SPEC_PHR[:1].upper() + _SPEC_PHR[1:]
+_WHATSAPP  = str(config.get("WHATSAPP", "")).strip()   # ex "33668181811" (sans +) ; vide = pas de WhatsApp
+SERVICE_LABELS = {s["SLUG"]: (s.get("NOM") or "").strip() for s in config.get("SERVICES", []) if s.get("SLUG")}
+
+
+def _fix_empty_fields(text):
+    """Nettoie les placeholders liés à l'ancienneté/année AVANT substitution
+    (on matche {{EXPERIENCE}}/{{ANNEE_CREATION}} → aucun risque de toucher un vrai « 10 ans »)."""
+    if not _EXP:
+        # paires num/label (stat + certification)
+        text = text.replace(
+            '<div class="t-num">{{EXPERIENCE}} ans</div><div class="t-label">d\'expérience</div>',
+            f'<div class="t-num">{_SPEC}</div><div class="t-label">{_SPEC_SUB}</div>')
+        text = text.replace('<div class="cert-name">{{EXPERIENCE}} ans</div>',
+                            f'<div class="cert-name">{_SPEC}</div>')
+        text = text.replace('<div class="cert-desc">d\'expérience</div>',
+                            f'<div class="cert-desc">{_SPEC_SUB}</div>')
+        # inline "X ans d'expérience" (hero-sub, trust pills)
+        text = text.replace("{{EXPERIENCE}} ans d'expérience", _SPEC_PHR)
+        # phrases "depuis X ans"
+        text = text.replace("Artisan local depuis {{EXPERIENCE}} ans — ", "Artisan local — ")
+        text = text.replace("à {{VILLE}} depuis {{EXPERIENCE}} ans.", f"à {{{{VILLE}}}}, {_SPEC_PHR}.")
+        text = text.replace("depuis {{EXPERIENCE}} ans.", ".")
+        text = text.replace("{{EXPERIENCE}} ans de savoir-faire", "un vrai savoir-faire")
+        # reste générique
+        text = text.replace("{{EXPERIENCE}} ans", _SPEC)
+        text = text.replace("depuis {{EXPERIENCE}}", "")
+    if not _ANNEE:
+        text = text.replace("Depuis {{ANNEE_CREATION}}, nous réalisons", "Nous réalisons")
+        text = text.replace("Depuis {{ANNEE_CREATION}}", _SPEC)
+        text = text.replace("depuis {{ANNEE_CREATION}}", "")
+    return text
+
+
+def _localbusiness_schema():
+    mentions = config.get("MENTIONS", {})
+    data = {
+        "@context": "https://schema.org", "@type": "GeneralContractor",
+        "name": config["ENTREPRISE"],
+        "telephone": "+33" + str(config["TEL_RAW"]).lstrip("0"),
+        "address": {"@type": "PostalAddress", "streetAddress": config.get("ADRESSE", ""),
+                    "addressLocality": config["VILLE"], "postalCode": str(config["CODE_POSTAL"]),
+                    "addressCountry": "FR"},
+        "url": f'https://{config["DOMAIN"]}/',
+        "areaServed": f'{config["VILLE"]} et le {config["DEPARTEMENT"]}',
+        "priceRange": "€€",
+    }
+    if config.get("LAT") and config.get("LNG"):
+        data["geo"] = {"@type": "GeoCoordinates", "latitude": config["LAT"], "longitude": config["LNG"]}
+    if config.get("NOTE") and config.get("NB_AVIS"):
+        data["aggregateRating"] = {"@type": "AggregateRating",
+                                   "ratingValue": str(config["NOTE"]).replace(",", "."),
+                                   "reviewCount": str(config["NB_AVIS"])}
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
+
+
+def _whatsapp_bits():
+    """Retourne (lien_footer, bulle_mobile, style_media) ou ('','','') si pas de WhatsApp."""
+    if not _WHATSAPP:
+        return "", "", ""
+    path = ("M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2 7.7L.5 31.5l8-2.1c2.2 1.2 4.8 1.9 7.5 1.9 8.6 0 "
+            "15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.8 1.3 1.3-4.6-.3-.5C3.6 "
+            "20.4 3 18.2 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13-5.8 12.5-13 12.5zm7.1-9.4c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.3.4-1 "
+            "1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.6.1-.3 "
+            "0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.2 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 "
+            "4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5z")
+    href = (f'https://wa.me/{_WHATSAPP}?text=Bonjour%2C%20je%20vous%20contacte%20via%20'
+            f'votre%20site%20pour%20un%20projet%20de%20ma%C3%A7onnerie.')
+    footer = (f'\n          <a href="{href}" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">'
+              f'<svg width="14" height="14" viewBox="0 0 32 32" fill="#25D366" aria-hidden="true"><path d="{path}"/></svg>WhatsApp</a>')
+    bubble = (f'<a href="{href}" target="_blank" rel="noopener" class="wa-float" aria-label="Contacter sur WhatsApp" '
+              f'style="position:fixed;right:18px;bottom:calc(84px + env(safe-area-inset-bottom, 0px));z-index:301;'
+              f'width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;'
+              f'justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.28)">'
+              f'<svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="{path}"/></svg></a>\n')
+    style = '<style>@media(min-width:769px){.wa-float{display:none!important}}</style>\n'
+    return footer, bubble, style
+
+
+_WA_FOOTER, _WA_BUBBLE, _WA_STYLE = _whatsapp_bits()
+
+
+def postprocess(html):
+    """Passe finale (après substitution) : labels services, mailto, schema, WhatsApp, srcset, FAQ."""
+    # 1) Libellés services = NOM du config (nav, drawer, footer, cartes)
+    for slug, nom in SERVICE_LABELS.items():
+        if not nom:
+            continue
+        html = re.sub(r'(href="/' + re.escape(slug) + r'/"[^>]*>)[^<]{1,70}(</a>)',
+                      lambda m: m.group(1) + nom + m.group(2), html)
+        # titre <h3> de la carte service sur la home (premier h3 après le href du slug)
+        html = re.sub(r'(href="/' + re.escape(slug) + r'/"[^>]*>(?:(?!</a>).){0,600}?<h3[^>]*>)[^<]{1,70}(</h3>)',
+                      lambda m: m.group(1) + nom + m.group(2), html, count=1, flags=re.S)
+    # 2) E-mail absent → retirer les liens mailto vides
+    if not _EMAIL:
+        html = re.sub(r'\s*<a href="mailto:">\s*</a>', '', html)
+        html = re.sub(r'\s*<a href="mailto:">\s*<svg.*?</svg>\s*</a>', '', html, flags=re.S)
+        html = re.sub(r'<a href="mailto:">(.*?)</a>', r'\1', html, flags=re.S)
+        html = re.sub(r'(<br>)?\s*E-mail\s*:\s*(<a href="mailto:">\s*</a>)?', '', html)
+    # 3) Schema.org LocalBusiness (une fois, dans le head)
+    if 'GeneralContractor' not in html and '</head>' in html:
+        html = html.replace('</head>', _localbusiness_schema() + '\n</head>', 1)
+    # 4) FAQ : espace insécable avant ? ! (typo FR, évite l'orphelin)
+    html = re.sub(r'(class="faq-q">[^<]*?) ([?!])', r'\1 \2', html)
+    # 5) srcset + preload sur le héros eager (si variante -960 dispo)
+    def _hero_srcset(m):
+        tag = m.group(0)
+        mm = re.search(r'src="(/images/([a-z0-9-]+)\.webp)"', tag)
+        if not mm or 'srcset' in tag:
+            return tag
+        base = mm.group(2)
+        if not (IMAGES_SRC / f"{base}-960.webp").exists():
+            return tag
+        add = (f'srcset="/images/{base}-960.webp 960w, /images/{base}.webp 1600w" '
+               f'sizes="(max-width:700px) 92vw, 480px" fetchpriority="high" ')
+        return tag[:5] + add + tag[5:]
+    html = re.sub(r'<img[^>]*loading="eager"[^>]*>', _hero_srcset, html)
+    # 6) WhatsApp : lien footer + bulle mobile
+    if _WHATSAPP:
+        tel_anchor = f'{config["TEL_DISPLAY"]}\n          </a>'
+        fstart = html.find('<footer')
+        if fstart >= 0 and 'wa.me/' not in html[fstart:html.find('</footer>', fstart) + 9]:
+            html = html.replace(tel_anchor, tel_anchor + _WA_FOOTER, 1)
+        if '</body>' in html and 'wa-float' not in html:
+            html = html.replace('</body>', _WA_BUBBLE + '</body>', 1)
+        if '</head>' in html and '.wa-float{display:none' not in html:
+            html = html.replace('</head>', _WA_STYLE + '</head>', 1)
+    return html
+
 # ── Nettoyage + création dossier output (préserve .git) ──────────────────────
 if OUTPUT.exists():
     for item in OUTPUT.iterdir():
@@ -42,6 +180,7 @@ print(f"✓ Dossier output : {OUTPUT}")
 
 # ── Lecture index.html source ─────────────────────────────────────────────────
 index_src = (BASE / "index.html").read_text(encoding="utf-8")
+index_src = _fix_empty_fields(index_src)   # v2 : nettoie ancienneté/année vides avant extraction header/footer
 
 # ── Extraction CSS partagé ────────────────────────────────────────────────────
 css_match = re.search(r'<style>([\s\S]*?)</style>', index_src)
@@ -190,7 +329,7 @@ def build_vars(extra=None):
 
 def apply_vars(template_str, variables):
     """Remplace tous les {{VAR}} par leur valeur."""
-    result = template_str
+    result = _fix_empty_fields(template_str)   # v2 : nettoie champs vides avant substitution
     for key, val in variables.items():
         result = result.replace("{{" + key + "}}", str(val))
     return result
@@ -198,7 +337,7 @@ def apply_vars(template_str, variables):
 
 def write_page(folder, html_content):
     folder.mkdir(parents=True, exist_ok=True)
-    (folder / "index.html").write_text(html_content, encoding="utf-8")
+    (folder / "index.html").write_text(postprocess(html_content), encoding="utf-8")
 
 
 # ── Génération AVIS HTML ──────────────────────────────────────────────────────
@@ -224,7 +363,15 @@ def photo_tag(src, alt="Réalisation maçonnerie"):
 photo_alts = photos.get("ALTS", [])
 def _alt(i):
     return photo_alts[i-1] if i <= len(photo_alts) and photo_alts[i-1] else f"Réalisation maçonnerie {i}"
-photo_real_vars = {f"PHOTO_REAL_{i}": photo_tag(src, _alt(i)) for i, src in enumerate(real_photos[:5], 1)}
+def _photo_slot(i):
+    """Photo pour l'emplacement i (1-based). Cycle sur les photos dispo pour éviter les {{}} bruts."""
+    avail = [s for s in real_photos if s]
+    if not avail:
+        return photo_tag("", _alt(i))
+    src = avail[(i - 1) % len(avail)]
+    return photo_tag(src, _alt(i))
+
+photo_real_vars = {f"PHOTO_REAL_{i}": _photo_slot(i) for i in range(1, 7)}
 
 base_vars = build_vars({
     "ZONE_CHIPS": zone_chips_html,
@@ -255,8 +402,8 @@ print("✓ merci/index.html")
 # ── PAGE : réalisations ───────────────────────────────────────────────────────
 reals_tpl = (TEMPLATES / "realisations.html").read_text(encoding="utf-8")
 reals_vars = build_vars()
-for i, src in enumerate(real_photos[:5], 1):
-    reals_vars[f"PHOTO_REAL_{i}"] = photo_tag(src, _alt(i))
+for i in range(1, 7):
+    reals_vars[f"PHOTO_REAL_{i}"] = _photo_slot(i)
 reals_html = apply_vars(reals_tpl, reals_vars)
 write_page(OUTPUT / "realisations", reals_html)
 print("✓ realisations/index.html")
