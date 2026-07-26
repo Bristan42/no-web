@@ -307,6 +307,7 @@ def build_vars(extra=None):
         "FOOTER":         shared_footer,
         "SHARED_SCRIPT":  shared_script,
         "CF_ANALYTICS_SCRIPT": _cf_analytics_script(),
+        "OG_IMAGE": (config.get("PHOTOS",{}).get("REALISATIONS") or ["real-1.webp"])[0].split("/")[-1],
     }
     # Mentions légales
     mentions = config.get("MENTIONS", {})

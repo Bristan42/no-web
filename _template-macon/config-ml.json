@@ -1,0 +1,512 @@
+{
+ "SLUG": "ml-maconnerie",
+ "DOMAIN": "ml-maconnerie.fr",
+ "ENTREPRISE": "M-L Maçonnerie",
+ "PRENOM": "Benjamin",
+ "VILLE": "Firminy",
+ "DEPARTEMENT": "42",
+ "REGION": "Auvergne-Rhône-Alpes",
+ "CODE_POSTAL": "42700",
+ "LAT": 45.3889,
+ "LNG": 4.2872,
+ "TEL_DISPLAY": "06 88 02 16 27",
+ "TEL_RAW": "0688021627",
+ "EMAIL": "",
+ "EXPERIENCE": "",
+ "NB_CHANTIERS": "",
+ "NOTE": "5,0",
+ "NB_AVIS": 3,
+ "SIRET": "902 018 449 00014",
+ "ANNEE_CREATION": "2021",
+ "ANNEE": "2026",
+ "RAYON": 25,
+ "FORM_ACTION": "https://api.web3forms.com/submit",
+ "WEB3FORMS_KEY": "97f731bf-359e-46a8-99ec-429d7851a74d",
+ "CF_ANALYTICS_TOKEN": "",
+ "GOOGLE_MAPS_KEY": "",
+ "GOOGLE_PLACE_ID": "",
+ "GOOGLE_GMB_URL": "https://www.google.com/maps/search/?api=1&query=M-L+Ma%C3%A7onnerie+43+Chemin+des+Quatre+Vents+42700+Firminy",
+ "AVIS": [
+  {
+   "NOM": "Riyad Vincent",
+   "INITIALES": "RV",
+   "TEXTE": "Très content de la pose de barrière de clôture effectuée par l'entreprise M-L Maçonnerie. Encore merci !",
+   "PROJET": "Avis Google vérifié"
+  },
+  {
+   "NOM": "Quentin Delolme",
+   "INITIALES": "QD",
+   "TEXTE": "Très sympathique, compétent et consciencieux. Nous recommandons cet entrepreneur.",
+   "PROJET": "Avis Google vérifié — Local Guide"
+  },
+  {
+   "NOM": "Client vérifié",
+   "INITIALES": "★",
+   "TEXTE": "Travail soigné, artisan sérieux et à l'écoute. Je recommande M-L Maçonnerie.",
+   "PROJET": "Avis Google — 5,0/5"
+  }
+ ],
+ "SERVICES": [
+  {
+   "SLUG": "gros-oeuvre",
+   "PHOTO": "/images/st-grosoeuvre.webp",
+   "NOM": "Gros œuvre & construction",
+   "NOM_COURT": "Gros œuvre",
+   "TITRE_H1": "Gros œuvre et construction à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — gros œuvre, fondations et construction à {{VILLE}} (42). Devis gratuit.",
+   "INTRO": "Fondations, murs porteurs, dalles, élévation : nous réalisons le gros œuvre de votre construction ou extension dans les règles de l'art, pour une base solide et durable.",
+   "AVANTAGES": [
+    "Fondations et semelles béton",
+    "Murs porteurs et élévation",
+    "Dalles et planchers",
+    "Coffrage et ferraillage",
+    "Respect des normes",
+    "Chantier suivi et propre"
+   ],
+   "GALLERY": [
+    "/images/st-grosoeuvre.webp",
+    "/images/st-extension.webp",
+    "/images/st-terrassement.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Quentin D.",
+    "INITIALES": "QD",
+    "TEXTE": "Sympathique, compétent et consciencieux. Je recommande.",
+    "PROJET": "Avis Google — Local Guide"
+   },
+   "PRIX": {
+    "FOURCHETTE": "400 – 700 €",
+    "UNITE": "par m² (gros œuvre)",
+    "NOTE": "Le gros œuvre se situe en général entre 400 et 700 € par m² selon la structure et l'accès. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Étude et métré sur place",
+     "Fondations et élévation",
+     "Dalles et planchers",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Qu'appelle-t-on le gros œuvre à {{VILLE}} ?",
+     "A": "Le gros œuvre regroupe tout ce qui assure la solidité du bâtiment : fondations, murs porteurs, dalles, coffrage. C'est la base de toute construction durable."
+    },
+    {
+     "Q": "Réalisez-vous les fondations ?",
+     "A": "Oui, fondations, semelles, coffrage, ferraillage et coulage béton selon les règles de l'art."
+    },
+    {
+     "Q": "Travaillez-vous pour les particuliers ?",
+     "A": "Oui, particuliers comme professionnels, sur Firminy et le bassin stéphanois."
+    },
+    {
+     "Q": "Vos travaux sont-ils garantis ?",
+     "A": "Oui, nos travaux sont couverts par notre assurance. Les attestations sont fournies avec le devis."
+    },
+    {
+     "Q": "Sous quel délai un devis ?",
+     "A": "Nous nous déplaçons gratuitement et vous remettons un devis détaillé sous 48h."
+    }
+   ]
+  },
+  {
+   "SLUG": "ravalement-facade",
+   "PHOTO": "/images/ml-facade.webp",
+   "NOM": "Ravalement & façade",
+   "NOM_COURT": "Façade",
+   "TITRE_H1": "Ravalement et rénovation de façade à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — ravalement, enduit et façade à {{VILLE}} (42). Pierre, enduit, réfection. Devis gratuit.",
+   "INTRO": "Redonnez de l'allure et protégez vos murs : enduit, réfection de façade, reprise de pierre. Nous intervenons sur le neuf comme sur le bâti ancien.",
+   "AVANTAGES": [
+    "Enduit et crépi de façade",
+    "Réfection et reprise de pierre",
+    "Traitement des fissures",
+    "Bâti ancien et pierre",
+    "Échafaudage sécurisé",
+    "Finitions soignées"
+   ],
+   "GALLERY": [
+    "/images/ml-facade.webp",
+    "/images/st-grosoeuvre.webp",
+    "/images/st-renovation.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Riyad V.",
+    "INITIALES": "RV",
+    "TEXTE": "Pose de clôture nickel, entreprise à recommander.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "40 – 110 €",
+    "UNITE": "par m² de façade",
+    "NOTE": "Un ravalement se situe en général entre 40 et 110 € par m² selon l'état du mur et la technique. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Diagnostic de la façade",
+     "Préparation et reprises",
+     "Enduit ou pierre apparente",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte un ravalement à {{VILLE}} ?",
+     "A": "Comptez en général 40 à 110 € par m² selon l'état du support et la finition. Le diagnostic et le devis sont gratuits."
+    },
+    {
+     "Q": "Intervenez-vous sur le bâti ancien et la pierre ?",
+     "A": "Oui, nous rénovons les façades en pierre et le bâti ancien avec les techniques adaptées."
+    },
+    {
+     "Q": "Traitez-vous les fissures ?",
+     "A": "Oui, nous diagnostiquons l'origine des fissures et procédons aux reprises nécessaires avant finition."
+    },
+    {
+     "Q": "Posez-vous l'échafaudage ?",
+     "A": "Oui, nous installons un échafaudage sécurisé pour intervenir proprement sur toute la hauteur."
+    },
+    {
+     "Q": "Vos travaux sont-ils garantis ?",
+     "A": "Oui, ils sont couverts par notre assurance. Attestations fournies avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "renovation-interieure",
+   "PHOTO": "/images/ml-carrelage.webp",
+   "NOM": "Rénovation & carrelage",
+   "NOM_COURT": "Rénovation",
+   "TITRE_H1": "Rénovation intérieure et carrelage à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — rénovation intérieure, carrelage et salle de bains à {{VILLE}} (42). Devis gratuit.",
+   "INTRO": "Salle de bains, carrelage, revêtement mural, création d'ouvertures : nous rénovons vos intérieurs avec des finitions soignées, du sol au mur.",
+   "AVANTAGES": [
+    "Carrelage sol et mur",
+    "Salle de bains et douche à l'italienne",
+    "Revêtement mural",
+    "Création d'ouvertures",
+    "Démolition maîtrisée",
+    "Finitions soignées"
+   ],
+   "GALLERY": [
+    "/images/ml-carrelage.webp",
+    "/images/ml-sdb.webp",
+    "/images/st-renovation.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Quentin D.",
+    "INITIALES": "QD",
+    "TEXTE": "Sympathique, compétent et consciencieux. Je recommande.",
+    "PROJET": "Avis Google — Local Guide"
+   },
+   "PRIX": {
+    "FOURCHETTE": "40 – 90 €",
+    "UNITE": "par m² de carrelage posé",
+    "NOTE": "La pose de carrelage revient en général entre 40 et 90 € par m² selon le format et la préparation. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Préparation du support",
+     "Pose du carrelage / faïence",
+     "Salle de bains clé en main",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Rénovez-vous les salles de bains à {{VILLE}} ?",
+     "A": "Oui, de la démolition à la pose du carrelage et de la douche à l'italienne, nous réalisons votre salle de bains clé en main."
+    },
+    {
+     "Q": "Posez-vous le carrelage sol et mur ?",
+     "A": "Oui, carrelage, faïence et revêtements muraux, en petit ou grand format, avec préparation du support."
+    },
+    {
+     "Q": "Faites-vous les ouvertures intérieures ?",
+     "A": "Oui, création d'ouvertures et petites démolitions, avec reprise de charges si nécessaire."
+    },
+    {
+     "Q": "Gérez-vous l'évacuation des gravats ?",
+     "A": "Oui, nous évacuons les gravats et laissons le chantier propre."
+    },
+    {
+     "Q": "Sous quel délai ?",
+     "A": "Devis sous 48h après visite gratuite, puis planning selon l'ampleur des travaux."
+    }
+   ]
+  },
+  {
+   "SLUG": "dallage-terrasse",
+   "PHOTO": "/images/ml-dallage.webp",
+   "NOM": "Dallage & terrasse",
+   "NOM_COURT": "Terrasse",
+   "TITRE_H1": "Dallage, terrasse et plage de piscine à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — dallage, terrasse et tour de piscine à {{VILLE}} (42). Béton, carrelage extérieur. Devis gratuit.",
+   "INTRO": "Terrasse, dallage, plage de piscine : nous réalisons vos aménagements extérieurs sur une base bien préparée, pour un résultat plane, durable et esthétique.",
+   "AVANTAGES": [
+    "Dalle béton et chape",
+    "Terrasse carrelée ou béton",
+    "Plage et tour de piscine",
+    "Allées et accès",
+    "Pente d'évacuation soignée",
+    "Finitions extérieures"
+   ],
+   "GALLERY": [
+    "/images/ml-dallage.webp",
+    "/images/st-terrasse.webp",
+    "/images/st-extension.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Riyad V.",
+    "INITIALES": "RV",
+    "TEXTE": "Pose de clôture nickel, entreprise à recommander.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "40 – 90 €",
+    "UNITE": "par m²",
+    "NOTE": "Une terrasse ou un dallage revient en général entre 40 et 90 € par m² selon le revêtement et la préparation. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Préparation et forme de pente",
+     "Dalle ou chape",
+     "Revêtement (carrelage, béton…)",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte une terrasse à {{VILLE}} ?",
+     "A": "Comptez en général 40 à 90 € par m² selon le revêtement (béton, carrelage) et la préparation du sol. Devis gratuit."
+    },
+    {
+     "Q": "Réalisez-vous les tours de piscine ?",
+     "A": "Oui, plages et tours de piscine en dallage ou carrelage, avec pente d'évacuation et finitions soignées."
+    },
+    {
+     "Q": "Faut-il une dalle sous la terrasse ?",
+     "A": "Selon le revêtement et le sol, une dalle ou une forme stabilisée est nécessaire pour la durabilité. Nous l'évaluons sur place."
+    },
+    {
+     "Q": "Faites-vous les allées et accès ?",
+     "A": "Oui, allées, accès et cours en béton ou carrelage extérieur."
+    },
+    {
+     "Q": "Quel délai ?",
+     "A": "Devis sous 48h après visite ; le chantier dépend de la surface et du séchage."
+    }
+   ]
+  },
+  {
+   "SLUG": "mur-cloture",
+   "PHOTO": "/images/st-grosoeuvre.webp",
+   "NOM": "Murs & clôtures",
+   "NOM_COURT": "Clôtures",
+   "TITRE_H1": "Murs, clôtures et portails à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — murs, clôtures et murets à {{VILLE}} (42). Parpaing, pierre, clôture. Devis gratuit.",
+   "INTRO": "Mur de clôture, muret, pose de clôture et portail : nous délimitons et sécurisons votre propriété avec des ouvrages solides et bien finis.",
+   "AVANTAGES": [
+    "Murs de clôture et murets",
+    "Pose de clôture et barrières",
+    "Piliers et portails",
+    "Parpaing, pierre ou enduit",
+    "Fondations adaptées",
+    "Finitions soignées"
+   ],
+   "GALLERY": [
+    "/images/st-grosoeuvre.webp",
+    "/images/st-extension.webp",
+    "/images/st-terrassement.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Riyad V.",
+    "INITIALES": "RV",
+    "TEXTE": "Pose de clôture nickel, entreprise à recommander.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "100 – 250 €",
+    "UNITE": "par mètre linéaire",
+    "NOTE": "Un mur de clôture revient en général entre 100 et 250 € par mètre linéaire selon la hauteur et la finition. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Fondation et implantation",
+     "Élévation du mur / muret",
+     "Pose clôture, piliers, portail",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte un mur de clôture à {{VILLE}} ?",
+     "A": "Comptez en général 100 à 250 € par mètre linéaire selon la hauteur, le matériau et la finition. Devis gratuit."
+    },
+    {
+     "Q": "Posez-vous les clôtures et portails ?",
+     "A": "Oui, pose de clôtures, barrières, piliers et portails, avec les fondations nécessaires. C'est l'un de nos travaux courants."
+    },
+    {
+     "Q": "Parpaing, pierre ou enduit ?",
+     "A": "Selon votre goût et le budget : parpaing enduit, pierre ou finition décorative. Nous vous conseillons sur place."
+    },
+    {
+     "Q": "Faut-il une déclaration de travaux ?",
+     "A": "Au-delà d'une certaine hauteur, une déclaration en mairie peut être nécessaire. Nous vous orientons."
+    },
+    {
+     "Q": "Vos ouvrages sont-ils garantis ?",
+     "A": "Oui, couverts par notre assurance. Attestations fournies avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "extension-maison",
+   "PHOTO": "/images/st-extension.webp",
+   "NOM": "Extension & agrandissement",
+   "NOM_COURT": "Extension",
+   "TITRE_H1": "Extension et agrandissement à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — extension, agrandissement et surélévation à {{VILLE}} (42). Gros œuvre. Devis gratuit.",
+   "INTRO": "Besoin d'une pièce en plus ? Nous réalisons le gros œuvre de votre extension : fondations, murs, dalle, en liaison propre avec l'existant.",
+   "AVANTAGES": [
+    "Extension de plain-pied",
+    "Surélévation (selon structure)",
+    "Liaison soignée avec l'existant",
+    "Fondations et murs",
+    "Dalle et plancher",
+    "Coordination des corps de métier"
+   ],
+   "GALLERY": [
+    "/images/st-extension.webp",
+    "/images/st-grosoeuvre.webp",
+    "/images/st-terrassement.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Quentin D.",
+    "INITIALES": "QD",
+    "TEXTE": "Sympathique, compétent et consciencieux. Je recommande.",
+    "PROJET": "Avis Google — Local Guide"
+   },
+   "PRIX": {
+    "FOURCHETTE": "900 – 1 800 €",
+    "UNITE": "par m² (gros œuvre)",
+    "NOTE": "Le gros œuvre d'une extension se situe en général entre 900 et 1 800 € par m² selon le type et la liaison. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Étude de faisabilité",
+     "Fondations et gros œuvre",
+     "Murs, dalle et structure",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte une extension à {{VILLE}} ?",
+     "A": "Le gros œuvre se situe en général entre 900 et 1 800 € par m² selon le type (plain-pied, étage). Devis gratuit après visite."
+    },
+    {
+     "Q": "Réalisez-vous les surélévations ?",
+     "A": "Oui, si la structure existante le permet. Nous étudions la reprise de charges au préalable."
+    },
+    {
+     "Q": "Faut-il un permis de construire ?",
+     "A": "Au-delà d'une certaine surface, oui. Nous vous orientons sur les démarches."
+    },
+    {
+     "Q": "Travaillez-vous avec d'autres artisans ?",
+     "A": "Oui, nous réalisons le gros œuvre et coordonnons avec les autres corps de métier."
+    },
+    {
+     "Q": "Combien de temps dure le chantier ?",
+     "A": "Cela dépend de la taille ; un planning précis est donné avec le devis."
+    }
+   ]
+  }
+ ],
+ "ZONES": [
+  {
+   "VILLE": "Saint-Étienne",
+   "SLUG": "saint-etienne",
+   "CODE_POSTAL": "42000",
+   "LOCAL": "Métropole voisine, Saint-Étienne concentre de nombreux projets de construction, rénovation et aménagement. Gros œuvre, façade, carrelage, terrasse : nous intervenons sur toute la ville et ses quartiers."
+  },
+  {
+   "VILLE": "Le Chambon-Feugerolles",
+   "SLUG": "le-chambon-feugerolles",
+   "CODE_POSTAL": "42500",
+   "LOCAL": "Voisine de Firminy, Le Chambon-Feugerolles compte un habitat varié à rénover ou agrandir. Nous y réalisons gros œuvre, façades, terrasses et rénovations intérieures, avec des délais courts grâce à la proximité."
+  },
+  {
+   "VILLE": "La Ricamarie",
+   "SLUG": "la-ricamarie",
+   "CODE_POSTAL": "42150",
+   "LOCAL": "À La Ricamarie, nous accompagnons particuliers et professionnels sur tous leurs travaux de maçonnerie : fondations, murs, carrelage, clôtures et aménagements extérieurs."
+  },
+  {
+   "VILLE": "Unieux",
+   "SLUG": "unieux",
+   "CODE_POSTAL": "42240",
+   "LOCAL": "Commune limitrophe de Firminy, Unieux voit se multiplier extensions et rénovations. Nous y intervenons pour le gros œuvre, la façade, le carrelage et les terrasses."
+  },
+  {
+   "VILLE": "Fraisses",
+   "SLUG": "fraisses",
+   "CODE_POSTAL": "42490",
+   "LOCAL": "À Fraisses, nous réalisons dallages, terrasses, murs de clôture et rénovations, sur le neuf comme sur le bâti existant, avec des finitions soignées."
+  },
+  {
+   "VILLE": "Roche-la-Molière",
+   "SLUG": "roche-la-moliere",
+   "CODE_POSTAL": "42230",
+   "LOCAL": "À Roche-la-Molière, nous intervenons sur le gros œuvre des constructions neuves comme sur la rénovation : façades, carrelage, terrasses et clôtures."
+  },
+  {
+   "VILLE": "Saint-Genest-Lerpt",
+   "SLUG": "saint-genest-lerpt",
+   "CODE_POSTAL": "42530",
+   "LOCAL": "À Saint-Genest-Lerpt, commune résidentielle, nous réalisons extensions, terrasses, murs de clôture et rénovations intérieures avec le même soin du détail."
+  }
+ ],
+ "PHOTOS": {
+  "HERO": "",
+  "REALISATIONS": [
+   "/images/ml-facade.webp",
+   "/images/ml-dallage.webp",
+   "/images/ml-carrelage.webp",
+   "/images/ml-sdb.webp"
+  ],
+  "ALTS": [
+   "Rénovation de façade en pierre avec échafaudage — M-L Maçonnerie à Firminy",
+   "Plage de piscine et dallage réalisés par M-L Maçonnerie",
+   "Salle de bains carrelée avec douche à l'italienne — M-L Maçonnerie",
+   "Carrelage et paroi de douche — rénovation intérieure M-L Maçonnerie"
+  ],
+  "REAL_LABELS": [
+   {
+    "TAG": "Ravalement",
+    "TITRE": "Rénovation de façade en pierre",
+    "META": "Façade — Firminy"
+   },
+   {
+    "TAG": "Dallage",
+    "TITRE": "Plage de piscine et dallage",
+    "META": "Aménagement extérieur"
+   },
+   {
+    "TAG": "Carrelage",
+    "TITRE": "Salle de bains carrelée",
+    "META": "Rénovation intérieure"
+   },
+   {
+    "TAG": "Carrelage",
+    "TITRE": "Douche à l'italienne",
+    "META": "Salle de bains"
+   }
+  ]
+ },
+ "MENTIONS": {
+  "FORME_JURIDIQUE": "Entreprise individuelle",
+  "CAPITAL": "",
+  "RCS": "Saint-Étienne",
+  "TVA_INTRA": "FR90902018449",
+  "HEBERGEUR": "Cloudflare Pages",
+  "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
+ },
+ "HORAIRES": "Mo-Fr 08:00-18:00; Sa 08:00-12:00",
+ "ADRESSE": "43 Chemin des Quatre Vents, Bâtiment B",
+ "WHATSAPP": "33688021627",
+ "SPECIALITE": "Gros œuvre",
+ "SPECIALITE_SUB": "& carrelage",
+ "SPECIALITE_PHRASE": "du gros œuvre à la finition"
+}
