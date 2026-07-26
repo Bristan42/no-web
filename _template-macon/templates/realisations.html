@@ -51,77 +51,7 @@
   <p class="reveal d2">Aperçu de nos savoir-faire — extensions, ravalements, gros œuvre, rénovation, dallage. Photos à titre d'illustration.</p>
 </div>
 
-<div class="reals-filters reveal">
-  <button class="filter-btn active" data-filter="all">Toutes les prestations</button>
-  <button class="filter-btn" data-filter="extension">Extensions</button>
-  <button class="filter-btn" data-filter="ravalement">Ravalements</button>
-  <button class="filter-btn" data-filter="gros-oeuvre">Gros œuvre</button>
-  <button class="filter-btn" data-filter="renovation">Rénovation</button>
-  <button class="filter-btn" data-filter="dallage">Dallage</button>
-</div>
-
-<div class="reals-grid">
-  <div class="real-card reveal" data-cat="extension">
-    <div class="real-photo">
-      {{PHOTO_REAL_1}}
-      <div class="reals-cat">Extension</div>
-    </div>
-    <div class="real-body">
-      <div class="real-title">Extension de maison</div>
-      <div class="real-meta">Maçonnerie générale</div>
-    </div>
-  </div>
-  <div class="real-card reveal d1" data-cat="ravalement">
-    <div class="real-photo">
-      {{PHOTO_REAL_2}}
-      <div class="reals-cat">Ravalement</div>
-    </div>
-    <div class="real-body">
-      <div class="real-title">Ravalement de façade</div>
-      <div class="real-meta">Ravalement & façade</div>
-    </div>
-  </div>
-  <div class="real-card reveal d2" data-cat="gros-oeuvre">
-    <div class="real-photo">
-      {{PHOTO_REAL_3}}
-      <div class="reals-cat">Gros œuvre</div>
-    </div>
-    <div class="real-body">
-      <div class="real-title">Gros œuvre & construction</div>
-      <div class="real-meta">Gros œuvre</div>
-    </div>
-  </div>
-  <div class="real-card reveal d1" data-cat="renovation">
-    <div class="real-photo">
-      {{PHOTO_REAL_4}}
-      <div class="reals-cat">Rénovation</div>
-    </div>
-    <div class="real-body">
-      <div class="real-title">Ouverture de mur porteur</div>
-      <div class="real-meta">Rénovation intérieure</div>
-    </div>
-  </div>
-  <div class="real-card reveal d2" data-cat="dallage">
-    <div class="real-photo">
-      {{PHOTO_REAL_5}}
-      <div class="reals-cat">Dallage</div>
-    </div>
-    <div class="real-body">
-      <div class="real-title">Terrasse en béton désactivé</div>
-      <div class="real-meta">Aménagement extérieur</div>
-    </div>
-  </div>
-  <div class="real-card reveal d3" data-cat="extension">
-    <div class="real-photo">
-      <div class="real-photo-placeholder">+</div>
-      <div class="reals-cat">Extension</div>
-    </div>
-    <div class="real-body">
-      <div class="real-title">Surélévation de maison</div>
-      <div class="real-meta">Extension & surélévation</div>
-    </div>
-  </div>
-</div>
+{{REALISATIONS_GALLERY}}
 
 <section style="padding:20px 24px 60px">
   <div style="max-width:820px;margin:0 auto">
@@ -156,17 +86,5 @@
 
 {{FOOTER}}
 {{SHARED_SCRIPT}}
-<script>
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.real-card').forEach(card => {
-      card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
-    });
-  });
-});
-</script>
 </body>
 </html>

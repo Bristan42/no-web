@@ -373,6 +373,34 @@ def _photo_slot(i):
 
 photo_real_vars = {f"PHOTO_REAL_{i}": _photo_slot(i) for i in range(1, 7)}
 
+
+def build_realisations_gallery():
+    """Page Réalisations = VRAIES photos + libellés honnêtes (config PHOTOS.REAL_LABELS).
+    Pas de faux titres, pas de placeholder, pas de filtres. Si pas de libellés → photos seules."""
+    ph = config.get("PHOTOS", {})
+    reals = [s for s in ph.get("REALISATIONS", []) if s]
+    if not reals:
+        return ""
+    labels = ph.get("REAL_LABELS", [])
+    alts = ph.get("ALTS", [])
+    cards = []
+    for i, src in enumerate(reals):
+        alt = alts[i] if i < len(alts) and alts[i] else "Réalisation"
+        lab = labels[i] if i < len(labels) else {}
+        tag = lab.get("TAG", "")
+        title = lab.get("TITRE", "")
+        meta = lab.get("META", "")
+        cat_html = f'\n      <div class="reals-cat">{tag}</div>' if tag else ""
+        body_html = (f'\n    <div class="real-body"><div class="real-title">{title}</div>'
+                     f'<div class="real-meta">{meta}</div></div>') if (title or meta) else ""
+        cards.append(
+            f'<div class="real-card reveal">\n'
+            f'    <div class="real-photo">\n'
+            f'      <img class="real-ph" src="{src}" alt="{alt}" loading="lazy" decoding="async" width="800" height="600">'
+            f'{cat_html}\n    </div>{body_html}\n  </div>'
+        )
+    return '<div class="reals-grid">\n  ' + '\n  '.join(cards) + '\n</div>'
+
 base_vars = build_vars({
     "ZONE_CHIPS": zone_chips_html,
     "FOOTER_ZONE_LINKS": footer_zone_links_html,
@@ -402,8 +430,7 @@ print("✓ merci/index.html")
 # ── PAGE : réalisations ───────────────────────────────────────────────────────
 reals_tpl = (TEMPLATES / "realisations.html").read_text(encoding="utf-8")
 reals_vars = build_vars()
-for i in range(1, 7):
-    reals_vars[f"PHOTO_REAL_{i}"] = _photo_slot(i)
+reals_vars["REALISATIONS_GALLERY"] = build_realisations_gallery()
 reals_html = apply_vars(reals_tpl, reals_vars)
 write_page(OUTPUT / "realisations", reals_html)
 print("✓ realisations/index.html")
