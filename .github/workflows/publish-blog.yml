@@ -1,0 +1,46 @@
+name: Publier le blog (auto)
+
+on:
+  schedule:
+    - cron: '0 9 * * *'   # 09:00 UTC = 11:00 Paris (heure d'ete)
+  workflow_dispatch:
+    inputs:
+      today:
+        description: "Date forcee YYYY-MM-DD (optionnel, sinon date du jour)"
+        required: false
+      dry:
+        description: "Dry-run : true = ne publie rien, montre seulement"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Recuperer la file d'attente + le script
+        run: |
+          git fetch origin blog-content
+          git show origin/blog-content:.blog-scheduler/publish_due.py > "$RUNNER_TEMP/publish_due.py"
+      - name: Publier les articles dus
+        env:
+          REPO_DIR: ${{ github.workspace }}
+        run: |
+          git config user.name "No Web Publisher"
+          git config user.email "actions@users.noreply.github.com"
+          ARGS="--cloud"
+          if [ -n "${{ github.event.inputs.today }}" ]; then ARGS="$ARGS --today ${{ github.event.inputs.today }}"; fi
+          if [ "${{ github.event.inputs.dry }}" = "true" ]; then ARGS="$ARGS --dry"; fi
+          echo "Commande: publish_due.py $ARGS"
+          python3 "$RUNNER_TEMP/publish_due.py" $ARGS
