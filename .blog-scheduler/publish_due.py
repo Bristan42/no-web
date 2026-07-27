@@ -44,6 +44,17 @@ MANIFEST=[
  ("2026-09-28","28 sept. 2026","etre-visible-google-artisan","Référencement",None),
  ("2026-10-01","1 oct. 2026","site-ou-reseaux-sociaux-artisan","Présence en ligne",None),
  ("2026-10-04","4 oct. 2026","site-internet-rentable-artisan","Budget",None),
+ ("2026-10-07","7 oct. 2026","agence-web-ou-freelance-saint-etienne","Choisir",None),
+ ("2026-10-10","10 oct. 2026","agence-web-ou-freelance-avantages-inconvenients","Choisir",None),
+ ("2026-10-13","13 oct. 2026","comment-choisir-agence-web","Choisir",None),
+ ("2026-10-16","16 oct. 2026","prix-site-internet-agence-web","Budget",None),
+ ("2026-10-19","19 oct. 2026","freelance-web-webmaster-definition","Comprendre",None),
+ ("2026-10-22","22 oct. 2026","prestataire-web-local-saint-etienne","Local",None),
+ ("2026-10-25","25 oct. 2026","agence-web-pas-chere","Budget",None),
+ ("2026-10-28","28 oct. 2026","questions-avant-signer-agence-web","Choisir",None),
+ ("2026-10-31","31 oct. 2026","agence-web-pieges-arnaques","Choisir",None),
+ ("2026-11-03","3 nov. 2026","delai-creation-site-internet","Comprendre",None),
+ ("2026-11-06","6 nov. 2026","modele-no-web-ni-agence-ni-freelance","No Web",None),
 ]
 
 POST_CSS=(" .post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}\n"
