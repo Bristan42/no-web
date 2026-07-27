@@ -1,0 +1,505 @@
+{
+ "SLUG": "bc-maconnerie",
+ "DOMAIN": "bc-maconnerie.fr",
+ "ENTREPRISE": "BC Maçonnerie",
+ "PRENOM": "Benoît",
+ "VILLE": "Saint-Ferréol-d'Auroure",
+ "DEPARTEMENT": "43",
+ "REGION": "Auvergne-Rhône-Alpes",
+ "CODE_POSTAL": "43330",
+ "LAT": 45.3564,
+ "LNG": 4.2544,
+ "TEL_DISPLAY": "06 82 52 67 30",
+ "TEL_RAW": "0682526730",
+ "EMAIL": "",
+ "EXPERIENCE": "",
+ "NB_CHANTIERS": "",
+ "NOTE": "4,7",
+ "NB_AVIS": 15,
+ "SIRET": "892 514 225 00010",
+ "ANNEE_CREATION": "2021",
+ "ANNEE": "2026",
+ "RAYON": 25,
+ "FORM_ACTION": "https://api.web3forms.com/submit",
+ "WEB3FORMS_KEY": "97f731bf-359e-46a8-99ec-429d7851a74d",
+ "CF_ANALYTICS_TOKEN": "",
+ "GOOGLE_MAPS_KEY": "",
+ "GOOGLE_PLACE_ID": "",
+ "GOOGLE_GMB_URL": "https://www.google.com/maps/search/?api=1&query=BC+Ma%C3%A7onnerie+Saint-Ferr%C3%A9ol-d%27Auroure",
+ "AVIS": [
+  {
+   "NOM": "Vincent Monteux",
+   "INITIALES": "VM",
+   "TEXTE": "Très satisfait du travail réalisé par cette équipe. Chantier réalisé dans les temps, conforme à notre attente, et laissé très propre en fin d'intervention. Je recommande.",
+   "PROJET": "Avis Google vérifié — Local Guide"
+  },
+  {
+   "NOM": "Valérie T.",
+   "INITIALES": "VT",
+   "TEXTE": "Travail soigné et de qualité. Toute l'équipe est à l'écoute et respectueuse des contraintes du chantier. Très bons conseils de M. Carot qui a su s'adapter à nos demandes. Nous recommandons fortement.",
+   "PROJET": "Avis Google vérifié"
+  },
+  {
+   "NOM": "Val",
+   "INITIALES": "V",
+   "TEXTE": "Deuxième expérience et nous sommes toujours très contents des travaux, des conseils et des réactions rapides de toute l'équipe. Les tarifs sont toujours compétitifs. Merci !",
+   "PROJET": "Avis Google vérifié"
+  }
+ ],
+ "SERVICES": [
+  {
+   "SLUG": "gros-oeuvre",
+   "PHOTO": "/images/st-grosoeuvre.webp",
+   "NOM": "Gros œuvre & construction",
+   "NOM_COURT": "Gros œuvre",
+   "TITRE_H1": "Gros œuvre et construction à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — gros œuvre, fondations et construction à {{VILLE}} (42). Devis gratuit.",
+   "INTRO": "Fondations, murs porteurs, dalles, élévation : nous réalisons le gros œuvre de votre construction ou extension dans les règles de l'art, pour une base solide et durable.",
+   "AVANTAGES": [
+    "Fondations et semelles béton",
+    "Murs porteurs et élévation",
+    "Dalles et planchers",
+    "Coffrage et ferraillage",
+    "Respect des normes",
+    "Chantier suivi et propre"
+   ],
+   "GALLERY": [
+    "/images/st-grosoeuvre.webp",
+    "/images/bc-extension.webp",
+    "/images/st-terrassement.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Quentin D.",
+    "INITIALES": "QD",
+    "TEXTE": "Sympathique, compétent et consciencieux. Je recommande.",
+    "PROJET": "Avis Google — Local Guide"
+   },
+   "PRIX": {
+    "FOURCHETTE": "400 – 700 €",
+    "UNITE": "par m² (gros œuvre)",
+    "NOTE": "Le gros œuvre se situe en général entre 400 et 700 € par m² selon la structure et l'accès. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Étude et métré sur place",
+     "Fondations et élévation",
+     "Dalles et planchers",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Qu'appelle-t-on le gros œuvre à {{VILLE}} ?",
+     "A": "Le gros œuvre regroupe tout ce qui assure la solidité du bâtiment : fondations, murs porteurs, dalles, coffrage. C'est la base de toute construction durable."
+    },
+    {
+     "Q": "Réalisez-vous les fondations ?",
+     "A": "Oui, fondations, semelles, coffrage, ferraillage et coulage béton selon les règles de l'art."
+    },
+    {
+     "Q": "Travaillez-vous pour les particuliers ?",
+     "A": "Oui, particuliers comme professionnels, sur Firminy et le bassin stéphanois."
+    },
+    {
+     "Q": "Vos travaux sont-ils garantis ?",
+     "A": "Oui, nos travaux sont couverts par notre assurance. Les attestations sont fournies avec le devis."
+    },
+    {
+     "Q": "Sous quel délai un devis ?",
+     "A": "Nous nous déplaçons gratuitement et vous remettons un devis détaillé sous 48h."
+    }
+   ]
+  },
+  {
+   "SLUG": "ravalement-facade",
+   "PHOTO": "/images/bc-facade.webp",
+   "NOM": "Ravalement & façade",
+   "NOM_COURT": "Façade",
+   "TITRE_H1": "Ravalement et rénovation de façade à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — ravalement, enduit et façade à {{VILLE}} (42). Pierre, enduit, réfection. Devis gratuit.",
+   "INTRO": "Redonnez de l'allure et protégez vos murs : enduit, réfection de façade, reprise de pierre. Nous intervenons sur le neuf comme sur le bâti ancien.",
+   "AVANTAGES": [
+    "Enduit et crépi de façade",
+    "Réfection et reprise de pierre",
+    "Traitement des fissures",
+    "Bâti ancien et pierre",
+    "Échafaudage sécurisé",
+    "Finitions soignées"
+   ],
+   "GALLERY": [
+    "/images/bc-facade.webp",
+    "/images/st-renovation.webp",
+    "/images/st-grosoeuvre.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Riyad V.",
+    "INITIALES": "RV",
+    "TEXTE": "Pose de clôture nickel, entreprise à recommander.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "40 – 110 €",
+    "UNITE": "par m² de façade",
+    "NOTE": "Un ravalement se situe en général entre 40 et 110 € par m² selon l'état du mur et la technique. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Diagnostic de la façade",
+     "Préparation et reprises",
+     "Enduit ou pierre apparente",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte un ravalement à {{VILLE}} ?",
+     "A": "Comptez en général 40 à 110 € par m² selon l'état du support et la finition. Le diagnostic et le devis sont gratuits."
+    },
+    {
+     "Q": "Intervenez-vous sur le bâti ancien et la pierre ?",
+     "A": "Oui, nous rénovons les façades en pierre et le bâti ancien avec les techniques adaptées."
+    },
+    {
+     "Q": "Traitez-vous les fissures ?",
+     "A": "Oui, nous diagnostiquons l'origine des fissures et procédons aux reprises nécessaires avant finition."
+    },
+    {
+     "Q": "Posez-vous l'échafaudage ?",
+     "A": "Oui, nous installons un échafaudage sécurisé pour intervenir proprement sur toute la hauteur."
+    },
+    {
+     "Q": "Vos travaux sont-ils garantis ?",
+     "A": "Oui, ils sont couverts par notre assurance. Attestations fournies avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "renovation-interieure",
+   "PHOTO": "/images/st-renovation.webp",
+   "NOM": "Rénovation & maçonnerie",
+   "NOM_COURT": "Rénovation",
+   "TITRE_H1": "Rénovation et reprise de maçonnerie à {{VILLE}}",
+   "DESCRIPTION_SEO": "BC Maçonnerie — rénovation, reprise de structure et ouvertures à {{VILLE}} (43). Bâti ancien et récent. Devis gratuit.",
+   "INTRO": "Rénover, transformer, reprendre l'existant : ouvertures dans les murs, reprises de structure, ragréage, réfection. Nous redonnons vie à votre bâti avec le sérieux et les conseils qui font notre réputation.",
+   "AVANTAGES": [
+    "Reprise de structure et sous-œuvre",
+    "Ouverture de murs porteurs",
+    "Ragréage et reprise de dalles",
+    "Rénovation de bâti ancien",
+    "Démolition maîtrisée",
+    "Finitions soignées"
+   ],
+   "GALLERY": [
+    "/images/st-renovation.webp",
+    "/images/st-grosoeuvre.webp",
+    "/images/bc-facade.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Quentin D.",
+    "INITIALES": "QD",
+    "TEXTE": "Sympathique, compétent et consciencieux. Je recommande.",
+    "PROJET": "Avis Google — Local Guide"
+   },
+   "PRIX": {
+    "FOURCHETTE": "Sur devis",
+    "UNITE": "selon les travaux",
+    "NOTE": "La rénovation se chiffre selon la nature et l'ampleur des travaux. Devis gratuit après visite.",
+    "LIGNES": [
+     "Diagnostic sur place",
+     "Reprise de structure / ouvertures",
+     "Ragréage et finitions",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Rénovez-vous le bâti ancien à {{VILLE}} ?",
+     "A": "Oui, nous intervenons sur la rénovation et la reprise de maçonnerie : ouvertures, reprises de structure, ragréage, sur le bâti ancien comme récent."
+    },
+    {
+     "Q": "Peut-on ouvrir un mur porteur ?",
+     "A": "Oui, avec la reprise de charges adaptée (linteau, poutre). C'est un travail de structure que nous maîtrisons."
+    },
+    {
+     "Q": "Faites-vous le ragréage de dalles ?",
+     "A": "Oui, ragréage et reprise de dalles pour rattraper les niveaux avant la pose d'un revêtement."
+    },
+    {
+     "Q": "Gérez-vous la démolition et les gravats ?",
+     "A": "Oui, démolition maîtrisée et évacuation des gravats, dans le cadre de vos travaux."
+    },
+    {
+     "Q": "Sous quel délai un devis ?",
+     "A": "Nous nous déplaçons gratuitement et remettons un devis détaillé sous 48h."
+    }
+   ]
+  },
+  {
+   "SLUG": "dallage-terrasse",
+   "PHOTO": "/images/bc-piscine.webp",
+   "NOM": "Dallage & terrasse",
+   "NOM_COURT": "Terrasse",
+   "TITRE_H1": "Dallage, terrasse et plage de piscine à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — dallage, terrasse et tour de piscine à {{VILLE}} (42). Béton, carrelage extérieur. Devis gratuit.",
+   "INTRO": "Terrasse, dallage, plage de piscine : nous réalisons vos aménagements extérieurs sur une base bien préparée, pour un résultat plane, durable et esthétique.",
+   "AVANTAGES": [
+    "Dalle béton et chape",
+    "Terrasse carrelée ou béton",
+    "Plage et tour de piscine",
+    "Allées et accès",
+    "Pente d'évacuation soignée",
+    "Finitions extérieures"
+   ],
+   "GALLERY": [
+    "/images/bc-piscine.webp",
+    "/images/st-terrasse.webp",
+    "/images/st-extension.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Riyad V.",
+    "INITIALES": "RV",
+    "TEXTE": "Pose de clôture nickel, entreprise à recommander.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "40 – 90 €",
+    "UNITE": "par m²",
+    "NOTE": "Une terrasse ou un dallage revient en général entre 40 et 90 € par m² selon le revêtement et la préparation. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Préparation et forme de pente",
+     "Dalle ou chape",
+     "Revêtement (carrelage, béton…)",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte une terrasse à {{VILLE}} ?",
+     "A": "Comptez en général 40 à 90 € par m² selon le revêtement (béton, carrelage) et la préparation du sol. Devis gratuit."
+    },
+    {
+     "Q": "Réalisez-vous les tours de piscine ?",
+     "A": "Oui, plages et tours de piscine en dallage ou carrelage, avec pente d'évacuation et finitions soignées."
+    },
+    {
+     "Q": "Faut-il une dalle sous la terrasse ?",
+     "A": "Selon le revêtement et le sol, une dalle ou une forme stabilisée est nécessaire pour la durabilité. Nous l'évaluons sur place."
+    },
+    {
+     "Q": "Faites-vous les allées et accès ?",
+     "A": "Oui, allées, accès et cours en béton ou carrelage extérieur."
+    },
+    {
+     "Q": "Quel délai ?",
+     "A": "Devis sous 48h après visite ; le chantier dépend de la surface et du séchage."
+    }
+   ]
+  },
+  {
+   "SLUG": "mur-cloture",
+   "PHOTO": "/images/st-grosoeuvre.webp",
+   "NOM": "Murs & clôtures",
+   "NOM_COURT": "Clôtures",
+   "TITRE_H1": "Murs, clôtures et portails à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — murs, clôtures et murets à {{VILLE}} (42). Parpaing, pierre, clôture. Devis gratuit.",
+   "INTRO": "Mur de clôture, muret, pose de clôture et portail : nous délimitons et sécurisons votre propriété avec des ouvrages solides et bien finis.",
+   "AVANTAGES": [
+    "Murs de clôture et murets",
+    "Pose de clôture et barrières",
+    "Piliers et portails",
+    "Parpaing, pierre ou enduit",
+    "Fondations adaptées",
+    "Finitions soignées"
+   ],
+   "GALLERY": [
+    "/images/st-grosoeuvre.webp",
+    "/images/bc-extension.webp",
+    "/images/st-terrassement.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Riyad V.",
+    "INITIALES": "RV",
+    "TEXTE": "Pose de clôture nickel, entreprise à recommander.",
+    "PROJET": "Avis Google vérifié"
+   },
+   "PRIX": {
+    "FOURCHETTE": "100 – 250 €",
+    "UNITE": "par mètre linéaire",
+    "NOTE": "Un mur de clôture revient en général entre 100 et 250 € par mètre linéaire selon la hauteur et la finition. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Fondation et implantation",
+     "Élévation du mur / muret",
+     "Pose clôture, piliers, portail",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte un mur de clôture à {{VILLE}} ?",
+     "A": "Comptez en général 100 à 250 € par mètre linéaire selon la hauteur, le matériau et la finition. Devis gratuit."
+    },
+    {
+     "Q": "Posez-vous les clôtures et portails ?",
+     "A": "Oui, pose de clôtures, barrières, piliers et portails, avec les fondations nécessaires. C'est l'un de nos travaux courants."
+    },
+    {
+     "Q": "Parpaing, pierre ou enduit ?",
+     "A": "Selon votre goût et le budget : parpaing enduit, pierre ou finition décorative. Nous vous conseillons sur place."
+    },
+    {
+     "Q": "Faut-il une déclaration de travaux ?",
+     "A": "Au-delà d'une certaine hauteur, une déclaration en mairie peut être nécessaire. Nous vous orientons."
+    },
+    {
+     "Q": "Vos ouvrages sont-ils garantis ?",
+     "A": "Oui, couverts par notre assurance. Attestations fournies avec le devis."
+    }
+   ]
+  },
+  {
+   "SLUG": "extension-maison",
+   "PHOTO": "/images/bc-extension.webp",
+   "NOM": "Extension & agrandissement",
+   "NOM_COURT": "Extension",
+   "TITRE_H1": "Extension et agrandissement à {{VILLE}}",
+   "DESCRIPTION_SEO": "M-L Maçonnerie — extension, agrandissement et surélévation à {{VILLE}} (42). Gros œuvre. Devis gratuit.",
+   "INTRO": "Besoin d'une pièce en plus ? Nous réalisons le gros œuvre de votre extension : fondations, murs, dalle, en liaison propre avec l'existant.",
+   "AVANTAGES": [
+    "Extension de plain-pied",
+    "Surélévation (selon structure)",
+    "Liaison soignée avec l'existant",
+    "Fondations et murs",
+    "Dalle et plancher",
+    "Coordination des corps de métier"
+   ],
+   "GALLERY": [
+    "/images/bc-extension.webp",
+    "/images/st-grosoeuvre.webp",
+    "/images/st-terrassement.webp"
+   ],
+   "TEMOIGNAGE": {
+    "NOM": "Quentin D.",
+    "INITIALES": "QD",
+    "TEXTE": "Sympathique, compétent et consciencieux. Je recommande.",
+    "PROJET": "Avis Google — Local Guide"
+   },
+   "PRIX": {
+    "FOURCHETTE": "900 – 1 800 €",
+    "UNITE": "par m² (gros œuvre)",
+    "NOTE": "Le gros œuvre d'une extension se situe en général entre 900 et 1 800 € par m² selon le type et la liaison. Fourchette indicative — devis gratuit.",
+    "LIGNES": [
+     "Étude de faisabilité",
+     "Fondations et gros œuvre",
+     "Murs, dalle et structure",
+     "Devis détaillé après visite gratuite"
+    ]
+   },
+   "FAQ": [
+    {
+     "Q": "Combien coûte une extension à {{VILLE}} ?",
+     "A": "Le gros œuvre se situe en général entre 900 et 1 800 € par m² selon le type (plain-pied, étage). Devis gratuit après visite."
+    },
+    {
+     "Q": "Réalisez-vous les surélévations ?",
+     "A": "Oui, si la structure existante le permet. Nous étudions la reprise de charges au préalable."
+    },
+    {
+     "Q": "Faut-il un permis de construire ?",
+     "A": "Au-delà d'une certaine surface, oui. Nous vous orientons sur les démarches."
+    },
+    {
+     "Q": "Travaillez-vous avec d'autres artisans ?",
+     "A": "Oui, nous réalisons le gros œuvre et coordonnons avec les autres corps de métier."
+    },
+    {
+     "Q": "Combien de temps dure le chantier ?",
+     "A": "Cela dépend de la taille ; un planning précis est donné avec le devis."
+    }
+   ]
+  }
+ ],
+ "ZONES": [
+  {
+   "VILLE": "Firminy",
+   "SLUG": "firminy",
+   "CODE_POSTAL": "42700",
+   "LOCAL": "À Firminy, à quelques minutes de notre atelier, nous réalisons gros œuvre, façades, terrasses et extensions. Une équipe locale, réactive, avec des délais courts grâce à la proximité."
+  },
+  {
+   "VILLE": "Le Chambon-Feugerolles",
+   "SLUG": "le-chambon-feugerolles",
+   "CODE_POSTAL": "42500",
+   "LOCAL": "Au Chambon-Feugerolles, nous accompagnons particuliers et professionnels sur tous leurs travaux de maçonnerie : murs, dalles, façades, clôtures et aménagements extérieurs."
+  },
+  {
+   "VILLE": "Unieux",
+   "SLUG": "unieux",
+   "CODE_POSTAL": "42240",
+   "LOCAL": "À Unieux, nous intervenons sur le gros œuvre des constructions neuves comme sur la rénovation du bâti existant, avec un travail soigné et des finitions durables."
+  },
+  {
+   "VILLE": "Aurec-sur-Loire",
+   "SLUG": "aurec-sur-loire",
+   "CODE_POSTAL": "43110",
+   "LOCAL": "À Aurec-sur-Loire, nous réalisons terrasses, murs, extensions et rénovations de façade, sur le neuf comme sur l'ancien, avec le sérieux d'une entreprise locale."
+  },
+  {
+   "VILLE": "Fraisses",
+   "SLUG": "fraisses",
+   "CODE_POSTAL": "42490",
+   "LOCAL": "À Fraisses, nous intervenons pour vos dallages, terrasses, murs de clôture et travaux de gros œuvre, avec des tarifs compétitifs comme le soulignent nos clients."
+  },
+  {
+   "VILLE": "Saint-Just-Malmont",
+   "SLUG": "saint-just-malmont",
+   "CODE_POSTAL": "43240",
+   "LOCAL": "À Saint-Just-Malmont, nous réalisons extensions, façades, terrasses et maçonnerie générale, avec une équipe à l'écoute et respectueuse de votre chantier."
+  },
+  {
+   "VILLE": "Pont-Salomon",
+   "SLUG": "pont-salomon",
+   "CODE_POSTAL": "43330",
+   "LOCAL": "À Pont-Salomon, commune voisine de notre siège, nous intervenons rapidement pour tous vos travaux de maçonnerie, gros œuvre et aménagements extérieurs."
+  }
+ ],
+ "PHOTOS": {
+  "HERO": "",
+  "REALISATIONS": [
+   "/images/bc-facade.webp",
+   "/images/bc-piscine.webp",
+   "/images/bc-extension.webp"
+  ],
+  "ALTS": [
+   "Rénovation de façade en pierre avec échafaudage — BC Maçonnerie",
+   "Plage de piscine et terrasse — BC Maçonnerie",
+   "Extension en béton armé, coffrage et échafaudage — BC Maçonnerie"
+  ],
+  "REAL_LABELS": [
+   {
+    "TAG": "Ravalement",
+    "TITRE": "Rénovation de façade en pierre",
+    "META": "Bâti ancien"
+   },
+   {
+    "TAG": "Terrasse",
+    "TITRE": "Plage de piscine & terrasse",
+    "META": "Aménagement extérieur"
+   },
+   {
+    "TAG": "Extension",
+    "TITRE": "Extension en béton armé",
+    "META": "Gros œuvre"
+   }
+  ]
+ },
+ "MENTIONS": {
+  "FORME_JURIDIQUE": "SARL",
+  "CAPITAL": "",
+  "RCS": "Le Puy-en-Velay",
+  "TVA_INTRA": "",
+  "HEBERGEUR": "Cloudflare Pages",
+  "HEBERGEUR_ADRESSE": "101 Townsend St, San Francisco, CA 94107, États-Unis"
+ },
+ "HORAIRES": "Mo-Fr 08:00-19:00; Sa 08:00-12:00",
+ "ADRESSE": "110 Lotissement les Épicéas",
+ "WHATSAPP": "33682526730",
+ "SPECIALITE": "Maçonnerie",
+ "SPECIALITE_SUB": "& gros œuvre",
+ "SPECIALITE_PHRASE": "du gros œuvre à la finition"
+}
