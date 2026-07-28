@@ -101,9 +101,9 @@
     /* ─────────────────── NAV ─────────────────── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      padding: 0 max(32px, calc((100% - 1200px) / 2));
+      padding: 0 max(32px, calc((100% - 1100px) / 2));
       height: 60px;
-      display: flex; align-items: center; gap: 24px;
+      display: flex; justify-content: space-between; align-items: center;
       border-bottom: 1px solid transparent;
       transition: background 0.5s ease, border-color 0.5s ease;
     }
@@ -123,7 +123,7 @@
     /* ── Mega menu ── */
     /* Centrage absolu du menu indépendant du logo et du CTA */
     .nav-menu {
-      margin-left: auto;
+      position: absolute; left: 50%; transform: translateX(-50%);
       display: flex; align-items: center; gap: 4px;
     }
     .nav-item { position: relative; } /* static pour que le dropdown se positionne par rapport à nav */
@@ -1024,7 +1024,6 @@
       .nav-menu { display: none; }
       .nav-burger { display: block; }
       .nav-wa-btn { display: none; }
-      .nav-right { margin-left: auto; }
     }
 
     @media (max-width: 860px) {
