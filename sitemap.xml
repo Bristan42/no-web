@@ -275,4 +275,11 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://no-web.fr/blog/macon-visible-google/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

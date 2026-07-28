@@ -81,6 +81,18 @@
  .lead-form-note{margin-top:14px;font-size:12px;color:var(--text-3);text-align:center}.lead-form-note a{color:#25D366;text-decoration:none;font-weight:600}.lead-form-note a:hover{text-decoration:underline}
  @media(max-width:860px){.featured-card{grid-template-columns:1fr}.featured-visual{min-height:150px}.up-grid{grid-template-columns:1fr}}
  @media(max-width:768px){nav{padding:0 20px}.blog-hero{padding:48px 22px 4px}.blog-wrap{padding:36px 22px}.blog-cta{padding:0 22px}.featured-body{padding:28px 24px}footer{flex-direction:column;gap:16px;text-align:center;padding:24px}}
+  .post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+ .post-card{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color .25s,transform .2s}
+ .post-card:hover{border-color:var(--border-h);transform:translateY(-4px)}
+ .post-thumb-img{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--border)}
+ .post-thumb-img img{width:100%;height:100%;object-fit:cover;display:block}
+ .post-content{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+ .post-cat{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#38bdf8;margin-bottom:10px}
+ .post-content h3{font-size:16px;font-weight:700;line-height:1.32;margin-bottom:10px}
+ .post-content p{font-size:13px;color:var(--text-2);line-height:1.55;margin-bottom:16px;flex:1}
+ .post-meta{font-size:12px;color:var(--text-3);display:flex;gap:8px;align-items:center}.post-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-3);opacity:.6}
+ @media(max-width:860px){.post-grid{grid-template-columns:1fr 1fr}}
+ @media(max-width:600px){.post-grid{grid-template-columns:1fr}}
  </style>
 </head>
 <body>
@@ -160,13 +172,25 @@
 
   <div class="section-eyebrow">Prochainement</div>
   <div class="up-grid">
-   <div class="up-card"><span class="up-badge">Bientôt</span><h3>Être visible sur Google quand on est maçon</h3><p>Le guide du référencement local, étape par étape.</p></div>
    <div class="up-card"><span class="up-badge">Bientôt</span><h3>La fiche Google Business Profile du maçon</h3><p>La remplir pour apparaître dans le pack local.</p></div>
    <div class="up-card"><span class="up-badge">Bientôt</span><h3>Combien coûte un site internet pour un maçon ?</h3><p>Les vrais prix, sans langue de bois.</p></div>
    <div class="up-card"><span class="up-badge">Bientôt</span><h3>Avis clients en maçonnerie : comment en obtenir</h3><p>La méthode simple pour collecter des avis.</p></div>
    <div class="up-card"><span class="up-badge">Bientôt</span><h3>Photos de chantier : décrocher plus de devis</h3><p>Transformer vos réalisations en arguments.</p></div>
    <div class="up-card"><span class="up-badge">Bientôt</span><h3>Devis de maçonnerie : le rédiger pour qu'il passe</h3><p>Modèle offert et bonnes pratiques.</p></div>
   </div>
+ </div>
+
+ <div class="section-eyebrow">Derniers articles</div>
+ <div class="post-grid">
+   <a href="/blog/macon-visible-google/" class="post-card">
+    <div class="post-thumb-img"><img src="/blog/img/macon-pose-briques-truelle.webp" width="1000" height="750" loading="lazy" alt="Maçon en train de poser une brique à la truelle sur un mur en construction"></div>
+    <div class="post-content">
+     <div class="post-cat">Référencement</div>
+     <h3>Référencement maçon : comment être visible sur Google</h3>
+     <p>Référencement local pour maçon : comment ressortir sur « maçon + votre ville » dans le pack local et…</p>
+     <div class="post-meta"><span>Bristan Farré</span><span class="dot"></span><span>28 juil. 2026</span><span class="dot"></span><span>10 min</span></div>
+    </div>
+   </a>
  </div>
 
  <div class="blog-cta">
