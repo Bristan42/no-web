@@ -36,11 +36,18 @@ jobs:
       - name: Publier les articles dus
         env:
           REPO_DIR: ${{ github.workspace }}
+          INPUT_TODAY: ${{ github.event.inputs.today }}
+          INPUT_DRY: ${{ github.event.inputs.dry }}
         run: |
           git config user.name "No Web Publisher"
           git config user.email "actions@users.noreply.github.com"
           ARGS="--cloud"
-          if [ -n "${{ github.event.inputs.today }}" ]; then ARGS="$ARGS --today ${{ github.event.inputs.today }}"; fi
-          if [ "${{ github.event.inputs.dry }}" = "true" ]; then ARGS="$ARGS --dry"; fi
+          if [ -n "$INPUT_TODAY" ]; then
+            case "$INPUT_TODAY" in
+              [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ARGS="$ARGS --today $INPUT_TODAY" ;;
+              *) echo "Date invalide (attendu AAAA-MM-JJ), ignorée: $INPUT_TODAY" ;;
+            esac
+          fi
+          if [ "$INPUT_DRY" = "true" ]; then ARGS="$ARGS --dry"; fi
           echo "Commande: publish_due.py $ARGS"
           python3 "$RUNNER_TEMP/publish_due.py" $ARGS
