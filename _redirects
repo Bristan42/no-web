@@ -1,4 +1,0 @@
-# Blocage de l'accès public aux dossiers internes (outils, données prospects/clients, CI)
-/_template-macon/*      /  404
-/_template-plombier/*   /  404
-/.github/*              /  404
