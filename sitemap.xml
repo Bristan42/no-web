@@ -359,4 +359,11 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://no-web.fr/blog/erreurs-macon-invisible-google/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
