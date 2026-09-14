@@ -387,4 +387,11 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://no-web.fr/blog/trouver-clients-artisan/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
